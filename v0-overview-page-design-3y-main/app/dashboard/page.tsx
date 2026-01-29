@@ -16,7 +16,7 @@ export default function DashboardPage() {
         <PageHeader />
         
         {/* Today Section with Stats */}
-        <div className="mb-6 flex items-center gap-12">
+        <div className="mb-6 flex items-center gap-16">
           {/* Left: Today Header with Profile */}
           <div className="flex items-center gap-4 flex-shrink-0">
             <div
@@ -46,7 +46,6 @@ export default function DashboardPage() {
             className="flex gap-4"
             style={{
               background: "transparent",
-              maxWidth: "500px",
             }}
           >
             {/* Matches */}
