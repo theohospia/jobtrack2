@@ -43,9 +43,10 @@ export default function DashboardPage() {
 
           {/* Right: Stats Container */}
           <div
-            className="flex gap-4 flex-1"
+            className="flex gap-4"
             style={{
               background: "transparent",
+              maxWidth: "500px",
             }}
           >
             {/* Matches */}
