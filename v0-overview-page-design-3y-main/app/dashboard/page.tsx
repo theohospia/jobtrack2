@@ -58,7 +58,7 @@ export default function DashboardPage() {
           >
             {/* Matches */}
             <div 
-              className="flex flex-1 flex-col items-start gap-2 rounded-2xl p-4"
+              className="flex flex-1 items-center gap-3 rounded-2xl p-4"
               style={{
                 background: "#FFFFFF",
                 border: "1px solid #E5E7EB",
@@ -79,7 +79,7 @@ export default function DashboardPage() {
               </div>
               <div className="flex flex-col gap-0">
                 <p
-                  className="text-2xl font-semibold"
+                  className="text-2xl font-semibold leading-none"
                   style={{ color: "#0F172A" }}
                 >
                   12
@@ -95,7 +95,7 @@ export default function DashboardPage() {
 
             {/* Responses */}
             <div 
-              className="flex flex-1 flex-col items-start gap-2 rounded-2xl p-4"
+              className="flex flex-1 items-center gap-3 rounded-2xl p-4"
               style={{
                 background: "#FFFFFF",
                 border: "1px solid #E5E7EB",
@@ -114,7 +114,7 @@ export default function DashboardPage() {
               </div>
               <div className="flex flex-col gap-0">
                 <p
-                  className="text-2xl font-semibold"
+                  className="text-2xl font-semibold leading-none"
                   style={{ color: "#0F172A" }}
                 >
                   4
@@ -130,7 +130,7 @@ export default function DashboardPage() {
 
             {/* Follow-ups */}
             <div 
-              className="flex flex-1 flex-col items-start gap-2 rounded-2xl p-4"
+              className="flex flex-1 items-center gap-3 rounded-2xl p-4"
               style={{
                 background: "#FFFFFF",
                 border: "1px solid #E5E7EB",
@@ -150,7 +150,7 @@ export default function DashboardPage() {
               </div>
               <div className="flex flex-col gap-0">
                 <p
-                  className="text-2xl font-semibold"
+                  className="text-2xl font-semibold leading-none"
                   style={{ color: "#0F172A" }}
                 >
                   3
