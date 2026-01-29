@@ -400,61 +400,13 @@ export default function DashboardPage() {
               <button
                 className="cursor-pointer rounded-lg px-4 py-2 text-xs font-semibold transition-all duration-[120ms] flex-shrink-0 ml-4"
                 style={{
-                  background: "#F1F5F9",
-                  color: "#0F172A",
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.background = "#E2E8F0"}
-                onMouseLeave={(e) => e.currentTarget.style.background = "#F1F5F9"}
-              >
-                Browse
-              </button>
-            </div>
-          </div>
-        </section>
-
-        {/* Newsletter Section */}
-        <section className="mt-12">
-          <div
-            className="rounded-2xl p-8"
-            style={{
-              background: "#FFFFFF",
-              border: "1px solid #E5E7EB",
-            }}
-          >
-            <h2
-              className="text-2xl font-semibold"
-              style={{ color: "#0F172A" }}
-            >
-              Join our newsletter
-            </h2>
-            <p
-              className="mt-2 text-sm"
-              style={{ color: "#64748B" }}
-            >
-              Get weekly tips, job opportunities, and career insights delivered to your inbox.
-            </p>
-            <div className="mt-4 flex gap-2">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 rounded-lg border px-4 py-2 text-sm transition-colors"
-                style={{
-                  borderColor: "#E5E7EB",
-                  background: "#FFFFFF",
-                }}
-                onFocus={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
-                onBlur={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
-              />
-              <button
-                className="cursor-pointer rounded-lg px-6 py-2 text-sm font-semibold transition-all duration-[120ms]"
-                style={{
                   background: "#2563EB",
                   color: "#FFFFFF",
                 }}
                 onMouseEnter={(e) => e.currentTarget.style.background = "#1D4ED8"}
                 onMouseLeave={(e) => e.currentTarget.style.background = "#2563EB"}
               >
-                Subscribe
+                Browse
               </button>
             </div>
           </div>
