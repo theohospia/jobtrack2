@@ -16,7 +16,7 @@ export default function DashboardPage() {
         <PageHeader />
         
         {/* Today Section with Stats */}
-        <div className="mb-6 flex items-center gap-16">
+        <div className="mb-6 flex items-center gap-12">
           {/* Left: Today Header with Profile */}
           <div className="flex items-center gap-4 flex-shrink-0">
             <div
@@ -46,11 +46,12 @@ export default function DashboardPage() {
             className="flex gap-4"
             style={{
               background: "transparent",
+              maxWidth: "500px",
             }}
           >
             {/* Matches */}
             <div 
-              className="flex flex-1 items-center gap-3 rounded-2xl px-3 py-4"
+              className="flex flex-1 items-center gap-3 rounded-2xl p-4"
               style={{
                 background: "#FFFFFF",
                 border: "1px solid #E5E7EB",
@@ -87,7 +88,7 @@ export default function DashboardPage() {
 
             {/* Responses */}
             <div 
-              className="flex flex-1 items-center gap-3 rounded-2xl px-3 py-4"
+              className="flex flex-1 items-center gap-3 rounded-2xl p-4"
               style={{
                 background: "#FFFFFF",
                 border: "1px solid #E5E7EB",
@@ -122,7 +123,7 @@ export default function DashboardPage() {
 
             {/* Follow-ups */}
             <div 
-              className="flex flex-1 items-center gap-3 rounded-2xl px-3 py-4"
+              className="flex flex-1 items-center gap-3 rounded-2xl p-4"
               style={{
                 background: "#FFFFFF",
                 border: "1px solid #E5E7EB",
