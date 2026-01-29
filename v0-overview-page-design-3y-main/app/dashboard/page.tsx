@@ -16,7 +16,7 @@ export default function DashboardPage() {
         <PageHeader />
         
         {/* Today Section with Stats */}
-        <div className="mb-6 flex items-center gap-6">
+        <div className="mb-6 flex items-center gap-12">
           {/* Left: Today Header with Profile */}
           <div className="flex items-center gap-4 flex-shrink-0">
             <div
