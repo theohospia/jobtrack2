@@ -88,26 +88,17 @@ export default function DashboardPage() {
                 12
               </p>
             </div>
-            <div className="flex items-center gap-2 ml-4">
+            <div className="flex-shrink-0">
               <button
-                className="flex items-center justify-center rounded-lg p-2 transition-colors flex-shrink-0"
-                style={{ background: "#F1F5F9", color: "#64748B" }}
+                className="cursor-pointer rounded-lg px-3 py-2 text-xs font-medium transition-colors"
+                style={{ 
+                  background: "#F1F5F9",
+                  color: "#2563EB",
+                }}
                 onMouseEnter={(e) => e.currentTarget.style.background = "#E2E8F0"}
                 onMouseLeave={(e) => e.currentTarget.style.background = "#F1F5F9"}
               >
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M14 9V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h6.5M19 8h-6v8h6V8Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </button>
-              <button
-                className="flex items-center justify-center rounded-lg p-2 transition-colors flex-shrink-0"
-                style={{ background: "#F1F5F9", color: "#64748B" }}
-                onMouseEnter={(e) => e.currentTarget.style.background = "#E2E8F0"}
-                onMouseLeave={(e) => e.currentTarget.style.background = "#F1F5F9"}
-              >
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M10 15v4a2 2 0 0 0 2 2h6.5M5 8h6v8H5V8M9 21H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
+                View more
               </button>
             </div>
           </div>
@@ -145,26 +136,17 @@ export default function DashboardPage() {
                 4
               </p>
             </div>
-            <div className="flex items-center gap-2 ml-4">
+            <div className="flex-shrink-0">
               <button
-                className="flex items-center justify-center rounded-lg p-2 transition-colors flex-shrink-0"
-                style={{ background: "#F1F5F9", color: "#64748B" }}
+                className="cursor-pointer rounded-lg px-3 py-2 text-xs font-medium transition-colors"
+                style={{ 
+                  background: "#F1F5F9",
+                  color: "#2563EB",
+                }}
                 onMouseEnter={(e) => e.currentTarget.style.background = "#E2E8F0"}
                 onMouseLeave={(e) => e.currentTarget.style.background = "#F1F5F9"}
               >
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M14 9V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h6.5M19 8h-6v8h6V8Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </button>
-              <button
-                className="flex items-center justify-center rounded-lg p-2 transition-colors flex-shrink-0"
-                style={{ background: "#F1F5F9", color: "#64748B" }}
-                onMouseEnter={(e) => e.currentTarget.style.background = "#E2E8F0"}
-                onMouseLeave={(e) => e.currentTarget.style.background = "#F1F5F9"}
-              >
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M10 15v4a2 2 0 0 0 2 2h6.5M5 8h6v8H5V8M9 21H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
+                View more
               </button>
             </div>
           </div>
@@ -203,26 +185,17 @@ export default function DashboardPage() {
                 3
               </p>
             </div>
-            <div className="flex items-center gap-2 ml-4">
+            <div className="flex-shrink-0">
               <button
-                className="flex items-center justify-center rounded-lg p-2 transition-colors flex-shrink-0"
-                style={{ background: "#F1F5F9", color: "#64748B" }}
+                className="cursor-pointer rounded-lg px-3 py-2 text-xs font-medium transition-colors"
+                style={{ 
+                  background: "#F1F5F9",
+                  color: "#2563EB",
+                }}
                 onMouseEnter={(e) => e.currentTarget.style.background = "#E2E8F0"}
                 onMouseLeave={(e) => e.currentTarget.style.background = "#F1F5F9"}
               >
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M14 9V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h6.5M19 8h-6v8h6V8Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </button>
-              <button
-                className="flex items-center justify-center rounded-lg p-2 transition-colors flex-shrink-0"
-                style={{ background: "#F1F5F9", color: "#64748B" }}
-                onMouseEnter={(e) => e.currentTarget.style.background = "#E2E8F0"}
-                onMouseLeave={(e) => e.currentTarget.style.background = "#F1F5F9"}
-              >
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M10 15v4a2 2 0 0 0 2 2h6.5M5 8h6v8H5V8M9 21H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
+                View more
               </button>
             </div>
           </div>
