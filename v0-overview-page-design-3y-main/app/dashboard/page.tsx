@@ -293,9 +293,9 @@ export default function DashboardPage() {
               </p>
             </div>
 
-            {/* Job Card 4 */}
+            {/* CTA Card */}
             <div
-              className="rounded-2xl p-5 transition-colors"
+              className="rounded-2xl p-5 transition-colors flex items-center justify-between"
               style={{
                 background: "#FFFFFF",
                 border: "1px solid #E5E7EB",
@@ -303,15 +303,25 @@ export default function DashboardPage() {
               onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
               onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
             >
-              <h4 className="text-sm font-semibold" style={{ color: "#0F172A" }}>
-                Data Analyst
-              </h4>
-              <p className="mt-1 text-xs" style={{ color: "#64748B" }}>
-                Analytics Pro · Boston, MA
-              </p>
-              <p className="mt-2 text-xs" style={{ color: "#94A3B8" }}>
-                Posted 3 hours ago
-              </p>
+              <div>
+                <h4 className="text-sm font-semibold" style={{ color: "#0F172A" }}>
+                  Explore more jobs
+                </h4>
+                <p className="mt-1 text-xs" style={{ color: "#64748B" }}>
+                  1000s of jobs waiting for you
+                </p>
+              </div>
+              <button
+                className="cursor-pointer rounded-lg px-4 py-2 text-xs font-semibold transition-all duration-[120ms] flex-shrink-0 ml-4"
+                style={{
+                  background: "#2563EB",
+                  color: "#FFFFFF",
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.background = "#1D4ED8"}
+                onMouseLeave={(e) => e.currentTarget.style.background = "#2563EB"}
+              >
+                Browse
+              </button>
             </div>
           </div>
         </section>
