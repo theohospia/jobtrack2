@@ -361,11 +361,11 @@ export default function DashboardPage() {
               <button
                 className="cursor-pointer rounded-lg px-4 py-2 text-xs font-semibold transition-all duration-[120ms] flex-shrink-0 ml-4"
                 style={{
-                  background: "#2563EB",
-                  color: "#FFFFFF",
+                  background: "#F1F5F9",
+                  color: "#0F172A",
                 }}
-                onMouseEnter={(e) => e.currentTarget.style.background = "#1D4ED8"}
-                onMouseLeave={(e) => e.currentTarget.style.background = "#2563EB"}
+                onMouseEnter={(e) => e.currentTarget.style.background = "#E2E8F0"}
+                onMouseLeave={(e) => e.currentTarget.style.background = "#F1F5F9"}
               >
                 Browse
               </button>
