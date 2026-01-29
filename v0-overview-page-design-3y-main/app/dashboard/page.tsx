@@ -39,7 +39,7 @@ export default function DashboardPage() {
         >
           {/* Matches */}
           <div 
-            className="flex flex-1 flex-col items-center rounded-2xl p-6"
+            className="flex flex-1 items-center gap-4 rounded-2xl p-6"
             style={{
               background: "#FFFFFF",
               border: "1px solid #E5E7EB",
@@ -47,7 +47,7 @@ export default function DashboardPage() {
             }}
           >
             <div
-              className="flex items-center justify-center rounded-full w-12 h-12"
+              className="flex items-center justify-center rounded-full w-12 h-12 flex-shrink-0"
               style={{
                 background: "#DBEAFE",
               }}
@@ -58,23 +58,25 @@ export default function DashboardPage() {
                 <path d="M12 14C10.3431 14 9 15.3431 9 17V20H15V17C15 15.3431 13.6569 14 12 14Z" fill="#2563EB" />
               </svg>
             </div>
-            <p
-              className="mt-3 text-xs font-medium"
-              style={{ color: "#64748B" }}
-            >
-              Matches
-            </p>
-            <p
-              className="mt-2 text-2xl font-semibold"
-              style={{ color: "#0F172A" }}
-            >
-              12
-            </p>
+            <div className="flex flex-col">
+              <p
+                className="text-xs font-medium"
+                style={{ color: "#64748B" }}
+              >
+                Matches
+              </p>
+              <p
+                className="text-2xl font-semibold"
+                style={{ color: "#0F172A" }}
+              >
+                12
+              </p>
+            </div>
           </div>
 
           {/* Responses */}
           <div 
-            className="flex flex-1 flex-col items-center rounded-2xl p-6"
+            className="flex flex-1 items-center gap-4 rounded-2xl p-6"
             style={{
               background: "#FFFFFF",
               border: "1px solid #E5E7EB",
@@ -82,7 +84,7 @@ export default function DashboardPage() {
             }}
           >
             <div
-              className="flex items-center justify-center rounded-full w-12 h-12"
+              className="flex items-center justify-center rounded-full w-12 h-12 flex-shrink-0"
               style={{
                 background: "#DCFCE7",
               }}
@@ -91,23 +93,25 @@ export default function DashboardPage() {
                 <path d="M3 9L12 4L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" fill="#22C55E" stroke="#22C55E" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>
-            <p
-              className="mt-3 text-xs font-medium"
-              style={{ color: "#64748B" }}
-            >
-              Responses
-            </p>
-            <p
-              className="mt-2 text-2xl font-semibold"
-              style={{ color: "#0F172A" }}
-            >
-              4
-            </p>
+            <div className="flex flex-col">
+              <p
+                className="text-xs font-medium"
+                style={{ color: "#64748B" }}
+              >
+                Responses
+              </p>
+              <p
+                className="text-2xl font-semibold"
+                style={{ color: "#0F172A" }}
+              >
+                4
+              </p>
+            </div>
           </div>
 
           {/* Follow-ups */}
           <div 
-            className="flex flex-1 flex-col items-center rounded-2xl p-6"
+            className="flex flex-1 items-center gap-4 rounded-2xl p-6"
             style={{
               background: "#FFFFFF",
               border: "1px solid #E5E7EB",
@@ -115,7 +119,7 @@ export default function DashboardPage() {
             }}
           >
             <div
-              className="flex items-center justify-center rounded-full w-12 h-12"
+              className="flex items-center justify-center rounded-full w-12 h-12 flex-shrink-0"
               style={{
                 background: "#FEF08A",
               }}
@@ -125,18 +129,20 @@ export default function DashboardPage() {
                 <path d="M12 7V12L15.5 14.5" stroke="#EAB308" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>
-            <p
-              className="mt-3 text-xs font-medium"
-              style={{ color: "#64748B" }}
-            >
-              Follow-ups
-            </p>
-            <p
-              className="mt-2 text-2xl font-semibold"
-              style={{ color: "#0F172A" }}
-            >
-              3
-            </p>
+            <div className="flex flex-col">
+              <p
+                className="text-xs font-medium"
+                style={{ color: "#64748B" }}
+              >
+                Follow-ups
+              </p>
+              <p
+                className="text-2xl font-semibold"
+                style={{ color: "#0F172A" }}
+              >
+                3
+              </p>
+            </div>
           </div>
         </div>
         
