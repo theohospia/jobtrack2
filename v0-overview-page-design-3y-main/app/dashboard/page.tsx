@@ -173,7 +173,7 @@ export default function DashboardPage() {
             className="mb-6 text-[26px] font-semibold leading-[1.3]"
             style={{ color: "#0F172A", letterSpacing: "-0.3px" }}
           >
-            Tutorials
+            Welcome
           </h2>
 
           <div className="flex flex-col gap-6">
@@ -385,7 +385,7 @@ export default function DashboardPage() {
 
             {/* Job Card 5 */}
             <div
-              className="rounded-2xl p-5 transition-colors flex items-center justify-between"
+              className="rounded-2xl p-5 transition-colors"
               style={{
                 background: "#FFFFFF",
                 border: "1px solid #E5E7EB",
@@ -393,28 +393,15 @@ export default function DashboardPage() {
               onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
               onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
             >
-              <div>
-                <h4 className="text-sm font-semibold" style={{ color: "#0F172A" }}>
-                  Marketing Coordinator
-                </h4>
-                <p className="mt-1 text-xs" style={{ color: "#64748B" }}>
-                  Growth Labs · Remote
-                </p>
-                <p className="mt-2 text-xs" style={{ color: "#94A3B8" }}>
-                  Posted 1 day ago
-                </p>
-              </div>
-              <button
-                className="cursor-pointer rounded-lg px-4 py-2 text-xs font-semibold transition-all duration-[120ms] flex-shrink-0 ml-4"
-                style={{
-                  background: "#2563EB",
-                  color: "#FFFFFF",
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.background = "#1D4ED8"}
-                onMouseLeave={(e) => e.currentTarget.style.background = "#2563EB"}
-              >
-                Browse
-              </button>
+              <h4 className="text-sm font-semibold" style={{ color: "#0F172A" }}>
+                Marketing Coordinator
+              </h4>
+              <p className="mt-1 text-xs" style={{ color: "#64748B" }}>
+                Growth Labs · Remote
+              </p>
+              <p className="mt-2 text-xs" style={{ color: "#94A3B8" }}>
+                Posted 1 day ago
+              </p>
             </div>
           </div>
         </section>
