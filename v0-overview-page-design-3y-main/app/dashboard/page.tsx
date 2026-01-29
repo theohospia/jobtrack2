@@ -378,6 +378,48 @@ export default function DashboardPage() {
 
             {/* Job Card 3 */}
             <div
+              className="rounded-2xl p-5 transition-colors"
+              style={{
+                background: "#FFFFFF",
+                border: "1px solid #E5E7EB",
+              }}
+              onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
+              onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
+            >
+              <h4 className="text-sm font-semibold" style={{ color: "#0F172A" }}>
+                Senior Developer
+              </h4>
+              <p className="mt-1 text-xs" style={{ color: "#64748B" }}>
+                Tech Innovations Ltd. · Seattle, WA
+              </p>
+              <p className="mt-2 text-xs" style={{ color: "#94A3B8" }}>
+                Posted 4 hours ago
+              </p>
+            </div>
+
+            {/* Job Card 4 */}
+            <div
+              className="rounded-2xl p-5 transition-colors"
+              style={{
+                background: "#FFFFFF",
+                border: "1px solid #E5E7EB",
+              }}
+              onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
+              onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
+            >
+              <h4 className="text-sm font-semibold" style={{ color: "#0F172A" }}>
+                Business Analyst
+              </h4>
+              <p className="mt-1 text-xs" style={{ color: "#64748B" }}>
+                Consulting Partners · Boston, MA
+              </p>
+              <p className="mt-2 text-xs" style={{ color: "#94A3B8" }}>
+                Posted 8 hours ago
+              </p>
+            </div>
+
+            {/* Job Card 5 */}
+            <div
               className="rounded-2xl p-5 transition-colors flex items-center justify-between"
               style={{
                 background: "#FFFFFF",
