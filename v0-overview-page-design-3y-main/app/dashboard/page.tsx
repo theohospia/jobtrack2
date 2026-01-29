@@ -297,28 +297,28 @@ export default function DashboardPage() {
             <div
               className="rounded-2xl p-5 transition-colors flex items-center justify-between"
               style={{
-                background: "#2563EB",
-                border: "1px solid #2563EB",
+                background: "#FFFFFF",
+                border: "1px solid #E5E7EB",
               }}
-              onMouseEnter={(e) => e.currentTarget.style.borderColor = "#1D4ED8"}
-              onMouseLeave={(e) => e.currentTarget.style.borderColor = "#2563EB"}
+              onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
+              onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
             >
               <div>
-                <h4 className="text-sm font-semibold" style={{ color: "#FFFFFF" }}>
+                <h4 className="text-sm font-semibold" style={{ color: "#0F172A" }}>
                   Explore more jobs
                 </h4>
-                <p className="mt-1 text-xs" style={{ color: "#E0E7FF" }}>
+                <p className="mt-1 text-xs" style={{ color: "#64748B" }}>
                   1000s of jobs waiting for you
                 </p>
               </div>
               <button
                 className="cursor-pointer rounded-lg px-4 py-2 text-xs font-semibold transition-all duration-[120ms] flex-shrink-0 ml-4"
                 style={{
-                  background: "#FFFFFF",
-                  color: "#2563EB",
+                  background: "#2563EB",
+                  color: "#FFFFFF",
                 }}
-                onMouseEnter={(e) => e.currentTarget.style.background = "#F0F4FF"}
-                onMouseLeave={(e) => e.currentTarget.style.background = "#FFFFFF"}
+                onMouseEnter={(e) => e.currentTarget.style.background = "#1D4ED8"}
+                onMouseLeave={(e) => e.currentTarget.style.background = "#2563EB"}
               >
                 Browse
               </button>
