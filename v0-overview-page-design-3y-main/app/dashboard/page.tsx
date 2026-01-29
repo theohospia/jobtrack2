@@ -16,37 +16,37 @@ export default function DashboardPage() {
         <PageHeader />
         
         {/* Today Section with Stats */}
-        <div className="mb-6 flex items-start justify-between gap-6">
-          {/* Left: Today Header with Profile */}
-          <div className="flex items-center gap-4 flex-shrink-0">
-            <div
-              className="flex items-center justify-center rounded-full flex-shrink-0"
-              style={{
-                width: "56px",
-                height: "56px",
-                background: "#E2E8F0",
-                border: "2px solid #CBD5E1",
-              }}
-            >
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="16" cy="10" r="4" fill="#64748B" />
-                <path d="M16 16C12.6863 16 10 18.6863 10 22V28H22V22C22 18.6863 19.3137 16 16 16Z" fill="#64748B" />
-              </svg>
-            </div>
-            <div>
+        <div className="mb-6 flex gap-6">
+          {/* Left: Today Header with Profile and Subtext */}
+          <div className="flex flex-col gap-0">
+            <div className="flex items-center gap-4">
+              <div
+                className="flex items-center justify-center rounded-full flex-shrink-0"
+                style={{
+                  width: "64px",
+                  height: "64px",
+                  background: "#E2E8F0",
+                  border: "2px solid #CBD5E1",
+                }}
+              >
+                <svg width="36" height="36" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="16" cy="10" r="4" fill="#64748B" />
+                  <path d="M16 16C12.6863 16 10 18.6863 10 22V28H22V22C22 18.6863 19.3137 16 16 16Z" fill="#64748B" />
+                </svg>
+              </div>
               <h1 
                 className="text-[26px] font-semibold leading-[1.3]"
                 style={{ color: "#0F172A", letterSpacing: "-0.3px" }}
               >
                 Today
               </h1>
-              <p
-                className="mt-1 text-sm"
-                style={{ color: "#64748B" }}
-              >
-                Your job search progress and opportunities await.
-              </p>
             </div>
+            <p
+              className="mt-3 text-sm"
+              style={{ color: "#64748B" }}
+            >
+              Your job search progress and opportunities await.
+            </p>
           </div>
 
           {/* Right: Stats Container */}
@@ -58,7 +58,7 @@ export default function DashboardPage() {
           >
             {/* Matches */}
             <div 
-              className="flex flex-1 items-center gap-4 rounded-2xl p-6"
+              className="flex flex-1 flex-col items-start gap-2 rounded-2xl p-4"
               style={{
                 background: "#FFFFFF",
                 border: "1px solid #E5E7EB",
@@ -66,49 +66,36 @@ export default function DashboardPage() {
               }}
             >
               <div
-                className="flex items-center justify-center rounded-full w-12 h-12 flex-shrink-0"
+                className="flex items-center justify-center rounded-full w-10 h-10 flex-shrink-0"
                 style={{
                   background: "#DBEAFE",
                 }}
               >
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="8" cy="8" r="3" fill="#2563EB" />
                   <circle cx="16" cy="8" r="3" fill="#2563EB" />
                   <path d="M12 14C10.3431 14 9 15.3431 9 17V20H15V17C15 15.3431 13.6569 14 12 14Z" fill="#2563EB" />
                 </svg>
               </div>
-              <div className="flex flex-col flex-1">
-                <p
-                  className="text-xs font-medium"
-                  style={{ color: "#64748B" }}
-                >
-                  Matches
-                </p>
+              <div className="flex flex-col gap-0">
                 <p
                   className="text-2xl font-semibold"
                   style={{ color: "#0F172A" }}
                 >
                   12
                 </p>
-              </div>
-              <div className="flex-shrink-0">
-                <button
-                  className="cursor-pointer rounded-lg px-3 py-2 text-xs font-medium transition-colors"
-                  style={{ 
-                    background: "#F1F5F9",
-                    color: "#2563EB",
-                  }}
-                  onMouseEnter={(e) => e.currentTarget.style.background = "#E2E8F0"}
-                  onMouseLeave={(e) => e.currentTarget.style.background = "#F1F5F9"}
+                <p
+                  className="text-xs font-medium"
+                  style={{ color: "#64748B" }}
                 >
-                  View more
-                </button>
+                  Matches
+                </p>
               </div>
             </div>
 
             {/* Responses */}
             <div 
-              className="flex flex-1 items-center gap-4 rounded-2xl p-6"
+              className="flex flex-1 flex-col items-start gap-2 rounded-2xl p-4"
               style={{
                 background: "#FFFFFF",
                 border: "1px solid #E5E7EB",
@@ -116,47 +103,34 @@ export default function DashboardPage() {
               }}
             >
               <div
-                className="flex items-center justify-center rounded-full w-12 h-12 flex-shrink-0"
+                className="flex items-center justify-center rounded-full w-10 h-10 flex-shrink-0"
                 style={{
                   background: "#DBEAFE",
                 }}
               >
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 9L12 4L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" fill="#2563EB" stroke="#2563EB" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
-              <div className="flex flex-col flex-1">
-                <p
-                  className="text-xs font-medium"
-                  style={{ color: "#64748B" }}
-                >
-                  Responses
-                </p>
+              <div className="flex flex-col gap-0">
                 <p
                   className="text-2xl font-semibold"
                   style={{ color: "#0F172A" }}
                 >
                   4
                 </p>
-              </div>
-              <div className="flex-shrink-0">
-                <button
-                  className="cursor-pointer rounded-lg px-3 py-2 text-xs font-medium transition-colors"
-                  style={{ 
-                    background: "#F1F5F9",
-                    color: "#2563EB",
-                  }}
-                  onMouseEnter={(e) => e.currentTarget.style.background = "#E2E8F0"}
-                  onMouseLeave={(e) => e.currentTarget.style.background = "#F1F5F9"}
+                <p
+                  className="text-xs font-medium"
+                  style={{ color: "#64748B" }}
                 >
-                  View more
-                </button>
+                  Responses
+                </p>
               </div>
             </div>
 
             {/* Follow-ups */}
             <div 
-              className="flex flex-1 items-center gap-4 rounded-2xl p-6"
+              className="flex flex-1 flex-col items-start gap-2 rounded-2xl p-4"
               style={{
                 background: "#FFFFFF",
                 border: "1px solid #E5E7EB",
@@ -164,42 +138,29 @@ export default function DashboardPage() {
               }}
             >
               <div
-                className="flex items-center justify-center rounded-full w-12 h-12 flex-shrink-0"
+                className="flex items-center justify-center rounded-full w-10 h-10 flex-shrink-0"
                 style={{
                   background: "#DBEAFE",
                 }}
               >
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="12" cy="12" r="9" stroke="#2563EB" strokeWidth="2"/>
                   <path d="M12 7V12L15.5 14.5" stroke="#2563EB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
-              <div className="flex flex-col flex-1">
-                <p
-                  className="text-xs font-medium"
-                  style={{ color: "#64748B" }}
-                >
-                  Follow-ups
-                </p>
+              <div className="flex flex-col gap-0">
                 <p
                   className="text-2xl font-semibold"
                   style={{ color: "#0F172A" }}
                 >
                   3
                 </p>
-              </div>
-              <div className="flex-shrink-0">
-                <button
-                  className="cursor-pointer rounded-lg px-3 py-2 text-xs font-medium transition-colors"
-                  style={{ 
-                    background: "#F1F5F9",
-                    color: "#2563EB",
-                  }}
-                  onMouseEnter={(e) => e.currentTarget.style.background = "#E2E8F0"}
-                  onMouseLeave={(e) => e.currentTarget.style.background = "#F1F5F9"}
+                <p
+                  className="text-xs font-medium"
+                  style={{ color: "#64748B" }}
                 >
-                  View more
-                </button>
+                  Follow-ups
+                </p>
               </div>
             </div>
           </div>
