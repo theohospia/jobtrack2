@@ -224,15 +224,16 @@ export default function DashboardPage() {
             >
               {/* Image */}
               <div 
-                className="w-2/5 flex-shrink-0 flex items-center justify-center"
+                className="w-2/5 flex-shrink-0 overflow-hidden"
                 style={{ 
                   aspectRatio: "16/9",
-                  background: "#DBEAFE",
                 }}
               >
-                <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M32 8C18.7452 8 8 18.7452 8 32C8 45.2548 18.7452 56 32 56C45.2548 56 56 45.2548 56 32C56 18.7452 45.2548 8 32 8ZM28 40H36V48H28V40ZM36 36H28V20H36V36Z" fill="#2563EB"/>
-                </svg>
+                <img
+                  src="/placeholder.svg?height=200&width=350"
+                  alt="Tutorial 1: How to use the app"
+                  className="w-full h-full object-cover"
+                />
               </div>
               
               {/* Content */}
@@ -308,15 +309,16 @@ export default function DashboardPage() {
 
               {/* Image */}
               <div 
-                className="w-2/5 flex-shrink-0 flex items-center justify-center"
+                className="w-2/5 flex-shrink-0 overflow-hidden"
                 style={{ 
                   aspectRatio: "16/9",
-                  background: "#DBEAFE",
                 }}
               >
-                <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M56 12H8C4.68629 12 2 14.6863 2 18V46C2 49.3137 4.68629 52 8 52H56C59.3137 52 62 49.3137 62 46V18C62 14.6863 59.3137 12 56 12ZM8 18H56V30L42 22L8 38V18Z" fill="#2563EB"/>
-                </svg>
+                <img
+                  src="/placeholder.svg?height=200&width=350"
+                  alt="Tutorial 2: Set up your profile for better matches"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>
