@@ -16,37 +16,29 @@ export default function DashboardPage() {
         <PageHeader />
         
         {/* Today Section with Stats */}
-        <div className="mb-6 flex gap-6">
-          {/* Left: Today Header with Profile and Subtext */}
-          <div className="flex flex-col gap-0">
-            <div className="flex items-center gap-4">
-              <div
-                className="flex items-center justify-center rounded-full flex-shrink-0"
-                style={{
-                  width: "64px",
-                  height: "64px",
-                  background: "#E2E8F0",
-                  border: "2px solid #CBD5E1",
-                }}
-              >
-                <svg width="36" height="36" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="16" cy="10" r="4" fill="#64748B" />
-                  <path d="M16 16C12.6863 16 10 18.6863 10 22V28H22V22C22 18.6863 19.3137 16 16 16Z" fill="#64748B" />
-                </svg>
-              </div>
-              <h1 
-                className="text-[26px] font-semibold leading-[1.3]"
-                style={{ color: "#0F172A", letterSpacing: "-0.3px" }}
-              >
-                Today
-              </h1>
-            </div>
-            <p
-              className="mt-3 text-sm"
-              style={{ color: "#64748B" }}
+        <div className="mb-6 flex items-center gap-6">
+          {/* Left: Today Header with Profile */}
+          <div className="flex items-center gap-4 flex-shrink-0">
+            <div
+              className="flex items-center justify-center rounded-full flex-shrink-0"
+              style={{
+                width: "64px",
+                height: "64px",
+                background: "#E2E8F0",
+                border: "2px solid #CBD5E1",
+              }}
             >
-              Your job search progress and opportunities await.
-            </p>
+              <svg width="36" height="36" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="10" r="4" fill="#64748B" />
+                <path d="M16 16C12.6863 16 10 18.6863 10 22V28H22V22C22 18.6863 19.3137 16 16 16Z" fill="#64748B" />
+              </svg>
+            </div>
+            <h1 
+              className="text-[26px] font-semibold leading-[1.3]"
+              style={{ color: "#0F172A", letterSpacing: "-0.3px" }}
+            >
+              Today
+            </h1>
           </div>
 
           {/* Right: Stats Container */}
