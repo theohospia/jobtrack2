@@ -74,7 +74,7 @@ export default function DashboardPage() {
                 <path d="M12 14C10.3431 14 9 15.3431 9 17V20H15V17C15 15.3431 13.6569 14 12 14Z" fill="#2563EB" />
               </svg>
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col flex-1">
               <p
                 className="text-xs font-medium"
                 style={{ color: "#64748B" }}
@@ -87,6 +87,28 @@ export default function DashboardPage() {
               >
                 12
               </p>
+            </div>
+            <div className="flex items-center gap-2 ml-4">
+              <button
+                className="flex items-center justify-center rounded-lg p-2 transition-colors flex-shrink-0"
+                style={{ background: "#F1F5F9", color: "#64748B" }}
+                onMouseEnter={(e) => e.currentTarget.style.background = "#E2E8F0"}
+                onMouseLeave={(e) => e.currentTarget.style.background = "#F1F5F9"}
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14 9V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h6.5M19 8h-6v8h6V8Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
+              <button
+                className="flex items-center justify-center rounded-lg p-2 transition-colors flex-shrink-0"
+                style={{ background: "#F1F5F9", color: "#64748B" }}
+                onMouseEnter={(e) => e.currentTarget.style.background = "#E2E8F0"}
+                onMouseLeave={(e) => e.currentTarget.style.background = "#F1F5F9"}
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 15v4a2 2 0 0 0 2 2h6.5M5 8h6v8H5V8M9 21H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
             </div>
           </div>
 
@@ -109,7 +131,7 @@ export default function DashboardPage() {
                 <path d="M3 9L12 4L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" fill="#2563EB" stroke="#2563EB" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col flex-1">
               <p
                 className="text-xs font-medium"
                 style={{ color: "#64748B" }}
@@ -122,6 +144,28 @@ export default function DashboardPage() {
               >
                 4
               </p>
+            </div>
+            <div className="flex items-center gap-2 ml-4">
+              <button
+                className="flex items-center justify-center rounded-lg p-2 transition-colors flex-shrink-0"
+                style={{ background: "#F1F5F9", color: "#64748B" }}
+                onMouseEnter={(e) => e.currentTarget.style.background = "#E2E8F0"}
+                onMouseLeave={(e) => e.currentTarget.style.background = "#F1F5F9"}
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14 9V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h6.5M19 8h-6v8h6V8Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
+              <button
+                className="flex items-center justify-center rounded-lg p-2 transition-colors flex-shrink-0"
+                style={{ background: "#F1F5F9", color: "#64748B" }}
+                onMouseEnter={(e) => e.currentTarget.style.background = "#E2E8F0"}
+                onMouseLeave={(e) => e.currentTarget.style.background = "#F1F5F9"}
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 15v4a2 2 0 0 0 2 2h6.5M5 8h6v8H5V8M9 21H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
             </div>
           </div>
 
@@ -145,7 +189,7 @@ export default function DashboardPage() {
                 <path d="M12 7V12L15.5 14.5" stroke="#2563EB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col flex-1">
               <p
                 className="text-xs font-medium"
                 style={{ color: "#64748B" }}
@@ -158,6 +202,28 @@ export default function DashboardPage() {
               >
                 3
               </p>
+            </div>
+            <div className="flex items-center gap-2 ml-4">
+              <button
+                className="flex items-center justify-center rounded-lg p-2 transition-colors flex-shrink-0"
+                style={{ background: "#F1F5F9", color: "#64748B" }}
+                onMouseEnter={(e) => e.currentTarget.style.background = "#E2E8F0"}
+                onMouseLeave={(e) => e.currentTarget.style.background = "#F1F5F9"}
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14 9V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h6.5M19 8h-6v8h6V8Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
+              <button
+                className="flex items-center justify-center rounded-lg p-2 transition-colors flex-shrink-0"
+                style={{ background: "#F1F5F9", color: "#64748B" }}
+                onMouseEnter={(e) => e.currentTarget.style.background = "#E2E8F0"}
+                onMouseLeave={(e) => e.currentTarget.style.background = "#F1F5F9"}
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 15v4a2 2 0 0 0 2 2h6.5M5 8h6v8H5V8M9 21H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
             </div>
           </div>
         </div>
