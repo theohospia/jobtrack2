@@ -194,10 +194,13 @@ export default function DashboardPage() {
                   3 min · Beginner
                 </p>
                 <button
-                  className="mt-4 flex items-center gap-1 cursor-pointer text-sm font-medium transition-colors"
-                  style={{ color: "#2563EB" }}
-                  onMouseEnter={(e) => e.currentTarget.style.color = "#1D4ED8"}
-                  onMouseLeave={(e) => e.currentTarget.style.color = "#2563EB"}
+                  className="mt-4 flex items-center gap-1 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2"
+                  style={{ 
+                    background: "#2563EB",
+                    color: "#FFFFFF" 
+                  }}
+                  onMouseEnter={(e) => e.currentTarget.style.background = "#1D4ED8"}
+                  onMouseLeave={(e) => e.currentTarget.style.background = "#2563EB"}
                 >
                   Watch
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -232,10 +235,13 @@ export default function DashboardPage() {
                   5 min · Quick win
                 </p>
                 <button
-                  className="mt-4 flex items-center gap-1 cursor-pointer text-sm font-medium transition-colors"
-                  style={{ color: "#2563EB" }}
-                  onMouseEnter={(e) => e.currentTarget.style.color = "#1D4ED8"}
-                  onMouseLeave={(e) => e.currentTarget.style.color = "#2563EB"}
+                  className="mt-4 flex items-center gap-1 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2"
+                  style={{ 
+                    background: "#2563EB",
+                    color: "#FFFFFF" 
+                  }}
+                  onMouseEnter={(e) => e.currentTarget.style.background = "#1D4ED8"}
+                  onMouseLeave={(e) => e.currentTarget.style.background = "#2563EB"}
                 >
                   Watch
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
