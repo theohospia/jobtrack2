@@ -15,95 +15,147 @@ export default function DashboardPage() {
       <main className="mx-auto max-w-[1120px] px-6 pt-6 pb-10">
         <PageHeader />
         
-        {/* Today Section */}
-        <h1 
-          className="mb-2 text-[26px] font-semibold leading-[1.3]"
-          style={{ color: "#0F172A", letterSpacing: "-0.3px" }}
-        >
-          Today
-        </h1>
-        
-        <p
-          className="mb-6 text-sm"
-          style={{ color: "#64748B" }}
-        >
-          Your job search progress and opportunities await.
-        </p>
-
-        {/* Stats Container */}
-        <div
-          className="mb-8 flex gap-6"
-          style={{
-            background: "transparent",
-          }}
-        >
-          {/* Matches */}
-          <div 
-            className="flex flex-1 flex-col items-center rounded-2xl p-6"
-            style={{
-              background: "#FFFFFF",
-              border: "1px solid #E5E7EB",
-              boxShadow: "0 1px 3px rgba(0, 0, 0, 0.08)",
-            }}
-          >
-            <p
-              className="text-2xl font-semibold"
-              style={{ color: "#0F172A" }}
+        {/* Today Section with Stats */}
+        <div className="mb-6 flex items-center gap-12">
+          {/* Left: Today Header with Profile */}
+          <div className="flex items-center gap-4 flex-shrink-0">
+            <div
+              className="flex items-center justify-center rounded-full flex-shrink-0"
+              style={{
+                width: "64px",
+                height: "64px",
+                background: "#E2E8F0",
+                border: "2px solid #CBD5E1",
+              }}
             >
-              12
-            </p>
-            <p
-              className="mt-2 text-xs font-medium"
-              style={{ color: "#64748B" }}
+              <svg width="36" height="36" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="10" r="4" fill="#64748B" />
+                <path d="M16 16C12.6863 16 10 18.6863 10 22V28H22V22C22 18.6863 19.3137 16 16 16Z" fill="#64748B" />
+              </svg>
+            </div>
+            <h1 
+              className="text-[26px] font-semibold leading-[1.3]"
+              style={{ color: "#0F172A", letterSpacing: "-0.3px" }}
             >
-              Matches
-            </p>
+              Today
+            </h1>
           </div>
 
-          {/* Responses */}
-          <div 
-            className="flex flex-1 flex-col items-center rounded-2xl p-6"
+          {/* Right: Stats Container */}
+          <div
+            className="flex gap-4"
             style={{
-              background: "#FFFFFF",
-              border: "1px solid #E5E7EB",
-              boxShadow: "0 1px 3px rgba(0, 0, 0, 0.08)",
+              background: "transparent",
+              maxWidth: "500px",
             }}
           >
-            <p
-              className="text-2xl font-semibold"
-              style={{ color: "#0F172A" }}
+            {/* Matches */}
+            <div 
+              className="flex flex-1 items-center gap-3 rounded-2xl p-4"
+              style={{
+                background: "#FFFFFF",
+                border: "1px solid #E5E7EB",
+                boxShadow: "0 1px 3px rgba(0, 0, 0, 0.08)",
+              }}
             >
-              4
-            </p>
-            <p
-              className="mt-2 text-xs font-medium"
-              style={{ color: "#64748B" }}
-            >
-              Responses
-            </p>
-          </div>
+              <div
+                className="flex items-center justify-center rounded-full w-10 h-10 flex-shrink-0"
+                style={{
+                  background: "#DBEAFE",
+                }}
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="8" cy="8" r="3" fill="#2563EB" />
+                  <circle cx="16" cy="8" r="3" fill="#2563EB" />
+                  <path d="M12 14C10.3431 14 9 15.3431 9 17V20H15V17C15 15.3431 13.6569 14 12 14Z" fill="#2563EB" />
+                </svg>
+              </div>
+              <div className="flex flex-col gap-0">
+                <p
+                  className="text-2xl font-semibold leading-none"
+                  style={{ color: "#0F172A" }}
+                >
+                  12
+                </p>
+                <p
+                  className="text-xs font-medium"
+                  style={{ color: "#64748B" }}
+                >
+                  Matches
+                </p>
+              </div>
+            </div>
 
-          {/* Follow-ups */}
-          <div 
-            className="flex flex-1 flex-col items-center rounded-2xl p-6"
-            style={{
-              background: "#FFFFFF",
-              border: "1px solid #E5E7EB",
-              boxShadow: "0 1px 3px rgba(0, 0, 0, 0.08)",
-            }}
-          >
-            <p
-              className="text-2xl font-semibold"
-              style={{ color: "#2563EB" }}
+            {/* Responses */}
+            <div 
+              className="flex flex-1 items-center gap-3 rounded-2xl p-4"
+              style={{
+                background: "#FFFFFF",
+                border: "1px solid #E5E7EB",
+                boxShadow: "0 1px 3px rgba(0, 0, 0, 0.08)",
+              }}
             >
-              3
-            </p>
-            <p
-              className="mt-2 text-xs font-medium"
-              style={{ color: "#2563EB" }}
+              <div
+                className="flex items-center justify-center rounded-full w-10 h-10 flex-shrink-0"
+                style={{
+                  background: "#DBEAFE",
+                }}
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 9L12 4L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" fill="#2563EB" stroke="#2563EB" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <div className="flex flex-col gap-0">
+                <p
+                  className="text-2xl font-semibold leading-none"
+                  style={{ color: "#0F172A" }}
+                >
+                  4
+                </p>
+                <p
+                  className="text-xs font-medium"
+                  style={{ color: "#64748B" }}
+                >
+                  Responses
+                </p>
+              </div>
+            </div>
+
+            {/* Follow-ups */}
+            <div 
+              className="flex flex-1 items-center gap-3 rounded-2xl p-4"
+              style={{
+                background: "#FFFFFF",
+                border: "1px solid #E5E7EB",
+                boxShadow: "0 1px 3px rgba(0, 0, 0, 0.08)",
+              }}
             >
-              Follow-ups
-            </p>
+              <div
+                className="flex items-center justify-center rounded-full w-10 h-10 flex-shrink-0"
+                style={{
+                  background: "#DBEAFE",
+                }}
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="9" stroke="#2563EB" strokeWidth="2"/>
+                  <path d="M12 7V12L15.5 14.5" stroke="#2563EB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <div className="flex flex-col gap-0">
+                <p
+                  className="text-2xl font-semibold leading-none"
+                  style={{ color: "#0F172A" }}
+                >
+                  3
+                </p>
+                <p
+                  className="text-xs font-medium"
+                  style={{ color: "#64748B" }}
+                >
+                  Follow-ups
+                </p>
+              </div>
+            </div>
           </div>
         </div>
         
@@ -114,7 +166,7 @@ export default function DashboardPage() {
             className="mb-6 text-[26px] font-semibold leading-[1.3]"
             style={{ color: "#0F172A", letterSpacing: "-0.3px" }}
           >
-            Tutorials
+            Welcome
           </h2>
 
           <div className="flex flex-col gap-6">
@@ -131,12 +183,14 @@ export default function DashboardPage() {
               {/* Image */}
               <div 
                 className="w-2/5 flex-shrink-0 overflow-hidden"
-                style={{ aspectRatio: "16/9" }}
+                style={{ 
+                  aspectRatio: "16/9",
+                }}
               >
                 <img
-                  src="https://www.efinancialcareers.fr/img/resize=width:540,height:320,fit:crop/vAvBKQzoTLyOOPWQtfc8"
-                  alt="Tutorial 1"
-                  className="h-full w-full object-cover"
+                  src="/placeholder.svg?height=200&width=350"
+                  alt="Tutorial 1: How to use the app"
+                  className="w-full h-full object-cover"
                 />
               </div>
               
@@ -155,10 +209,13 @@ export default function DashboardPage() {
                   3 min · Beginner
                 </p>
                 <button
-                  className="mt-4 flex items-center gap-1 cursor-pointer text-sm font-medium transition-colors"
-                  style={{ color: "#2563EB" }}
-                  onMouseEnter={(e) => e.currentTarget.style.color = "#1D4ED8"}
-                  onMouseLeave={(e) => e.currentTarget.style.color = "#2563EB"}
+                  className="mt-4 flex items-center gap-1 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2"
+                  style={{ 
+                    background: "#2563EB",
+                    color: "#FFFFFF" 
+                  }}
+                  onMouseEnter={(e) => e.currentTarget.style.background = "#1D4ED8"}
+                  onMouseLeave={(e) => e.currentTarget.style.background = "#2563EB"}
                 >
                   Watch
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -193,10 +250,13 @@ export default function DashboardPage() {
                   5 min · Quick win
                 </p>
                 <button
-                  className="mt-4 flex items-center gap-1 cursor-pointer text-sm font-medium transition-colors"
-                  style={{ color: "#2563EB" }}
-                  onMouseEnter={(e) => e.currentTarget.style.color = "#1D4ED8"}
-                  onMouseLeave={(e) => e.currentTarget.style.color = "#2563EB"}
+                  className="mt-4 flex items-center gap-1 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2"
+                  style={{ 
+                    background: "#2563EB",
+                    color: "#FFFFFF" 
+                  }}
+                  onMouseEnter={(e) => e.currentTarget.style.background = "#1D4ED8"}
+                  onMouseLeave={(e) => e.currentTarget.style.background = "#2563EB"}
                 >
                   Watch
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -208,12 +268,14 @@ export default function DashboardPage() {
               {/* Image */}
               <div 
                 className="w-2/5 flex-shrink-0 overflow-hidden"
-                style={{ aspectRatio: "16/9" }}
+                style={{ 
+                  aspectRatio: "16/9",
+                }}
               >
                 <img
-                  src="https://www.efinancialcareers.fr/img/resize=width:350,height:207,fit:crop/DyLoYqEiQCepjRaEmtAM"
-                  alt="Tutorial 2"
-                  className="h-full w-full object-cover"
+                  src="/placeholder.svg?height=200&width=350"
+                  alt="Tutorial 2: Set up your profile for better matches"
+                  className="w-full h-full object-cover"
                 />
               </div>
             </div>
@@ -229,237 +291,110 @@ export default function DashboardPage() {
             Latest jobs
           </h2>
 
-          <div className="grid grid-cols-2 gap-6">
-            {/* Left Column */}
-            <div className="flex flex-col gap-4">
-              {/* Job Card 1 */}
-              <div
-                className="rounded-2xl p-5 transition-colors"
-                style={{
-                  background: "#FFFFFF",
-                  border: "1px solid #E5E7EB",
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
-                onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
-              >
-                <h4 className="text-sm font-semibold" style={{ color: "#0F172A" }}>
-                  Product Manager
-                </h4>
-                <p className="mt-1 text-xs" style={{ color: "#64748B" }}>
-                  TechCorp Inc. · San Francisco, CA
-                </p>
-                <p className="mt-2 text-xs" style={{ color: "#94A3B8" }}>
-                  Posted 2 hours ago
-                </p>
-              </div>
-
-              {/* Job Card 2 */}
-              <div
-                className="rounded-2xl p-5 transition-colors"
-                style={{
-                  background: "#FFFFFF",
-                  border: "1px solid #E5E7EB",
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
-                onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
-              >
-                <h4 className="text-sm font-semibold" style={{ color: "#0F172A" }}>
-                  UX Designer
-                </h4>
-                <p className="mt-1 text-xs" style={{ color: "#64748B" }}>
-                  Design Studio Co. · New York, NY
-                </p>
-                <p className="mt-2 text-xs" style={{ color: "#94A3B8" }}>
-                  Posted 5 hours ago
-                </p>
-              </div>
-
-              {/* Job Card 3 */}
-              <div
-                className="rounded-2xl p-5 transition-colors"
-                style={{
-                  background: "#FFFFFF",
-                  border: "1px solid #E5E7EB",
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
-                onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
-              >
-                <h4 className="text-sm font-semibold" style={{ color: "#0F172A" }}>
-                  Marketing Coordinator
-                </h4>
-                <p className="mt-1 text-xs" style={{ color: "#64748B" }}>
-                  Growth Labs · Remote
-                </p>
-                <p className="mt-2 text-xs" style={{ color: "#94A3B8" }}>
-                  Posted 1 day ago
-                </p>
-              </div>
-
-              {/* Job Card 7 */}
-              <div
-                className="rounded-2xl p-5 transition-colors"
-                style={{
-                  background: "#FFFFFF",
-                  border: "1px solid #E5E7EB",
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
-                onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
-              >
-                <h4 className="text-sm font-semibold" style={{ color: "#0F172A" }}>
-                  Business Analyst
-                </h4>
-                <p className="mt-1 text-xs" style={{ color: "#64748B" }}>
-                  Strategy Consulting · Denver, CO
-                </p>
-                <p className="mt-2 text-xs" style={{ color: "#94A3B8" }}>
-                  Posted 4 hours ago
-                </p>
-              </div>
+          <div className="flex flex-col gap-4">
+            {/* Job Card 1 */}
+            <div
+              className="rounded-2xl p-5 transition-colors"
+              style={{
+                background: "#FFFFFF",
+                border: "1px solid #E5E7EB",
+              }}
+              onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
+              onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
+            >
+              <h4 className="text-sm font-semibold" style={{ color: "#0F172A" }}>
+                Product Manager
+              </h4>
+              <p className="mt-1 text-xs" style={{ color: "#64748B" }}>
+                TechCorp Inc. · San Francisco, CA
+              </p>
+              <p className="mt-2 text-xs" style={{ color: "#94A3B8" }}>
+                Posted 2 hours ago
+              </p>
             </div>
 
-            {/* Right Column */}
-            <div className="flex flex-col gap-4">
-              {/* Job Card 4 */}
-              <div
-                className="rounded-2xl p-5 transition-colors"
-                style={{
-                  background: "#FFFFFF",
-                  border: "1px solid #E5E7EB",
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
-                onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
-              >
-                <h4 className="text-sm font-semibold" style={{ color: "#0F172A" }}>
-                  Data Analyst
-                </h4>
-                <p className="mt-1 text-xs" style={{ color: "#64748B" }}>
-                  Analytics Pro · Boston, MA
-                </p>
-                <p className="mt-2 text-xs" style={{ color: "#94A3B8" }}>
-                  Posted 3 hours ago
-                </p>
-              </div>
-
-              {/* Job Card 5 */}
-              <div
-                className="rounded-2xl p-5 transition-colors"
-                style={{
-                  background: "#FFFFFF",
-                  border: "1px solid #E5E7EB",
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
-                onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
-              >
-                <h4 className="text-sm font-semibold" style={{ color: "#0F172A" }}>
-                  Frontend Developer
-                </h4>
-                <p className="mt-1 text-xs" style={{ color: "#64748B" }}>
-                  Web Solutions Ltd. · Austin, TX
-                </p>
-                <p className="mt-2 text-xs" style={{ color: "#94A3B8" }}>
-                  Posted 6 hours ago
-                </p>
-              </div>
-
-              {/* Job Card 6 */}
-              <div
-                className="rounded-2xl p-5 transition-colors"
-                style={{
-                  background: "#FFFFFF",
-                  border: "1px solid #E5E7EB",
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
-                onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
-              >
-                <h4 className="text-sm font-semibold" style={{ color: "#0F172A" }}>
-                  Sales Manager
-                </h4>
-                <p className="mt-1 text-xs" style={{ color: "#64748B" }}>
-                  Enterprise Sales Co. · Chicago, IL
-                </p>
-                <p className="mt-2 text-xs" style={{ color: "#94A3B8" }}>
-                  Posted 1 day ago
-                </p>
-              </div>
-
-              {/* CTA Card */}
-              <div
-                className="rounded-2xl p-5 transition-colors flex flex-col justify-between"
-                style={{
-                  background: "#FFFFFF",
-                  border: "1px solid #E5E7EB",
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
-                onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
-              >
-                <div>
-                  <h4 className="text-sm font-semibold" style={{ color: "#0F172A" }}>
-                    Find your next opportunity
-                  </h4>
-                  <p className="mt-1 text-xs" style={{ color: "#64748B" }}>
-                    Discover roles matching your profile.
-                  </p>
-                </div>
-                <button
-                  className="mt-4 cursor-pointer rounded-lg px-4 py-2 text-xs font-semibold transition-all duration-[120ms] w-fit"
-                  style={{
-                    background: "#2563EB",
-                    color: "#FFFFFF",
-                  }}
-                  onMouseEnter={(e) => e.currentTarget.style.background = "#1D4ED8"}
-                  onMouseLeave={(e) => e.currentTarget.style.background = "#2563EB"}
-                >
-                  Explore
-                </button>
-              </div>
+            {/* Job Card 2 */}
+            <div
+              className="rounded-2xl p-5 transition-colors"
+              style={{
+                background: "#FFFFFF",
+                border: "1px solid #E5E7EB",
+              }}
+              onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
+              onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
+            >
+              <h4 className="text-sm font-semibold" style={{ color: "#0F172A" }}>
+                UX Designer
+              </h4>
+              <p className="mt-1 text-xs" style={{ color: "#64748B" }}>
+                Design Studio Co. · New York, NY
+              </p>
+              <p className="mt-2 text-xs" style={{ color: "#94A3B8" }}>
+                Posted 5 hours ago
+              </p>
             </div>
-          </div>
-        </section>
 
-        {/* Newsletter Section */}
-        <section className="mt-12">
-          <div
-            className="rounded-2xl p-8"
-            style={{
-              background: "#FFFFFF",
-              border: "1px solid #E5E7EB",
-            }}
-          >
-            <h2
-              className="text-2xl font-semibold"
-              style={{ color: "#0F172A" }}
+            {/* Job Card 3 */}
+            <div
+              className="rounded-2xl p-5 transition-colors"
+              style={{
+                background: "#FFFFFF",
+                border: "1px solid #E5E7EB",
+              }}
+              onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
+              onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
             >
-              Join our newsletter
-            </h2>
-            <p
-              className="mt-2 text-sm"
-              style={{ color: "#64748B" }}
+              <h4 className="text-sm font-semibold" style={{ color: "#0F172A" }}>
+                Senior Developer
+              </h4>
+              <p className="mt-1 text-xs" style={{ color: "#64748B" }}>
+                Tech Innovations Ltd. · Seattle, WA
+              </p>
+              <p className="mt-2 text-xs" style={{ color: "#94A3B8" }}>
+                Posted 4 hours ago
+              </p>
+            </div>
+
+            {/* Job Card 4 */}
+            <div
+              className="rounded-2xl p-5 transition-colors"
+              style={{
+                background: "#FFFFFF",
+                border: "1px solid #E5E7EB",
+              }}
+              onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
+              onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
             >
-              Get weekly tips, job opportunities, and career insights delivered to your inbox.
-            </p>
-            <div className="mt-4 flex gap-2">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 rounded-lg border px-4 py-2 text-sm transition-colors"
-                style={{
-                  borderColor: "#E5E7EB",
-                  background: "#FFFFFF",
-                }}
-                onFocus={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
-                onBlur={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
-              />
-              <button
-                className="cursor-pointer rounded-lg px-6 py-2 text-sm font-semibold transition-all duration-[120ms]"
-                style={{
-                  background: "#2563EB",
-                  color: "#FFFFFF",
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.background = "#1D4ED8"}
-                onMouseLeave={(e) => e.currentTarget.style.background = "#2563EB"}
-              >
-                Subscribe
-              </button>
+              <h4 className="text-sm font-semibold" style={{ color: "#0F172A" }}>
+                Business Analyst
+              </h4>
+              <p className="mt-1 text-xs" style={{ color: "#64748B" }}>
+                Consulting Partners · Boston, MA
+              </p>
+              <p className="mt-2 text-xs" style={{ color: "#94A3B8" }}>
+                Posted 8 hours ago
+              </p>
+            </div>
+
+            {/* Job Card 5 */}
+            <div
+              className="rounded-2xl p-5 transition-colors"
+              style={{
+                background: "#FFFFFF",
+                border: "1px solid #E5E7EB",
+              }}
+              onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
+              onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
+            >
+              <h4 className="text-sm font-semibold" style={{ color: "#0F172A" }}>
+                Marketing Coordinator
+              </h4>
+              <p className="mt-1 text-xs" style={{ color: "#64748B" }}>
+                Growth Labs · Remote
+              </p>
+              <p className="mt-2 text-xs" style={{ color: "#94A3B8" }}>
+                Posted 1 day ago
+              </p>
             </div>
           </div>
         </section>
