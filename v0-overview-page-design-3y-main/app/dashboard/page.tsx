@@ -337,27 +337,6 @@ export default function DashboardPage() {
 
             {/* Job Card 3 */}
             <div
-              className="rounded-2xl p-5 transition-colors"
-              style={{
-                background: "#FFFFFF",
-                border: "1px solid #E5E7EB",
-              }}
-              onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
-              onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
-            >
-              <h4 className="text-sm font-semibold" style={{ color: "#0F172A" }}>
-                Marketing Coordinator
-              </h4>
-              <p className="mt-1 text-xs" style={{ color: "#64748B" }}>
-                Growth Labs · Remote
-              </p>
-              <p className="mt-2 text-xs" style={{ color: "#94A3B8" }}>
-                Posted 1 day ago
-              </p>
-            </div>
-
-            {/* CTA Card */}
-            <div
               className="rounded-2xl p-5 transition-colors flex items-center justify-between"
               style={{
                 background: "#FFFFFF",
@@ -368,10 +347,13 @@ export default function DashboardPage() {
             >
               <div>
                 <h4 className="text-sm font-semibold" style={{ color: "#0F172A" }}>
-                  Explore more jobs
+                  Marketing Coordinator
                 </h4>
                 <p className="mt-1 text-xs" style={{ color: "#64748B" }}>
-                  1000s of jobs waiting for you
+                  Growth Labs · Remote
+                </p>
+                <p className="mt-2 text-xs" style={{ color: "#94A3B8" }}>
+                  Posted 1 day ago
                 </p>
               </div>
               <button
