@@ -94,13 +94,13 @@ export default function DashboardPage() {
           >
             <p
               className="text-2xl font-semibold"
-              style={{ color: "#2563EB" }}
+              style={{ color: "#0F172A" }}
             >
               3
             </p>
             <p
               className="mt-2 text-xs font-medium"
-              style={{ color: "#2563EB" }}
+              style={{ color: "#64748B" }}
             >
               Follow-ups
             </p>
