@@ -229,189 +229,89 @@ export default function DashboardPage() {
             Latest jobs
           </h2>
 
-          <div className="grid grid-cols-2 gap-6">
-            {/* Left Column */}
-            <div className="flex flex-col gap-4">
-              {/* Job Card 1 */}
-              <div
-                className="rounded-2xl p-5 transition-colors"
-                style={{
-                  background: "#FFFFFF",
-                  border: "1px solid #E5E7EB",
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
-                onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
-              >
-                <h4 className="text-sm font-semibold" style={{ color: "#0F172A" }}>
-                  Product Manager
-                </h4>
-                <p className="mt-1 text-xs" style={{ color: "#64748B" }}>
-                  TechCorp Inc. · San Francisco, CA
-                </p>
-                <p className="mt-2 text-xs" style={{ color: "#94A3B8" }}>
-                  Posted 2 hours ago
-                </p>
-              </div>
-
-              {/* Job Card 2 */}
-              <div
-                className="rounded-2xl p-5 transition-colors"
-                style={{
-                  background: "#FFFFFF",
-                  border: "1px solid #E5E7EB",
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
-                onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
-              >
-                <h4 className="text-sm font-semibold" style={{ color: "#0F172A" }}>
-                  UX Designer
-                </h4>
-                <p className="mt-1 text-xs" style={{ color: "#64748B" }}>
-                  Design Studio Co. · New York, NY
-                </p>
-                <p className="mt-2 text-xs" style={{ color: "#94A3B8" }}>
-                  Posted 5 hours ago
-                </p>
-              </div>
-
-              {/* Job Card 3 */}
-              <div
-                className="rounded-2xl p-5 transition-colors"
-                style={{
-                  background: "#FFFFFF",
-                  border: "1px solid #E5E7EB",
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
-                onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
-              >
-                <h4 className="text-sm font-semibold" style={{ color: "#0F172A" }}>
-                  Marketing Coordinator
-                </h4>
-                <p className="mt-1 text-xs" style={{ color: "#64748B" }}>
-                  Growth Labs · Remote
-                </p>
-                <p className="mt-2 text-xs" style={{ color: "#94A3B8" }}>
-                  Posted 1 day ago
-                </p>
-              </div>
-
-              {/* Job Card 7 */}
-              <div
-                className="rounded-2xl p-5 transition-colors"
-                style={{
-                  background: "#FFFFFF",
-                  border: "1px solid #E5E7EB",
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
-                onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
-              >
-                <h4 className="text-sm font-semibold" style={{ color: "#0F172A" }}>
-                  Business Analyst
-                </h4>
-                <p className="mt-1 text-xs" style={{ color: "#64748B" }}>
-                  Strategy Consulting · Denver, CO
-                </p>
-                <p className="mt-2 text-xs" style={{ color: "#94A3B8" }}>
-                  Posted 4 hours ago
-                </p>
-              </div>
+          <div className="flex flex-col gap-4">
+            {/* Job Card 1 */}
+            <div
+              className="rounded-2xl p-5 transition-colors"
+              style={{
+                background: "#FFFFFF",
+                border: "1px solid #E5E7EB",
+              }}
+              onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
+              onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
+            >
+              <h4 className="text-sm font-semibold" style={{ color: "#0F172A" }}>
+                Product Manager
+              </h4>
+              <p className="mt-1 text-xs" style={{ color: "#64748B" }}>
+                TechCorp Inc. · San Francisco, CA
+              </p>
+              <p className="mt-2 text-xs" style={{ color: "#94A3B8" }}>
+                Posted 2 hours ago
+              </p>
             </div>
 
-            {/* Right Column */}
-            <div className="flex flex-col gap-4">
-              {/* Job Card 4 */}
-              <div
-                className="rounded-2xl p-5 transition-colors"
-                style={{
-                  background: "#FFFFFF",
-                  border: "1px solid #E5E7EB",
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
-                onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
-              >
-                <h4 className="text-sm font-semibold" style={{ color: "#0F172A" }}>
-                  Data Analyst
-                </h4>
-                <p className="mt-1 text-xs" style={{ color: "#64748B" }}>
-                  Analytics Pro · Boston, MA
-                </p>
-                <p className="mt-2 text-xs" style={{ color: "#94A3B8" }}>
-                  Posted 3 hours ago
-                </p>
-              </div>
+            {/* Job Card 2 */}
+            <div
+              className="rounded-2xl p-5 transition-colors"
+              style={{
+                background: "#FFFFFF",
+                border: "1px solid #E5E7EB",
+              }}
+              onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
+              onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
+            >
+              <h4 className="text-sm font-semibold" style={{ color: "#0F172A" }}>
+                UX Designer
+              </h4>
+              <p className="mt-1 text-xs" style={{ color: "#64748B" }}>
+                Design Studio Co. · New York, NY
+              </p>
+              <p className="mt-2 text-xs" style={{ color: "#94A3B8" }}>
+                Posted 5 hours ago
+              </p>
+            </div>
 
-              {/* Job Card 5 */}
-              <div
-                className="rounded-2xl p-5 transition-colors"
-                style={{
-                  background: "#FFFFFF",
-                  border: "1px solid #E5E7EB",
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
-                onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
-              >
-                <h4 className="text-sm font-semibold" style={{ color: "#0F172A" }}>
-                  Frontend Developer
-                </h4>
-                <p className="mt-1 text-xs" style={{ color: "#64748B" }}>
-                  Web Solutions Ltd. · Austin, TX
-                </p>
-                <p className="mt-2 text-xs" style={{ color: "#94A3B8" }}>
-                  Posted 6 hours ago
-                </p>
-              </div>
+            {/* Job Card 3 */}
+            <div
+              className="rounded-2xl p-5 transition-colors"
+              style={{
+                background: "#FFFFFF",
+                border: "1px solid #E5E7EB",
+              }}
+              onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
+              onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
+            >
+              <h4 className="text-sm font-semibold" style={{ color: "#0F172A" }}>
+                Marketing Coordinator
+              </h4>
+              <p className="mt-1 text-xs" style={{ color: "#64748B" }}>
+                Growth Labs · Remote
+              </p>
+              <p className="mt-2 text-xs" style={{ color: "#94A3B8" }}>
+                Posted 1 day ago
+              </p>
+            </div>
 
-              {/* Job Card 6 */}
-              <div
-                className="rounded-2xl p-5 transition-colors"
-                style={{
-                  background: "#FFFFFF",
-                  border: "1px solid #E5E7EB",
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
-                onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
-              >
-                <h4 className="text-sm font-semibold" style={{ color: "#0F172A" }}>
-                  Sales Manager
-                </h4>
-                <p className="mt-1 text-xs" style={{ color: "#64748B" }}>
-                  Enterprise Sales Co. · Chicago, IL
-                </p>
-                <p className="mt-2 text-xs" style={{ color: "#94A3B8" }}>
-                  Posted 1 day ago
-                </p>
-              </div>
-
-              {/* CTA Card */}
-              <div
-                className="rounded-2xl p-5 transition-colors flex flex-col justify-between"
-                style={{
-                  background: "#FFFFFF",
-                  border: "1px solid #E5E7EB",
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
-                onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
-              >
-                <div>
-                  <h4 className="text-sm font-semibold" style={{ color: "#0F172A" }}>
-                    Find your next opportunity
-                  </h4>
-                  <p className="mt-1 text-xs" style={{ color: "#64748B" }}>
-                    Discover roles matching your profile.
-                  </p>
-                </div>
-                <button
-                  className="mt-4 cursor-pointer rounded-lg px-4 py-2 text-xs font-semibold transition-all duration-[120ms] w-fit"
-                  style={{
-                    background: "#2563EB",
-                    color: "#FFFFFF",
-                  }}
-                  onMouseEnter={(e) => e.currentTarget.style.background = "#1D4ED8"}
-                  onMouseLeave={(e) => e.currentTarget.style.background = "#2563EB"}
-                >
-                  Explore
-                </button>
-              </div>
+            {/* Job Card 4 */}
+            <div
+              className="rounded-2xl p-5 transition-colors"
+              style={{
+                background: "#FFFFFF",
+                border: "1px solid #E5E7EB",
+              }}
+              onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
+              onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
+            >
+              <h4 className="text-sm font-semibold" style={{ color: "#0F172A" }}>
+                Data Analyst
+              </h4>
+              <p className="mt-1 text-xs" style={{ color: "#64748B" }}>
+                Analytics Pro · Boston, MA
+              </p>
+              <p className="mt-2 text-xs" style={{ color: "#94A3B8" }}>
+                Posted 3 hours ago
+              </p>
             </div>
           </div>
         </section>
