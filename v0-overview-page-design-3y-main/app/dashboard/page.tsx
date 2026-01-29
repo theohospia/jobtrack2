@@ -16,11 +16,10 @@ export default function DashboardPage() {
         <PageHeader />
         
         {/* Today Section with Stats */}
-        <div className="mb-6">
-          {/* Header and Stats Row */}
-          <div className="flex items-start gap-6 mb-3">
-            {/* Left: Today Header with Profile */}
-            <div className="flex items-center gap-4 flex-shrink-0">
+        <div className="mb-6 flex gap-6">
+          {/* Left: Today Header with Profile and Subtext */}
+          <div className="flex flex-col gap-0">
+            <div className="flex items-center gap-4">
               <div
                 className="flex items-center justify-center rounded-full flex-shrink-0"
                 style={{
@@ -42,126 +41,129 @@ export default function DashboardPage() {
                 Today
               </h1>
             </div>
+            <p
+              className="mt-3 text-sm"
+              style={{ color: "#64748B" }}
+            >
+              Your job search progress and opportunities await.
+            </p>
+          </div>
 
-            {/* Right: Stats Container - Horizontal Layout */}
-            <div className="flex gap-4 flex-1">
-              {/* Matches */}
-              <div 
-                className="flex flex-1 items-center gap-3 rounded-2xl p-4"
+          {/* Right: Stats Container */}
+          <div
+            className="flex gap-4 flex-1"
+            style={{
+              background: "transparent",
+            }}
+          >
+            {/* Matches */}
+            <div 
+              className="flex flex-1 flex-col items-start gap-2 rounded-2xl p-4"
+              style={{
+                background: "#FFFFFF",
+                border: "1px solid #E5E7EB",
+                boxShadow: "0 1px 3px rgba(0, 0, 0, 0.08)",
+              }}
+            >
+              <div
+                className="flex items-center justify-center rounded-full w-10 h-10 flex-shrink-0"
                 style={{
-                  background: "#FFFFFF",
-                  border: "1px solid #E5E7EB",
-                  boxShadow: "0 1px 3px rgba(0, 0, 0, 0.08)",
+                  background: "#DBEAFE",
                 }}
               >
-                <div
-                  className="flex items-center justify-center rounded-full w-10 h-10 flex-shrink-0"
-                  style={{
-                    background: "#DBEAFE",
-                  }}
-                >
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="8" cy="8" r="3" fill="#2563EB" />
-                    <circle cx="16" cy="8" r="3" fill="#2563EB" />
-                    <path d="M12 14C10.3431 14 9 15.3431 9 17V20H15V17C15 15.3431 13.6569 14 12 14Z" fill="#2563EB" />
-                  </svg>
-                </div>
-                <div className="flex flex-col">
-                  <p
-                    className="text-xs font-medium"
-                    style={{ color: "#64748B" }}
-                  >
-                    Matches
-                  </p>
-                  <p
-                    className="text-lg font-semibold"
-                    style={{ color: "#0F172A" }}
-                  >
-                    12
-                  </p>
-                </div>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="8" cy="8" r="3" fill="#2563EB" />
+                  <circle cx="16" cy="8" r="3" fill="#2563EB" />
+                  <path d="M12 14C10.3431 14 9 15.3431 9 17V20H15V17C15 15.3431 13.6569 14 12 14Z" fill="#2563EB" />
+                </svg>
               </div>
-
-              {/* Responses */}
-              <div 
-                className="flex flex-1 items-center gap-3 rounded-2xl p-4"
-                style={{
-                  background: "#FFFFFF",
-                  border: "1px solid #E5E7EB",
-                  boxShadow: "0 1px 3px rgba(0, 0, 0, 0.08)",
-                }}
-              >
-                <div
-                  className="flex items-center justify-center rounded-full w-10 h-10 flex-shrink-0"
-                  style={{
-                    background: "#DBEAFE",
-                  }}
+              <div className="flex flex-col gap-0">
+                <p
+                  className="text-2xl font-semibold"
+                  style={{ color: "#0F172A" }}
                 >
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 9L12 4L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" fill="#2563EB" stroke="#2563EB" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </div>
-                <div className="flex flex-col">
-                  <p
-                    className="text-xs font-medium"
-                    style={{ color: "#64748B" }}
-                  >
-                    Responses
-                  </p>
-                  <p
-                    className="text-lg font-semibold"
-                    style={{ color: "#0F172A" }}
-                  >
-                    4
-                  </p>
-                </div>
+                  12
+                </p>
+                <p
+                  className="text-xs font-medium"
+                  style={{ color: "#64748B" }}
+                >
+                  Matches
+                </p>
               </div>
+            </div>
 
-              {/* Follow-ups */}
-              <div 
-                className="flex flex-1 items-center gap-3 rounded-2xl p-4"
+            {/* Responses */}
+            <div 
+              className="flex flex-1 flex-col items-start gap-2 rounded-2xl p-4"
+              style={{
+                background: "#FFFFFF",
+                border: "1px solid #E5E7EB",
+                boxShadow: "0 1px 3px rgba(0, 0, 0, 0.08)",
+              }}
+            >
+              <div
+                className="flex items-center justify-center rounded-full w-10 h-10 flex-shrink-0"
                 style={{
-                  background: "#FFFFFF",
-                  border: "1px solid #E5E7EB",
-                  boxShadow: "0 1px 3px rgba(0, 0, 0, 0.08)",
+                  background: "#DBEAFE",
                 }}
               >
-                <div
-                  className="flex items-center justify-center rounded-full w-10 h-10 flex-shrink-0"
-                  style={{
-                    background: "#DBEAFE",
-                  }}
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 9L12 4L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" fill="#2563EB" stroke="#2563EB" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <div className="flex flex-col gap-0">
+                <p
+                  className="text-2xl font-semibold"
+                  style={{ color: "#0F172A" }}
                 >
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="12" cy="12" r="9" stroke="#2563EB" strokeWidth="2"/>
-                    <path d="M12 7V12L15.5 14.5" stroke="#2563EB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </div>
-                <div className="flex flex-col">
-                  <p
-                    className="text-xs font-medium"
-                    style={{ color: "#64748B" }}
-                  >
-                    Follow-ups
-                  </p>
-                  <p
-                    className="text-lg font-semibold"
-                    style={{ color: "#0F172A" }}
-                  >
-                    3
-                  </p>
-                </div>
+                  4
+                </p>
+                <p
+                  className="text-xs font-medium"
+                  style={{ color: "#64748B" }}
+                >
+                  Responses
+                </p>
+              </div>
+            </div>
+
+            {/* Follow-ups */}
+            <div 
+              className="flex flex-1 flex-col items-start gap-2 rounded-2xl p-4"
+              style={{
+                background: "#FFFFFF",
+                border: "1px solid #E5E7EB",
+                boxShadow: "0 1px 3px rgba(0, 0, 0, 0.08)",
+              }}
+            >
+              <div
+                className="flex items-center justify-center rounded-full w-10 h-10 flex-shrink-0"
+                style={{
+                  background: "#DBEAFE",
+                }}
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="9" stroke="#2563EB" strokeWidth="2"/>
+                  <path d="M12 7V12L15.5 14.5" stroke="#2563EB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <div className="flex flex-col gap-0">
+                <p
+                  className="text-2xl font-semibold"
+                  style={{ color: "#0F172A" }}
+                >
+                  3
+                </p>
+                <p
+                  className="text-xs font-medium"
+                  style={{ color: "#64748B" }}
+                >
+                  Follow-ups
+                </p>
               </div>
             </div>
           </div>
-
-          {/* Subtext Below Stats */}
-          <p
-            className="text-sm"
-            style={{ color: "#64748B" }}
-          >
-            Your job search progress and opportunities await.
-          </p>
         </div>
         
         {/* Tutorials Section */}
