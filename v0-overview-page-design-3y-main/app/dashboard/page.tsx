@@ -45,6 +45,7 @@ export default function DashboardPage() {
           <div className="relative flex gap-3 items-center">
             {/* Decorative Band Background - Separate Element */}
             <div
+              className="rounded-2xl"
               style={{
                 position: "absolute",
                 top: "50%",
@@ -52,8 +53,7 @@ export default function DashboardPage() {
                 right: 0,
                 transform: "translateY(-50%)",
                 height: "64px",
-                background: "#EEF4FF",
-                borderRadius: "4px",
+                background: "#FFFFFF",
                 border: "1px solid #E5E7EB",
                 pointerEvents: "none",
               }}
