@@ -16,146 +16,153 @@ export default function DashboardPage() {
         <PageHeader />
         
         {/* Today Section with Stats */}
-        <div className="mb-6 flex items-center justify-between gap-6">
-          {/* Left: Today Header with Profile */}
-          <div className="flex items-center gap-4 flex-shrink-0">
+        <div 
+          className="mb-6 -mx-6 px-6 py-4"
+          style={{
+            background: "linear-gradient(90deg, rgba(0,3,4,0) 0%, rgba(0,3,4,0.08) 50%, rgba(0,3,4,0) 100%)",
+          }}
+        >
+          <div className="flex items-center justify-between gap-6">
+            {/* Left: Today Header with Profile */}
+            <div className="flex items-center gap-4 flex-shrink-0">
+              <div
+                className="flex items-center justify-center rounded-full flex-shrink-0"
+                style={{
+                  width: "64px",
+                  height: "64px",
+                  background: "#E2E8F0",
+                  border: "2px solid #CBD5E1",
+                }}
+              >
+                <svg width="36" height="36" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="16" cy="10" r="4" fill="#64748B" />
+                  <path d="M16 16C12.6863 16 10 18.6863 10 22V28H22V22C22 18.6863 19.3137 16 16 16Z" fill="#64748B" />
+                </svg>
+              </div>
+              <h1 
+                className="text-[26px] font-semibold leading-[1.3]"
+                style={{ color: "#0F172A", letterSpacing: "-0.3px" }}
+              >
+                Today
+              </h1>
+            </div>
+
+            {/* Right: Stats Container */}
             <div
-              className="flex items-center justify-center rounded-full flex-shrink-0"
+              className="flex gap-3"
               style={{
-                width: "64px",
-                height: "64px",
-                background: "#E2E8F0",
-                border: "2px solid #CBD5E1",
+                background: "transparent",
               }}
             >
-              <svg width="36" height="36" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="16" cy="10" r="4" fill="#64748B" />
-                <path d="M16 16C12.6863 16 10 18.6863 10 22V28H22V22C22 18.6863 19.3137 16 16 16Z" fill="#64748B" />
-              </svg>
-            </div>
-            <h1 
-              className="text-[26px] font-semibold leading-[1.3]"
-              style={{ color: "#0F172A", letterSpacing: "-0.3px" }}
-            >
-              Today
-            </h1>
-          </div>
-
-          {/* Right: Stats Container */}
-          <div
-            className="flex gap-3"
-            style={{
-              background: "transparent",
-            }}
-          >
-            {/* Matches - Pill Card */}
-            <div 
-              className="flex items-center gap-2 rounded-xl px-4 py-2"
-              style={{
-                background: "#2563EB",
-              }}
-            >
-              <div
-                className="flex items-center justify-center rounded-full flex-shrink-0"
+              {/* Matches - Pill Card */}
+              <div 
+                className="flex items-center gap-2 px-4 py-2"
                 style={{
-                  width: "40px",
-                  height: "40px",
-                  background: "#1D4ED8",
-                  border: "2px solid #FFFFFF",
+                  background: "#2563EB",
                 }}
               >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="8" cy="8" r="3" fill="#FFFFFF" />
-                  <circle cx="16" cy="8" r="3" fill="#FFFFFF" />
-                  <path d="M12 14C10.3431 14 9 15.3431 9 17V20H15V17C15 15.3431 13.6569 14 12 14Z" fill="#FFFFFF" />
-                </svg>
-              </div>
-              <div className="flex flex-col gap-0">
-                <p
-                  className="text-sm font-semibold leading-none"
-                  style={{ color: "#FFFFFF" }}
+                <div
+                  className="flex items-center justify-center rounded-full flex-shrink-0"
+                  style={{
+                    width: "40px",
+                    height: "40px",
+                    background: "#1D4ED8",
+                    border: "2px solid #FFFFFF",
+                  }}
                 >
-                  12
-                </p>
-                <p
-                  className="text-xs font-medium"
-                  style={{ color: "#FFFFFF" }}
-                >
-                  Matches
-                </p>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="8" cy="8" r="3" fill="#FFFFFF" />
+                    <circle cx="16" cy="8" r="3" fill="#FFFFFF" />
+                    <path d="M12 14C10.3431 14 9 15.3431 9 17V20H15V17C15 15.3431 13.6569 14 12 14Z" fill="#FFFFFF" />
+                  </svg>
+                </div>
+                <div className="flex flex-col gap-0">
+                  <p
+                    className="text-sm font-semibold leading-none"
+                    style={{ color: "#FFFFFF" }}
+                  >
+                    12
+                  </p>
+                  <p
+                    className="text-xs font-medium"
+                    style={{ color: "#FFFFFF" }}
+                  >
+                    Matches
+                  </p>
+                </div>
               </div>
-            </div>
 
-            {/* Responses - Pill Card */}
-            <div 
-              className="flex items-center gap-2 rounded-xl px-4 py-2"
-              style={{
-                background: "#2563EB",
-              }}
-            >
-              <div
-                className="flex items-center justify-center rounded-full flex-shrink-0"
+              {/* Responses - Pill Card */}
+              <div 
+                className="flex items-center gap-2 px-4 py-2"
                 style={{
-                  width: "40px",
-                  height: "40px",
-                  background: "#1D4ED8",
-                  border: "2px solid #FFFFFF",
+                  background: "#2563EB",
                 }}
               >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M3 9L12 4L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" fill="#FFFFFF"/>
-                </svg>
-              </div>
-              <div className="flex flex-col gap-0">
-                <p
-                  className="text-sm font-semibold leading-none"
-                  style={{ color: "#FFFFFF" }}
+                <div
+                  className="flex items-center justify-center rounded-full flex-shrink-0"
+                  style={{
+                    width: "40px",
+                    height: "40px",
+                    background: "#1D4ED8",
+                    border: "2px solid #FFFFFF",
+                  }}
                 >
-                  4
-                </p>
-                <p
-                  className="text-xs font-medium"
-                  style={{ color: "#FFFFFF" }}
-                >
-                  Responses
-                </p>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 9L12 4L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" fill="#FFFFFF"/>
+                  </svg>
+                </div>
+                <div className="flex flex-col gap-0">
+                  <p
+                    className="text-sm font-semibold leading-none"
+                    style={{ color: "#FFFFFF" }}
+                  >
+                    4
+                  </p>
+                  <p
+                    className="text-xs font-medium"
+                    style={{ color: "#FFFFFF" }}
+                  >
+                    Responses
+                  </p>
+                </div>
               </div>
-            </div>
 
-            {/* Follow-ups - Pill Card */}
-            <div 
-              className="flex items-center gap-2 rounded-xl px-4 py-2"
-              style={{
-                background: "#2563EB",
-              }}
-            >
-              <div
-                className="flex items-center justify-center rounded-full flex-shrink-0"
+              {/* Follow-ups - Pill Card */}
+              <div 
+                className="flex items-center gap-2 px-4 py-2"
                 style={{
-                  width: "40px",
-                  height: "40px",
-                  background: "#1D4ED8",
-                  border: "2px solid #FFFFFF",
+                  background: "#2563EB",
                 }}
               >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="12" cy="12" r="9" stroke="#FFFFFF" strokeWidth="2"/>
-                  <path d="M12 7V12L15.5 14.5" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </div>
-              <div className="flex flex-col gap-0">
-                <p
-                  className="text-sm font-semibold leading-none"
-                  style={{ color: "#FFFFFF" }}
+                <div
+                  className="flex items-center justify-center rounded-full flex-shrink-0"
+                  style={{
+                    width: "40px",
+                    height: "40px",
+                    background: "#1D4ED8",
+                    border: "2px solid #FFFFFF",
+                  }}
                 >
-                  3
-                </p>
-                <p
-                  className="text-xs font-medium"
-                  style={{ color: "#FFFFFF" }}
-                >
-                  Follow-ups
-                </p>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="9" stroke="#FFFFFF" strokeWidth="2"/>
+                    <path d="M12 7V12L15.5 14.5" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
+                <div className="flex flex-col gap-0">
+                  <p
+                    className="text-sm font-semibold leading-none"
+                    style={{ color: "#FFFFFF" }}
+                  >
+                    3
+                  </p>
+                  <p
+                    className="text-xs font-medium"
+                    style={{ color: "#FFFFFF" }}
+                  >
+                    Follow-ups
+                  </p>
+                </div>
               </div>
             </div>
           </div>
