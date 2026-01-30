@@ -41,12 +41,13 @@ export default function DashboardPage() {
             </h1>
           </div>
 
-          {/* Right: Stats Container */}
+          {/* Right: Stats Container Band */}
           <div
-            className="flex gap-3 px-5 py-3"
+            className="flex gap-3"
             style={{
-              background: "linear-gradient(180deg, rgba(0, 3, 4, 0.7) 0%, rgba(0, 3, 4, 0.75) 50%, rgba(0, 3, 4, 0.7) 100%)",
-              backdropFilter: "blur(0.5px)",
+              background: "linear-gradient(90deg, rgba(0, 3, 4, 0) 0%, rgba(0, 3, 4, 0.7) 15%, rgba(0, 3, 4, 0.7) 85%, rgba(0, 3, 4, 0) 100%)",
+              padding: "12px 16px",
+              borderRadius: "4px",
             }}
           >
             {/* Matches - Card */}
