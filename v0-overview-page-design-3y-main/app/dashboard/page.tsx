@@ -17,9 +17,9 @@ export default function DashboardPage() {
         
         {/* Today Section with Stats */}
         <div 
-          className="mb-6 -mx-6 px-6 py-4"
+          className="mb-6 -mx-6 px-6 py-6"
           style={{
-            background: "linear-gradient(90deg, rgba(0,3,4,0) 0%, rgba(0,3,4,0.08) 50%, rgba(0,3,4,0) 100%)",
+            background: "linear-gradient(90deg, rgba(0,3,4,0.5) 0%, rgba(0,3,4,0.7) 50%, rgba(0,3,4,0.5) 100%)",
           }}
         >
           <div className="flex items-center justify-between gap-6">
@@ -54,7 +54,7 @@ export default function DashboardPage() {
                 background: "transparent",
               }}
             >
-              {/* Matches - Pill Card */}
+              {/* Matches - Card */}
               <div 
                 className="flex items-center gap-2 px-4 py-2"
                 style={{
@@ -62,7 +62,7 @@ export default function DashboardPage() {
                 }}
               >
                 <div
-                  className="flex items-center justify-center rounded-full flex-shrink-0"
+                  className="flex items-center justify-center flex-shrink-0"
                   style={{
                     width: "40px",
                     height: "40px",
@@ -92,7 +92,7 @@ export default function DashboardPage() {
                 </div>
               </div>
 
-              {/* Responses - Pill Card */}
+              {/* Responses - Card */}
               <div 
                 className="flex items-center gap-2 px-4 py-2"
                 style={{
@@ -100,7 +100,7 @@ export default function DashboardPage() {
                 }}
               >
                 <div
-                  className="flex items-center justify-center rounded-full flex-shrink-0"
+                  className="flex items-center justify-center flex-shrink-0"
                   style={{
                     width: "40px",
                     height: "40px",
@@ -128,7 +128,7 @@ export default function DashboardPage() {
                 </div>
               </div>
 
-              {/* Follow-ups - Pill Card */}
+              {/* Follow-ups - Card */}
               <div 
                 className="flex items-center gap-2 px-4 py-2"
                 style={{
@@ -136,7 +136,7 @@ export default function DashboardPage() {
                 }}
               >
                 <div
-                  className="flex items-center justify-center rounded-full flex-shrink-0"
+                  className="flex items-center justify-center flex-shrink-0"
                   style={{
                     width: "40px",
                     height: "40px",
