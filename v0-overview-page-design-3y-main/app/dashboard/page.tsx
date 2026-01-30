@@ -52,11 +52,7 @@ export default function DashboardPage() {
                 right: 0,
                 transform: "translateY(-50%)",
                 height: "36px",
-                background: `
-                  linear-gradient(90deg, rgba(0, 3, 4, 0) 0%, rgba(0, 3, 4, 0.7) 15%, rgba(0, 3, 4, 0.7) 85%, rgba(0, 3, 4, 0) 100%),
-                  linear-gradient(180deg, rgba(0, 3, 4, 0) 0%, rgba(0, 3, 4, 0.7) 20%, rgba(0, 3, 4, 0.7) 80%, rgba(0, 3, 4, 0) 100%)
-                `,
-                backgroundBlendMode: "multiply, multiply",
+                background: "linear-gradient(90deg, transparent 0%, rgba(0, 3, 4, 0.7) 50%, transparent 100%)",
                 borderRadius: "4px",
                 pointerEvents: "none",
               }}
