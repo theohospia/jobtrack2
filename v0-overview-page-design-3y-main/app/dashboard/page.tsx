@@ -43,10 +43,11 @@ export default function DashboardPage() {
 
           {/* Right: Stats Container Band */}
           <div
-            className="flex gap-3 relative overflow-hidden"
+            className="flex gap-3 relative overflow-hidden items-center"
             style={{
-              padding: "12px 16px",
+              padding: "2px 16px",
               borderRadius: "4px",
+              height: "fit-content",
             }}
           >
             {/* Diagonal Lines Background */}
