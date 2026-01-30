@@ -57,7 +57,7 @@ export default function DashboardPage() {
 
         {/* Metric Cards Grid */}
         <div className="mb-12 grid grid-cols-4 gap-4">
-          {/* Monthly Revenue */}
+          {/* Matches Found */}
           <div
             className="rounded-2xl p-6 transition-colors"
             style={{
@@ -75,104 +75,7 @@ export default function DashboardPage() {
           >
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-sm font-medium" style={{ color: "#64748B" }}>
-                Monthly Revenue
-              </h3>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <text x="8" y="16" fontSize="14" fontWeight="bold" fill="#2563EB">$</text>
-              </svg>
-            </div>
-            <p className="text-2xl font-semibold mb-2" style={{ color: "#0F172A" }}>
-              $48,500
-            </p>
-            <p className="text-xs" style={{ color: "#10B981" }}>
-              +12.5% from last month
-            </p>
-          </div>
-
-          {/* New Deals Closed */}
-          <div
-            className="rounded-2xl p-6 transition-colors"
-            style={{
-              background: "#FFFFFF",
-              border: "1px solid #E5E7EB",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.borderColor = "#CBD5E1";
-              e.currentTarget.style.boxShadow = "0px 8px 24px rgba(15, 23, 42, 0.06)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.borderColor = "#E5E7EB";
-              e.currentTarget.style.boxShadow = "none";
-            }}
-          >
-            <div className="flex items-center justify-between mb-4">
-              <h3 className="text-sm font-medium" style={{ color: "#64748B" }}>
-                New Deals Closed
-              </h3>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="12" cy="12" r="8" stroke="#2563EB" strokeWidth="2"/>
-                <circle cx="12" cy="12" r="3" fill="#2563EB"/>
-              </svg>
-            </div>
-            <p className="text-2xl font-semibold mb-2" style={{ color: "#0F172A" }}>
-              12
-            </p>
-            <p className="text-xs" style={{ color: "#10B981" }}>
-              +3 from last month
-            </p>
-          </div>
-
-          {/* Pipeline Value */}
-          <div
-            className="rounded-2xl p-6 transition-colors"
-            style={{
-              background: "#FFFFFF",
-              border: "1px solid #E5E7EB",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.borderColor = "#CBD5E1";
-              e.currentTarget.style.boxShadow = "0px 8px 24px rgba(15, 23, 42, 0.06)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.borderColor = "#E5E7EB";
-              e.currentTarget.style.boxShadow = "none";
-            }}
-          >
-            <div className="flex items-center justify-between mb-4">
-              <h3 className="text-sm font-medium" style={{ color: "#64748B" }}>
-                Pipeline Value
-              </h3>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 19L19 5M19 5H10M19 5V14" stroke="#2563EB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </div>
-            <p className="text-2xl font-semibold mb-2" style={{ color: "#0F172A" }}>
-              $320,000
-            </p>
-            <p className="text-xs" style={{ color: "#10B981" }}>
-              +8.2% total pipeline
-            </p>
-          </div>
-
-          {/* Conversion Rate */}
-          <div
-            className="rounded-2xl p-6 transition-colors"
-            style={{
-              background: "#FFFFFF",
-              border: "1px solid #E5E7EB",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.borderColor = "#CBD5E1";
-              e.currentTarget.style.boxShadow = "0px 8px 24px rgba(15, 23, 42, 0.06)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.borderColor = "#E5E7EB";
-              e.currentTarget.style.boxShadow = "none";
-            }}
-          >
-            <div className="flex items-center justify-between mb-4">
-              <h3 className="text-sm font-medium" style={{ color: "#64748B" }}>
-                Conversion Rate
+                Matches Found
               </h3>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="8" cy="8" r="2" fill="#2563EB" />
@@ -181,10 +84,107 @@ export default function DashboardPage() {
               </svg>
             </div>
             <p className="text-2xl font-semibold mb-2" style={{ color: "#0F172A" }}>
-              18.4%
+              10
             </p>
             <p className="text-xs" style={{ color: "#10B981" }}>
-              +2.1% lead to close
+              +18% from last week
+            </p>
+          </div>
+
+          {/* Outreach Sent */}
+          <div
+            className="rounded-2xl p-6 transition-colors"
+            style={{
+              background: "#FFFFFF",
+              border: "1px solid #E5E7EB",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.borderColor = "#CBD5E1";
+              e.currentTarget.style.boxShadow = "0px 8px 24px rgba(15, 23, 42, 0.06)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.borderColor = "#E5E7EB";
+              e.currentTarget.style.boxShadow = "none";
+            }}
+          >
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-sm font-medium" style={{ color: "#64748B" }}>
+                Outreach Sent
+              </h3>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 19L19 5M19 5H10M19 5V14" stroke="#2563EB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </div>
+            <p className="text-2xl font-semibold mb-2" style={{ color: "#0F172A" }}>
+              42
+            </p>
+            <p className="text-xs" style={{ color: "#64748B" }}>
+              &nbsp;
+            </p>
+          </div>
+
+          {/* Responses Received */}
+          <div
+            className="rounded-2xl p-6 transition-colors"
+            style={{
+              background: "#FFFFFF",
+              border: "1px solid #E5E7EB",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.borderColor = "#CBD5E1";
+              e.currentTarget.style.boxShadow = "0px 8px 24px rgba(15, 23, 42, 0.06)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.borderColor = "#E5E7EB";
+              e.currentTarget.style.boxShadow = "none";
+            }}
+          >
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-sm font-medium" style={{ color: "#64748B" }}>
+                Responses Received
+              </h3>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="8" stroke="#2563EB" strokeWidth="2"/>
+                <circle cx="12" cy="12" r="3" fill="#2563EB"/>
+              </svg>
+            </div>
+            <p className="text-2xl font-semibold mb-2" style={{ color: "#0F172A" }}>
+              4
+            </p>
+            <p className="text-xs" style={{ color: "#10B981" }}>
+              +2 new responses
+            </p>
+          </div>
+
+          {/* Interview Rate */}
+          <div
+            className="rounded-2xl p-6 transition-colors"
+            style={{
+              background: "#FFFFFF",
+              border: "1px solid #E5E7EB",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.borderColor = "#CBD5E1";
+              e.currentTarget.style.boxShadow = "0px 8px 24px rgba(15, 23, 42, 0.06)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.borderColor = "#E5E7EB";
+              e.currentTarget.style.boxShadow = "none";
+            }}
+          >
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-sm font-medium" style={{ color: "#64748B" }}>
+                Interview Rate
+              </h3>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <text x="8" y="16" fontSize="14" fontWeight="bold" fill="#2563EB">%</text>
+              </svg>
+            </div>
+            <p className="text-2xl font-semibold mb-2" style={{ color: "#0F172A" }}>
+              +3.2%
+            </p>
+            <p className="text-xs" style={{ color: "#10B981" }}>
+              +2.1% reply rate
             </p>
           </div>
         </div>
