@@ -50,110 +50,62 @@ export default function DashboardPage() {
           >
             {/* Matches */}
             <div 
-              className="flex flex-1 items-center gap-3 rounded-2xl p-4"
+              className="flex flex-col items-center justify-center rounded-lg p-6 w-24 h-24"
               style={{
-                background: "#FFFFFF",
-                border: "1px solid #E5E7EB",
-                boxShadow: "0 1px 3px rgba(0, 0, 0, 0.08)",
+                background: "linear-gradient(180deg, #DBEAFE 0%, #2563EB 60%, #1D4ED8 100%)",
+                boxShadow: "inset 0 2px 0 rgba(255,255,255,0.25), 0 6px 12px rgba(0,0,0,0.15)",
               }}
             >
-              <div
-                className="flex items-center justify-center rounded-full w-10 h-10 flex-shrink-0"
-                style={{
-                  background: "#DBEAFE",
-                }}
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="mb-2">
+                <circle cx="8" cy="8" r="3" fill="#FFFFFF" />
+                <circle cx="16" cy="8" r="3" fill="#FFFFFF" />
+                <path d="M12 14C10.3431 14 9 15.3431 9 17V20H15V17C15 15.3431 13.6569 14 12 14Z" fill="#FFFFFF" />
+              </svg>
+              <p
+                className="text-xl font-bold leading-none"
+                style={{ color: "#FFFFFF" }}
               >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="8" cy="8" r="3" fill="#2563EB" />
-                  <circle cx="16" cy="8" r="3" fill="#2563EB" />
-                  <path d="M12 14C10.3431 14 9 15.3431 9 17V20H15V17C15 15.3431 13.6569 14 12 14Z" fill="#2563EB" />
-                </svg>
-              </div>
-              <div className="flex flex-col gap-0">
-                <p
-                  className="text-2xl font-semibold leading-none"
-                  style={{ color: "#0F172A" }}
-                >
-                  12
-                </p>
-                <p
-                  className="text-xs font-medium"
-                  style={{ color: "#64748B" }}
-                >
-                  Matches
-                </p>
-              </div>
+                12
+              </p>
             </div>
 
             {/* Responses */}
             <div 
-              className="flex flex-1 items-center gap-3 rounded-2xl p-4"
+              className="flex flex-col items-center justify-center rounded-lg p-6 w-24 h-24"
               style={{
-                background: "#FFFFFF",
-                border: "1px solid #E5E7EB",
-                boxShadow: "0 1px 3px rgba(0, 0, 0, 0.08)",
+                background: "linear-gradient(180deg, #DBEAFE 0%, #2563EB 60%, #1D4ED8 100%)",
+                boxShadow: "inset 0 2px 0 rgba(255,255,255,0.25), 0 6px 12px rgba(0,0,0,0.15)",
               }}
             >
-              <div
-                className="flex items-center justify-center rounded-full w-10 h-10 flex-shrink-0"
-                style={{
-                  background: "#DBEAFE",
-                }}
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="mb-2">
+                <path d="M3 9L12 4L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" fill="#FFFFFF"/>
+              </svg>
+              <p
+                className="text-xl font-bold leading-none"
+                style={{ color: "#FFFFFF" }}
               >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M3 9L12 4L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" fill="#2563EB" stroke="#2563EB" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </div>
-              <div className="flex flex-col gap-0">
-                <p
-                  className="text-2xl font-semibold leading-none"
-                  style={{ color: "#0F172A" }}
-                >
-                  4
-                </p>
-                <p
-                  className="text-xs font-medium"
-                  style={{ color: "#64748B" }}
-                >
-                  Responses
-                </p>
-              </div>
+                4
+              </p>
             </div>
 
             {/* Follow-ups */}
             <div 
-              className="flex flex-1 items-center gap-3 rounded-2xl p-4"
+              className="flex flex-col items-center justify-center rounded-lg p-6 w-24 h-24"
               style={{
-                background: "#FFFFFF",
-                border: "1px solid #E5E7EB",
-                boxShadow: "0 1px 3px rgba(0, 0, 0, 0.08)",
+                background: "linear-gradient(180deg, #DBEAFE 0%, #2563EB 60%, #1D4ED8 100%)",
+                boxShadow: "inset 0 2px 0 rgba(255,255,255,0.25), 0 6px 12px rgba(0,0,0,0.15)",
               }}
             >
-              <div
-                className="flex items-center justify-center rounded-full w-10 h-10 flex-shrink-0"
-                style={{
-                  background: "#DBEAFE",
-                }}
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="mb-2">
+                <circle cx="12" cy="12" r="9" stroke="#FFFFFF" strokeWidth="2"/>
+                <path d="M12 7V12L15.5 14.5" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+              <p
+                className="text-xl font-bold leading-none"
+                style={{ color: "#FFFFFF" }}
               >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="12" cy="12" r="9" stroke="#2563EB" strokeWidth="2"/>
-                  <path d="M12 7V12L15.5 14.5" stroke="#2563EB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </div>
-              <div className="flex flex-col gap-0">
-                <p
-                  className="text-2xl font-semibold leading-none"
-                  style={{ color: "#0F172A" }}
-                >
-                  3
-                </p>
-                <p
-                  className="text-xs font-medium"
-                  style={{ color: "#64748B" }}
-                >
-                  Follow-ups
-                </p>
-              </div>
+                3
+              </p>
             </div>
           </div>
         </div>
