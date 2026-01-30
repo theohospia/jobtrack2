@@ -57,7 +57,7 @@ export default function DashboardPage() {
                 left: 0,
                 right: 0,
                 bottom: 0,
-                backgroundImage: `url("data:image/svg+xml,%3Csvg width='8' height='8' viewBox='0 0 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline x1='0' y1='0' x2='8' y2='8' stroke='rgba(255,255,255,0.08)' stroke-width='1'/%3E%3C/svg%3E")`,
+                backgroundImage: `url("data:image/svg+xml,%3Csvg width='8' height='8' viewBox='0 0 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline x1='0' y1='0' x2='8' y2='8' stroke='rgba(255,255,255,0.25)' stroke-width='1'/%3E%3C/svg%3E")`,
                 backgroundRepeat: "repeat",
                 pointerEvents: "none",
               }}
