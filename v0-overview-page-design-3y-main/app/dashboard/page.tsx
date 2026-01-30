@@ -15,294 +15,220 @@ export default function DashboardPage() {
       <main className="mx-auto max-w-[1120px] px-6 pt-6 pb-10">
         <PageHeader />
         
-        {/* Today Section with Stats */}
-        <div className="mb-6 flex items-center justify-between gap-6">
-          {/* Left: Today Header with Profile */}
-          <div className="flex items-center gap-4 flex-shrink-0">
-            <div
-              className="flex items-center justify-center rounded-full flex-shrink-0"
-              style={{
-                width: "64px",
-                height: "64px",
-                background: "#E2E8F0",
-                border: "2px solid #CBD5E1",
-              }}
-            >
-              <svg width="36" height="36" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="16" cy="10" r="4" fill="#64748B" />
-                <path d="M16 16C12.6863 16 10 18.6863 10 22V28H22V22C22 18.6863 19.3137 16 16 16Z" fill="#64748B" />
+        {/* Dashboard Header with Date Range and Add New Deal */}
+        <div className="mb-8 flex items-center justify-between">
+          <h1 
+            className="text-[32px] font-semibold leading-[1.2]"
+            style={{ color: "#0F172A", letterSpacing: "-0.5px" }}
+          >
+            Dashboard
+          </h1>
+          <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2 px-4 py-2 rounded-lg" style={{ background: "#F1F5F9", color: "#64748B" }}>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" strokeWidth="2"/>
+                <path d="M16 2V6M8 2V6" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                <path d="M3 10H21" stroke="currentColor" strokeWidth="2"/>
               </svg>
+              <span className="text-sm font-medium">Jan 20, 2023 - Feb 09, 2023</span>
             </div>
-            <h1 
-              className="text-[26px] font-semibold leading-[1.3]"
-              style={{ color: "#0F172A", letterSpacing: "-0.3px" }}
-            >
-              Today
-            </h1>
-          </div>
-
-          {/* Right: Stats Container with Decorative Band */}
-          <div className="relative flex gap-3 items-center">
-            {/* Decorative Band Background - Separate Element */}
-            <div
-              className="rounded-2xl"
+            <button
+              className="flex items-center gap-2 px-4 py-2 rounded-lg font-medium text-sm"
               style={{
-                position: "absolute",
-                top: "50%",
-                left: 0,
-                right: 0,
-                transform: "translateY(-50%)",
-                height: "128px",
-                background: "#FFFFFF",
-                border: "1px solid #E5E7EB",
-                boxShadow: "0px 8px 24px rgba(15, 23, 42, 0.06)",
-                pointerEvents: "none",
+                background: "#2563EB",
+                color: "#FFFFFF"
               }}
-            />
-
-            {/* Stat Cards - Content Layer */}
-            {/* Matches - Card */}
-            <div 
-              className="flex items-center gap-1 px-5 py-2 relative z-10"
-              style={{
-                background: "transparent",
-              }}
+              onMouseEnter={(e) => e.currentTarget.style.background = "#1D4ED8"}
+              onMouseLeave={(e) => e.currentTarget.style.background = "#2563EB"}
             >
-              <div
-                className="flex items-center justify-center rounded-full flex-shrink-0"
-                style={{
-                  width: "112px",
-                  height: "112px",
-                  background: "transparent",
-                  border: "none",
-                }}
-              >
-                <svg width="56" height="56" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="8" cy="8" r="3" fill="#1E40AF" />
-                  <circle cx="16" cy="8" r="3" fill="#1E40AF" />
-                  <path d="M12 14C10.3431 14 9 15.3431 9 17V20H15V17C15 15.3431 13.6569 14 12 14Z" fill="#1E40AF" />
-                </svg>
-              </div>
-              <div className="flex flex-col gap-0">
-                <p
-                  className="text-lg font-semibold leading-none"
-                  style={{ color: "#000000" }}
-                >
-                  12
-                </p>
-                <p
-                  className="text-sm font-medium"
-                  style={{ color: "#000000" }}
-                >
-                  Matches
-                </p>
-              </div>
-            </div>
-
-            {/* Responses - Card */}
-            <div 
-              className="flex items-center gap-1 px-5 py-2 relative z-10"
-              style={{
-                background: "transparent",
-              }}
-            >
-              <div
-                className="flex items-center justify-center rounded-full flex-shrink-0"
-                style={{
-                  width: "112px",
-                  height: "112px",
-                  background: "transparent",
-                  border: "none",
-                }}
-              >
-                <svg width="56" height="56" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="7" cy="12" r="2" fill="#2563EB" />
-                  <circle cx="17" cy="12" r="2" fill="#2563EB" />
-                  <path d="M12 7C9.5 7 7.5 9 7.5 11.5V18H16.5V11.5C16.5 9 14.5 7 12 7Z" fill="#2563EB" />
-                </svg>
-              </div>
-              <div className="flex flex-col gap-0">
-                <p
-                  className="text-lg font-semibold leading-none"
-                  style={{ color: "#000000" }}
-                >
-                  4
-                </p>
-                <p
-                  className="text-sm font-medium"
-                  style={{ color: "#000000" }}
-                >
-                  Responses
-                </p>
-              </div>
-            </div>
-
-            {/* Follow-ups - Card */}
-            <div 
-              className="flex items-center gap-1 px-5 py-2 relative z-10"
-              style={{
-                background: "transparent",
-              }}
-            >
-              <div
-                className="flex items-center justify-center rounded-full flex-shrink-0"
-                style={{
-                  width: "112px",
-                  height: "112px",
-                  background: "transparent",
-                  border: "none",
-                }}
-              >
-                <svg width="56" height="56" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="8" y="10" width="8" height="6" fill="#3B82F6" />
-                  <circle cx="8.5" cy="8" r="1.5" fill="#3B82F6" />
-                  <circle cx="15.5" cy="8" r="1.5" fill="#3B82F6" />
-                  <path d="M8 16L8 18M16 16L16 18" stroke="#3B82F6" strokeWidth="2" strokeLinecap="round" />
-                </svg>
-              </div>
-              <div className="flex flex-col gap-0">
-                <p
-                  className="text-lg font-semibold leading-none"
-                  style={{ color: "#000000" }}
-                >
-                  3
-                </p>
-                <p
-                  className="text-sm font-medium"
-                  style={{ color: "#000000" }}
-                >
-                  Follow-ups
-                </p>
-              </div>
-            </div>
+              <span>+</span>
+              Add New Deal
+            </button>
           </div>
         </div>
-        
-        {/* Tutorials Section */}
-        <section className="mt-12">
-          {/* Header */}
-          <h2
-            className="mb-6 text-[26px] font-semibold leading-[1.3]"
+
+        {/* Tabs */}
+        <div className="mb-8 flex gap-6 border-b" style={{ borderColor: "#E5E7EB" }}>
+          <button className="pb-3 text-sm font-medium" style={{ color: "#0F172A", borderBottom: "2px solid #2563EB" }}>
+            Overview
+          </button>
+          <button className="pb-3 text-sm font-medium transition-colors" style={{ color: "#94A3B8" }}
+            onMouseEnter={(e) => e.currentTarget.style.color = "#64748B"}
+            onMouseLeave={(e) => e.currentTarget.style.color = "#94A3B8"}>
+            Analytics
+          </button>
+          <button className="pb-3 text-sm font-medium transition-colors" style={{ color: "#94A3B8" }}
+            onMouseEnter={(e) => e.currentTarget.style.color = "#64748B"}
+            onMouseLeave={(e) => e.currentTarget.style.color = "#94A3B8"}>
+            All Deals
+          </button>
+          <button className="pb-3 text-sm font-medium transition-colors" style={{ color: "#94A3B8" }}
+            onMouseEnter={(e) => e.currentTarget.style.color = "#64748B"}
+            onMouseLeave={(e) => e.currentTarget.style.color = "#94A3B8"}>
+            Reports
+          </button>
+        </div>
+
+        {/* Metric Cards Grid */}
+        <div className="mb-12 grid grid-cols-4 gap-4">
+          {/* Monthly Revenue */}
+          <div
+            className="rounded-2xl p-6 transition-colors"
+            style={{
+              background: "#FFFFFF",
+              border: "1px solid #E5E7EB",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.borderColor = "#CBD5E1";
+              e.currentTarget.style.boxShadow = "0px 8px 24px rgba(15, 23, 42, 0.06)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.borderColor = "#E5E7EB";
+              e.currentTarget.style.boxShadow = "none";
+            }}
+          >
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-sm font-medium" style={{ color: "#64748B" }}>
+                Monthly Revenue
+              </h3>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <text x="8" y="16" fontSize="14" fontWeight="bold" fill="#2563EB">$</text>
+              </svg>
+            </div>
+            <p className="text-2xl font-semibold mb-2" style={{ color: "#0F172A" }}>
+              $48,500
+            </p>
+            <p className="text-xs" style={{ color: "#10B981" }}>
+              +12.5% from last month
+            </p>
+          </div>
+
+          {/* New Deals Closed */}
+          <div
+            className="rounded-2xl p-6 transition-colors"
+            style={{
+              background: "#FFFFFF",
+              border: "1px solid #E5E7EB",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.borderColor = "#CBD5E1";
+              e.currentTarget.style.boxShadow = "0px 8px 24px rgba(15, 23, 42, 0.06)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.borderColor = "#E5E7EB";
+              e.currentTarget.style.boxShadow = "none";
+            }}
+          >
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-sm font-medium" style={{ color: "#64748B" }}>
+                New Deals Closed
+              </h3>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="8" stroke="#2563EB" strokeWidth="2"/>
+                <circle cx="12" cy="12" r="3" fill="#2563EB"/>
+              </svg>
+            </div>
+            <p className="text-2xl font-semibold mb-2" style={{ color: "#0F172A" }}>
+              12
+            </p>
+            <p className="text-xs" style={{ color: "#10B981" }}>
+              +3 from last month
+            </p>
+          </div>
+
+          {/* Pipeline Value */}
+          <div
+            className="rounded-2xl p-6 transition-colors"
+            style={{
+              background: "#FFFFFF",
+              border: "1px solid #E5E7EB",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.borderColor = "#CBD5E1";
+              e.currentTarget.style.boxShadow = "0px 8px 24px rgba(15, 23, 42, 0.06)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.borderColor = "#E5E7EB";
+              e.currentTarget.style.boxShadow = "none";
+            }}
+          >
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-sm font-medium" style={{ color: "#64748B" }}>
+                Pipeline Value
+              </h3>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 19L19 5M19 5H10M19 5V14" stroke="#2563EB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </div>
+            <p className="text-2xl font-semibold mb-2" style={{ color: "#0F172A" }}>
+              $320,000
+            </p>
+            <p className="text-xs" style={{ color: "#10B981" }}>
+              +8.2% total pipeline
+            </p>
+          </div>
+
+          {/* Conversion Rate */}
+          <div
+            className="rounded-2xl p-6 transition-colors"
+            style={{
+              background: "#FFFFFF",
+              border: "1px solid #E5E7EB",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.borderColor = "#CBD5E1";
+              e.currentTarget.style.boxShadow = "0px 8px 24px rgba(15, 23, 42, 0.06)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.borderColor = "#E5E7EB";
+              e.currentTarget.style.boxShadow = "none";
+            }}
+          >
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-sm font-medium" style={{ color: "#64748B" }}>
+                Conversion Rate
+              </h3>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="8" cy="8" r="2" fill="#2563EB" />
+                <circle cx="16" cy="8" r="2" fill="#2563EB" />
+                <path d="M12 14C10.3431 14 9 15.3431 9 17V20H15V17C15 15.3431 13.6569 14 12 14Z" fill="#2563EB" />
+              </svg>
+            </div>
+            <p className="text-2xl font-semibold mb-2" style={{ color: "#0F172A" }}>
+              18.4%
+            </p>
+            <p className="text-xs" style={{ color: "#10B981" }}>
+              +2.1% lead to close
+            </p>
+          </div>
+        </div>
+
+        {/* Today Section */}
+        <div className="mb-8 flex items-center gap-4">
+          <div
+            className="flex items-center justify-center rounded-full flex-shrink-0"
+            style={{
+              width: "64px",
+              height: "64px",
+              background: "#E2E8F0",
+              border: "2px solid #CBD5E1",
+            }}
+          >
+            <svg width="36" height="36" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="16" cy="10" r="4" fill="#64748B" />
+              <path d="M16 16C12.6863 16 10 18.6863 10 22V28H22V22C22 18.6863 19.3137 16 16 16Z" fill="#64748B" />
+            </svg>
+          </div>
+          <h2 
+            className="text-[26px] font-semibold leading-[1.3]"
             style={{ color: "#0F172A", letterSpacing: "-0.3px" }}
           >
-            Welcome
+            Today
           </h2>
-
-          <div className="flex flex-col gap-6">
-            {/* Tutorial 1 - Image Left, Content Right */}
-            <div
-              className="flex gap-6 overflow-hidden rounded-2xl transition-colors"
-              style={{
-                background: "#FFFFFF",
-                border: "1px solid #E5E7EB",
-              }}
-              onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
-              onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
-            >
-              {/* Image */}
-              <div 
-                className="w-2/5 flex-shrink-0 overflow-hidden"
-                style={{ 
-                  aspectRatio: "16/9",
-                }}
-              >
-                <img
-                  src="/placeholder.svg?height=200&width=350"
-                  alt="Tutorial 1: How to use the app"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              
-              {/* Content */}
-              <div className="flex w-3/5 flex-col items-start justify-center pr-6">
-                <h3
-                  className="text-lg font-semibold"
-                  style={{ color: "#0F172A" }}
-                >
-                  Tutorial #1: How to use the app
-                </h3>
-                <p 
-                  className="mt-2 text-xs"
-                  style={{ color: "#64748B" }}
-                >
-                  3 min · Beginner
-                </p>
-                <button
-                  className="mt-4 flex items-center gap-1 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2"
-                  style={{ 
-                    background: "#2563EB",
-                    color: "#FFFFFF" 
-                  }}
-                  onMouseEnter={(e) => e.currentTarget.style.background = "#1D4ED8"}
-                  onMouseLeave={(e) => e.currentTarget.style.background = "#2563EB"}
-                >
-                  Watch
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </button>
-              </div>
-            </div>
-
-            {/* Tutorial 2 - Content Left, Image Right */}
-            <div
-              className="flex gap-6 overflow-hidden rounded-2xl transition-colors"
-              style={{
-                background: "#FFFFFF",
-                border: "1px solid #E5E7EB",
-              }}
-              onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
-              onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
-            >
-              {/* Content */}
-              <div className="flex w-3/5 flex-col items-start justify-center pl-6">
-                <h3
-                  className="text-lg font-semibold"
-                  style={{ color: "#0F172A" }}
-                >
-                  Tutorial #2: Set up your profile for better matches
-                </h3>
-                <p 
-                  className="mt-2 text-xs"
-                  style={{ color: "#64748B" }}
-                >
-                  5 min · Quick win
-                </p>
-                <button
-                  className="mt-4 flex items-center gap-1 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2"
-                  style={{ 
-                    background: "#2563EB",
-                    color: "#FFFFFF" 
-                  }}
-                  onMouseEnter={(e) => e.currentTarget.style.background = "#1D4ED8"}
-                  onMouseLeave={(e) => e.currentTarget.style.background = "#2563EB"}
-                >
-                  Watch
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </button>
-              </div>
-
-              {/* Image */}
-              <div 
-                className="w-2/5 flex-shrink-0 overflow-hidden"
-                style={{ 
-                  aspectRatio: "16/9",
-                }}
-              >
-                <img
-                  src="/placeholder.svg?height=200&width=350"
-                  alt="Tutorial 2: Set up your profile for better matches"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-
+        </div>
+        
         {/* Latest Jobs Section */}
-        <section className="mt-12">
+        <section>
           <h2
             className="mb-6 text-[26px] font-semibold leading-[1.3]"
             style={{ color: "#0F172A", letterSpacing: "-0.3px" }}
