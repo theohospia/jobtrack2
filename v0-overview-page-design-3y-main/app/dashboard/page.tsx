@@ -53,7 +53,7 @@ export default function DashboardPage() {
               className="flex items-center gap-3 rounded-full px-5 py-3"
               style={{
                 background: "#2563EB",
-                boxShadow: "inset 0 1px 0 rgba(255,255,255,0.3), 0 8px 16px rgba(37,99,235,0.25)",
+                boxShadow: "inset 0 1px 0 rgba(255,255,255,0.3), 0 4px 8px rgba(37,99,235,0.15)",
               }}
             >
               <div
@@ -93,7 +93,7 @@ export default function DashboardPage() {
               className="flex items-center gap-3 rounded-full px-5 py-3"
               style={{
                 background: "#2563EB",
-                boxShadow: "inset 0 1px 0 rgba(255,255,255,0.3), 0 8px 16px rgba(37,99,235,0.25)",
+                boxShadow: "inset 0 1px 0 rgba(255,255,255,0.3), 0 4px 8px rgba(37,99,235,0.15)",
               }}
             >
               <div
@@ -131,7 +131,7 @@ export default function DashboardPage() {
               className="flex items-center gap-3 rounded-full px-5 py-3"
               style={{
                 background: "#2563EB",
-                boxShadow: "inset 0 1px 0 rgba(255,255,255,0.3), 0 8px 16px rgba(37,99,235,0.25)",
+                boxShadow: "inset 0 1px 0 rgba(255,255,255,0.3), 0 4px 8px rgba(37,99,235,0.15)",
               }}
             >
               <div
