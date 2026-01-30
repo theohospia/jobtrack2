@@ -50,7 +50,7 @@ export default function DashboardPage() {
           >
             {/* Matches - Pill Card */}
             <div 
-              className="flex items-center gap-3 rounded-full px-5 py-3"
+              className="flex items-center gap-3 rounded-lg px-5 py-3"
               style={{
                 background: "#2563EB",
               }}
@@ -88,7 +88,7 @@ export default function DashboardPage() {
 
             {/* Responses - Pill Card */}
             <div 
-              className="flex items-center gap-3 rounded-full px-5 py-3"
+              className="flex items-center gap-3 rounded-lg px-5 py-3"
               style={{
                 background: "#2563EB",
               }}
@@ -124,7 +124,7 @@ export default function DashboardPage() {
 
             {/* Follow-ups - Pill Card */}
             <div 
-              className="flex items-center gap-3 rounded-full px-5 py-3"
+              className="flex items-center gap-3 rounded-lg px-5 py-3"
               style={{
                 background: "#2563EB",
               }}
