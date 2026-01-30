@@ -52,7 +52,7 @@ export default function DashboardPage() {
                 right: 0,
                 transform: "translateY(-50%)",
                 height: "36px",
-                background: "rgba(0, 3, 4, 0.7)",
+                background: "#EEF4FF",
                 borderRadius: "4px",
                 pointerEvents: "none",
               }}
