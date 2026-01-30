@@ -170,7 +170,7 @@ export default function DashboardPage() {
 
         {/* Revenue Overview and Recent Sales */}
         <div className="grid grid-cols-3 gap-6">
-          {/* Revenue Overview - 2 columns */}
+          {/* Responses Overview - 2 columns */}
           <div
             className="col-span-2 rounded-2xl p-8 transition-colors"
             style={{
@@ -181,26 +181,28 @@ export default function DashboardPage() {
             onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
           >
             <h3 className="text-xl font-semibold mb-1" style={{ color: "#0F172A" }}>
-              Revenue Overview
+              Responses Overview
             </h3>
             <p className="text-sm mb-6" style={{ color: "#64748B" }}>
-              Monthly revenue and deals closed over time
+              Daily responses
             </p>
             
             {/* Chart Container */}
             <div className="flex items-end justify-center gap-4 h-64">
               {/* Y-axis labels */}
               <div className="flex flex-col justify-between h-full text-right pr-2">
-                <span className="text-xs" style={{ color: "#94A3B8" }}>$60k</span>
-                <span className="text-xs" style={{ color: "#94A3B8" }}>$45k</span>
-                <span className="text-xs" style={{ color: "#94A3B8" }}>$30k</span>
-                <span className="text-xs" style={{ color: "#94A3B8" }}>$15k</span>
-                <span className="text-xs" style={{ color: "#94A3B8" }}>$0k</span>
+                <span className="text-xs" style={{ color: "#94A3B8" }}>12</span>
+                <span className="text-xs" style={{ color: "#94A3B8" }}>10</span>
+                <span className="text-xs" style={{ color: "#94A3B8" }}>8</span>
+                <span className="text-xs" style={{ color: "#94A3B8" }}>6</span>
+                <span className="text-xs" style={{ color: "#94A3B8" }}>4</span>
+                <span className="text-xs" style={{ color: "#94A3B8" }}>2</span>
+                <span className="text-xs" style={{ color: "#94A3B8" }}>0</span>
               </div>
 
               {/* Bars */}
               <div className="flex items-end gap-3 flex-1">
-                {/* Jan */}
+                {/* Mon */}
                 <div className="flex-1 flex flex-col items-center gap-2">
                   <div
                     style={{
@@ -210,10 +212,10 @@ export default function DashboardPage() {
                       borderRadius: "4px",
                     }}
                   />
-                  <span className="text-xs font-medium" style={{ color: "#64748B" }}>Jan</span>
+                  <span className="text-xs font-medium" style={{ color: "#64748B" }}>Mon</span>
                 </div>
 
-                {/* Feb */}
+                {/* Tue */}
                 <div className="flex-1 flex flex-col items-center gap-2">
                   <div
                     style={{
@@ -223,10 +225,10 @@ export default function DashboardPage() {
                       borderRadius: "4px",
                     }}
                   />
-                  <span className="text-xs font-medium" style={{ color: "#64748B" }}>Feb</span>
+                  <span className="text-xs font-medium" style={{ color: "#64748B" }}>Tue</span>
                 </div>
 
-                {/* Mar */}
+                {/* Wed */}
                 <div className="flex-1 flex flex-col items-center gap-2">
                   <div
                     style={{
@@ -236,10 +238,10 @@ export default function DashboardPage() {
                       borderRadius: "4px",
                     }}
                   />
-                  <span className="text-xs font-medium" style={{ color: "#64748B" }}>Mar</span>
+                  <span className="text-xs font-medium" style={{ color: "#64748B" }}>Wed</span>
                 </div>
 
-                {/* Apr */}
+                {/* Thu */}
                 <div className="flex-1 flex flex-col items-center gap-2">
                   <div
                     style={{
@@ -249,10 +251,10 @@ export default function DashboardPage() {
                       borderRadius: "4px",
                     }}
                   />
-                  <span className="text-xs font-medium" style={{ color: "#64748B" }}>Apr</span>
+                  <span className="text-xs font-medium" style={{ color: "#64748B" }}>Thu</span>
                 </div>
 
-                {/* May */}
+                {/* Fri */}
                 <div className="flex-1 flex flex-col items-center gap-2">
                   <div
                     style={{
@@ -262,10 +264,10 @@ export default function DashboardPage() {
                       borderRadius: "4px",
                     }}
                   />
-                  <span className="text-xs font-medium" style={{ color: "#64748B" }}>May</span>
+                  <span className="text-xs font-medium" style={{ color: "#64748B" }}>Fri</span>
                 </div>
 
-                {/* Jun */}
+                {/* Sat */}
                 <div className="flex-1 flex flex-col items-center gap-2">
                   <div
                     style={{
@@ -275,7 +277,7 @@ export default function DashboardPage() {
                       borderRadius: "4px",
                     }}
                   />
-                  <span className="text-xs font-medium" style={{ color: "#64748B" }}>Jun</span>
+                  <span className="text-xs font-medium" style={{ color: "#64748B" }}>Sat</span>
                 </div>
               </div>
             </div>
