@@ -60,9 +60,7 @@ export default function DashboardPage() {
                 style={{
                   width: "44px",
                   height: "44px",
-                  background: "rgba(255,255,255,0.25)",
-                  backdropFilter: "blur(4px)",
-                  boxShadow: "inset 0 1px 2px rgba(255,255,255,0.4)",
+                  background: "#1D4ED8",
                 }}
               >
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -80,7 +78,7 @@ export default function DashboardPage() {
                 </p>
                 <p
                   className="text-xs font-bold"
-                  style={{ color: "rgba(255,255,255,0.8)" }}
+                  style={{ color: "#FFFFFF" }}
                 >
                   Matches
                 </p>
@@ -99,9 +97,7 @@ export default function DashboardPage() {
                 style={{
                   width: "44px",
                   height: "44px",
-                  background: "rgba(255,255,255,0.25)",
-                  backdropFilter: "blur(4px)",
-                  boxShadow: "inset 0 1px 2px rgba(255,255,255,0.4)",
+                  background: "#1D4ED8",
                 }}
               >
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -117,7 +113,7 @@ export default function DashboardPage() {
                 </p>
                 <p
                   className="text-xs font-bold"
-                  style={{ color: "rgba(255,255,255,0.8)" }}
+                  style={{ color: "#FFFFFF" }}
                 >
                   Responses
                 </p>
@@ -136,9 +132,7 @@ export default function DashboardPage() {
                 style={{
                   width: "44px",
                   height: "44px",
-                  background: "rgba(255,255,255,0.25)",
-                  backdropFilter: "blur(4px)",
-                  boxShadow: "inset 0 1px 2px rgba(255,255,255,0.4)",
+                  background: "#1D4ED8",
                 }}
               >
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -155,7 +149,7 @@ export default function DashboardPage() {
                 </p>
                 <p
                   className="text-xs font-bold"
-                  style={{ color: "rgba(255,255,255,0.8)" }}
+                  style={{ color: "#FFFFFF" }}
                 >
                   Follow-ups
                 </p>
