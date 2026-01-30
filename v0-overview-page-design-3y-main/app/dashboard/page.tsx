@@ -43,16 +43,17 @@ export default function DashboardPage() {
 
           {/* Right: Stats Container */}
           <div
-            className="flex gap-3"
+            className="flex gap-3 px-5 py-3"
             style={{
-              background: "transparent",
+              background: "linear-gradient(180deg, rgba(0, 3, 4, 0.7) 0%, rgba(0, 3, 4, 0.75) 50%, rgba(0, 3, 4, 0.7) 100%)",
+              backdropFilter: "blur(0.5px)",
             }}
           >
-            {/* Matches - Pill Card */}
+            {/* Matches - Card */}
             <div 
-              className="flex items-center gap-2 rounded-xl px-4 py-2"
+              className="flex items-center gap-2 px-4 py-2"
               style={{
-                background: "#2563EB",
+                background: "transparent",
               }}
             >
               <div
@@ -60,7 +61,7 @@ export default function DashboardPage() {
                 style={{
                   width: "40px",
                   height: "40px",
-                  background: "#1D4ED8",
+                  background: "#2563EB",
                   border: "2px solid #FFFFFF",
                 }}
               >
@@ -86,11 +87,11 @@ export default function DashboardPage() {
               </div>
             </div>
 
-            {/* Responses - Pill Card */}
+            {/* Responses - Card */}
             <div 
-              className="flex items-center gap-2 rounded-xl px-4 py-2"
+              className="flex items-center gap-2 px-4 py-2"
               style={{
-                background: "#2563EB",
+                background: "transparent",
               }}
             >
               <div
@@ -98,7 +99,7 @@ export default function DashboardPage() {
                 style={{
                   width: "40px",
                   height: "40px",
-                  background: "#1D4ED8",
+                  background: "#2563EB",
                   border: "2px solid #FFFFFF",
                 }}
               >
@@ -122,11 +123,11 @@ export default function DashboardPage() {
               </div>
             </div>
 
-            {/* Follow-ups - Pill Card */}
+            {/* Follow-ups - Card */}
             <div 
-              className="flex items-center gap-2 rounded-xl px-4 py-2"
+              className="flex items-center gap-2 px-4 py-2"
               style={{
-                background: "#2563EB",
+                background: "transparent",
               }}
             >
               <div
@@ -134,7 +135,7 @@ export default function DashboardPage() {
                 style={{
                   width: "40px",
                   height: "40px",
-                  background: "#1D4ED8",
+                  background: "#2563EB",
                   border: "2px solid #FFFFFF",
                 }}
               >
