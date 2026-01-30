@@ -203,146 +203,226 @@ export default function DashboardPage() {
           </div>
         </div>
 
-        {/* Today Section */}
-        <div className="mb-8 flex items-center gap-4">
+        {/* Revenue Overview and Recent Sales */}
+        <div className="grid grid-cols-3 gap-6">
+          {/* Revenue Overview - 2 columns */}
           <div
-            className="flex items-center justify-center rounded-full flex-shrink-0"
+            className="col-span-2 rounded-2xl p-8 transition-colors"
             style={{
-              width: "64px",
-              height: "64px",
-              background: "#E2E8F0",
-              border: "2px solid #CBD5E1",
+              background: "#FFFFFF",
+              border: "1px solid #E5E7EB",
             }}
+            onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
+            onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
           >
-            <svg width="36" height="36" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="16" cy="10" r="4" fill="#64748B" />
-              <path d="M16 16C12.6863 16 10 18.6863 10 22V28H22V22C22 18.6863 19.3137 16 16 16Z" fill="#64748B" />
-            </svg>
+            <h3 className="text-xl font-semibold mb-1" style={{ color: "#0F172A" }}>
+              Revenue Overview
+            </h3>
+            <p className="text-sm mb-6" style={{ color: "#64748B" }}>
+              Monthly revenue and deals closed over time
+            </p>
+            
+            {/* Chart Container */}
+            <div className="flex items-end justify-center gap-4 h-64">
+              {/* Y-axis labels */}
+              <div className="flex flex-col justify-between h-full text-right pr-2">
+                <span className="text-xs" style={{ color: "#94A3B8" }}>$60k</span>
+                <span className="text-xs" style={{ color: "#94A3B8" }}>$45k</span>
+                <span className="text-xs" style={{ color: "#94A3B8" }}>$30k</span>
+                <span className="text-xs" style={{ color: "#94A3B8" }}>$15k</span>
+                <span className="text-xs" style={{ color: "#94A3B8" }}>$0k</span>
+              </div>
+
+              {/* Bars */}
+              <div className="flex items-end gap-3 flex-1">
+                {/* Jan */}
+                <div className="flex-1 flex flex-col items-center gap-2">
+                  <div
+                    style={{
+                      width: "100%",
+                      height: "120px",
+                      background: "#2563EB",
+                      borderRadius: "4px",
+                    }}
+                  />
+                  <span className="text-xs font-medium" style={{ color: "#64748B" }}>Jan</span>
+                </div>
+
+                {/* Feb */}
+                <div className="flex-1 flex flex-col items-center gap-2">
+                  <div
+                    style={{
+                      width: "100%",
+                      height: "95px",
+                      background: "#2563EB",
+                      borderRadius: "4px",
+                    }}
+                  />
+                  <span className="text-xs font-medium" style={{ color: "#64748B" }}>Feb</span>
+                </div>
+
+                {/* Mar */}
+                <div className="flex-1 flex flex-col items-center gap-2">
+                  <div
+                    style={{
+                      width: "100%",
+                      height: "140px",
+                      background: "#2563EB",
+                      borderRadius: "4px",
+                    }}
+                  />
+                  <span className="text-xs font-medium" style={{ color: "#64748B" }}>Mar</span>
+                </div>
+
+                {/* Apr */}
+                <div className="flex-1 flex flex-col items-center gap-2">
+                  <div
+                    style={{
+                      width: "100%",
+                      height: "155px",
+                      background: "#2563EB",
+                      borderRadius: "4px",
+                    }}
+                  />
+                  <span className="text-xs font-medium" style={{ color: "#64748B" }}>Apr</span>
+                </div>
+
+                {/* May */}
+                <div className="flex-1 flex flex-col items-center gap-2">
+                  <div
+                    style={{
+                      width: "100%",
+                      height: "145px",
+                      background: "#2563EB",
+                      borderRadius: "4px",
+                    }}
+                  />
+                  <span className="text-xs font-medium" style={{ color: "#64748B" }}>May</span>
+                </div>
+
+                {/* Jun */}
+                <div className="flex-1 flex flex-col items-center gap-2">
+                  <div
+                    style={{
+                      width: "100%",
+                      height: "165px",
+                      background: "#2563EB",
+                      borderRadius: "4px",
+                    }}
+                  />
+                  <span className="text-xs font-medium" style={{ color: "#64748B" }}>Jun</span>
+                </div>
+              </div>
+            </div>
           </div>
-          <h2 
-            className="text-[26px] font-semibold leading-[1.3]"
-            style={{ color: "#0F172A", letterSpacing: "-0.3px" }}
+
+          {/* Recent Sales - 1 column */}
+          <div
+            className="rounded-2xl p-8 transition-colors"
+            style={{
+              background: "#FFFFFF",
+              border: "1px solid #E5E7EB",
+            }}
+            onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
+            onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
           >
-            Today
-          </h2>
+            <h3 className="text-xl font-semibold mb-1" style={{ color: "#0F172A" }}>
+              Recent Sales
+            </h3>
+            <p className="text-sm mb-6" style={{ color: "#64748B" }}>
+              Latest deals closed by your team
+            </p>
+
+            {/* Sales List */}
+            <div className="flex flex-col gap-4">
+              {/* Sale 1 */}
+              <div className="flex items-center justify-between pb-4 border-b" style={{ borderColor: "#E5E7EB" }}>
+                <div className="flex items-center gap-3">
+                  <div
+                    className="flex items-center justify-center rounded-full flex-shrink-0 text-sm font-semibold"
+                    style={{
+                      width: "40px",
+                      height: "40px",
+                      background: "#E0E7FF",
+                      color: "#2563EB",
+                    }}
+                  >
+                    JD
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold" style={{ color: "#0F172A" }}>Jane Doe</p>
+                    <p className="text-xs" style={{ color: "#64748B" }}>Acme Inc.</p>
+                  </div>
+                </div>
+                <p className="text-sm font-semibold" style={{ color: "#0F172A" }}>+$15,000</p>
+              </div>
+
+              {/* Sale 2 */}
+              <div className="flex items-center justify-between pb-4 border-b" style={{ borderColor: "#E5E7EB" }}>
+                <div className="flex items-center gap-3">
+                  <img
+                    src="/placeholder.svg?height=40&width=40"
+                    alt="Mike Roberts"
+                    className="w-10 h-10 rounded-full object-cover"
+                  />
+                  <div>
+                    <p className="text-sm font-semibold" style={{ color: "#0F172A" }}>Mike Roberts</p>
+                    <p className="text-xs" style={{ color: "#64748B" }}>StartupXYZ</p>
+                  </div>
+                </div>
+                <p className="text-sm font-semibold" style={{ color: "#0F172A" }}>+$12,500</p>
+              </div>
+
+              {/* Sale 3 */}
+              <div className="flex items-center justify-between pb-4 border-b" style={{ borderColor: "#E5E7EB" }}>
+                <div className="flex items-center gap-3">
+                  <img
+                    src="/placeholder.svg?height=40&width=40"
+                    alt="Sarah Johnson"
+                    className="w-10 h-10 rounded-full object-cover"
+                  />
+                  <div>
+                    <p className="text-sm font-semibold" style={{ color: "#0F172A" }}>Sarah Johnson</p>
+                    <p className="text-xs" style={{ color: "#64748B" }}>TechCorp Inc.</p>
+                  </div>
+                </div>
+                <p className="text-sm font-semibold" style={{ color: "#0F172A" }}>+$25,000</p>
+              </div>
+
+              {/* Sale 4 */}
+              <div className="flex items-center justify-between pb-4 border-b" style={{ borderColor: "#E5E7EB" }}>
+                <div className="flex items-center gap-3">
+                  <img
+                    src="/placeholder.svg?height=40&width=40"
+                    alt="Alex Lee"
+                    className="w-10 h-10 rounded-full object-cover"
+                  />
+                  <div>
+                    <p className="text-sm font-semibold" style={{ color: "#0F172A" }}>Alex Lee</p>
+                    <p className="text-xs" style={{ color: "#64748B" }}>Global Solutions</p>
+                  </div>
+                </div>
+                <p className="text-sm font-semibold" style={{ color: "#0F172A" }}>+$8,500</p>
+              </div>
+
+              {/* Sale 5 */}
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <img
+                    src="/placeholder.svg?height=40&width=40"
+                    alt="Emily Martinez"
+                    className="w-10 h-10 rounded-full object-cover"
+                  />
+                  <div>
+                    <p className="text-sm font-semibold" style={{ color: "#0F172A" }}>Emily Martinez</p>
+                    <p className="text-xs" style={{ color: "#64748B" }}>Retail Chain Co.</p>
+                  </div>
+                </div>
+                <p className="text-sm font-semibold" style={{ color: "#0F172A" }}>+$25,000</p>
+              </div>
+            </div>
+          </div>
         </div>
-        
-        {/* Latest Jobs Section */}
-        <section>
-          <h2
-            className="mb-6 text-[26px] font-semibold leading-[1.3]"
-            style={{ color: "#0F172A", letterSpacing: "-0.3px" }}
-          >
-            Latest jobs
-          </h2>
-
-          <div className="flex flex-col gap-4">
-            {/* Job Card 1 */}
-            <div
-              className="rounded-2xl p-5 transition-colors"
-              style={{
-                background: "#FFFFFF",
-                border: "1px solid #E5E7EB",
-              }}
-              onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
-              onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
-            >
-              <h4 className="text-sm font-semibold" style={{ color: "#0F172A" }}>
-                Product Manager
-              </h4>
-              <p className="mt-1 text-xs" style={{ color: "#64748B" }}>
-                TechCorp Inc. · San Francisco, CA
-              </p>
-              <p className="mt-2 text-xs" style={{ color: "#94A3B8" }}>
-                Posted 2 hours ago
-              </p>
-            </div>
-
-            {/* Job Card 2 */}
-            <div
-              className="rounded-2xl p-5 transition-colors"
-              style={{
-                background: "#FFFFFF",
-                border: "1px solid #E5E7EB",
-              }}
-              onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
-              onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
-            >
-              <h4 className="text-sm font-semibold" style={{ color: "#0F172A" }}>
-                UX Designer
-              </h4>
-              <p className="mt-1 text-xs" style={{ color: "#64748B" }}>
-                Design Studio Co. · New York, NY
-              </p>
-              <p className="mt-2 text-xs" style={{ color: "#94A3B8" }}>
-                Posted 5 hours ago
-              </p>
-            </div>
-
-            {/* Job Card 3 */}
-            <div
-              className="rounded-2xl p-5 transition-colors"
-              style={{
-                background: "#FFFFFF",
-                border: "1px solid #E5E7EB",
-              }}
-              onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
-              onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
-            >
-              <h4 className="text-sm font-semibold" style={{ color: "#0F172A" }}>
-                Senior Developer
-              </h4>
-              <p className="mt-1 text-xs" style={{ color: "#64748B" }}>
-                Tech Innovations Ltd. · Seattle, WA
-              </p>
-              <p className="mt-2 text-xs" style={{ color: "#94A3B8" }}>
-                Posted 4 hours ago
-              </p>
-            </div>
-
-            {/* Job Card 4 */}
-            <div
-              className="rounded-2xl p-5 transition-colors"
-              style={{
-                background: "#FFFFFF",
-                border: "1px solid #E5E7EB",
-              }}
-              onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
-              onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
-            >
-              <h4 className="text-sm font-semibold" style={{ color: "#0F172A" }}>
-                Business Analyst
-              </h4>
-              <p className="mt-1 text-xs" style={{ color: "#64748B" }}>
-                Consulting Partners · Boston, MA
-              </p>
-              <p className="mt-2 text-xs" style={{ color: "#94A3B8" }}>
-                Posted 8 hours ago
-              </p>
-            </div>
-
-            {/* Job Card 5 */}
-            <div
-              className="rounded-2xl p-5 transition-colors"
-              style={{
-                background: "#FFFFFF",
-                border: "1px solid #E5E7EB",
-              }}
-              onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
-              onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
-            >
-              <h4 className="text-sm font-semibold" style={{ color: "#0F172A" }}>
-                Marketing Coordinator
-              </h4>
-              <p className="mt-1 text-xs" style={{ color: "#64748B" }}>
-                Growth Labs · Remote
-              </p>
-              <p className="mt-2 text-xs" style={{ color: "#94A3B8" }}>
-                Posted 1 day ago
-              </p>
-            </div>
-          </div>
-        </section>
       </main>
     </div>
   );
