@@ -55,6 +55,7 @@ export default function DashboardPage() {
                 height: "64px",
                 background: "#FFFFFF",
                 border: "1px solid #E5E7EB",
+                boxShadow: "0px 8px 24px rgba(15, 23, 42, 0.06)",
                 pointerEvents: "none",
               }}
             />
