@@ -116,9 +116,9 @@ export default function DashboardPage() {
                 }}
               >
                 <svg width="56" height="56" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="8" cy="8" r="3" fill="#2563EB" />
-                  <circle cx="16" cy="8" r="3" fill="#2563EB" />
-                  <path d="M12 14C10.3431 14 9 15.3431 9 17V20H15V17C15 15.3431 13.6569 14 12 14Z" fill="#2563EB" />
+                  <circle cx="7" cy="12" r="2" fill="#2563EB" />
+                  <circle cx="17" cy="12" r="2" fill="#2563EB" />
+                  <path d="M12 7C9.5 7 7.5 9 7.5 11.5V18H16.5V11.5C16.5 9 14.5 7 12 7Z" fill="#2563EB" />
                 </svg>
               </div>
               <div className="flex flex-col gap-0">
@@ -154,9 +154,10 @@ export default function DashboardPage() {
                 }}
               >
                 <svg width="56" height="56" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="8" cy="8" r="3" fill="#3B82F6" />
-                  <circle cx="16" cy="8" r="3" fill="#3B82F6" />
-                  <path d="M12 14C10.3431 14 9 15.3431 9 17V20H15V17C15 15.3431 13.6569 14 12 14Z" fill="#3B82F6" />
+                  <rect x="8" y="10" width="8" height="6" fill="#3B82F6" />
+                  <circle cx="8.5" cy="8" r="1.5" fill="#3B82F6" />
+                  <circle cx="15.5" cy="8" r="1.5" fill="#3B82F6" />
+                  <path d="M8 16L8 18M16 16L16 18" stroke="#3B82F6" strokeWidth="2" strokeLinecap="round" />
                 </svg>
               </div>
               <div className="flex flex-col gap-0">
