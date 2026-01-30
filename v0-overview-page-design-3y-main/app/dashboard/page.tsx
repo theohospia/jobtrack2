@@ -184,7 +184,7 @@ export default function DashboardPage() {
               Responses Overview
             </h3>
             <p className="text-sm mb-6" style={{ color: "#64748B" }}>
-              Daily responses
+              Daily outreach and responses over time
             </p>
             
             {/* Chart Container */}
@@ -294,15 +294,15 @@ export default function DashboardPage() {
             onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
           >
             <h3 className="text-xl font-semibold mb-1" style={{ color: "#0F172A" }}>
-              Recent Sales
+              Recent Responses
             </h3>
             <p className="text-sm mb-6" style={{ color: "#64748B" }}>
-              Latest deals closed by your team
+              Latest responses you got
             </p>
 
             {/* Sales List */}
             <div className="flex flex-col gap-4">
-              {/* Sale 1 */}
+              {/* Response 1 */}
               <div className="flex items-center justify-between pb-4 border-b" style={{ borderColor: "#E5E7EB" }}>
                 <div className="flex items-center gap-3">
                   <div
@@ -321,10 +321,20 @@ export default function DashboardPage() {
                     <p className="text-xs" style={{ color: "#64748B" }}>Acme Inc.</p>
                   </div>
                 </div>
-                <p className="text-sm font-semibold" style={{ color: "#0F172A" }}>+$15,000</p>
+                <button
+                  className="px-3 py-1 rounded-lg text-xs font-medium transition-colors"
+                  style={{
+                    background: "#F1F5F9",
+                    color: "#2563EB"
+                  }}
+                  onMouseEnter={(e) => e.currentTarget.style.background = "#E2E8F0"}
+                  onMouseLeave={(e) => e.currentTarget.style.background = "#F1F5F9"}
+                >
+                  View
+                </button>
               </div>
 
-              {/* Sale 2 */}
+              {/* Response 2 */}
               <div className="flex items-center justify-between pb-4 border-b" style={{ borderColor: "#E5E7EB" }}>
                 <div className="flex items-center gap-3">
                   <img
@@ -337,10 +347,20 @@ export default function DashboardPage() {
                     <p className="text-xs" style={{ color: "#64748B" }}>StartupXYZ</p>
                   </div>
                 </div>
-                <p className="text-sm font-semibold" style={{ color: "#0F172A" }}>+$12,500</p>
+                <button
+                  className="px-3 py-1 rounded-lg text-xs font-medium transition-colors"
+                  style={{
+                    background: "#F1F5F9",
+                    color: "#2563EB"
+                  }}
+                  onMouseEnter={(e) => e.currentTarget.style.background = "#E2E8F0"}
+                  onMouseLeave={(e) => e.currentTarget.style.background = "#F1F5F9"}
+                >
+                  View
+                </button>
               </div>
 
-              {/* Sale 3 */}
+              {/* Response 3 */}
               <div className="flex items-center justify-between pb-4 border-b" style={{ borderColor: "#E5E7EB" }}>
                 <div className="flex items-center gap-3">
                   <img
@@ -353,10 +373,20 @@ export default function DashboardPage() {
                     <p className="text-xs" style={{ color: "#64748B" }}>TechCorp Inc.</p>
                   </div>
                 </div>
-                <p className="text-sm font-semibold" style={{ color: "#0F172A" }}>+$25,000</p>
+                <button
+                  className="px-3 py-1 rounded-lg text-xs font-medium transition-colors"
+                  style={{
+                    background: "#F1F5F9",
+                    color: "#2563EB"
+                  }}
+                  onMouseEnter={(e) => e.currentTarget.style.background = "#E2E8F0"}
+                  onMouseLeave={(e) => e.currentTarget.style.background = "#F1F5F9"}
+                >
+                  View
+                </button>
               </div>
 
-              {/* Sale 4 */}
+              {/* Response 4 */}
               <div className="flex items-center justify-between pb-4 border-b" style={{ borderColor: "#E5E7EB" }}>
                 <div className="flex items-center gap-3">
                   <img
@@ -369,10 +399,20 @@ export default function DashboardPage() {
                     <p className="text-xs" style={{ color: "#64748B" }}>Global Solutions</p>
                   </div>
                 </div>
-                <p className="text-sm font-semibold" style={{ color: "#0F172A" }}>+$8,500</p>
+                <button
+                  className="px-3 py-1 rounded-lg text-xs font-medium transition-colors"
+                  style={{
+                    background: "#F1F5F9",
+                    color: "#2563EB"
+                  }}
+                  onMouseEnter={(e) => e.currentTarget.style.background = "#E2E8F0"}
+                  onMouseLeave={(e) => e.currentTarget.style.background = "#F1F5F9"}
+                >
+                  View
+                </button>
               </div>
 
-              {/* Sale 5 */}
+              {/* Response 5 */}
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <img
@@ -385,7 +425,17 @@ export default function DashboardPage() {
                     <p className="text-xs" style={{ color: "#64748B" }}>Retail Chain Co.</p>
                   </div>
                 </div>
-                <p className="text-sm font-semibold" style={{ color: "#0F172A" }}>+$25,000</p>
+                <button
+                  className="px-3 py-1 rounded-lg text-xs font-medium transition-colors"
+                  style={{
+                    background: "#F1F5F9",
+                    color: "#2563EB"
+                  }}
+                  onMouseEnter={(e) => e.currentTarget.style.background = "#E2E8F0"}
+                  onMouseLeave={(e) => e.currentTarget.style.background = "#F1F5F9"}
+                >
+                  View
+                </button>
               </div>
             </div>
           </div>
