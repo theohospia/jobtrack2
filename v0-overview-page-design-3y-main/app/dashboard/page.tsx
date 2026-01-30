@@ -51,9 +51,10 @@ export default function DashboardPage() {
                 left: 0,
                 right: 0,
                 transform: "translateY(-50%)",
-                height: "52px",
+                height: "64px",
                 background: "#EEF4FF",
                 borderRadius: "4px",
+                border: "1px solid #E5E7EB",
                 pointerEvents: "none",
               }}
             />
