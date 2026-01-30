@@ -49,14 +49,14 @@ export default function DashboardPage() {
 
             {/* Right: Stats Container - Gaming Band */}
             <div
-              className="flex gap-3"
+              className="flex gap-3 rounded-xl px-4 py-3"
               style={{
-                background: "transparent",
+                background: "linear-gradient(180deg, rgba(0,3,4,0.7) 0%, rgba(0,3,4,0.5) 100%)",
               }}
             >
               {/* Matches - Card */}
               <div 
-                className="flex items-center gap-2 px-4 py-2"
+                className="flex items-center gap-2"
                 style={{
                   background: "transparent",
                 }}
@@ -94,7 +94,7 @@ export default function DashboardPage() {
 
               {/* Responses - Card */}
               <div 
-                className="flex items-center gap-2 px-4 py-2"
+                className="flex items-center gap-2"
                 style={{
                   background: "transparent",
                 }}
@@ -130,7 +130,7 @@ export default function DashboardPage() {
 
               {/* Follow-ups - Card */}
               <div 
-                className="flex items-center gap-2 px-4 py-2"
+                className="flex items-center gap-2"
                 style={{
                   background: "transparent",
                 }}
