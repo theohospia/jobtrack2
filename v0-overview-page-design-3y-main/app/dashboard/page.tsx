@@ -19,7 +19,7 @@ export default function DashboardPage() {
         <div 
           className="mb-6 -mx-6 px-6 py-6"
           style={{
-            background: "linear-gradient(90deg, rgba(0,3,4,0.5) 0%, rgba(0,3,4,0.7) 50%, rgba(0,3,4,0.5) 100%)",
+            background: "linear-gradient(180deg, rgba(0,3,4,0.7) 0%, rgba(0,3,4,0.5) 100%)",
           }}
         >
           <div className="flex items-center justify-between gap-6">
@@ -47,7 +47,7 @@ export default function DashboardPage() {
               </h1>
             </div>
 
-            {/* Right: Stats Container */}
+            {/* Right: Stats Container - Gaming Band */}
             <div
               className="flex gap-3"
               style={{
@@ -58,15 +58,15 @@ export default function DashboardPage() {
               <div 
                 className="flex items-center gap-2 px-4 py-2"
                 style={{
-                  background: "#2563EB",
+                  background: "transparent",
                 }}
               >
                 <div
-                  className="flex items-center justify-center flex-shrink-0"
+                  className="flex items-center justify-center flex-shrink-0 rounded-full"
                   style={{
                     width: "40px",
                     height: "40px",
-                    background: "#1D4ED8",
+                    background: "#2563EB",
                     border: "2px solid #FFFFFF",
                   }}
                 >
@@ -96,15 +96,15 @@ export default function DashboardPage() {
               <div 
                 className="flex items-center gap-2 px-4 py-2"
                 style={{
-                  background: "#2563EB",
+                  background: "transparent",
                 }}
               >
                 <div
-                  className="flex items-center justify-center flex-shrink-0"
+                  className="flex items-center justify-center flex-shrink-0 rounded-full"
                   style={{
                     width: "40px",
                     height: "40px",
-                    background: "#1D4ED8",
+                    background: "#2563EB",
                     border: "2px solid #FFFFFF",
                   }}
                 >
@@ -132,15 +132,15 @@ export default function DashboardPage() {
               <div 
                 className="flex items-center gap-2 px-4 py-2"
                 style={{
-                  background: "#2563EB",
+                  background: "transparent",
                 }}
               >
                 <div
-                  className="flex items-center justify-center flex-shrink-0"
+                  className="flex items-center justify-center flex-shrink-0 rounded-full"
                   style={{
                     width: "40px",
                     height: "40px",
-                    background: "#1D4ED8",
+                    background: "#2563EB",
                     border: "2px solid #FFFFFF",
                   }}
                 >
