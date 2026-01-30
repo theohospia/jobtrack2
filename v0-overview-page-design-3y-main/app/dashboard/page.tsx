@@ -71,16 +71,16 @@ export default function DashboardPage() {
               <div
                 className="flex items-center justify-center rounded-full flex-shrink-0"
                 style={{
-                  width: "128px",
-                  height: "128px",
+                  width: "112px",
+                  height: "112px",
                   background: "transparent",
                   border: "none",
                 }}
               >
-                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="8" cy="8" r="3" fill="#2563EB" />
-                  <circle cx="16" cy="8" r="3" fill="#2563EB" />
-                  <path d="M12 14C10.3431 14 9 15.3431 9 17V20H15V17C15 15.3431 13.6569 14 12 14Z" fill="#2563EB" />
+                <svg width="56" height="56" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="8" cy="8" r="3" fill="#1E40AF" />
+                  <circle cx="16" cy="8" r="3" fill="#1E40AF" />
+                  <path d="M12 14C10.3431 14 9 15.3431 9 17V20H15V17C15 15.3431 13.6569 14 12 14Z" fill="#1E40AF" />
                 </svg>
               </div>
               <div className="flex flex-col gap-0">
@@ -109,13 +109,13 @@ export default function DashboardPage() {
               <div
                 className="flex items-center justify-center rounded-full flex-shrink-0"
                 style={{
-                  width: "128px",
-                  height: "128px",
+                  width: "112px",
+                  height: "112px",
                   background: "transparent",
                   border: "none",
                 }}
               >
-                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="56" height="56" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="8" cy="8" r="3" fill="#2563EB" />
                   <circle cx="16" cy="8" r="3" fill="#2563EB" />
                   <path d="M12 14C10.3431 14 9 15.3431 9 17V20H15V17C15 15.3431 13.6569 14 12 14Z" fill="#2563EB" />
@@ -147,16 +147,16 @@ export default function DashboardPage() {
               <div
                 className="flex items-center justify-center rounded-full flex-shrink-0"
                 style={{
-                  width: "128px",
-                  height: "128px",
+                  width: "112px",
+                  height: "112px",
                   background: "transparent",
                   border: "none",
                 }}
               >
-                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="8" cy="8" r="3" fill="#2563EB" />
-                  <circle cx="16" cy="8" r="3" fill="#2563EB" />
-                  <path d="M12 14C10.3431 14 9 15.3431 9 17V20H15V17C15 15.3431 13.6569 14 12 14Z" fill="#2563EB" />
+                <svg width="56" height="56" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="8" cy="8" r="3" fill="#3B82F6" />
+                  <circle cx="16" cy="8" r="3" fill="#3B82F6" />
+                  <path d="M12 14C10.3431 14 9 15.3431 9 17V20H15V17C15 15.3431 13.6569 14 12 14Z" fill="#3B82F6" />
                 </svg>
               </div>
               <div className="flex flex-col gap-0">
