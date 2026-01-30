@@ -73,14 +73,14 @@ export default function DashboardPage() {
                 style={{
                   width: "36px",
                   height: "36px",
-                  background: "#F3F4F6",
+                  background: "transparent",
                   border: "none",
                 }}
               >
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="8" cy="8" r="3" fill="#065F46" />
-                  <circle cx="16" cy="8" r="3" fill="#065F46" />
-                  <path d="M12 14C10.3431 14 9 15.3431 9 17V20H15V17C15 15.3431 13.6569 14 12 14Z" fill="#065F46" />
+                  <circle cx="8" cy="8" r="3" fill="#10B981" />
+                  <circle cx="16" cy="8" r="3" fill="#10B981" />
+                  <path d="M12 14C10.3431 14 9 15.3431 9 17V20H15V17C15 15.3431 13.6569 14 12 14Z" fill="#10B981" />
                 </svg>
               </div>
               <div className="flex flex-col gap-0">
@@ -111,12 +111,12 @@ export default function DashboardPage() {
                 style={{
                   width: "36px",
                   height: "36px",
-                  background: "#F3F4F6",
+                  background: "transparent",
                   border: "none",
                 }}
               >
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M3 9L12 4L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" fill="#065F46"/>
+                  <path d="M3 9L12 4L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" fill="#10B981"/>
                 </svg>
               </div>
               <div className="flex flex-col gap-0">
@@ -147,13 +147,13 @@ export default function DashboardPage() {
                 style={{
                   width: "36px",
                   height: "36px",
-                  background: "#F3F4F6",
+                  background: "transparent",
                   border: "none",
                 }}
               >
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="12" cy="12" r="9" stroke="#065F46" strokeWidth="2"/>
-                  <path d="M12 7V12L15.5 14.5" stroke="#065F46" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <circle cx="12" cy="12" r="9" stroke="#10B981" strokeWidth="2"/>
+                  <path d="M12 7V12L15.5 14.5" stroke="#10B981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
               <div className="flex flex-col gap-0">
