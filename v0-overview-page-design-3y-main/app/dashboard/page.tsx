@@ -71,13 +71,13 @@ export default function DashboardPage() {
               </div>
               <div className="flex flex-col gap-0">
                 <p
-                  className="text-2xl font-black leading-none"
+                  className="text-sm font-semibold leading-none"
                   style={{ color: "#FFFFFF" }}
                 >
                   12
                 </p>
                 <p
-                  className="text-xs font-bold"
+                  className="text-xs font-medium"
                   style={{ color: "#FFFFFF" }}
                 >
                   Matches
@@ -106,13 +106,13 @@ export default function DashboardPage() {
               </div>
               <div className="flex flex-col gap-0">
                 <p
-                  className="text-2xl font-black leading-none"
+                  className="text-sm font-semibold leading-none"
                   style={{ color: "#FFFFFF" }}
                 >
                   4
                 </p>
                 <p
-                  className="text-xs font-bold"
+                  className="text-xs font-medium"
                   style={{ color: "#FFFFFF" }}
                 >
                   Responses
@@ -142,13 +142,13 @@ export default function DashboardPage() {
               </div>
               <div className="flex flex-col gap-0">
                 <p
-                  className="text-2xl font-black leading-none"
+                  className="text-sm font-semibold leading-none"
                   style={{ color: "#FFFFFF" }}
                 >
                   3
                 </p>
                 <p
-                  className="text-xs font-bold"
+                  className="text-xs font-medium"
                   style={{ color: "#FFFFFF" }}
                 >
                   Follow-ups
