@@ -43,125 +43,154 @@ export default function DashboardPage() {
 
           {/* Right: Stats Container Band */}
           <div
-            className="flex gap-3"
+            className="flex gap-3 relative overflow-hidden"
             style={{
-              background: `
-                linear-gradient(90deg, rgba(0, 3, 4, 0) 0%, rgba(0, 3, 4, 0.7) 15%, rgba(0, 3, 4, 0.7) 85%, rgba(0, 3, 4, 0) 100%),
-                linear-gradient(180deg, rgba(0, 3, 4, 0) 0%, rgba(0, 3, 4, 0.7) 20%, rgba(0, 3, 4, 0.7) 80%, rgba(0, 3, 4, 0) 100%)
-              `,
-              backgroundBlendMode: "multiply",
               padding: "12px 16px",
               borderRadius: "4px",
             }}
           >
-            {/* Matches - Card */}
-            <div 
-              className="flex items-center gap-2 px-4 py-2"
+            {/* Diagonal Lines Background */}
+            <div
               style={{
-                background: "transparent",
+                position: "absolute",
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                backgroundImage: `url("data:image/svg+xml,%3Csvg width='8' height='8' viewBox='0 0 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline x1='0' y1='0' x2='8' y2='8' stroke='rgba(255,255,255,0.08)' stroke-width='1'/%3E%3C/svg%3E")`,
+                backgroundRepeat: "repeat",
+                pointerEvents: "none",
               }}
-            >
-              <div
-                className="flex items-center justify-center rounded-full flex-shrink-0"
-                style={{
-                  width: "40px",
-                  height: "40px",
-                  background: "#2563EB",
-                  border: "2px solid #FFFFFF",
-                }}
-              >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="8" cy="8" r="3" fill="#FFFFFF" />
-                  <circle cx="16" cy="8" r="3" fill="#FFFFFF" />
-                  <path d="M12 14C10.3431 14 9 15.3431 9 17V20H15V17C15 15.3431 13.6569 14 12 14Z" fill="#FFFFFF" />
-                </svg>
-              </div>
-              <div className="flex flex-col gap-0">
-                <p
-                  className="text-sm font-semibold leading-none"
-                  style={{ color: "#FFFFFF" }}
-                >
-                  12
-                </p>
-                <p
-                  className="text-xs font-medium"
-                  style={{ color: "#FFFFFF" }}
-                >
-                  Matches
-                </p>
-              </div>
-            </div>
+            />
+            
+            {/* Gradient Overlay */}
+            <div
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                background: `
+                  linear-gradient(90deg, rgba(0, 3, 4, 0) 0%, rgba(0, 3, 4, 0.7) 15%, rgba(0, 3, 4, 0.7) 85%, rgba(0, 3, 4, 0) 100%),
+                  linear-gradient(180deg, rgba(0, 3, 4, 0) 0%, rgba(0, 3, 4, 0.7) 20%, rgba(0, 3, 4, 0.7) 80%, rgba(0, 3, 4, 0) 100%)
+                `,
+                backgroundBlendMode: "multiply",
+                pointerEvents: "none",
+              }}
+            />
 
-            {/* Responses - Card */}
-            <div 
-              className="flex items-center gap-2 px-4 py-2"
-              style={{
-                background: "transparent",
-              }}
-            >
-              <div
-                className="flex items-center justify-center rounded-full flex-shrink-0"
+            {/* Content Wrapper */}
+            <div className="flex gap-3 relative z-10">
+              {/* Matches - Card */}
+              <div 
+                className="flex items-center gap-2 px-4 py-2"
                 style={{
-                  width: "40px",
-                  height: "40px",
-                  background: "#2563EB",
-                  border: "2px solid #FFFFFF",
+                  background: "transparent",
                 }}
               >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M3 9L12 4L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" fill="#FFFFFF"/>
-                </svg>
-              </div>
-              <div className="flex flex-col gap-0">
-                <p
-                  className="text-sm font-semibold leading-none"
-                  style={{ color: "#FFFFFF" }}
+                <div
+                  className="flex items-center justify-center rounded-full flex-shrink-0"
+                  style={{
+                    width: "40px",
+                    height: "40px",
+                    background: "#2563EB",
+                    border: "2px solid #FFFFFF",
+                  }}
                 >
-                  4
-                </p>
-                <p
-                  className="text-xs font-medium"
-                  style={{ color: "#FFFFFF" }}
-                >
-                  Responses
-                </p>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="8" cy="8" r="3" fill="#FFFFFF" />
+                    <circle cx="16" cy="8" r="3" fill="#FFFFFF" />
+                    <path d="M12 14C10.3431 14 9 15.3431 9 17V20H15V17C15 15.3431 13.6569 14 12 14Z" fill="#FFFFFF" />
+                  </svg>
+                </div>
+                <div className="flex flex-col gap-0">
+                  <p
+                    className="text-sm font-semibold leading-none"
+                    style={{ color: "#FFFFFF" }}
+                  >
+                    12
+                  </p>
+                  <p
+                    className="text-xs font-medium"
+                    style={{ color: "#FFFFFF" }}
+                  >
+                    Matches
+                  </p>
+                </div>
               </div>
-            </div>
 
-            {/* Follow-ups - Card */}
-            <div 
-              className="flex items-center gap-2 px-4 py-2"
-              style={{
-                background: "transparent",
-              }}
-            >
-              <div
-                className="flex items-center justify-center rounded-full flex-shrink-0"
+              {/* Responses - Card */}
+              <div 
+                className="flex items-center gap-2 px-4 py-2"
                 style={{
-                  width: "40px",
-                  height: "40px",
-                  background: "#2563EB",
-                  border: "2px solid #FFFFFF",
+                  background: "transparent",
                 }}
               >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="12" cy="12" r="9" stroke="#FFFFFF" strokeWidth="2"/>
-                  <path d="M12 7V12L15.5 14.5" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
+                <div
+                  className="flex items-center justify-center rounded-full flex-shrink-0"
+                  style={{
+                    width: "40px",
+                    height: "40px",
+                    background: "#2563EB",
+                    border: "2px solid #FFFFFF",
+                  }}
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 9L12 4L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" fill="#FFFFFF"/>
+                  </svg>
+                </div>
+                <div className="flex flex-col gap-0">
+                  <p
+                    className="text-sm font-semibold leading-none"
+                    style={{ color: "#FFFFFF" }}
+                  >
+                    4
+                  </p>
+                  <p
+                    className="text-xs font-medium"
+                    style={{ color: "#FFFFFF" }}
+                  >
+                    Responses
+                  </p>
+                </div>
               </div>
-              <div className="flex flex-col gap-0">
-                <p
-                  className="text-sm font-semibold leading-none"
-                  style={{ color: "#FFFFFF" }}
+
+              {/* Follow-ups - Card */}
+              <div 
+                className="flex items-center gap-2 px-4 py-2"
+                style={{
+                  background: "transparent",
+                }}
+              >
+                <div
+                  className="flex items-center justify-center rounded-full flex-shrink-0"
+                  style={{
+                    width: "40px",
+                    height: "40px",
+                    background: "#2563EB",
+                    border: "2px solid #FFFFFF",
+                  }}
                 >
-                  3
-                </p>
-                <p
-                  className="text-xs font-medium"
-                  style={{ color: "#FFFFFF" }}
-                >
-                  Follow-ups
-                </p>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="9" stroke="#FFFFFF" strokeWidth="2"/>
+                    <path d="M12 7V12L15.5 14.5" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
+                <div className="flex flex-col gap-0">
+                  <p
+                    className="text-sm font-semibold leading-none"
+                    style={{ color: "#FFFFFF" }}
+                  >
+                    3
+                  </p>
+                  <p
+                    className="text-xs font-medium"
+                    style={{ color: "#FFFFFF" }}
+                  >
+                    Follow-ups
+                  </p>
+                </div>
               </div>
             </div>
           </div>
