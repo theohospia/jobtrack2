@@ -34,28 +34,7 @@ export default function DashboardPage() {
         </div>
 
         {/* Tabs */}
-        <div className="mb-8 flex gap-6 border-b" style={{ borderColor: "#E5E7EB" }}>
-          <button className="pb-3 text-sm font-medium" style={{ color: "#0F172A", borderBottom: "2px solid #2563EB" }}>
-            Overview
-          </button>
-          <button className="pb-3 text-sm font-medium transition-colors" style={{ color: "#94A3B8" }}
-            onMouseEnter={(e) => e.currentTarget.style.color = "#64748B"}
-            onMouseLeave={(e) => e.currentTarget.style.color = "#94A3B8"}>
-            Analytics
-          </button>
-          <button className="pb-3 text-sm font-medium transition-colors" style={{ color: "#94A3B8" }}
-            onMouseEnter={(e) => e.currentTarget.style.color = "#64748B"}
-            onMouseLeave={(e) => e.currentTarget.style.color = "#94A3B8"}>
-            All Deals
-          </button>
-          <button className="pb-3 text-sm font-medium transition-colors" style={{ color: "#94A3B8" }}
-            onMouseEnter={(e) => e.currentTarget.style.color = "#64748B"}
-            onMouseLeave={(e) => e.currentTarget.style.color = "#94A3B8"}>
-            Reports
-          </button>
-        </div>
-
-        {/* Metric Cards Grid */}
+        
         <div className="mb-12 grid grid-cols-4 gap-4">
           {/* Matches Found */}
           <div
@@ -118,8 +97,8 @@ export default function DashboardPage() {
             <p className="text-2xl font-semibold mb-2" style={{ color: "#0F172A" }}>
               42
             </p>
-            <p className="text-xs" style={{ color: "#64748B" }}>
-              &nbsp;
+            <p className="text-xs" style={{ color: "#10B981" }}>
+              +7 from last week
             </p>
           </div>
 
