@@ -45,7 +45,11 @@ export default function DashboardPage() {
           <div
             className="flex gap-3"
             style={{
-              background: "linear-gradient(90deg, rgba(0, 3, 4, 0) 0%, rgba(0, 3, 4, 0.7) 15%, rgba(0, 3, 4, 0.7) 85%, rgba(0, 3, 4, 0) 100%)",
+              background: `
+                linear-gradient(90deg, rgba(0, 3, 4, 0) 0%, rgba(0, 3, 4, 0.7) 15%, rgba(0, 3, 4, 0.7) 85%, rgba(0, 3, 4, 0) 100%),
+                linear-gradient(180deg, rgba(0, 3, 4, 0) 0%, rgba(0, 3, 4, 0.7) 20%, rgba(0, 3, 4, 0.7) 80%, rgba(0, 3, 4, 0) 100%)
+              `,
+              backgroundBlendMode: "multiply",
               padding: "12px 16px",
               borderRadius: "4px",
             }}
