@@ -196,7 +196,7 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
                 className="text-sm font-medium"
                 style={{ color: "#64748B" }}
               >
-                Above market
+                Above market · High confidence
               </p>
               <div className="flex items-center gap-1">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
