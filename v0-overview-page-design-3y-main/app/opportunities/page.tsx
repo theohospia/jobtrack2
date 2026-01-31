@@ -121,23 +121,12 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
           </p>
           
           {/* Role Title - Bottom */}
-          <div className="flex flex-wrap items-center gap-2 mt-1">
-            <h3
-              className="text-base font-semibold"
-              style={{ color: "#0F172A" }}
-            >
-              {opportunity.roleTitle}
-            </h3>
-            {opportunity.metaSignals.map((signal) => (
-              <span
-                key={signal}
-                className="rounded-md px-2 py-0.5 text-[11px] font-medium"
-                style={{ background: "transparent", color: "#2563EB" }}
-              >
-                {signal}
-              </span>
-            ))}
-          </div>
+          <h3
+            className="text-base font-semibold mt-1"
+            style={{ color: "#0F172A" }}
+          >
+            {opportunity.roleTitle}
+          </h3>
         </div>
         <FitPill level={opportunity.fitLevel} />
       </div>
