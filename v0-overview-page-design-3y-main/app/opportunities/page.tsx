@@ -201,12 +201,18 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
               >
                 Above market · High confidence
               </p>
-              <p
-                className="text-sm font-medium"
-                style={{ color: "#64748B" }}
-              >
-                {opportunity.metaSignals[0]}
-              </p>
+              <div className="flex items-center gap-1">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="10" stroke="#64748B" strokeWidth="2"/>
+                  <path d="M12 6V12L16 16" stroke="#64748B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+                <p
+                  className="text-sm font-medium"
+                  style={{ color: "#64748B" }}
+                >
+                  {opportunity.metaSignals[0]}
+                </p>
+              </div>
             </div>
           </div>
         </div>
