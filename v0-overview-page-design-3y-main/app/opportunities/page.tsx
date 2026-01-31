@@ -185,15 +185,23 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
               </div>
             </div>
 
-            {/* Estimated Salary */}
-            {opportunity.estimatedSalary && (
+            {/* Estimated Salary and Confidence */}
+            <div className="flex flex-col gap-1">
+              {opportunity.estimatedSalary && (
+                <p
+                  className="text-sm font-medium"
+                  style={{ color: "#64748B" }}
+                >
+                  {opportunity.estimatedSalary}
+                </p>
+              )}
               <p
                 className="text-sm font-medium"
                 style={{ color: "#64748B" }}
               >
-                {opportunity.estimatedSalary}
+                Above market · High confidence
               </p>
-            )}
+            </div>
           </div>
         </div>
 
