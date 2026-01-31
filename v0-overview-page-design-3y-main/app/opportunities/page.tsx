@@ -17,9 +17,9 @@ interface Opportunity {
 }
 
 const fitStyles: Record<FitLevel, { bg: string; color: string; label: string }> = {
-  strong: { bg: "transparent", color: "#2563EB", label: "Strong fit" },
-  good: { bg: "transparent", color: "#2563EB", label: "Good fit" },
-  stretch: { bg: "transparent", color: "#2563EB", label: "Stretch" },
+  strong: { bg: "transparent", color: "#000000", label: "Strong fit" },
+  good: { bg: "transparent", color: "#000000", label: "Good fit" },
+  stretch: { bg: "transparent", color: "#000000", label: "Stretch" },
 }
 
 // Fit distribution rule (enforced by decision engine):
@@ -131,7 +131,12 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
 
           {/* Fit Pill - Below Role Title */}
           <div className="mt-2">
-            <FitPill level={opportunity.fitLevel} />
+            <span
+              className="inline-block rounded-full px-2.5 py-1 text-xs font-semibold"
+              style={{ background: "transparent", color: "#000000" }}
+            >
+              {fitStyles[opportunity.fitLevel].label}
+            </span>
           </div>
         </div>
 
