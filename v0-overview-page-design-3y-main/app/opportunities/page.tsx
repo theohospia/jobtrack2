@@ -141,8 +141,8 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
             {opportunity.roleTitle}
           </h3>
 
-          {/* Circle + Salary Row */}
-          <div className="flex items-center gap-4 mt-2">
+          {/* Circle + Salary Column */}
+          <div className="flex gap-4 mt-2">
             {/* Circular Fit Strength Indicator */}
             <div className="flex items-center justify-center flex-shrink-0">
               <svg width="60" height="60" viewBox="0 0 100 100" className="transform -rotate-90">
@@ -185,15 +185,25 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
               </div>
             </div>
 
-            {/* Estimated Salary */}
-            {opportunity.estimatedSalary && (
+            {/* Salary and Confidence Info */}
+            <div className="flex flex-col gap-1">
+              {/* Estimated Salary - Top aligned */}
+              {opportunity.estimatedSalary && (
+                <p
+                  className="text-sm font-medium"
+                  style={{ color: "#64748B" }}
+                >
+                  {opportunity.estimatedSalary}
+                </p>
+              )}
+              {/* Above Market Info - Below Salary */}
               <p
                 className="text-sm font-medium"
                 style={{ color: "#64748B" }}
               >
-                {opportunity.estimatedSalary}
+                Above market · High confidence
               </p>
-            )}
+            </div>
           </div>
         </div>
 
