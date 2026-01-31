@@ -186,7 +186,7 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
             </div>
 
             {/* Salary and Confidence Info */}
-            <div className="flex flex-col gap-1">
+            <div className="flex flex-col gap-2">
               {/* Estimated Salary - Top aligned */}
               {opportunity.estimatedSalary && (
                 <p
