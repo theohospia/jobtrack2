@@ -112,7 +112,16 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
       {/* Top Row: Title + Meta Badges + Fit Signal */}
       <div className="flex items-start justify-between">
         <div>
-          <div className="flex flex-wrap items-center gap-2">
+          {/* Company Info - Top */}
+          <p
+            className="text-[13px] font-medium"
+            style={{ color: "#64748B" }}
+          >
+            {opportunity.company} · {opportunity.location} · {opportunity.workStyle}
+          </p>
+          
+          {/* Role Title - Bottom */}
+          <div className="flex flex-wrap items-center gap-2 mt-1">
             <h3
               className="text-base font-semibold"
               style={{ color: "#0F172A" }}
@@ -129,12 +138,6 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
               </span>
             ))}
           </div>
-          <p
-            className="mt-1 text-[13px]"
-            style={{ color: "#64748B" }}
-          >
-            {opportunity.company} · {opportunity.location} · {opportunity.workStyle}
-          </p>
         </div>
         <FitPill level={opportunity.fitLevel} />
       </div>
