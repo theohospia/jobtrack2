@@ -212,6 +212,50 @@ export default function OpportunitiesPage() {
           </h1>
         </header>
 
+        {/* Search and Filters */}
+        <div className="mb-8 flex gap-4">
+          {/* Search Bar */}
+          <div
+            className="flex-1 flex items-center gap-3 rounded-lg px-5 py-3.5"
+            style={{
+              background: "#FFFFFF",
+              border: "1px solid #E5E7EB",
+            }}
+          >
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="11" cy="11" r="8" stroke="#94A3B8" strokeWidth="2"/>
+              <path d="M21 21L16 16" stroke="#94A3B8" strokeWidth="2" strokeLinecap="round"/>
+            </svg>
+            <input
+              type="text"
+              placeholder="Search roles, companies..."
+              className="flex-1 bg-transparent text-base outline-none"
+              style={{ color: "#0F172A" }}
+            />
+          </div>
+
+          {/* Filter Button */}
+          <button
+            className="flex items-center gap-2 rounded-lg px-6 py-3.5 transition-colors"
+            style={{
+              background: "#FFFFFF",
+              border: "1px solid #E5E7EB",
+              color: "#64748B",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = "#F1F5F9";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = "#FFFFFF";
+            }}
+          >
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+            </svg>
+            <span className="text-base font-medium">Filters</span>
+          </button>
+        </div>
+
         {/* Opportunities List */}
         <div className="mb-8 flex flex-col gap-3">
           {showEmpty ? (
