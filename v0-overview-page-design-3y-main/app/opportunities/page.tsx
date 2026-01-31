@@ -283,7 +283,7 @@ export default function OpportunitiesPage() {
   return (
     <div
       className="min-h-screen min-w-[1280px]"
-      style={{ backgroundColor: "#F8FAFC" }}
+      style={{ backgroundColor: "#FFFFFF" }}
     >
       <TopNav />
       <main className="mx-auto max-w-[1120px] px-6 pt-8 pb-16">
