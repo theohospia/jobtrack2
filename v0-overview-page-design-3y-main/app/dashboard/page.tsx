@@ -272,7 +272,7 @@ export default function DashboardPage() {
               }}
             >
               <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/51af03a8-3f10-426a-9e2c-16e47811bab1-removebg-preview-KCufpWooZsUJT7EDzCwmI1w8Ii8Hls.png"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-vbbwLo6LbfhvvST8snD8yli5B1PXnb.png"
                 alt="Tutorial 2: Set up your profile for better matches"
                 className="w-full h-full object-cover"
                 style={{ backgroundColor: "#FFFFFF" }}
