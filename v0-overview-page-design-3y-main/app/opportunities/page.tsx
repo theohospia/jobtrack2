@@ -142,19 +142,22 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
       {/* Primary CTA */}
       <div className="flex items-start">
         <button
-          className="h-11 w-fit cursor-pointer px-5 text-sm font-semibold transition-all duration-[120ms] ease-in-out py-0 rounded-full shadow-xs my-1"
+          className="flex items-center gap-1 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2 mt-1"
           style={{
-            background: "#2563EB",
+            background: "#EC9F55",
             color: "#FFFFFF",
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.background = "#1D4ED8"
+            e.currentTarget.style.background = "#D88A3D"
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.background = "#2563EB"
+            e.currentTarget.style.background = "#EC9F55"
           }}
         >
           Apply now
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
         </button>
       </div>
     </div>
@@ -246,19 +249,22 @@ export default function OpportunitiesPage() {
         {!showEmpty && (
           <div className="flex justify-center">
             <button
-              className="h-11 w-fit cursor-pointer px-5 py-0 text-sm font-semibold shadow-xs transition-all duration-[120ms] ease-in-out rounded-lg"
+              className="flex items-center gap-1 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2"
               style={{
-                background: "#2563EB",
+                background: "#EC9F55",
                 color: "#FFFFFF",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.background = "#1D4ED8"
+                e.currentTarget.style.background = "#D88A3D"
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.background = "#2563EB"
+                e.currentTarget.style.background = "#EC9F55"
               }}
             >
               Load more
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
             </button>
           </div>
         )}
