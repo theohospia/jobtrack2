@@ -122,7 +122,7 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
       }}
     >
       {/* Main Content */}
-      <div className="flex items-start justify-between gap-4">
+      <div className="flex items-center justify-between gap-4">
         {/* Left Side: Company Info, Role Title, Circle + Salary */}
         <div className="flex-1">
           {/* Company Info - Top */}
@@ -145,7 +145,7 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
           <div className="flex items-center gap-4 mt-2">
             {/* Circular Fit Strength Indicator */}
             <div className="flex items-center justify-center flex-shrink-0">
-              <svg width="50" height="50" viewBox="0 0 100 100" className="transform -rotate-90">
+              <svg width="40" height="40" viewBox="0 0 100 100" className="transform -rotate-90">
                 {/* Background circle */}
                 <circle
                   cx="50"
