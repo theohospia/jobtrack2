@@ -123,7 +123,7 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
     >
       {/* Main Content */}
       <div className="flex items-start justify-between gap-4">
-        {/* Left Side: Company Info, Role Title, Salary, and Fit */}
+        {/* Left Side: Company Info, Role Title, Circle + Salary */}
         <div className="flex-1">
           {/* Company Info - Top */}
           <p
@@ -141,68 +141,81 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
             {opportunity.roleTitle}
           </h3>
 
-          {/* Estimated Salary - Below Role Title */}
-          {opportunity.estimatedSalary && (
-            <p
-              className="text-sm font-medium mt-0.5"
-              style={{ color: "#64748B" }}
-            >
-              {opportunity.estimatedSalary}
-            </p>
-          )}
-        </div>
+          {/* Circle + Salary Row */}
+          <div className="flex items-center gap-4 mt-2">
+            {/* Circular Fit Strength Indicator */}
+            <div className="flex items-center justify-center">
+              <svg width="85" height="85" viewBox="0 0 100 100" className="transform -rotate-90">
+                {/* Background circle */}
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="45"
+                  fill="none"
+                  stroke="#E5E7EB"
+                  strokeWidth="8"
+                />
+                {/* Progress circle */}
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="45"
+                  fill="none"
+                  stroke="#2563EB"
+                  strokeWidth="8"
+                  strokeDasharray={`${(opportunity.fitStrength / 100) * 2 * Math.PI * 45} ${2 * Math.PI * 45}`}
+                  strokeLinecap="round"
+                  style={{ transition: "stroke-dasharray 0.3s ease" }}
+                />
+              </svg>
+              {/* Center text */}
+              <div className="absolute flex flex-col items-center justify-center w-16 h-16">
+                <span
+                  className="text-sm font-bold"
+                  style={{ color: "#2563EB" }}
+                >
+                  {opportunity.fitStrength}%
+                </span>
+                <span
+                  className="text-xs font-medium mt-0.5 text-center"
+                  style={{ color: "#64748B" }}
+                >
+                  {fitStyles[opportunity.fitLevel].label}
+                </span>
+              </div>
+            </div>
 
-        {/* Right Side: Circular Fit Strength Indicator + Arrow */}
-        <div className="flex items-center justify-center gap-6">
-          <div className="flex items-center justify-center">
-            <svg width="85" height="85" viewBox="0 0 100 100" className="transform -rotate-90">
-              {/* Background circle */}
-              <circle
-                cx="50"
-                cy="50"
-                r="45"
-                fill="none"
-                stroke="#E5E7EB"
-                strokeWidth="8"
-              />
-              {/* Progress circle */}
-              <circle
-                cx="50"
-                cy="50"
-                r="45"
-                fill="none"
-                stroke="#2563EB"
-                strokeWidth="8"
-                strokeDasharray={`${(opportunity.fitStrength / 100) * 2 * Math.PI * 45} ${2 * Math.PI * 45}`}
-                strokeLinecap="round"
-                style={{ transition: "stroke-dasharray 0.3s ease" }}
-              />
-            </svg>
-            {/* Center text */}
-            <div className="absolute flex flex-col items-center justify-center w-16 h-16">
-              <span
-                className="text-sm font-bold"
-                style={{ color: "#2563EB" }}
-              >
-                {opportunity.fitStrength}%
-              </span>
-              <span
-                className="text-xs font-medium mt-0.5 text-center"
+            {/* Estimated Salary */}
+            {opportunity.estimatedSalary && (
+              <p
+                className="text-sm font-medium"
                 style={{ color: "#64748B" }}
               >
-                {fitStyles[opportunity.fitLevel].label}
-              </span>
-            </div>
+                {opportunity.estimatedSalary}
+              </p>
+            )}
           </div>
-          
-          {/* Right Arrow */}
-          <span
-            className="text-3xl font-light"
-            style={{ color: "#94A3B8" }}
-          >
-            {'>'}
-          </span>
         </div>
+
+        {/* Right Side: View more Button */}
+        <button
+          className="flex items-center gap-2 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2 whitespace-nowrap"
+          style={{
+            background: "#2563EB",
+            color: "#FFFFFF",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.background = "#1D4ED8"
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.background = "#2563EB"
+          }}
+        >
+          View more
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </button>
       </div>
     </div>
   )
