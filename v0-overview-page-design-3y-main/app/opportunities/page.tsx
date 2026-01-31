@@ -119,7 +119,7 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
       }}
     >
       {/* Main Content */}
-      <div className="flex items-start justify-between gap-4">
+      <div className="flex items-center justify-between gap-4">
         {/* Left Side: Company Info, Role Title, Circle + Salary */}
         <div className="flex-1">
           {/* Company Info - Top */}
