@@ -23,14 +23,28 @@ export default function DashboardPage() {
           >
             Dashboard
           </h1>
-          <div className="flex items-center gap-2 px-4 py-2 rounded-lg" style={{ background: "#F1F5F9", color: "#64748B" }}>
+          <button 
+            className="flex items-center gap-2 px-4 py-2 rounded-lg cursor-pointer transition-colors"
+            style={{ background: "#F1F5F9", color: "#64748B" }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = "#E2E8F0";
+              e.currentTarget.style.color = "#475569";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = "#F1F5F9";
+              e.currentTarget.style.color = "#64748B";
+            }}
+          >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" strokeWidth="2"/>
               <path d="M16 2V6M8 2V6" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
               <path d="M3 10H21" stroke="currentColor" strokeWidth="2"/>
             </svg>
             <span className="text-sm font-medium">Jan 20, 2023 - Feb 09, 2023</span>
-          </div>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 9L12 15L18 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </button>
         </div>
 
         {/* Tabs */}
