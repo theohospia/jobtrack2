@@ -150,16 +150,6 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
               {opportunity.estimatedSalary}
             </p>
           )}
-
-          {/* Fit Level - Below Salary */}
-          <div className="mt-2">
-            <span
-              className="text-sm font-medium"
-              style={{ color: "#64748B" }}
-            >
-              {fitStyles[opportunity.fitLevel].label}
-            </span>
-          </div>
         </div>
 
         {/* Right Side: Circular Fit Strength Indicator */}
