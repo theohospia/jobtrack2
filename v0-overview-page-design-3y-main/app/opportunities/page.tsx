@@ -152,46 +152,53 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
           )}
         </div>
 
-        {/* Right Side: Circular Fit Strength Indicator */}
-        <div className="flex items-center justify-center">
-          <svg width="100" height="100" viewBox="0 0 100 100" className="transform -rotate-90">
-            {/* Background circle */}
-            <circle
-              cx="50"
-              cy="50"
-              r="45"
-              fill="none"
-              stroke="#E5E7EB"
-              strokeWidth="8"
-            />
-            {/* Progress circle */}
-            <circle
-              cx="50"
-              cy="50"
-              r="45"
-              fill="none"
-              stroke="#EC9F55"
-              strokeWidth="8"
-              strokeDasharray={`${(opportunity.fitStrength / 100) * 2 * Math.PI * 45} ${2 * Math.PI * 45}`}
-              strokeLinecap="round"
-              style={{ transition: "stroke-dasharray 0.3s ease" }}
-            />
-          </svg>
-          {/* Center text */}
-          <div className="absolute flex flex-col items-center justify-center w-24 h-24">
-            <span
-              className="text-xl font-bold"
-              style={{ color: "#EC9F55" }}
-            >
-              {opportunity.fitStrength}%
-            </span>
-            <span
-              className="text-xs font-medium mt-1 text-center"
-              style={{ color: "#64748B" }}
-            >
-              {fitStyles[opportunity.fitLevel].label}
-            </span>
+        {/* Right Side: Circular Fit Strength Indicator + Arrow */}
+        <div className="flex items-center justify-center gap-4">
+          <div className="flex items-center justify-center">
+            <svg width="100" height="100" viewBox="0 0 100 100" className="transform -rotate-90">
+              {/* Background circle */}
+              <circle
+                cx="50"
+                cy="50"
+                r="45"
+                fill="none"
+                stroke="#E5E7EB"
+                strokeWidth="8"
+              />
+              {/* Progress circle */}
+              <circle
+                cx="50"
+                cy="50"
+                r="45"
+                fill="none"
+                stroke="#EC9F55"
+                strokeWidth="8"
+                strokeDasharray={`${(opportunity.fitStrength / 100) * 2 * Math.PI * 45} ${2 * Math.PI * 45}`}
+                strokeLinecap="round"
+                style={{ transition: "stroke-dasharray 0.3s ease" }}
+              />
+            </svg>
+            {/* Center text */}
+            <div className="absolute flex flex-col items-center justify-center w-24 h-24">
+              <span
+                className="text-xl font-bold"
+                style={{ color: "#EC9F55" }}
+              >
+                {opportunity.fitStrength}%
+              </span>
+              <span
+                className="text-xs font-medium mt-1 text-center"
+                style={{ color: "#64748B" }}
+              >
+                {fitStyles[opportunity.fitLevel].label}
+              </span>
+            </div>
           </div>
+          
+          {/* Right Arrow */}
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="#94A3B8" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
         </div>
       </div>
     </div>
