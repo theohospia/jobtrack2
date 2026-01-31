@@ -169,18 +169,12 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
                 />
               </svg>
               {/* Center text */}
-              <div className="absolute flex flex-col items-center justify-center w-10 h-10">
+              <div className="absolute flex items-center justify-center">
                 <span
                   className="text-xs font-bold"
                   style={{ color: "#2563EB" }}
                 >
                   {opportunity.fitStrength}%
-                </span>
-                <span
-                  className="text-[9px] font-medium mt-0 text-center leading-tight"
-                  style={{ color: "#64748B" }}
-                >
-                  {fitStyles[opportunity.fitLevel].label}
                 </span>
               </div>
             </div>
@@ -199,7 +193,7 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
 
         {/* Right Side: Apply more Button */}
         <button
-          className="flex items-center gap-2 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2 whitespace-nowrap"
+          className="flex items-center gap-2 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2 whitespace-nowrap h-fit"
           style={{
             background: "#2563EB",
             color: "#FFFFFF",
