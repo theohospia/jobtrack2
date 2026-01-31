@@ -123,7 +123,7 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
               <span
                 key={signal}
                 className="rounded-md px-2 py-0.5 text-[11px] font-medium"
-                style={{ background: "#E5E7EB", color: "#475569" }}
+                style={{ background: "transparent", color: "#2563EB" }}
               >
                 {signal}
               </span>
