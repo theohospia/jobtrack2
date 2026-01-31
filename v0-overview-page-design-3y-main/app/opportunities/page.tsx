@@ -171,7 +171,7 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
                 cy="50"
                 r="45"
                 fill="none"
-                stroke="#EC9F55"
+                stroke="#2563EB"
                 strokeWidth="8"
                 strokeDasharray={`${(opportunity.fitStrength / 100) * 2 * Math.PI * 45} ${2 * Math.PI * 45}`}
                 strokeLinecap="round"
@@ -182,7 +182,7 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
             <div className="absolute flex flex-col items-center justify-center w-16 h-16">
               <span
                 className="text-sm font-bold"
-                style={{ color: "#EC9F55" }}
+                style={{ color: "#2563EB" }}
               >
                 {opportunity.fitStrength}%
               </span>
@@ -325,14 +325,14 @@ export default function OpportunitiesPage() {
             <button
               className="flex items-center gap-1 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2"
               style={{
-                background: "#EC9F55",
+                background: "#2563EB",
                 color: "#FFFFFF",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.background = "#D88A3D"
+                e.currentTarget.style.background = "#1D4ED8"
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.background = "#EC9F55"
+                e.currentTarget.style.background = "#2563EB"
               }}
             >
               Load more
