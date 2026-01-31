@@ -130,7 +130,7 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
             className="text-[13px] font-medium"
             style={{ color: "#64748B" }}
           >
-            {opportunity.company} · {opportunity.location} · {opportunity.workStyle} ({opportunity.metaSignals[0]})
+            {opportunity.company} · {opportunity.location} · {opportunity.workStyle}
           </p>
           
           {/* Role Title */}
@@ -200,6 +200,12 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
                 style={{ color: "#64748B" }}
               >
                 Above market · High confidence
+              </p>
+              <p
+                className="text-sm font-medium"
+                style={{ color: "#64748B" }}
+              >
+                {opportunity.metaSignals[0]}
               </p>
             </div>
           </div>
