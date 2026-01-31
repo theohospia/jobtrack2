@@ -188,7 +188,7 @@ export default function DashboardPage() {
               }}
             >
               <img
-                src="/placeholder.svg?height=200&width=350"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-SKWpXdydvoiiYLy4akjcBEhmIy2PrZ.png"
                 alt="Tutorial 1: How to use the app"
                 className="w-full h-full object-cover"
               />
@@ -273,7 +273,7 @@ export default function DashboardPage() {
               }}
             >
               <img
-                src="/placeholder.svg?height=200&width=350"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-urOH1Zbx0psHd1xzql5tsSfAa6Nwyl.png"
                 alt="Tutorial 2: Set up your profile for better matches"
                 className="w-full h-full object-cover"
               />
