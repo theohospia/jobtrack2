@@ -155,7 +155,7 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
         {/* Right Side: Circular Fit Strength Indicator + Arrow */}
         <div className="flex items-center justify-center gap-4">
           <div className="flex items-center justify-center">
-            <svg width="100" height="100" viewBox="0 0 100 100" className="transform -rotate-90">
+            <svg width="70" height="70" viewBox="0 0 100 100" className="transform -rotate-90">
               {/* Background circle */}
               <circle
                 cx="50"
@@ -179,15 +179,15 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
               />
             </svg>
             {/* Center text */}
-            <div className="absolute flex flex-col items-center justify-center w-24 h-24">
+            <div className="absolute flex flex-col items-center justify-center w-14 h-14">
               <span
-                className="text-xl font-bold"
+                className="text-sm font-bold"
                 style={{ color: "#EC9F55" }}
               >
                 {opportunity.fitStrength}%
               </span>
               <span
-                className="text-xs font-medium mt-1 text-center"
+                className="text-xs font-medium mt-0.5 text-center"
                 style={{ color: "#64748B" }}
               >
                 {fitStyles[opportunity.fitLevel].label}
