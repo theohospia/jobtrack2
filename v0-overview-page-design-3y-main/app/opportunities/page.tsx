@@ -14,6 +14,7 @@ interface Opportunity {
   explanation: string
   metaSignals: string[]
   estimatedTime?: string
+  estimatedSalary?: string
 }
 
 const fitStyles: Record<FitLevel, { bg: string; color: string; label: string }> = {
@@ -36,6 +37,7 @@ const opportunities: Opportunity[] = [
     fitLevel: "strong",
     explanation: "Your profile closely matches the role's requirements, and similar candidates received interviews here within 2 weeks.",
     metaSignals: ["3 days ago", "Low applicant volume", "Intern-friendly"],
+    estimatedSalary: "$32,000 - $38,000",
   },
   {
     id: "2",
@@ -46,6 +48,7 @@ const opportunities: Opportunity[] = [
     fitLevel: "strong",
     explanation: "Your SQL and Python skills match 90% of the requirements. This company has hired from your university before.",
     metaSignals: ["5 days ago", "Responds quickly"],
+    estimatedSalary: "$45,000 - $55,000",
   },
   {
     id: "3",
@@ -56,6 +59,7 @@ const opportunities: Opportunity[] = [
     fitLevel: "good",
     explanation: "Your analytics background is relevant, and the team is actively expanding. Previous applicants with similar profiles advanced to interviews.",
     metaSignals: ["1 week ago", "Growing team"],
+    estimatedSalary: "$52,000 - $62,000",
   },
   {
     id: "4",
@@ -66,6 +70,7 @@ const opportunities: Opportunity[] = [
     fitLevel: "good",
     explanation: "Your project experience aligns with their product focus. They value analytical backgrounds for this role.",
     metaSignals: ["4 days ago", "Startup environment"],
+    estimatedSalary: "$48,000 - $58,000",
   },
   {
     id: "5",
@@ -76,6 +81,7 @@ const opportunities: Opportunity[] = [
     fitLevel: "stretch",
     explanation: "This role typically requires more experience, but your quantitative skills could bridge the gap. Worth trying if you have capacity.",
     metaSignals: ["2 days ago", "Competitive"],
+    estimatedSalary: "$60,000 - $75,000",
   },
 ]
 
@@ -130,13 +136,21 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
           </h3>
 
           {/* Fit Pill - Below Role Title */}
-          <div className="mt-2">
+          <div className="mt-0.5 flex items-center gap-6">
             <span
               className="text-sm font-medium"
               style={{ color: "#64748B" }}
             >
               {fitStyles[opportunity.fitLevel].label}
             </span>
+            {opportunity.estimatedSalary && (
+              <span
+                className="text-sm font-medium"
+                style={{ color: "#64748B" }}
+              >
+                {opportunity.estimatedSalary}
+              </span>
+            )}
           </div>
         </div>
 
