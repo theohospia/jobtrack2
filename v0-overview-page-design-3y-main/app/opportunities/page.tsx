@@ -218,20 +218,6 @@ export default function OpportunitiesPage() {
           >
             Opportunities
           </h1>
-          <p
-            className="mt-1 text-sm leading-5"
-            style={{ color: "#64748B" }}
-          >
-            Roles where you have the highest chance of success right now.
-          </p>
-          {!showEmpty && (
-            <p
-              className="mt-1 text-xs"
-              style={{ color: "#64748B" }}
-            >
-              Showing {visibleOpportunities.length} high-confidence opportunities
-            </p>
-          )}
         </header>
 
         {/* Opportunities List */}
