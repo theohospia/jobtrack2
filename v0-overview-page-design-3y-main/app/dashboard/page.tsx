@@ -168,11 +168,11 @@ export default function DashboardPage() {
           </div>
         </div>
 
-        {/* Revenue Overview and Recent Sales */}
-        <div className="grid grid-cols-3 gap-6">
-          {/* Responses Overview - 2 columns */}
+        {/* Tutorials Section */}
+        <div className="flex flex-col gap-6">
+          {/* Tutorial 1 - Image Left, Content Right */}
           <div
-            className="col-span-2 rounded-2xl p-8 transition-colors"
+            className="flex gap-6 overflow-hidden rounded-2xl transition-colors"
             style={{
               background: "#FFFFFF",
               border: "1px solid #E5E7EB",
@@ -180,111 +180,116 @@ export default function DashboardPage() {
             onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
             onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
           >
-            <h3 className="text-xl font-semibold mb-1" style={{ color: "#0F172A" }}>
-              Responses Overview
-            </h3>
-            <p className="text-sm mb-6" style={{ color: "#64748B" }}>
-              Daily outreach and responses over time
-            </p>
+            {/* Image */}
+            <div 
+              className="w-2/5 flex-shrink-0 overflow-hidden"
+              style={{ 
+                aspectRatio: "16/9",
+              }}
+            >
+              <img
+                src="/placeholder.svg?height=200&width=350"
+                alt="Tutorial 1: How to use the app"
+                className="w-full h-full object-cover"
+              />
+            </div>
             
-            {/* Chart Container */}
-            <div className="flex items-end justify-center gap-4 h-64">
-              {/* Y-axis labels */}
-              <div className="flex flex-col justify-between h-full text-right pr-2">
-                <span className="text-xs" style={{ color: "#94A3B8" }}>12</span>
-                <span className="text-xs" style={{ color: "#94A3B8" }}>10</span>
-                <span className="text-xs" style={{ color: "#94A3B8" }}>8</span>
-                <span className="text-xs" style={{ color: "#94A3B8" }}>6</span>
-                <span className="text-xs" style={{ color: "#94A3B8" }}>4</span>
-                <span className="text-xs" style={{ color: "#94A3B8" }}>2</span>
-                <span className="text-xs" style={{ color: "#94A3B8" }}>0</span>
-              </div>
-
-              {/* Bars */}
-              <div className="flex items-end gap-3 flex-1">
-                {/* Mon */}
-                <div className="flex-1 flex flex-col items-center gap-2">
-                  <div
-                    style={{
-                      width: "100%",
-                      height: "120px",
-                      background: "#2563EB",
-                      borderRadius: "4px",
-                    }}
-                  />
-                  <span className="text-xs font-medium" style={{ color: "#64748B" }}>Mon</span>
-                </div>
-
-                {/* Tue */}
-                <div className="flex-1 flex flex-col items-center gap-2">
-                  <div
-                    style={{
-                      width: "100%",
-                      height: "95px",
-                      background: "#2563EB",
-                      borderRadius: "4px",
-                    }}
-                  />
-                  <span className="text-xs font-medium" style={{ color: "#64748B" }}>Tue</span>
-                </div>
-
-                {/* Wed */}
-                <div className="flex-1 flex flex-col items-center gap-2">
-                  <div
-                    style={{
-                      width: "100%",
-                      height: "140px",
-                      background: "#2563EB",
-                      borderRadius: "4px",
-                    }}
-                  />
-                  <span className="text-xs font-medium" style={{ color: "#64748B" }}>Wed</span>
-                </div>
-
-                {/* Thu */}
-                <div className="flex-1 flex flex-col items-center gap-2">
-                  <div
-                    style={{
-                      width: "100%",
-                      height: "155px",
-                      background: "#2563EB",
-                      borderRadius: "4px",
-                    }}
-                  />
-                  <span className="text-xs font-medium" style={{ color: "#64748B" }}>Thu</span>
-                </div>
-
-                {/* Fri */}
-                <div className="flex-1 flex flex-col items-center gap-2">
-                  <div
-                    style={{
-                      width: "100%",
-                      height: "145px",
-                      background: "#2563EB",
-                      borderRadius: "4px",
-                    }}
-                  />
-                  <span className="text-xs font-medium" style={{ color: "#64748B" }}>Fri</span>
-                </div>
-
-                {/* Sat */}
-                <div className="flex-1 flex flex-col items-center gap-2">
-                  <div
-                    style={{
-                      width: "100%",
-                      height: "165px",
-                      background: "#2563EB",
-                      borderRadius: "4px",
-                    }}
-                  />
-                  <span className="text-xs font-medium" style={{ color: "#64748B" }}>Sat</span>
-                </div>
-              </div>
+            {/* Content */}
+            <div className="flex w-3/5 flex-col items-start justify-center pr-6">
+              <h3
+                className="text-lg font-semibold"
+                style={{ color: "#0F172A" }}
+              >
+                Tutorial #1: How to use the app
+              </h3>
+              <p 
+                className="mt-2 text-xs"
+                style={{ color: "#64748B" }}
+              >
+                3 min · Beginner
+              </p>
+              <button
+                className="mt-4 flex items-center gap-1 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2"
+                style={{ 
+                  background: "#2563EB",
+                  color: "#FFFFFF" 
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.background = "#1D4ED8"}
+                onMouseLeave={(e) => e.currentTarget.style.background = "#2563EB"}
+              >
+                Watch
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
             </div>
           </div>
 
-          {/* Recent Sales - 1 column */}
+          {/* Tutorial 2 - Content Left, Image Right */}
           <div
+            className="flex gap-6 overflow-hidden rounded-2xl transition-colors"
+            style={{
+              background: "#FFFFFF",
+              border: "1px solid #E5E7EB",
+            }}
+            onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
+            onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
+          >
+            {/* Content */}
+            <div className="flex w-3/5 flex-col items-start justify-center pl-6">
+              <h3
+                className="text-lg font-semibold"
+                style={{ color: "#0F172A" }}
+              >
+                Tutorial #2: Set up your profile for better matches
+              </h3>
+              <p 
+                className="mt-2 text-xs"
+                style={{ color: "#64748B" }}
+              >
+                5 min · Quick win
+              </p>
+              <button
+                className="mt-4 flex items-center gap-1 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2"
+                style={{ 
+                  background: "#2563EB",
+                  color: "#FFFFFF" 
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.background = "#1D4ED8"}
+                onMouseLeave={(e) => e.currentTarget.style.background = "#2563EB"}
+              >
+                Watch
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
+            </div>
+
+            {/* Image */}
+            <div 
+              className="w-2/5 flex-shrink-0 overflow-hidden"
+              style={{ 
+                aspectRatio: "16/9",
+              }}
+            >
+              <img
+                src="/placeholder.svg?height=200&width=350"
+                alt="Tutorial 2: Set up your profile for better matches"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Recent Responses Section */}
+        <div className="mt-12 rounded-2xl p-8 transition-colors"
+            style={{
+              background: "#FFFFFF",
+              border: "1px solid #E5E7EB",
+            }}
+            onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
+            onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
+          >
             className="rounded-2xl p-8 transition-colors"
             style={{
               background: "#FFFFFF",
