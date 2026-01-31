@@ -179,7 +179,7 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
               />
             </svg>
             {/* Center text */}
-            <div className="absolute flex flex-col items-center justify-center w-14 h-14">
+            <div className="absolute flex flex-col items-center justify-center w-16 h-16">
               <span
                 className="text-sm font-bold"
                 style={{ color: "#EC9F55" }}
