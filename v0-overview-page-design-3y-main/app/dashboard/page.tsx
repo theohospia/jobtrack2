@@ -74,7 +74,7 @@ export default function DashboardPage() {
             <p className="text-2xl font-semibold mb-2" style={{ color: "#0F172A" }}>
               10
             </p>
-            <p className="text-xs" style={{ color: "#10B981" }}>
+            <p className="text-xs" style={{ color: "#2563EB" }}>
               +18% from last week
             </p>
           </div>
@@ -103,7 +103,7 @@ export default function DashboardPage() {
             <p className="text-2xl font-semibold mb-2" style={{ color: "#0F172A" }}>
               42
             </p>
-            <p className="text-xs" style={{ color: "#10B981" }}>
+            <p className="text-xs" style={{ color: "#2563EB" }}>
               +7 from last week
             </p>
           </div>
@@ -132,7 +132,7 @@ export default function DashboardPage() {
             <p className="text-2xl font-semibold mb-2" style={{ color: "#0F172A" }}>
               4
             </p>
-            <p className="text-xs" style={{ color: "#10B981" }}>
+            <p className="text-xs" style={{ color: "#2563EB" }}>
               +2 new responses
             </p>
           </div>
@@ -161,7 +161,7 @@ export default function DashboardPage() {
             <p className="text-2xl font-semibold mb-2" style={{ color: "#0F172A" }}>
               +3.2%
             </p>
-            <p className="text-xs" style={{ color: "#10B981" }}>
+            <p className="text-xs" style={{ color: "#2563EB" }}>
               +2.1% reply rate
             </p>
           </div>
