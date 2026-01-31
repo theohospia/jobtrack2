@@ -104,14 +104,11 @@ function FitPill({ level }: { level: FitLevel }) {
 }
 
 function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; index: number }) {
-  const isAltStyle = index % 2 === 1
-  const bgColor = isAltStyle ? "#F0F7FF" : "#FFFFFF"
-  
   return (
     <div
       className="flex w-full cursor-pointer flex-col gap-3 rounded-2xl p-5 transition-colors duration-150"
       style={{
-        background: bgColor,
+        background: "#FFFFFF",
         border: "1px solid #E5E7EB",
       }}
       onMouseEnter={(e) => {
