@@ -17,9 +17,9 @@ interface Opportunity {
 }
 
 const fitStyles: Record<FitLevel, { bg: string; color: string; label: string }> = {
-  strong: { bg: "#ECFDF5", color: "#065F46", label: "Strong fit" },
-  good: { bg: "#EFF6FF", color: "#1E40AF", label: "Good fit" },
-  stretch: { bg: "#FFF7ED", color: "#9A3412", label: "Stretch" },
+  strong: { bg: "transparent", color: "#2563EB", label: "Strong fit" },
+  good: { bg: "transparent", color: "#2563EB", label: "Good fit" },
+  stretch: { bg: "transparent", color: "#2563EB", label: "Stretch" },
 }
 
 // Fit distribution rule (enforced by decision engine):
