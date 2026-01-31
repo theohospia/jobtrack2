@@ -132,8 +132,8 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
           {/* Fit Pill - Below Role Title */}
           <div className="mt-2">
             <span
-              className="inline-block rounded-full px-2.5 py-1 text-xs font-semibold"
-              style={{ background: "transparent", color: "#000000" }}
+              className="text-sm font-medium"
+              style={{ color: "#64748B" }}
             >
               {fitStyles[opportunity.fitLevel].label}
             </span>
