@@ -266,7 +266,7 @@ export default function DashboardPage() {
 
             {/* Image */}
             <div 
-              className="w-2/5 flex-shrink-0 overflow-hidden"
+              className="w-1/3 flex-shrink-0 overflow-hidden"
               style={{ 
                 aspectRatio: "16/9",
               }}
