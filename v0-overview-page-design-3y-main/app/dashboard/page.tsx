@@ -111,11 +111,11 @@ export default function DashboardPage() {
               <button
                 className="mt-4 flex items-center gap-1 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2"
                 style={{ 
-                  background: "#2563EB",
+                  background: "#EC9F55",
                   color: "#FFFFFF" 
                 }}
-                onMouseEnter={(e) => e.currentTarget.style.background = "#1D4ED8"}
-                onMouseLeave={(e) => e.currentTarget.style.background = "#2563EB"}
+                onMouseEnter={(e) => e.currentTarget.style.background = "#D88A3D"}
+                onMouseLeave={(e) => e.currentTarget.style.background = "#EC9F55"}
               >
                 Watch
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -126,9 +126,9 @@ export default function DashboardPage() {
 
             {/* Image */}
             <div 
-              className="w-1/3 flex-shrink-0 overflow-hidden"
+              className="w-1/4 flex-shrink-0 overflow-hidden"
               style={{ 
-                aspectRatio: "16/9",
+                aspectRatio: "1/1",
               }}
             >
               <img
