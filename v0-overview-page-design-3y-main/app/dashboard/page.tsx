@@ -187,7 +187,7 @@ export default function DashboardPage() {
               }}
             >
               <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-SKWpXdydvoiiYLy4akjcBEhmIy2PrZ.png"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-PsK7JNW18g0gq6loRNUX661o8gJHb6.png"
                 alt="Tutorial 1: How to use the app"
                 className="w-full h-full object-cover"
               />
