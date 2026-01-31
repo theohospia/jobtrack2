@@ -299,10 +299,10 @@ export default function OpportunitiesPage() {
           {/* Search Bar */}
           <div
             className="flex-1 flex items-center gap-3 rounded-lg px-5 py-3.5"
-            style={{
-              background: "#FFFFFF",
-              border: "1px solid #E5E7EB",
-            }}
+      style={{
+        background: "#F1F5F9",
+        border: "1px solid #E5E7EB",
+      }}
           >
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="11" cy="11" r="8" stroke="#94A3B8" strokeWidth="2"/>
