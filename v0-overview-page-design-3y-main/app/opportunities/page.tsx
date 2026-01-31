@@ -153,7 +153,7 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
         </div>
 
         {/* Right Side: Circular Fit Strength Indicator + Arrow */}
-        <div className="flex items-center justify-center gap-4">
+        <div className="flex items-center justify-center gap-6">
           <div className="flex items-center justify-center">
             <svg width="70" height="70" viewBox="0 0 100 100" className="transform -rotate-90">
               {/* Background circle */}
