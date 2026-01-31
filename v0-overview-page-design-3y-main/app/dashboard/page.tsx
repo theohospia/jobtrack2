@@ -70,11 +70,6 @@ export default function DashboardPage() {
               <h3 className="text-sm font-medium" style={{ color: "#64748B" }}>
                 Matches Found
               </h3>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="8" cy="8" r="2" fill="#2563EB" />
-                <circle cx="16" cy="8" r="2" fill="#2563EB" />
-                <path d="M12 14C10.3431 14 9 15.3431 9 17V20H15V17C15 15.3431 13.6569 14 12 14Z" fill="#2563EB" />
-              </svg>
             </div>
             <p className="text-2xl font-semibold mb-2" style={{ color: "#0F172A" }}>
               10
@@ -104,9 +99,6 @@ export default function DashboardPage() {
               <h3 className="text-sm font-medium" style={{ color: "#64748B" }}>
                 Outreach Sent
               </h3>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 19L19 5M19 5H10M19 5V14" stroke="#2563EB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
             </div>
             <p className="text-2xl font-semibold mb-2" style={{ color: "#0F172A" }}>
               42
@@ -136,10 +128,6 @@ export default function DashboardPage() {
               <h3 className="text-sm font-medium" style={{ color: "#64748B" }}>
                 Responses Received
               </h3>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="12" cy="12" r="8" stroke="#2563EB" strokeWidth="2"/>
-                <circle cx="12" cy="12" r="3" fill="#2563EB"/>
-              </svg>
             </div>
             <p className="text-2xl font-semibold mb-2" style={{ color: "#0F172A" }}>
               4
@@ -169,9 +157,6 @@ export default function DashboardPage() {
               <h3 className="text-sm font-medium" style={{ color: "#64748B" }}>
                 Interview Rate
               </h3>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <text x="8" y="16" fontSize="14" fontWeight="bold" fill="#2563EB">%</text>
-              </svg>
             </div>
             <p className="text-2xl font-semibold mb-2" style={{ color: "#0F172A" }}>
               +3.2%
