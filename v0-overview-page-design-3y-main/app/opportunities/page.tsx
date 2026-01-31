@@ -117,7 +117,7 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
             className="text-[13px] font-medium"
             style={{ color: "#64748B" }}
           >
-            {opportunity.company} · {opportunity.location} · {opportunity.workStyle}
+            {opportunity.company} · {opportunity.location} · {opportunity.workStyle} ({opportunity.metaSignals[0]})
           </p>
           
           {/* Role Title - Bottom */}
