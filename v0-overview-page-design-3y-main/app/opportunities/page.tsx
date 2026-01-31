@@ -171,7 +171,7 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
                 cy="50"
                 r="45"
                 fill="none"
-                stroke="#60A5FA"
+                stroke="#2563EB"
                 strokeWidth="8"
                 strokeDasharray={`${(opportunity.fitStrength / 100) * 2 * Math.PI * 45} ${2 * Math.PI * 45}`}
                 strokeLinecap="round"
@@ -182,7 +182,7 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
             <div className="absolute flex flex-col items-center justify-center w-16 h-16">
               <span
                 className="text-sm font-bold"
-                style={{ color: "#60A5FA" }}
+                style={{ color: "#2563EB" }}
               >
                 {opportunity.fitStrength}%
               </span>
