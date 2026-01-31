@@ -23,25 +23,165 @@ export default function DashboardPage() {
           >
             Dashboard
           </h1>
-              <button
-                className="mt-4 flex items-center gap-1 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2"
-                style={{ 
-                  background: "#EC9F55",
-                  color: "#FFFFFF" 
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.background = "#D88A3D"}
-                onMouseLeave={(e) => e.currentTarget.style.background = "#EC9F55"}
-              >
-                Watch
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </button>
-            </div>
+          <button 
+            className="flex items-center gap-2 px-4 py-2 rounded-lg cursor-pointer transition-colors"
+            style={{ background: "#F1F5F9", color: "#64748B" }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = "#E2E8F0";
+              e.currentTarget.style.color = "#475569";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = "#F1F5F9";
+              e.currentTarget.style.color = "#64748B";
+            }}
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" strokeWidth="2"/>
+              <path d="M16 2V6M8 2V6" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+              <path d="M3 10H21" stroke="currentColor" strokeWidth="2"/>
+            </svg>
+            <span className="text-sm font-medium">Jan 20, 2023 - Feb 09, 2023</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11 4H4C2.89543 4 2 4.89543 2 6V20C2 21.1046 2.89543 22 4 22H18C19.1046 22 20 21.1046 20 20V13M15.5 2.5L21 8M22 7L17 2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </button>
+        </div>
 
+        {/* Tabs */}
+        
+        <div className="mb-12 grid grid-cols-4 gap-4">
+          {/* Matches Found */}
+          <div
+            className="rounded-2xl p-6 transition-colors"
+            style={{
+              background: "#FFFFFF",
+              border: "1px solid #E5E7EB",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.borderColor = "#CBD5E1";
+              e.currentTarget.style.boxShadow = "0px 8px 24px rgba(15, 23, 42, 0.06)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.borderColor = "#E5E7EB";
+              e.currentTarget.style.boxShadow = "none";
+            }}
+          >
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-sm font-medium" style={{ color: "#64748B" }}>
+                Matches Found
+              </h3>
+            </div>
+            <p className="text-2xl font-semibold mb-2" style={{ color: "#0F172A" }}>
+              10
+            </p>
+            <p className="text-xs" style={{ color: "#10B981" }}>
+              +18% from last week
+            </p>
+          </div>
+
+          {/* Outreach Sent */}
+          <div
+            className="rounded-2xl p-6 transition-colors"
+            style={{
+              background: "#FFFFFF",
+              border: "1px solid #E5E7EB",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.borderColor = "#CBD5E1";
+              e.currentTarget.style.boxShadow = "0px 8px 24px rgba(15, 23, 42, 0.06)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.borderColor = "#E5E7EB";
+              e.currentTarget.style.boxShadow = "none";
+            }}
+          >
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-sm font-medium" style={{ color: "#64748B" }}>
+                Outreach Sent
+              </h3>
+            </div>
+            <p className="text-2xl font-semibold mb-2" style={{ color: "#0F172A" }}>
+              42
+            </p>
+            <p className="text-xs" style={{ color: "#10B981" }}>
+              +7 from last week
+            </p>
+          </div>
+
+          {/* Responses Received */}
+          <div
+            className="rounded-2xl p-6 transition-colors"
+            style={{
+              background: "#FFFFFF",
+              border: "1px solid #E5E7EB",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.borderColor = "#CBD5E1";
+              e.currentTarget.style.boxShadow = "0px 8px 24px rgba(15, 23, 42, 0.06)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.borderColor = "#E5E7EB";
+              e.currentTarget.style.boxShadow = "none";
+            }}
+          >
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-sm font-medium" style={{ color: "#64748B" }}>
+                Responses Received
+              </h3>
+            </div>
+            <p className="text-2xl font-semibold mb-2" style={{ color: "#0F172A" }}>
+              4
+            </p>
+            <p className="text-xs" style={{ color: "#10B981" }}>
+              +2 new responses
+            </p>
+          </div>
+
+          {/* Interview Rate */}
+          <div
+            className="rounded-2xl p-6 transition-colors"
+            style={{
+              background: "#FFFFFF",
+              border: "1px solid #E5E7EB",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.borderColor = "#CBD5E1";
+              e.currentTarget.style.boxShadow = "0px 8px 24px rgba(15, 23, 42, 0.06)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.borderColor = "#E5E7EB";
+              e.currentTarget.style.boxShadow = "none";
+            }}
+          >
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-sm font-medium" style={{ color: "#64748B" }}>
+                Interview Rate
+              </h3>
+            </div>
+            <p className="text-2xl font-semibold mb-2" style={{ color: "#0F172A" }}>
+              +3.2%
+            </p>
+            <p className="text-xs" style={{ color: "#10B981" }}>
+              +2.1% reply rate
+            </p>
+          </div>
+        </div>
+
+        {/* Tutorials Section */}
+        <div className="flex flex-col gap-6">
+          {/* Tutorial 1 - Image Left, Content Right */}
+          <div
+            className="flex gap-6 overflow-hidden rounded-2xl transition-colors"
+            style={{
+              background: "#FFFFFF",
+              border: "1px solid #E5E7EB",
+            }}
+            onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
+            onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
+          >
             {/* Image */}
             <div 
-              className="w-1/3 flex-shrink-0 overflow-hidden"
+              className="w-2/5 flex-shrink-0 overflow-hidden"
               style={{ 
                 aspectRatio: "16/9",
               }}
@@ -70,11 +210,11 @@ export default function DashboardPage() {
               <button
                 className="mt-4 flex items-center gap-1 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2"
                 style={{ 
-                  background: "#EC9F55",
+                  background: "#2563EB",
                   color: "#FFFFFF" 
                 }}
-                onMouseEnter={(e) => e.currentTarget.style.background = "#D88A3D"}
-                onMouseLeave={(e) => e.currentTarget.style.background = "#EC9F55"}
+                onMouseEnter={(e) => e.currentTarget.style.background = "#1D4ED8"}
+                onMouseLeave={(e) => e.currentTarget.style.background = "#2563EB"}
               >
                 Watch
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -111,11 +251,11 @@ export default function DashboardPage() {
               <button
                 className="mt-4 flex items-center gap-1 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2"
                 style={{ 
-                  background: "#EC9F55",
+                  background: "#2563EB",
                   color: "#FFFFFF" 
                 }}
-                onMouseEnter={(e) => e.currentTarget.style.background = "#D88A3D"}
-                onMouseLeave={(e) => e.currentTarget.style.background = "#EC9F55"}
+                onMouseEnter={(e) => e.currentTarget.style.background = "#1D4ED8"}
+                onMouseLeave={(e) => e.currentTarget.style.background = "#2563EB"}
               >
                 Watch
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -126,9 +266,9 @@ export default function DashboardPage() {
 
             {/* Image */}
             <div 
-              className="w-1/4 flex-shrink-0 overflow-hidden"
+              className="w-2/5 flex-shrink-0 overflow-hidden"
               style={{ 
-                aspectRatio: "1/1",
+                aspectRatio: "16/9",
               }}
             >
               <img
