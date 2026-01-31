@@ -17,9 +17,9 @@ interface Opportunity {
 }
 
 const fitStyles: Record<FitLevel, { bg: string; color: string; label: string }> = {
-  strong: { bg: "#ECFDF5", color: "#065F46", label: "Strong fit" },
-  good: { bg: "#EFF6FF", color: "#1E40AF", label: "Good fit" },
-  stretch: { bg: "#FFF7ED", color: "#9A3412", label: "Stretch" },
+  strong: { bg: "transparent", color: "#2563EB", label: "Strong fit" },
+  good: { bg: "transparent", color: "#2563EB", label: "Good fit" },
+  stretch: { bg: "transparent", color: "#2563EB", label: "Stretch" },
 }
 
 // Fit distribution rule (enforced by decision engine):
@@ -112,29 +112,21 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
       {/* Top Row: Title + Meta Badges + Fit Signal */}
       <div className="flex items-start justify-between">
         <div>
-          <div className="flex flex-wrap items-center gap-2">
-            <h3
-              className="text-base font-semibold"
-              style={{ color: "#0F172A" }}
-            >
-              {opportunity.roleTitle}
-            </h3>
-            {opportunity.metaSignals.map((signal) => (
-              <span
-                key={signal}
-                className="rounded-md px-2 py-0.5 text-[11px] font-medium"
-                style={{ background: "#E5E7EB", color: "#475569" }}
-              >
-                {signal}
-              </span>
-            ))}
-          </div>
+          {/* Company Info - Top */}
           <p
-            className="mt-1 text-[13px]"
+            className="text-[13px] font-medium"
             style={{ color: "#64748B" }}
           >
-            {opportunity.company} · {opportunity.location} · {opportunity.workStyle}
+            {opportunity.company} · {opportunity.location} · {opportunity.workStyle} ({opportunity.metaSignals[0]})
           </p>
+          
+          {/* Role Title - Bottom */}
+          <h3
+            className="text-base font-semibold mt-1"
+            style={{ color: "#0F172A" }}
+          >
+            {opportunity.roleTitle}
+          </h3>
         </div>
         <FitPill level={opportunity.fitLevel} />
       </div>
@@ -142,19 +134,22 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
       {/* Primary CTA */}
       <div className="flex items-start">
         <button
-          className="h-11 w-fit cursor-pointer px-5 text-sm font-semibold transition-all duration-[120ms] ease-in-out py-0 rounded-full shadow-xs my-1"
+          className="flex items-center gap-1 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2 mt-1"
           style={{
-            background: "#2563EB",
+            background: "#EC9F55",
             color: "#FFFFFF",
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.background = "#1D4ED8"
+            e.currentTarget.style.background = "#D88A3D"
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.background = "#2563EB"
+            e.currentTarget.style.background = "#EC9F55"
           }}
         >
           Apply now
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
         </button>
       </div>
     </div>
@@ -215,21 +210,51 @@ export default function OpportunitiesPage() {
           >
             Opportunities
           </h1>
-          <p
-            className="mt-1 text-sm leading-5"
-            style={{ color: "#64748B" }}
-          >
-            Roles where you have the highest chance of success right now.
-          </p>
-          {!showEmpty && (
-            <p
-              className="mt-1 text-xs"
-              style={{ color: "#64748B" }}
-            >
-              Showing {visibleOpportunities.length} high-confidence opportunities
-            </p>
-          )}
         </header>
+
+        {/* Search and Filters */}
+        <div className="mb-8 flex gap-4">
+          {/* Search Bar */}
+          <div
+            className="flex-1 flex items-center gap-3 rounded-lg px-5 py-3.5"
+            style={{
+              background: "#FFFFFF",
+              border: "1px solid #E5E7EB",
+            }}
+          >
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="11" cy="11" r="8" stroke="#94A3B8" strokeWidth="2"/>
+              <path d="M21 21L16 16" stroke="#94A3B8" strokeWidth="2" strokeLinecap="round"/>
+            </svg>
+            <input
+              type="text"
+              placeholder="Search roles, companies..."
+              className="flex-1 bg-transparent text-base outline-none"
+              style={{ color: "#0F172A" }}
+            />
+          </div>
+
+          {/* Filter Button */}
+          <button
+            className="flex items-center gap-2 rounded-lg px-6 py-3.5 transition-colors"
+            style={{
+              background: "#FFFFFF",
+              border: "1px solid #E5E7EB",
+              color: "#64748B",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = "#F1F5F9";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = "#FFFFFF";
+            }}
+          >
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+            </svg>
+            <span className="text-base font-medium">Filters</span>
+          </button>
+        </div>
 
         {/* Opportunities List */}
         <div className="mb-8 flex flex-col gap-3">
@@ -246,19 +271,22 @@ export default function OpportunitiesPage() {
         {!showEmpty && (
           <div className="flex justify-center">
             <button
-              className="h-11 w-fit cursor-pointer px-5 py-0 text-sm font-semibold shadow-xs transition-all duration-[120ms] ease-in-out rounded-lg"
+              className="flex items-center gap-1 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2"
               style={{
-                background: "#2563EB",
+                background: "#EC9F55",
                 color: "#FFFFFF",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.background = "#1D4ED8"
+                e.currentTarget.style.background = "#D88A3D"
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.background = "#2563EB"
+                e.currentTarget.style.background = "#EC9F55"
               }}
             >
               Load more
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
             </button>
           </div>
         )}
