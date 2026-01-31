@@ -109,9 +109,10 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
         e.currentTarget.style.borderColor = "#E5E7EB"
       }}
     >
-      {/* Top Row: Title + Meta Badges + Fit Signal */}
-      <div className="flex items-start justify-between">
-        <div>
+      {/* Main Content */}
+      <div className="flex items-start justify-between gap-4">
+        {/* Left Side: Company Info, Role Title, and Fit */}
+        <div className="flex-1">
           {/* Company Info - Top */}
           <p
             className="text-[13px] font-medium"
@@ -120,21 +121,23 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
             {opportunity.company} · {opportunity.location} · {opportunity.workStyle} ({opportunity.metaSignals[0]})
           </p>
           
-          {/* Role Title - Bottom */}
+          {/* Role Title */}
           <h3
             className="text-base font-semibold mt-1"
             style={{ color: "#0F172A" }}
           >
             {opportunity.roleTitle}
           </h3>
-        </div>
-        <FitPill level={opportunity.fitLevel} />
-      </div>
 
-      {/* Primary CTA */}
-      <div className="flex items-start">
+          {/* Fit Pill - Below Role Title */}
+          <div className="mt-2">
+            <FitPill level={opportunity.fitLevel} />
+          </div>
+        </div>
+
+        {/* Right Side: Apply Now Button */}
         <button
-          className="flex items-center gap-1 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2 mt-1"
+          className="flex items-center gap-1 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2 mt-1 whitespace-nowrap"
           style={{
             background: "#EC9F55",
             color: "#FFFFFF",
