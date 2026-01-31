@@ -282,22 +282,15 @@ export default function DashboardPage() {
         </div>
 
         {/* Recent Responses Section */}
-        <div className="mt-12 rounded-2xl p-8 transition-colors"
-            style={{
-              background: "#FFFFFF",
-              border: "1px solid #E5E7EB",
-            }}
-            onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
-            onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
-          >
-            className="rounded-2xl p-8 transition-colors"
-            style={{
-              background: "#FFFFFF",
-              border: "1px solid #E5E7EB",
-            }}
-            onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
-            onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
-          >
+        <div 
+          className="mt-12 rounded-2xl p-8 transition-colors"
+          style={{
+            background: "#FFFFFF",
+            border: "1px solid #E5E7EB",
+          }}
+          onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
+          onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
+        >
             <h3 className="text-xl font-semibold mb-1" style={{ color: "#0F172A" }}>
               Recent Responses
             </h3>
