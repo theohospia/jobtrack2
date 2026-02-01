@@ -130,6 +130,7 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
             style={{
               background: "#FFFFFF",
               border: "1px solid #2563EB",
+              boxShadow: "inset 0 2px 4px 0 rgba(37, 99, 235, 0.1)",
             }}
           >
             <span
