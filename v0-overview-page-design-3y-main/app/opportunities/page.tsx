@@ -123,35 +123,20 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
     >
       {/* Main Content */}
       <div className="flex items-start justify-between gap-4">
-        {/* Left Side: Circular Fit Strength Indicator */}
+        {/* Left Side: Rectangle Fit Strength Indicator */}
         <div className="flex items-start justify-center flex-shrink-0">
-          <div className="flex items-center justify-center">
-            <svg width="85" height="85" viewBox="0 0 100 100" className="transform -rotate-90">
-              {/* Dotted circle - 16 evenly spaced dots */}
-              {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map((i) => {
-                const angle = (i / 16) * 2 * Math.PI - Math.PI / 2;
-                const x = 50 + 45 * Math.cos(angle);
-                const y = 50 + 45 * Math.sin(angle);
-                return (
-                  <circle
-                    key={i}
-                    cx={x}
-                    cy={y}
-                    r="3.5"
-                    fill="#374151"
-                  />
-                );
-              })}
-            </svg>
-            {/* Center text */}
-            <div className="absolute flex items-center justify-center w-12 h-12">
-              <span
-                className="text-lg font-bold"
-                style={{ color: "#374151" }}
-              >
-                {opportunity.fitStrength}%
-              </span>
-            </div>
+          <div
+            className="flex items-center justify-center rounded-lg px-4 py-3"
+            style={{
+              border: "2px solid #374151",
+            }}
+          >
+            <span
+              className="text-lg font-bold"
+              style={{ color: "#374151" }}
+            >
+              {opportunity.fitStrength}%
+            </span>
           </div>
         </div>
 
