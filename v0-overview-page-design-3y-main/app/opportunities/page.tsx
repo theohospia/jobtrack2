@@ -143,12 +143,17 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
 
           {/* Estimated Salary - Below Role Title */}
           {opportunity.estimatedSalary && (
-            <p
-              className="text-sm font-medium mt-0.5"
-              style={{ color: "#64748B" }}
-            >
-              {opportunity.estimatedSalary}
-            </p>
+            <div className="flex items-center gap-1">
+              <p
+                className="text-sm font-medium mt-0.5"
+                style={{ color: "#64748B" }}
+              >
+                {opportunity.estimatedSalary}
+              </p>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 12L10 8L6 4" stroke="#2563EB" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </div>
           )}
         </div>
 
