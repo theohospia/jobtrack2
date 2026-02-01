@@ -127,9 +127,9 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
         <div className="flex items-start justify-center flex-shrink-0">
           <div className="flex items-center justify-center">
             <svg width="85" height="85" viewBox="0 0 100 100" className="transform -rotate-90">
-              {/* Dotted circle - 12 evenly spaced dots */}
-              {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((i) => {
-                const angle = (i / 12) * 2 * Math.PI - Math.PI / 2;
+              {/* Dotted circle - 16 evenly spaced dots */}
+              {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map((i) => {
+                const angle = (i / 16) * 2 * Math.PI - Math.PI / 2;
                 const x = 50 + 45 * Math.cos(angle);
                 const y = 50 + 45 * Math.sin(angle);
                 return (
