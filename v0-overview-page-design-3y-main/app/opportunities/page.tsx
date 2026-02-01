@@ -126,7 +126,7 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
         {/* Left Side: Rectangle Fit Strength Indicator */}
         <div className="flex items-center justify-center flex-shrink-0">
           <div
-            className="flex items-center justify-center rounded-md px-5 py-2.5 min-w-fit"
+            className="flex items-center justify-center rounded-md px-5 py-6 min-w-fit"
             style={{
               border: "2px solid #374151",
             }}
