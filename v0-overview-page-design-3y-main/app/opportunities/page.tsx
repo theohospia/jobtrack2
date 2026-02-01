@@ -186,8 +186,8 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
             <div className="flex flex-col gap-1">
               {opportunity.estimatedSalary && (
                 <p
-                  className="text-sm font-medium"
-                  style={{ color: "#64748B" }}
+                  className="text-sm font-medium rounded-lg px-3 py-1.5 w-fit"
+                  style={{ color: "#FFFFFF", background: "#2563EB" }}
                 >
                   {opportunity.estimatedSalary}
                 </p>
