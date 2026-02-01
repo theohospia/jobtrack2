@@ -212,7 +212,7 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
                   className="text-sm font-medium"
                   style={{ color: "#64748B" }}
                 >
-                  Above market · High confidence
+                  Above market
                 </p>
               </div>
             </div>
