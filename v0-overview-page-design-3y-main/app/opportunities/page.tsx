@@ -129,7 +129,7 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
             className="flex items-center justify-center rounded-xl px-6 py-5"
             style={{
               background: "#FFFFFF",
-              border: "1px solid #E5E7EB",
+              border: "1px solid #2563EB",
               boxShadow: "0 1px 3px 0 rgba(37, 99, 235, 0.12)",
             }}
           >
