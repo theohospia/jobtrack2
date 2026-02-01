@@ -135,8 +135,6 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
                 fill="none"
                 stroke="#374151"
                 strokeWidth="8"
-                strokeDasharray="8,6"
-                strokeLinecap="round"
               />
               {/* Progress circle */}
               <circle
