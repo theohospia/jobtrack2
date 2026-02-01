@@ -210,7 +210,7 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
 
         {/* Right Side: Apply Button */}
         <button
-          className="flex items-center gap-2 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2 whitespace-nowrap border-b-2"
+          className="flex items-center gap-2 cursor-pointer text-sm font-medium transition-colors px-3 py-2 whitespace-nowrap border-b-2"
           style={{
             background: "transparent",
             color: "#2563EB",
