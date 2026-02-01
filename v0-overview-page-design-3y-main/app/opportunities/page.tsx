@@ -150,18 +150,12 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
               />
             </svg>
             {/* Center text */}
-            <div className="absolute flex flex-col items-center justify-center w-16 h-16">
+            <div className="absolute flex items-center justify-center w-12 h-12">
               <span
-                className="text-sm font-bold"
+                className="text-lg font-bold"
                 style={{ color: "#0F172A" }}
               >
                 {opportunity.fitStrength}%
-              </span>
-              <span
-                className="text-xs font-medium mt-0.5 text-center"
-                style={{ color: "#64748B" }}
-              >
-                {fitStyles[opportunity.fitLevel].label}
               </span>
             </div>
           </div>
@@ -187,7 +181,14 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
 
           {/* Estimated Salary - Below Role Title */}
           {opportunity.estimatedSalary && (
-            <div className="flex items-center gap-1">
+            <div className="flex items-center gap-2">
+              <p
+                className="text-sm font-medium"
+                style={{ color: "#64748B" }}
+              >
+                {fitStyles[opportunity.fitLevel].label}
+              </p>
+              <span style={{ color: "#64748B" }}>-</span>
               <p
                 className="text-sm font-medium"
                 style={{ color: "#64748B" }}
