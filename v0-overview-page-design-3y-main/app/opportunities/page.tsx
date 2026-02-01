@@ -126,13 +126,15 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
         {/* Left Side: Rectangle Fit Strength Indicator */}
         <div className="flex items-center justify-center flex-shrink-0">
           <div
-            className="flex items-center justify-center rounded-md px-5 py-6 min-w-fit"
+            className="flex items-center justify-center rounded-xl px-6 py-7"
             style={{
-              border: "2px solid #374151",
+              background: "#FFFFFF",
+              border: "1px solid #E5E7EB",
+              boxShadow: "0 1px 3px 0 rgba(15, 23, 42, 0.08)",
             }}
           >
             <span
-              className="text-base font-bold"
+              className="text-xl font-bold"
               style={{ color: "#374151" }}
             >
               {opportunity.fitStrength}%
