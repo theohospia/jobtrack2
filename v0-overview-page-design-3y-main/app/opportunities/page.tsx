@@ -214,6 +214,7 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
           style={{
             background: "transparent",
             color: "#2563EB",
+            borderBottom: "2px solid #2563EB",
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.opacity = "0.8"
