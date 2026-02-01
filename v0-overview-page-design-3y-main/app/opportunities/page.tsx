@@ -127,7 +127,7 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
         <div className="flex items-start justify-center flex-shrink-0">
           <div className="flex items-center justify-center">
             <svg width="85" height="85" viewBox="0 0 100 100" className="transform -rotate-90">
-              {/* Background circle */}
+              {/* Dotted circle */}
               <circle
                 cx="50"
                 cy="50"
@@ -135,20 +135,8 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
                 fill="none"
                 stroke="#374151"
                 strokeWidth="8"
-                strokeDasharray="1,5"
+                strokeDasharray="3,6"
                 strokeLinecap="round"
-              />
-              {/* Progress circle */}
-              <circle
-                cx="50"
-                cy="50"
-                r="45"
-                fill="none"
-                stroke="#374151"
-                strokeWidth="8"
-                strokeDasharray={`${(opportunity.fitStrength / 100) * 2 * Math.PI * 45} ${2 * Math.PI * 45}`}
-                strokeLinecap="round"
-                style={{ transition: "stroke-dasharray 0.3s ease" }}
               />
             </svg>
             {/* Center text */}
