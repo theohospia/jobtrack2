@@ -219,9 +219,9 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
           </div>
         </div>
 
-        {/* Right Side: Apply Button */}
+        {/* Right Side: Apply more Button */}
         <button
-          className="flex items-center justify-center cursor-pointer text-sm font-medium transition-colors rounded-lg px-4 py-2"
+          className="flex items-center gap-2 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2 whitespace-nowrap"
           style={{
             background: "#2563EB",
             color: "#FFFFFF",
@@ -234,6 +234,9 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
           }}
         >
           Apply
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
         </button>
       </div>
     </div>
