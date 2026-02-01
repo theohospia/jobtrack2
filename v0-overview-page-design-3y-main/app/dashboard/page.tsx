@@ -266,13 +266,13 @@ export default function DashboardPage() {
 
             {/* Image */}
             <div 
-              className="w-1/3 flex-shrink-0 overflow-hidden"
+              className="w-2/5 flex-shrink-0 overflow-hidden"
               style={{ 
                 aspectRatio: "16/9",
               }}
             >
               <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-vbbwLo6LbfhvvST8snD8yli5B1PXnb.png"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/51af03a8-3f10-426a-9e2c-16e47811bab1-removebg-preview-KCufpWooZsUJT7EDzCwmI1w8Ii8Hls.png"
                 alt="Tutorial 2: Set up your profile for better matches"
                 className="w-full h-full object-cover"
                 style={{ backgroundColor: "#FFFFFF" }}
