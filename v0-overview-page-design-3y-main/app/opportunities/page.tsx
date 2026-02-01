@@ -123,22 +123,47 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
     >
       {/* Main Content */}
       <div className="flex items-start justify-between gap-4">
-        {/* Left Side: Rectangle Fit Strength Indicator */}
-        <div className="flex items-center justify-center flex-shrink-0">
-          <div
-            className="flex items-center justify-center rounded-xl px-6 py-5"
-            style={{
-              background: "#FFFFFF",
-              border: "1px solid #2563EB",
-              boxShadow: "inset 0 2px 4px 0 rgba(37, 99, 235, 0.25), inset 0 -2px 4px 0 rgba(37, 99, 235, 0.2), inset 1px 0 2px 0 rgba(37, 99, 235, 0.15), inset -1px 0 2px 0 rgba(37, 99, 235, 0.15)",
-            }}
-          >
-            <span
-              className="text-xl font-bold"
-              style={{ color: "#2563EB" }}
-            >
-              {opportunity.fitStrength}%
-            </span>
+        {/* Left Side: Circular Fit Strength Indicator */}
+        <div className="flex items-start justify-center flex-shrink-0">
+          <div className="flex items-center justify-center">
+            <svg width="85" height="85" viewBox="0 0 100 100" className="transform -rotate-90">
+              {/* Background circle */}
+              <circle
+                cx="50"
+                cy="50"
+                r="45"
+                fill="none"
+                stroke="#E5E7EB"
+                strokeWidth="8"
+              />
+              {/* Progress circle */}
+              <circle
+                cx="50"
+                cy="50"
+                r="45"
+                fill="none"
+                stroke="#2563EB"
+                strokeWidth="8"
+                strokeDasharray={`${(opportunity.fitStrength / 100) * 2 * Math.PI * 45} ${2 * Math.PI * 45}`}
+                strokeLinecap="round"
+                style={{ transition: "stroke-dasharray 0.3s ease" }}
+              />
+            </svg>
+            {/* Center text */}
+            <div className="absolute flex flex-col items-center justify-center w-16 h-16">
+              <span
+                className="text-sm font-bold"
+                style={{ color: "#2563EB" }}
+              >
+                {opportunity.fitStrength}%
+              </span>
+              <span
+                className="text-xs font-medium mt-0.5 text-center"
+                style={{ color: "#64748B" }}
+              >
+                {fitStyles[opportunity.fitLevel].label}
+              </span>
+            </div>
           </div>
         </div>
 
@@ -162,14 +187,7 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
 
           {/* Estimated Salary - Below Role Title */}
           {opportunity.estimatedSalary && (
-            <div className="flex items-center gap-2">
-              <p
-                className="text-sm font-medium"
-                style={{ color: "#64748B" }}
-              >
-                {fitStyles[opportunity.fitLevel].label}
-              </p>
-              <span style={{ color: "#64748B" }}>-</span>
+            <div className="flex items-center gap-1">
               <p
                 className="text-sm font-medium"
                 style={{ color: "#64748B" }}
@@ -177,26 +195,25 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
                 {opportunity.estimatedSalary}
               </p>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="12" cy="12" r="10" stroke="#64748B" strokeWidth="2.5"/>
-                <path d="M12 7V12M12 16H12.01" stroke="#64748B" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                <circle cx="12" cy="12" r="10" stroke="#2563EB" strokeWidth="2.5"/>
+                <path d="M12 7V12M12 16H12.01" stroke="#2563EB" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>
           )}
         </div>
 
-        {/* Right Side: Apply Now Button */}
+        {/* Right Side: View More Button */}
         <button
           className="flex items-center gap-2 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2 whitespace-nowrap flex-shrink-0"
           style={{
-            background: "#FFFFFF",
-            color: "#2563EB",
-            border: "1px solid #2563EB",
+            background: "#2563EB",
+            color: "#FFFFFF",
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.borderColor = "#1D4ED8"
+            e.currentTarget.style.background = "#1D4ED8"
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.borderColor = "#2563EB"
+            e.currentTarget.style.background = "#2563EB"
           }}
         >
           Apply now
