@@ -184,19 +184,20 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
           )}
         </div>
 
-        {/* Right Side: View More Button */}
+        {/* Right Side: Apply Now Button */}
         <button
           className="flex items-center gap-2 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2 whitespace-nowrap flex-shrink-0"
           style={{
             background: "#FFFFFF",
             color: "#2563EB",
-            border: "1px solid #E5E7EB",
+            border: "1px solid #2563EB",
+            boxShadow: "0 0 8px 0 rgba(37, 99, 235, 0.2), 0 1px 3px 0 rgba(37, 99, 235, 0.12)",
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.borderColor = "#CBD5E1"
+            e.currentTarget.style.borderColor = "#1D4ED8"
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.borderColor = "#E5E7EB"
+            e.currentTarget.style.borderColor = "#2563EB"
           }}
         >
           Apply now
