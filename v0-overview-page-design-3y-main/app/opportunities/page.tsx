@@ -145,7 +145,7 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
           {opportunity.estimatedSalary && (
             <div className="flex items-center gap-1">
               <p
-                className="text-sm font-medium mt-0.5"
+                className="text-sm font-medium"
                 style={{ color: "#64748B" }}
               >
                 {opportunity.estimatedSalary}
