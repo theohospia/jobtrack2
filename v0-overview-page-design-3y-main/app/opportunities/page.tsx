@@ -186,8 +186,8 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
           {/* Estimated Salary */}
           {opportunity.estimatedSalary && (
             <p
-              className="text-sm font-medium"
-              style={{ color: "#64748B" }}
+              className="text-sm font-medium rounded-lg px-3 py-1.5"
+              style={{ color: "#FFFFFF", background: "#2563EB" }}
             >
               {opportunity.estimatedSalary}
             </p>
