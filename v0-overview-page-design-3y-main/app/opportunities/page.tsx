@@ -135,7 +135,7 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
                 fill="none"
                 stroke="#374151"
                 strokeWidth="8"
-                strokeDasharray="2,10"
+                strokeDasharray="1,12"
                 strokeLinecap="round"
               />
             </svg>
