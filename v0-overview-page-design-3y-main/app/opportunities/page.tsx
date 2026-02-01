@@ -152,8 +152,8 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
           )}
         </div>
 
-        {/* Right Side: Circular Fit Strength Indicator + Arrow */}
-        <div className="flex items-center justify-center gap-6">
+        {/* Right Side: Circular Fit Strength Indicator */}
+        <div className="flex items-center justify-center">
           <div className="flex items-center justify-center">
             <svg width="85" height="85" viewBox="0 0 100 100" className="transform -rotate-90">
               {/* Background circle */}
@@ -194,14 +194,6 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
               </span>
             </div>
           </div>
-          
-          {/* Right Arrow */}
-          <span
-            className="text-3xl font-light"
-            style={{ color: "#94A3B8" }}
-          >
-            {'>'}
-          </span>
         </div>
       </div>
     </div>
