@@ -130,7 +130,6 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
             style={{
               background: "#FFFFFF",
               border: "1px solid #2563EB",
-              boxShadow: "0 0 8px 0 rgba(37, 99, 235, 0.2), 0 1px 3px 0 rgba(37, 99, 235, 0.12)",
             }}
           >
             <span
@@ -191,7 +190,6 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
             background: "#FFFFFF",
             color: "#2563EB",
             border: "1px solid #2563EB",
-            boxShadow: "0 0 8px 0 rgba(37, 99, 235, 0.2), 0 1px 3px 0 rgba(37, 99, 235, 0.12)",
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.borderColor = "#1D4ED8"
