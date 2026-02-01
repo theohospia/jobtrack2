@@ -11,15 +11,17 @@ interface Opportunity {
   location: string
   workStyle: string
   fitLevel: FitLevel
+  fitStrength: number
   explanation: string
   metaSignals: string[]
   estimatedTime?: string
+  estimatedSalary?: string
 }
 
 const fitStyles: Record<FitLevel, { bg: string; color: string; label: string }> = {
-  strong: { bg: "transparent", color: "#2563EB", label: "Strong fit" },
-  good: { bg: "transparent", color: "#2563EB", label: "Good fit" },
-  stretch: { bg: "transparent", color: "#2563EB", label: "Stretch" },
+  strong: { bg: "transparent", color: "#000000", label: "Strong fit" },
+  good: { bg: "transparent", color: "#000000", label: "Good fit" },
+  stretch: { bg: "transparent", color: "#000000", label: "Stretch" },
 }
 
 // Fit distribution rule (enforced by decision engine):
@@ -34,8 +36,10 @@ const opportunities: Opportunity[] = [
     location: "Paris",
     workStyle: "Hybrid",
     fitLevel: "strong",
+    fitStrength: 92,
     explanation: "Your profile closely matches the role's requirements, and similar candidates received interviews here within 2 weeks.",
     metaSignals: ["3 days ago", "Low applicant volume", "Intern-friendly"],
+    estimatedSalary: "$32,000 - $38,000",
   },
   {
     id: "2",
@@ -44,8 +48,10 @@ const opportunities: Opportunity[] = [
     location: "London",
     workStyle: "Remote",
     fitLevel: "strong",
+    fitStrength: 88,
     explanation: "Your SQL and Python skills match 90% of the requirements. This company has hired from your university before.",
     metaSignals: ["5 days ago", "Responds quickly"],
+    estimatedSalary: "$45,000 - $55,000",
   },
   {
     id: "3",
@@ -54,8 +60,10 @@ const opportunities: Opportunity[] = [
     location: "Berlin",
     workStyle: "On-site",
     fitLevel: "good",
+    fitStrength: 72,
     explanation: "Your analytics background is relevant, and the team is actively expanding. Previous applicants with similar profiles advanced to interviews.",
     metaSignals: ["1 week ago", "Growing team"],
+    estimatedSalary: "$52,000 - $62,000",
   },
   {
     id: "4",
@@ -64,8 +72,10 @@ const opportunities: Opportunity[] = [
     location: "Amsterdam",
     workStyle: "Hybrid",
     fitLevel: "good",
+    fitStrength: 65,
     explanation: "Your project experience aligns with their product focus. They value analytical backgrounds for this role.",
     metaSignals: ["4 days ago", "Startup environment"],
+    estimatedSalary: "$48,000 - $58,000",
   },
   {
     id: "5",
@@ -74,8 +84,10 @@ const opportunities: Opportunity[] = [
     location: "Paris",
     workStyle: "On-site",
     fitLevel: "stretch",
+    fitStrength: 48,
     explanation: "This role typically requires more experience, but your quantitative skills could bridge the gap. Worth trying if you have capacity.",
     metaSignals: ["2 days ago", "Competitive"],
+    estimatedSalary: "$60,000 - $75,000",
   },
 ]
 
@@ -109,9 +121,10 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
         e.currentTarget.style.borderColor = "#E5E7EB"
       }}
     >
-      {/* Top Row: Title + Meta Badges + Fit Signal */}
-      <div className="flex items-start justify-between">
-        <div>
+      {/* Main Content */}
+      <div className="flex items-start justify-between gap-4">
+        {/* Left Side: Company Info, Role Title, Salary, and Fit */}
+        <div className="flex-1">
           {/* Company Info - Top */}
           <p
             className="text-[13px] font-medium"
@@ -120,37 +133,76 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
             {opportunity.company} · {opportunity.location} · {opportunity.workStyle} ({opportunity.metaSignals[0]})
           </p>
           
-          {/* Role Title - Bottom */}
+          {/* Role Title */}
           <h3
             className="text-base font-semibold mt-1"
             style={{ color: "#0F172A" }}
           >
             {opportunity.roleTitle}
           </h3>
-        </div>
-        <FitPill level={opportunity.fitLevel} />
-      </div>
 
-      {/* Primary CTA */}
-      <div className="flex items-start">
-        <button
-          className="flex items-center gap-1 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2 mt-1"
-          style={{
-            background: "#EC9F55",
-            color: "#FFFFFF",
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.background = "#D88A3D"
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.background = "#EC9F55"
-          }}
-        >
-          Apply now
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-        </button>
+          {/* Estimated Salary - Below Role Title */}
+          {opportunity.estimatedSalary && (
+            <p
+              className="text-sm font-medium mt-0.5"
+              style={{ color: "#64748B" }}
+            >
+              {opportunity.estimatedSalary}
+            </p>
+          )}
+        </div>
+
+        {/* Right Side: Circular Fit Strength Indicator + Arrow */}
+        <div className="flex items-center justify-center gap-6">
+          <div className="flex items-center justify-center">
+            <svg width="85" height="85" viewBox="0 0 100 100" className="transform -rotate-90">
+              {/* Background circle */}
+              <circle
+                cx="50"
+                cy="50"
+                r="45"
+                fill="none"
+                stroke="#E5E7EB"
+                strokeWidth="8"
+              />
+              {/* Progress circle */}
+              <circle
+                cx="50"
+                cy="50"
+                r="45"
+                fill="none"
+                stroke="#2563EB"
+                strokeWidth="8"
+                strokeDasharray={`${(opportunity.fitStrength / 100) * 2 * Math.PI * 45} ${2 * Math.PI * 45}`}
+                strokeLinecap="round"
+                style={{ transition: "stroke-dasharray 0.3s ease" }}
+              />
+            </svg>
+            {/* Center text */}
+            <div className="absolute flex flex-col items-center justify-center w-16 h-16">
+              <span
+                className="text-sm font-bold"
+                style={{ color: "#2563EB" }}
+              >
+                {opportunity.fitStrength}%
+              </span>
+              <span
+                className="text-xs font-medium mt-0.5 text-center"
+                style={{ color: "#64748B" }}
+              >
+                {fitStyles[opportunity.fitLevel].label}
+              </span>
+            </div>
+          </div>
+          
+          {/* Right Arrow */}
+          <span
+            className="text-3xl font-light"
+            style={{ color: "#94A3B8" }}
+          >
+            {'>'}
+          </span>
+        </div>
       </div>
     </div>
   )
@@ -273,14 +325,14 @@ export default function OpportunitiesPage() {
             <button
               className="flex items-center gap-1 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2"
               style={{
-                background: "#EC9F55",
+                background: "#2563EB",
                 color: "#FFFFFF",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.background = "#D88A3D"
+                e.currentTarget.style.background = "#1D4ED8"
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.background = "#EC9F55"
+                e.currentTarget.style.background = "#2563EB"
               }}
             >
               Load more
