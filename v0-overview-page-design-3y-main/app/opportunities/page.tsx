@@ -133,7 +133,7 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
                 cy="50"
                 r="45"
                 fill="none"
-                stroke="#0F172A"
+                stroke="#374151"
                 strokeWidth="8"
               />
               {/* Progress circle */}
@@ -142,7 +142,7 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
                 cy="50"
                 r="45"
                 fill="none"
-                stroke="#0F172A"
+                stroke="#374151"
                 strokeWidth="8"
                 strokeDasharray={`${(opportunity.fitStrength / 100) * 2 * Math.PI * 45} ${2 * Math.PI * 45}`}
                 strokeLinecap="round"
@@ -153,7 +153,7 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
             <div className="absolute flex items-center justify-center w-12 h-12">
               <span
                 className="text-lg font-bold"
-                style={{ color: "#0F172A" }}
+                style={{ color: "#374151" }}
               >
                 {opportunity.fitStrength}%
               </span>
