@@ -210,23 +210,15 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
 
         {/* Right Side: Apply Button */}
         <button
-          className="flex items-center gap-2 cursor-pointer text-sm font-medium transition-colors px-3 py-2 whitespace-nowrap border-b-2"
-          style={{
-            background: "transparent",
-            color: "#2563EB",
-            borderBottomColor: "#2563EB",
+          className="flex items-center gap-1 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2"
+          style={{ 
+            background: "#EC9F55",
+            color: "#FFFFFF" 
           }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.opacity = "0.8"
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.opacity = "1"
-          }}
+          onMouseEnter={(e) => e.currentTarget.style.background = "#D88A3D"}
+          onMouseLeave={(e) => e.currentTarget.style.background = "#EC9F55"}
         >
           Apply
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
         </button>
       </div>
     </div>
