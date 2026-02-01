@@ -153,7 +153,7 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
             <div className="absolute flex flex-col items-center justify-center w-16 h-16">
               <span
                 className="text-sm font-bold"
-                style={{ color: "#2563EB" }}
+                style={{ color: "#0F172A" }}
               >
                 {opportunity.fitStrength}%
               </span>
@@ -206,14 +206,15 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
         <button
           className="flex items-center gap-2 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2 whitespace-nowrap flex-shrink-0"
           style={{
-            background: "#2563EB",
-            color: "#FFFFFF",
+            background: "#FFFFFF",
+            color: "#2563EB",
+            border: "1px solid #E5E7EB",
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.background = "#1D4ED8"
+            e.currentTarget.style.borderColor = "#CBD5E1"
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.background = "#2563EB"
+            e.currentTarget.style.borderColor = "#E5E7EB"
           }}
         >
           Apply now
