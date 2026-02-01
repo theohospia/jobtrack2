@@ -210,13 +210,13 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
 
         {/* Right Side: Apply Button */}
         <button
-          className="flex items-center gap-1 cursor-pointer text-sm font-medium transition-opacity"
+          className="flex items-center gap-1 cursor-pointer text-sm font-medium transition-opacity pb-1"
           style={{
             background: "transparent",
             color: "#2563EB",
             border: "none",
             padding: 0,
-            textDecoration: "underline",
+            borderBottom: "1.5px solid #2563EB",
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.opacity = "0.8"
