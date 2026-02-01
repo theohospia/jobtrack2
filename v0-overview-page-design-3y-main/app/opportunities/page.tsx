@@ -133,7 +133,7 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
                 cy="50"
                 r="45"
                 fill="none"
-                stroke="#E5E7EB"
+                stroke="#0F172A"
                 strokeWidth="8"
               />
               {/* Progress circle */}
@@ -142,7 +142,7 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
                 cy="50"
                 r="45"
                 fill="none"
-                stroke="#2563EB"
+                stroke="#0F172A"
                 strokeWidth="8"
                 strokeDasharray={`${(opportunity.fitStrength / 100) * 2 * Math.PI * 45} ${2 * Math.PI * 45}`}
                 strokeLinecap="round"
