@@ -186,8 +186,8 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
             <div className="flex flex-col gap-1">
               {opportunity.estimatedSalary && (
                 <p
-                  className="text-sm font-medium"
-                  style={{ color: "#2563EB" }}
+                  className="text-sm font-medium rounded-lg px-3 py-1.5 w-fit"
+                  style={{ color: "#FFFFFF", background: "#2563EB" }}
                 >
                   {opportunity.estimatedSalary}
                 </p>
@@ -208,19 +208,18 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
           </div>
         </div>
 
-        {/* Right Side: Apply Button */}
+        {/* Right Side: Apply more Button */}
         <button
-          className="flex items-center gap-2 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2 whitespace-nowrap border-b-2"
+          className="flex items-center gap-2 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2 whitespace-nowrap"
           style={{
-            background: "transparent",
-            color: "#2563EB",
-            borderBottomColor: "#2563EB",
+            background: "#2563EB",
+            color: "#FFFFFF",
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.opacity = "0.8"
+            e.currentTarget.style.background = "#1D4ED8"
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.opacity = "1"
+            e.currentTarget.style.background = "#2563EB"
           }}
         >
           Apply
