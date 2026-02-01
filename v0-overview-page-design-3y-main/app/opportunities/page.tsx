@@ -11,17 +11,15 @@ interface Opportunity {
   location: string
   workStyle: string
   fitLevel: FitLevel
-  fitStrength: number
   explanation: string
   metaSignals: string[]
   estimatedTime?: string
-  estimatedSalary?: string
 }
 
 const fitStyles: Record<FitLevel, { bg: string; color: string; label: string }> = {
-  strong: { bg: "transparent", color: "#000000", label: "Strong fit" },
-  good: { bg: "transparent", color: "#000000", label: "Good fit" },
-  stretch: { bg: "transparent", color: "#000000", label: "Stretch" },
+  strong: { bg: "#ECFDF5", color: "#065F46", label: "Strong fit" },
+  good: { bg: "#EFF6FF", color: "#1E40AF", label: "Good fit" },
+  stretch: { bg: "#FFF7ED", color: "#9A3412", label: "Stretch" },
 }
 
 // Fit distribution rule (enforced by decision engine):
@@ -36,10 +34,8 @@ const opportunities: Opportunity[] = [
     location: "Paris",
     workStyle: "Hybrid",
     fitLevel: "strong",
-    fitStrength: 92,
     explanation: "Your profile closely matches the role's requirements, and similar candidates received interviews here within 2 weeks.",
     metaSignals: ["3 days ago", "Low applicant volume", "Intern-friendly"],
-    estimatedSalary: "$32,000 - $38,000",
   },
   {
     id: "2",
@@ -48,10 +44,8 @@ const opportunities: Opportunity[] = [
     location: "London",
     workStyle: "Remote",
     fitLevel: "strong",
-    fitStrength: 88,
     explanation: "Your SQL and Python skills match 90% of the requirements. This company has hired from your university before.",
     metaSignals: ["5 days ago", "Responds quickly"],
-    estimatedSalary: "$45,000 - $55,000",
   },
   {
     id: "3",
@@ -60,10 +54,8 @@ const opportunities: Opportunity[] = [
     location: "Berlin",
     workStyle: "On-site",
     fitLevel: "good",
-    fitStrength: 72,
     explanation: "Your analytics background is relevant, and the team is actively expanding. Previous applicants with similar profiles advanced to interviews.",
     metaSignals: ["1 week ago", "Growing team"],
-    estimatedSalary: "$52,000 - $62,000",
   },
   {
     id: "4",
@@ -72,10 +64,8 @@ const opportunities: Opportunity[] = [
     location: "Amsterdam",
     workStyle: "Hybrid",
     fitLevel: "good",
-    fitStrength: 65,
     explanation: "Your project experience aligns with their product focus. They value analytical backgrounds for this role.",
     metaSignals: ["4 days ago", "Startup environment"],
-    estimatedSalary: "$48,000 - $58,000",
   },
   {
     id: "5",
@@ -84,10 +74,8 @@ const opportunities: Opportunity[] = [
     location: "Paris",
     workStyle: "On-site",
     fitLevel: "stretch",
-    fitStrength: 48,
     explanation: "This role typically requires more experience, but your quantitative skills could bridge the gap. Worth trying if you have capacity.",
     metaSignals: ["2 days ago", "Competitive"],
-    estimatedSalary: "$60,000 - $75,000",
   },
 ]
 
@@ -104,11 +92,14 @@ function FitPill({ level }: { level: FitLevel }) {
 }
 
 function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; index: number }) {
+  const isAltStyle = index % 2 === 1
+  const bgColor = isAltStyle ? "#F0F7FF" : "#FFFFFF"
+  
   return (
     <div
       className="flex w-full cursor-pointer flex-col gap-3 rounded-2xl p-5 transition-colors duration-150"
       style={{
-        background: "#FFFFFF",
+        background: bgColor,
         border: "1px solid #E5E7EB",
       }}
       onMouseEnter={(e) => {
@@ -118,117 +109,52 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
         e.currentTarget.style.borderColor = "#E5E7EB"
       }}
     >
-      {/* Main Content */}
-      <div className="flex items-center justify-between gap-4">
-        {/* Left Side: Company Info, Role Title, Circle + Salary */}
-        <div className="flex-1">
-          {/* Company Info - Top */}
+      {/* Top Row: Title + Meta Badges + Fit Signal */}
+      <div className="flex items-start justify-between">
+        <div>
+          <div className="flex flex-wrap items-center gap-2">
+            <h3
+              className="text-base font-semibold"
+              style={{ color: "#0F172A" }}
+            >
+              {opportunity.roleTitle}
+            </h3>
+            {opportunity.metaSignals.map((signal) => (
+              <span
+                key={signal}
+                className="rounded-md px-2 py-0.5 text-[11px] font-medium"
+                style={{ background: "#E5E7EB", color: "#475569" }}
+              >
+                {signal}
+              </span>
+            ))}
+          </div>
           <p
-            className="text-[13px] font-medium"
+            className="mt-1 text-[13px]"
             style={{ color: "#64748B" }}
           >
             {opportunity.company} · {opportunity.location} · {opportunity.workStyle}
           </p>
-          
-          {/* Role Title */}
-          <h3
-            className="text-base font-semibold mt-1"
-            style={{ color: "#0F172A" }}
-          >
-            {opportunity.roleTitle}
-          </h3>
-
-          {/* Circle + Salary Row */}
-          <div className="flex items-center gap-4 mt-2">
-            {/* Circular Fit Strength Indicator */}
-            <div className="flex items-center justify-center flex-shrink-0">
-              <svg width="90" height="90" viewBox="0 0 100 100" className="transform -rotate-90">
-                {/* Background circle */}
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="45"
-                  fill="none"
-                  stroke="#E5E7EB"
-                  strokeWidth="8"
-                />
-                {/* Progress circle */}
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="45"
-                  fill="none"
-                  stroke="#2563EB"
-                  strokeWidth="8"
-                  strokeDasharray={`${(opportunity.fitStrength / 100) * 2 * Math.PI * 45} ${2 * Math.PI * 45}`}
-                  strokeLinecap="round"
-                  style={{ transition: "stroke-dasharray 0.3s ease" }}
-                />
-              </svg>
-              {/* Center text */}
-              <div className="absolute flex flex-col items-center justify-center w-14 h-14">
-                <span
-                  className="text-base font-bold"
-                  style={{ color: "#2563EB" }}
-                >
-                  {opportunity.fitStrength}%
-                </span>
-                <span
-                  className="text-xs font-medium mt-0 text-center leading-tight"
-                  style={{ color: "#64748B" }}
-                >
-                  {fitStyles[opportunity.fitLevel].label}
-                </span>
-              </div>
-            </div>
-
-            {/* Estimated Salary and Confidence */}
-            <div className="flex flex-col gap-1">
-              {opportunity.estimatedSalary && (
-                <p
-                  className="text-sm font-medium"
-                  style={{ color: "#2563EB" }}
-                >
-                  {opportunity.estimatedSalary}
-                </p>
-              )}
-              <div className="flex items-center gap-1">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="12" cy="12" r="10" stroke="#64748B" strokeWidth="2"/>
-                  <path d="M12 6V12L16 16" stroke="#64748B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-                <p
-                  className="text-sm font-medium"
-                  style={{ color: "#64748B" }}
-                >
-                  {opportunity.metaSignals[0]}
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
+        <FitPill level={opportunity.fitLevel} />
+      </div>
 
-        {/* Right Side: Apply Button */}
+      {/* Primary CTA */}
+      <div className="flex items-start">
         <button
-          className="flex items-center gap-1 cursor-pointer text-sm font-medium transition-opacity pb-1"
+          className="h-11 w-fit cursor-pointer px-5 text-sm font-semibold transition-all duration-[120ms] ease-in-out py-0 rounded-full shadow-xs my-1"
           style={{
-            background: "transparent",
-            color: "#2563EB",
-            border: "none",
-            padding: 0,
-            borderBottom: "1.5px solid #2563EB",
+            background: "#2563EB",
+            color: "#FFFFFF",
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.opacity = "0.8"
+            e.currentTarget.style.background = "#1D4ED8"
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.opacity = "1"
+            e.currentTarget.style.background = "#2563EB"
           }}
         >
-          Apply
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
+          Apply now
         </button>
       </div>
     </div>
@@ -289,51 +215,21 @@ export default function OpportunitiesPage() {
           >
             Opportunities
           </h1>
+          <p
+            className="mt-1 text-sm leading-5"
+            style={{ color: "#64748B" }}
+          >
+            Roles where you have the highest chance of success right now.
+          </p>
+          {!showEmpty && (
+            <p
+              className="mt-1 text-xs"
+              style={{ color: "#64748B" }}
+            >
+              Showing {visibleOpportunities.length} high-confidence opportunities
+            </p>
+          )}
         </header>
-
-        {/* Search and Filters */}
-        <div className="mb-8 flex gap-4">
-          {/* Search Bar */}
-          <div
-            className="flex-1 flex items-center gap-3 rounded-lg px-5 py-3.5"
-            style={{
-              background: "#FFFFFF",
-              border: "1px solid #CBD5E1",
-            }}
-          >
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="11" cy="11" r="8" stroke="#94A3B8" strokeWidth="2"/>
-              <path d="M21 21L16 16" stroke="#94A3B8" strokeWidth="2" strokeLinecap="round"/>
-            </svg>
-            <input
-              type="text"
-              placeholder="Search roles, companies..."
-              className="flex-1 bg-transparent text-base outline-none"
-              style={{ color: "#0F172A" }}
-            />
-          </div>
-
-          {/* Filter Button */}
-          <button
-            className="flex items-center gap-2 rounded-lg px-6 py-3.5 transition-colors"
-            style={{
-              background: "#FFFFFF",
-              border: "1px solid #E5E7EB",
-              color: "#64748B",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.background = "#F1F5F9";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.background = "#FFFFFF";
-            }}
-          >
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-            </svg>
-            <span className="text-base font-medium">Filters</span>
-          </button>
-        </div>
 
         {/* Opportunities List */}
         <div className="mb-8 flex flex-col gap-3">
@@ -350,7 +246,7 @@ export default function OpportunitiesPage() {
         {!showEmpty && (
           <div className="flex justify-center">
             <button
-              className="flex items-center gap-1 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2"
+              className="h-11 w-fit cursor-pointer px-5 py-0 text-sm font-semibold shadow-xs transition-all duration-[120ms] ease-in-out rounded-lg"
               style={{
                 background: "#2563EB",
                 color: "#FFFFFF",
@@ -363,9 +259,6 @@ export default function OpportunitiesPage() {
               }}
             >
               Load more
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
             </button>
           </div>
         )}

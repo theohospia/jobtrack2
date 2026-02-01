@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation"
 import { Search, Bell, ChevronDown, Menu, X } from "lucide-react"
 
 const tabs = [
-  { label: "Dashboard", href: "/dashboard" },
+  { label: "Today", href: "/dashboard" },
   { label: "Opportunities", href: "/opportunities" },
   { label: "Actions", href: "/actions" },
   { label: "Profile", href: "/profile" },

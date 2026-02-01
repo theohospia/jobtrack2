@@ -9,7 +9,7 @@ const _inter = Inter({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Your Job Search — Dashboard',
+  title: 'Your Job Search — Today',
   description: 'One thing matters most right now. Track your job search momentum.',
   generator: 'v0.app',
   icons: {
