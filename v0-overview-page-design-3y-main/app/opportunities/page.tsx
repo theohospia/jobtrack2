@@ -120,9 +120,51 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
     >
       {/* Main Content */}
       <div className="flex items-center justify-between gap-4">
-        {/* Left Side: Company Info, Role Title, Circle + Salary */}
+        {/* Left: Circle */}
+        <div className="flex items-center justify-center flex-shrink-0">
+          <svg width="90" height="90" viewBox="0 0 100 100" className="transform -rotate-90">
+            {/* Background circle */}
+            <circle
+              cx="50"
+              cy="50"
+              r="45"
+              fill="none"
+              stroke="#E5E7EB"
+              strokeWidth="8"
+            />
+            {/* Progress circle */}
+            <circle
+              cx="50"
+              cy="50"
+              r="45"
+              fill="none"
+              stroke="#2563EB"
+              strokeWidth="8"
+              strokeDasharray={`${(opportunity.fitStrength / 100) * 2 * Math.PI * 45} ${2 * Math.PI * 45}`}
+              strokeLinecap="round"
+              style={{ transition: "stroke-dasharray 0.3s ease" }}
+            />
+          </svg>
+          {/* Center text */}
+          <div className="absolute flex flex-col items-center justify-center w-14 h-14">
+            <span
+              className="text-base font-bold"
+              style={{ color: "#2563EB" }}
+            >
+              {opportunity.fitStrength}%
+            </span>
+            <span
+              className="text-xs font-medium mt-0 text-center leading-tight"
+              style={{ color: "#64748B" }}
+            >
+              {fitStyles[opportunity.fitLevel].label}
+            </span>
+          </div>
+        </div>
+
+        {/* Center: Company Info & Role Title */}
         <div className="flex-1">
-          {/* Company Info - Top */}
+          {/* Company Info */}
           <p
             className="text-[13px] font-medium"
             style={{ color: "#64748B" }}
@@ -137,96 +179,40 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
           >
             {opportunity.roleTitle}
           </h3>
-
-          {/* Circle + Salary Row */}
-          <div className="flex items-center gap-4 mt-2">
-            {/* Circular Fit Strength Indicator */}
-            <div className="flex items-center justify-center flex-shrink-0">
-              <svg width="90" height="90" viewBox="0 0 100 100" className="transform -rotate-90">
-                {/* Background circle */}
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="45"
-                  fill="none"
-                  stroke="#E5E7EB"
-                  strokeWidth="8"
-                />
-                {/* Progress circle */}
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="45"
-                  fill="none"
-                  stroke="#2563EB"
-                  strokeWidth="8"
-                  strokeDasharray={`${(opportunity.fitStrength / 100) * 2 * Math.PI * 45} ${2 * Math.PI * 45}`}
-                  strokeLinecap="round"
-                  style={{ transition: "stroke-dasharray 0.3s ease" }}
-                />
-              </svg>
-              {/* Center text */}
-              <div className="absolute flex flex-col items-center justify-center w-14 h-14">
-                <span
-                  className="text-base font-bold"
-                  style={{ color: "#2563EB" }}
-                >
-                  {opportunity.fitStrength}%
-                </span>
-                <span
-                  className="text-xs font-medium mt-0 text-center leading-tight"
-                  style={{ color: "#64748B" }}
-                >
-                  {fitStyles[opportunity.fitLevel].label}
-                </span>
-              </div>
-            </div>
-
-            {/* Estimated Salary and Confidence */}
-            <div className="flex flex-col gap-1">
-              {opportunity.estimatedSalary && (
-                <p
-                  className="text-sm font-medium"
-                  style={{ color: "#64748B" }}
-                >
-                  {opportunity.estimatedSalary}
-                </p>
-              )}
-              <div className="flex items-center gap-1">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="12" cy="12" r="10" stroke="#64748B" strokeWidth="2"/>
-                  <path d="M12 6V12L16 16" stroke="#64748B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-                <p
-                  className="text-sm font-medium"
-                  style={{ color: "#64748B" }}
-                >
-                  {opportunity.metaSignals[0]}
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
 
-        {/* Right Side: Apply more Button */}
-        <button
-          className="flex items-center gap-2 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2 whitespace-nowrap"
-          style={{
-            background: "#2563EB",
-            color: "#FFFFFF",
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.background = "#1D4ED8"
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.background = "#2563EB"
-          }}
-        >
-          Apply
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-        </button>
+        {/* Right: Salary & Apply Button */}
+        <div className="flex flex-col items-end gap-2">
+          {/* Estimated Salary */}
+          {opportunity.estimatedSalary && (
+            <p
+              className="text-sm font-medium"
+              style={{ color: "#64748B" }}
+            >
+              {opportunity.estimatedSalary}
+            </p>
+          )}
+          
+          {/* Apply Button */}
+          <button
+            className="flex items-center gap-2 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2 whitespace-nowrap"
+            style={{
+              background: "#2563EB",
+              color: "#FFFFFF",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = "#1D4ED8"
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = "#2563EB"
+            }}
+          >
+            Apply
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
   )
