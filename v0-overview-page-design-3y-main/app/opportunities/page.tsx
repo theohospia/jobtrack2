@@ -128,14 +128,14 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
           <div
             className="flex items-center justify-center rounded-xl px-6 py-7"
             style={{
-              background: "#F9FAFB",
-              border: "1px solid #F0F1F3",
+              background: "#FFFFFF",
+              border: "1px solid #E5E7EB",
               boxShadow: "0 1px 3px 0 rgba(15, 23, 42, 0.08)",
             }}
           >
             <span
               className="text-xl font-bold"
-              style={{ color: "#6B7280" }}
+              style={{ color: "#374151" }}
             >
               {opportunity.fitStrength}%
             </span>
