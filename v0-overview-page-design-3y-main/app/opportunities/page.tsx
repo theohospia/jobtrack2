@@ -195,8 +195,8 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
                 {opportunity.estimatedSalary}
               </p>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="12" cy="12" r="10" stroke="#2563EB" strokeWidth="2.5"/>
-                <path d="M12 7V12M12 16H12.01" stroke="#2563EB" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                <circle cx="12" cy="12" r="10" stroke="#64748B" strokeWidth="2.5"/>
+                <path d="M12 7V12M12 16H12.01" stroke="#64748B" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>
           )}
