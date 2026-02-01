@@ -135,7 +135,7 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
           >
             <span
               className="text-xl font-bold"
-              style={{ color: "#374151" }}
+              style={{ color: "#2563EB" }}
             >
               {opportunity.fitStrength}%
             </span>
