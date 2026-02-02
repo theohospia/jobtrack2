@@ -208,21 +208,8 @@ export default function ActionsPage() {
                 boxShadow: '0px 1px 3px rgba(15, 23, 42, 0.06)'
               }}
             >
-              {/* Top Section: Image and Urgency Badge */}
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 12 }}>
-                {/* LinkedIn Logo */}
-                <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-xOHFwID1ygIWjR8LyBoPK8UDsHJRg5.png"
-                  alt="LinkedIn"
-                  style={{
-                    width: 64,
-                    height: 64,
-                    borderRadius: 8,
-                    flexShrink: 0,
-                    marginTop: -20
-                  }}
-                />
-
+              {/* Top Section: Urgency Badge */}
+              <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: 12 }}>
                 {/* Urgency Badge */}
                 <span
                   style={{
