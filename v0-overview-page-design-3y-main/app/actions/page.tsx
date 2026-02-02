@@ -256,70 +256,42 @@ export default function ActionsPage() {
                 style={{
                   fontSize: 12,
                   color: '#94A3B8',
-                  marginBottom: 16,
-                  paddingBottom: 16,
-                  borderBottom: '1px solid #E5E7EB'
+                  marginBottom: 12
                 }}
               >
                 Applied {card.appliedDate}
               </p>
 
-              {/* Next Tasks */}
-              <div>
-                <p
+              {/* Progress Bar and View Tasks */}
+              <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                {/* Progress Bar */}
+                <div style={{ flex: 1, height: 6, background: '#E5E7EB', borderRadius: 3 }}>
+                  <div 
+                    style={{ 
+                      width: card.urgency === 'Very urgent' ? '75%' : card.urgency === 'Urgent' ? '50%' : '25%',
+                      height: '100%', 
+                      background: '#2563EB', 
+                      borderRadius: 3 
+                    }} 
+                  />
+                </div>
+                
+                {/* View Tasks Button */}
+                <button
+                  className="flex items-center gap-1 cursor-pointer text-xs font-medium transition-colors rounded-lg px-3 py-1.5 whitespace-nowrap"
                   style={{
-                    fontSize: 12,
-                    fontWeight: 500,
-                    color: '#0F172A',
-                    marginBottom: 8
+                    background: "#2563EB",
+                    color: "#FFFFFF",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = "#1D4ED8"
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = "#2563EB"
                   }}
                 >
-                  Next tasks
-                </p>
-                <ul style={{ margin: 0, padding: 0, listStyle: 'none' }}>
-                  {card.nextTasks.map((task, taskIndex) => (
-                    <li
-                      key={taskIndex}
-                      style={{
-                        fontSize: 13,
-                        color: '#64748B',
-                        marginBottom: taskIndex < card.nextTasks.length - 1 ? 8 : 0,
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'space-between',
-                        gap: 12
-                      }}
-                    >
-                      <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                        <span style={{ color: '#2563EB' }}>·</span>
-                        {task.text}
-                        <span style={{ color: '#EA580C', fontWeight: 600 }}>
-                          {'!'.repeat(task.urgency)}
-                        </span>
-                      </div>
-                      <button
-                        className="flex items-center gap-2 cursor-pointer transition-colors rounded-lg"
-                        style={{
-                          background: "#FFFFFF",
-                          color: "#2563EB",
-                          border: "none",
-                          padding: "6px 8px",
-                          cursor: 'pointer'
-                        }}
-                        onMouseEnter={(e) => {
-                          e.currentTarget.style.background = "#F8FAFC"
-                        }}
-                        onMouseLeave={(e) => {
-                          e.currentTarget.style.background = "#FFFFFF"
-                        }}
-                      >
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>
-                      </button>
-                    </li>
-                  ))}
-                </ul>
+                  View tasks
+                </button>
               </div>
             </div>
           ))}
