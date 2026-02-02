@@ -125,6 +125,76 @@ export default function ActionsPage() {
           </h1>
         </header>
 
+        {/* Filter Section */}
+        <div style={{ 
+          display: 'flex', 
+          gap: 12, 
+          marginBottom: 32,
+          alignItems: 'center',
+          flexWrap: 'wrap'
+        }}>
+          {/* Search by Name */}
+          <input
+            type="text"
+            placeholder="Search by job title..."
+            style={{
+              padding: '8px 12px',
+              fontSize: 13,
+              border: '1px solid #E5E7EB',
+              borderRadius: 8,
+              background: '#FFFFFF',
+              color: '#0F172A',
+              minWidth: 200,
+              transition: 'border-color 120ms ease'
+            }}
+            onFocus={(e) => e.target.style.borderColor = '#2563EB'}
+            onBlur={(e) => e.target.style.borderColor = '#E5E7EB'}
+          />
+
+          {/* Filter by Urgency */}
+          <select
+            style={{
+              padding: '8px 12px',
+              fontSize: 13,
+              border: '1px solid #E5E7EB',
+              borderRadius: 8,
+              background: '#FFFFFF',
+              color: '#0F172A',
+              cursor: 'pointer',
+              transition: 'border-color 120ms ease'
+            }}
+            onFocus={(e) => e.target.style.borderColor = '#2563EB'}
+            onBlur={(e) => e.target.style.borderColor = '#E5E7EB'}
+          >
+            <option value="">Filter by urgency</option>
+            <option value="very-urgent">Very urgent</option>
+            <option value="urgent">Urgent</option>
+            <option value="normal">Normal</option>
+          </select>
+
+          {/* Filter by Date */}
+          <select
+            style={{
+              padding: '8px 12px',
+              fontSize: 13,
+              border: '1px solid #E5E7EB',
+              borderRadius: 8,
+              background: '#FFFFFF',
+              color: '#0F172A',
+              cursor: 'pointer',
+              transition: 'border-color 120ms ease'
+            }}
+            onFocus={(e) => e.target.style.borderColor = '#2563EB'}
+            onBlur={(e) => e.target.style.borderColor = '#E5E7EB'}
+          >
+            <option value="">Filter by date</option>
+            <option value="1-day">Last 1 day</option>
+            <option value="3-days">Last 3 days</option>
+            <option value="7-days">Last 7 days</option>
+            <option value="all">All time</option>
+          </select>
+        </div>
+
         {/* Job Cards Row */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24, marginBottom: 80 }}>
           {jobCards.map((card, index) => (
