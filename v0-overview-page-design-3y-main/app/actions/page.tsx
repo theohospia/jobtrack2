@@ -49,6 +49,33 @@ export default function ActionsPage() {
       appliedDate: "2 days ago",
       nextTasks: ["Review requirements", "Submit portfolio"],
       urgency: "Normal"
+    },
+    {
+      title: "UX Designer",
+      company: "Creative Studios",
+      location: "Berlin",
+      workType: "Remote",
+      appliedDate: "1 day ago",
+      nextTasks: ["Portfolio review", "Design test"],
+      urgency: "Urgent"
+    },
+    {
+      title: "Senior Developer",
+      company: "TechCorp",
+      location: "San Francisco",
+      workType: "Hybrid",
+      appliedDate: "4 days ago",
+      nextTasks: ["Phone screen", "Technical interview"],
+      urgency: "Very urgent"
+    },
+    {
+      title: "Marketing Manager",
+      company: "Growth Labs",
+      location: "Boston",
+      workType: "Remote",
+      appliedDate: "6 days ago",
+      nextTasks: ["Case study", "Final round"],
+      urgency: "Normal"
     }
   ]
 
