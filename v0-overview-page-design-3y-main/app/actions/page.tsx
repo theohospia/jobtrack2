@@ -311,8 +311,8 @@ export default function ActionsPage() {
                       </div>
                       <button
                         style={{
-                          padding: '4px 10px',
-                          fontSize: 11,
+                          padding: '6px 14px',
+                          fontSize: 12,
                           fontWeight: 500,
                           background: '#2563EB',
                           color: '#FFFFFF',
