@@ -310,19 +310,19 @@ export default function ActionsPage() {
                         </span>
                       </div>
                       <button
-                        className="flex items-center gap-2 cursor-pointer transition-colors"
+                        className="flex items-center gap-2 cursor-pointer transition-colors rounded-lg"
                         style={{
-                          background: "transparent",
-                          color: "#2563EB",
+                          background: "#2563EB",
+                          color: "#FFFFFF",
                           border: "none",
-                          padding: 0,
+                          padding: "6px 8px",
                           cursor: 'pointer'
                         }}
                         onMouseEnter={(e) => {
-                          e.currentTarget.style.color = "#1D4ED8"
+                          e.currentTarget.style.background = "#1D4ED8"
                         }}
                         onMouseLeave={(e) => {
-                          e.currentTarget.style.color = "#2563EB"
+                          e.currentTarget.style.background = "#2563EB"
                         }}
                       >
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
