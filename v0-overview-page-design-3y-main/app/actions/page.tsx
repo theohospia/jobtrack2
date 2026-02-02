@@ -310,28 +310,23 @@ export default function ActionsPage() {
                         </span>
                       </div>
                       <button
-                        className="flex items-center gap-2 cursor-pointer text-xs font-medium transition-colors rounded-lg px-2 py-1 whitespace-nowrap flex-shrink-0"
+                        className="flex items-center gap-2 cursor-pointer transition-colors"
                         style={{
-                          background: "#2563EB",
-                          color: "#FFFFFF"
+                          background: "transparent",
+                          color: "#2563EB",
+                          border: "none",
+                          padding: 0,
+                          cursor: 'pointer'
                         }}
                         onMouseEnter={(e) => {
-                          e.currentTarget.style.background = "#1D4ED8"
+                          e.currentTarget.style.color = "#1D4ED8"
                         }}
                         onMouseLeave={(e) => {
-                          e.currentTarget.style.background = "#2563EB"
+                          e.currentTarget.style.color = "#2563EB"
                         }}
                       >
-                        {task.text.includes('Follow') ? 'Follow' : 
-                         task.text.includes('Prepare') ? 'Prepare' : 
-                         task.text.includes('Schedule') ? 'Schedule' : 
-                         task.text.includes('Review') ? 'Review' : 
-                         task.text.includes('Submit') ? 'Submit' : 
-                         task.text.includes('Coding') ? 'Code' : 
-                         task.text.includes('Portfolio') ? 'Review' : 
-                         task.text.includes('Case') ? 'Create' : 'Do it'}
-                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                         </svg>
                       </button>
                     </li>
