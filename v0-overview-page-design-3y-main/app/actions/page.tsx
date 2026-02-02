@@ -139,35 +139,77 @@ export default function ActionsPage() {
               </p>
 
               {/* Next Tasks */}
-              <div>
-                <p
-                  style={{
-                    fontSize: 12,
-                    fontWeight: 500,
-                    color: '#0F172A',
-                    marginBottom: 8
-                  }}
-                >
-                  Next tasks
-                </p>
-                <ul style={{ margin: 0, padding: 0, listStyle: 'none' }}>
-                  {card.nextTasks.map((task, taskIndex) => (
-                    <li
-                      key={taskIndex}
-                      style={{
-                        fontSize: 13,
-                        color: '#64748B',
-                        marginBottom: taskIndex < card.nextTasks.length - 1 ? 6 : 0,
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: 8
-                      }}
-                    >
-                      <span style={{ color: '#2563EB' }}>·</span>
-                      {task}
-                    </li>
-                  ))}
-                </ul>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 16 }}>
+                <div style={{ flex: 1 }}>
+                  <p
+                    style={{
+                      fontSize: 12,
+                      fontWeight: 500,
+                      color: '#0F172A',
+                      marginBottom: 8
+                    }}
+                  >
+                    Next tasks
+                  </p>
+                  <ul style={{ margin: 0, padding: 0, listStyle: 'none' }}>
+                    {card.nextTasks.map((task, taskIndex) => (
+                      <li
+                        key={taskIndex}
+                        style={{
+                          fontSize: 13,
+                          color: '#64748B',
+                          marginBottom: taskIndex < card.nextTasks.length - 1 ? 6 : 0,
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: 8
+                        }}
+                      >
+                        <span style={{ color: '#2563EB' }}>·</span>
+                        {task}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                {/* Action Buttons */}
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+                  <button
+                    style={{
+                      padding: '6px 12px',
+                      fontSize: 12,
+                      fontWeight: 500,
+                      background: '#2563EB',
+                      color: '#FFFFFF',
+                      border: 'none',
+                      borderRadius: 6,
+                      cursor: 'pointer',
+                      whiteSpace: 'nowrap',
+                      transition: 'background 120ms ease'
+                    }}
+                    onMouseEnter={(e) => e.currentTarget.style.background = '#1D4ED8'}
+                    onMouseLeave={(e) => e.currentTarget.style.background = '#2563EB'}
+                  >
+                    Do it
+                  </button>
+                  <button
+                    style={{
+                      padding: '6px 12px',
+                      fontSize: 12,
+                      fontWeight: 500,
+                      background: '#FFFFFF',
+                      color: '#2563EB',
+                      border: '1px solid #2563EB',
+                      borderRadius: 6,
+                      cursor: 'pointer',
+                      whiteSpace: 'nowrap',
+                      transition: 'background 120ms ease'
+                    }}
+                    onMouseEnter={(e) => e.currentTarget.style.background = '#F0F7FF'}
+                    onMouseLeave={(e) => e.currentTarget.style.background = '#FFFFFF'}
+                  >
+                    Later
+                  </button>
+                </div>
               </div>
             </div>
           ))}
