@@ -208,8 +208,20 @@ export default function ActionsPage() {
                 boxShadow: '0px 1px 3px rgba(15, 23, 42, 0.06)'
               }}
             >
-              {/* Top Section: Urgency Badge */}
-              <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: 12 }}>
+              {/* Top Section: Title and Urgency Badge */}
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 }}>
+                {/* Title */}
+                <h3
+                  style={{
+                    fontSize: 16,
+                    fontWeight: 600,
+                    color: '#0F172A',
+                    margin: 0
+                  }}
+                >
+                  {card.title}
+                </h3>
+                
                 {/* Urgency Badge */}
                 <span
                   style={{
@@ -219,26 +231,13 @@ export default function ActionsPage() {
                     background: '#DBEAFE',
                     padding: '4px 10px',
                     borderRadius: 16,
-                    whiteSpace: 'nowrap'
+                    whiteSpace: 'nowrap',
+                    flexShrink: 0
                   }}
                 >
                   {card.urgency}
                 </span>
               </div>
-
-              {/* Title */}
-              <h3
-                style={{
-                  fontSize: 16,
-                  fontWeight: 600,
-                  color: '#0F172A',
-                  marginBottom: 8,
-                  margin: 0,
-                  marginBottom: 8
-                }}
-              >
-                {card.title}
-              </h3>
 
               {/* Job Info */}
               <p
