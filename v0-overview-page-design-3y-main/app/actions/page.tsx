@@ -140,15 +140,12 @@ export default function ActionsPage() {
           }}
         >
           <img 
-            src="/placeholder-banner.jpg" 
-            alt="Actions banner"
+            src="/actions-banner.jpg" 
+            alt=""
             style={{
               width: '100%',
               height: '100%',
               objectFit: 'cover'
-            }}
-            onError={(e) => {
-              e.currentTarget.style.display = 'none'
             }}
           />
         </div>
