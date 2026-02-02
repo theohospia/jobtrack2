@@ -129,10 +129,10 @@ export default function ActionsPage() {
         <div 
           style={{ 
             width: '100%', 
-            height: 180, 
+            height: 100, 
             borderRadius: 12, 
             marginBottom: 24,
-            background: 'linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%)',
+            background: '#DBEAFE',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
