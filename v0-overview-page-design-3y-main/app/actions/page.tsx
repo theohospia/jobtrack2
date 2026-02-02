@@ -140,7 +140,7 @@ export default function ActionsPage() {
                     fontSize: 11,
                     fontWeight: 500,
                     color: '#FFFFFF',
-                    background: card.urgency === 'Very urgent' ? '#2563EB' : card.urgency === 'Urgent' ? '#EA580C' : '#94A3B8',
+                    background: '#2563EB',
                     padding: '4px 10px',
                     borderRadius: 6,
                     whiteSpace: 'nowrap'
