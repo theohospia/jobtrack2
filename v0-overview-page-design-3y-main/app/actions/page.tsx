@@ -142,7 +142,7 @@ export default function ActionsPage() {
                     color: '#FFFFFF',
                     background: '#2563EB',
                     padding: '4px 10px',
-                    borderRadius: 6,
+                    borderRadius: 16,
                     whiteSpace: 'nowrap'
                   }}
                 >
