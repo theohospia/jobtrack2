@@ -264,7 +264,7 @@ export default function ActionsPage() {
               {/* Progress Bar and View Tasks */}
               <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
                 {/* Tasks Label */}
-                <span style={{ fontSize: 12, fontWeight: 500, color: '#64748B', flexShrink: 0 }}>Tasks:</span>
+                <span style={{ fontSize: 12, fontWeight: 600, color: '#64748B', flexShrink: 0 }}>Tasks:</span>
                 
                 {/* Progress Bar */}
                 <div style={{ flex: 1, height: 6, background: '#E5E7EB', borderRadius: 3 }}>
