@@ -209,7 +209,7 @@ export default function ActionsPage() {
               }}
             >
               {/* Top Section: Image and Urgency Badge */}
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 12 }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
                 {/* LinkedIn Logo */}
                 <img
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-xOHFwID1ygIWjR8LyBoPK8UDsHJRg5.png"
