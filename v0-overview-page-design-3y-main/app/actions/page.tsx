@@ -139,8 +139,8 @@ export default function ActionsPage() {
                   style={{
                     fontSize: 11,
                     fontWeight: 500,
-                    color: card.urgency === 'Very urgent' ? '#FFFFFF' : card.urgency === 'Urgent' ? '#EA580C' : '#64748B',
-                    background: card.urgency === 'Very urgent' ? '#2563EB' : card.urgency === 'Urgent' ? '#FEF3C7' : '#F1F5F9',
+                    color: '#FFFFFF',
+                    background: card.urgency === 'Very urgent' ? '#2563EB' : card.urgency === 'Urgent' ? '#EA580C' : '#94A3B8',
                     padding: '4px 10px',
                     borderRadius: 6,
                     whiteSpace: 'nowrap'
