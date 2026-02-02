@@ -90,6 +90,18 @@ export default function ActionsPage() {
                 boxShadow: '0px 1px 3px rgba(15, 23, 42, 0.06)'
               }}
             >
+              {/* LinkedIn Logo */}
+              <img
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-7yd2UOOPK7AFKDClB4EMzt6XQxalPO.png"
+                alt="LinkedIn"
+                style={{
+                  width: 48,
+                  height: 48,
+                  marginBottom: 12,
+                  borderRadius: 8
+                }}
+              />
+
               {/* Title */}
               <h3
                 style={{
