@@ -263,6 +263,9 @@ export default function ActionsPage() {
 
               {/* Progress Bar and View Tasks */}
               <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                {/* Tasks Label */}
+                <span style={{ fontSize: 12, fontWeight: 500, color: '#64748B', flexShrink: 0 }}>Tasks:</span>
+                
                 {/* Progress Bar */}
                 <div style={{ flex: 1, height: 6, background: '#E5E7EB', borderRadius: 3 }}>
                   <div 
@@ -275,12 +278,14 @@ export default function ActionsPage() {
                   />
                 </div>
                 
-                {/* View Tasks Button */}
+                {/* Arrow Icon Button */}
                 <button
-                  className="flex items-center gap-2 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2 whitespace-nowrap flex-shrink-0"
+                  className="flex items-center justify-center cursor-pointer transition-colors rounded-lg flex-shrink-0"
                   style={{
                     background: "#2563EB",
                     color: "#FFFFFF",
+                    padding: "6px 8px",
+                    border: "none"
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.background = "#1D4ED8"
@@ -289,7 +294,6 @@ export default function ActionsPage() {
                     e.currentTarget.style.background = "#2563EB"
                   }}
                 >
-                  View tasks
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
