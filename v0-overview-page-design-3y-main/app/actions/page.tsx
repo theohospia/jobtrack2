@@ -310,20 +310,17 @@ export default function ActionsPage() {
                         </span>
                       </div>
                       <button
+                        className="flex items-center gap-2 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2 whitespace-nowrap flex-shrink-0"
                         style={{
-                          padding: '6px 14px',
-                          fontSize: 12,
-                          fontWeight: 500,
-                          background: '#2563EB',
-                          color: '#FFFFFF',
-                          border: 'none',
-                          borderRadius: 12,
-                          cursor: 'pointer',
-                          whiteSpace: 'nowrap',
-                          transition: 'background 120ms ease'
+                          background: "#2563EB",
+                          color: "#FFFFFF"
                         }}
-                        onMouseEnter={(e) => e.currentTarget.style.background = '#1D4ED8'}
-                        onMouseLeave={(e) => e.currentTarget.style.background = '#2563EB'}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.background = "#1D4ED8"
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.background = "#2563EB"
+                        }}
                       >
                         Do it
                       </button>
