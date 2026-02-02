@@ -215,8 +215,8 @@ export default function ActionsPage() {
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-xOHFwID1ygIWjR8LyBoPK8UDsHJRg5.png"
                   alt="LinkedIn"
                   style={{
-                    width: 48,
-                    height: 48,
+                    width: 64,
+                    height: 64,
                     borderRadius: 8,
                     flexShrink: 0
                   }}
