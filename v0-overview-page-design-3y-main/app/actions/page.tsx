@@ -132,10 +132,6 @@ export default function ActionsPage() {
             height: 100, 
             borderRadius: 12, 
             marginBottom: 24,
-            background: '#DBEAFE',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
             overflow: 'hidden'
           }}
         >
