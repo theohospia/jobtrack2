@@ -336,6 +336,25 @@ export default function ActionsPage() {
             </div>
           ))}
         </div>
+
+        {/* Load More Button */}
+        <div className="flex justify-center">
+          <button
+            className="flex items-center gap-1 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2"
+            style={{
+              background: "#2563EB",
+              color: "#FFFFFF",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = "#1D4ED8"
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = "#2563EB"
+            }}
+          >
+            Load more
+          </button>
+        </div>
       </main>
     </div>
   )
