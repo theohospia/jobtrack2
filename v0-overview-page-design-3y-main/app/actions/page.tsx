@@ -316,7 +316,7 @@ export default function ActionsPage() {
                           fontWeight: 500,
                           background: '#2563EB',
                           color: '#FFFFFF',
-                          border: '1px solid #1D4ED8',
+                          border: 'none',
                           borderRadius: 12,
                           cursor: 'pointer',
                           whiteSpace: 'nowrap',
