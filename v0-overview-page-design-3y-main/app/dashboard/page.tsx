@@ -244,8 +244,8 @@ export default function DashboardPage() {
                     style={{
                       width: "40px",
                       height: "40px",
-                      background: "#FEE2E2",
-                      color: "#DC2626",
+                      background: "#E0E7FF",
+                      color: "#2563EB",
                     }}
                   >
                     MR
