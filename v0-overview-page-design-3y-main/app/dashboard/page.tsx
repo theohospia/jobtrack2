@@ -254,7 +254,7 @@ export default function DashboardPage() {
             </div>
 
             {/* View More Button */}
-            <div className="flex justify-center mt-6">
+            <div className="flex justify-end mt-6">
               <button
                 className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors"
                 style={{
