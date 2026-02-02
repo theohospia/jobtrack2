@@ -189,11 +189,11 @@ export default function DashboardPage() {
               <button
                 className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors"
                 style={{
-                  background: "#2563EB",
+                  background: "#EC9F55",
                   color: "#FFFFFF"
                 }}
-                onMouseEnter={(e) => e.currentTarget.style.background = "#1D4ED8"}
-                onMouseLeave={(e) => e.currentTarget.style.background = "#2563EB"}
+                onMouseEnter={(e) => e.currentTarget.style.background = "#D88A3D"}
+                onMouseLeave={(e) => e.currentTarget.style.background = "#EC9F55"}
               >
                 View more
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
