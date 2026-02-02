@@ -322,7 +322,14 @@ export default function ActionsPage() {
                           e.currentTarget.style.background = "#2563EB"
                         }}
                       >
-                        Do it
+                        {task.text.includes('Follow') ? 'Follow' : 
+                         task.text.includes('Prepare') ? 'Prepare' : 
+                         task.text.includes('Schedule') ? 'Schedule' : 
+                         task.text.includes('Review') ? 'Review' : 
+                         task.text.includes('Submit') ? 'Submit' : 
+                         task.text.includes('Coding') ? 'Code' : 
+                         task.text.includes('Portfolio') ? 'Review' : 
+                         task.text.includes('Case') ? 'Create' : 'Do it'}
                       </button>
                     </li>
                   ))}
