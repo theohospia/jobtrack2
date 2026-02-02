@@ -223,16 +223,16 @@ export default function ActionsPage() {
                           padding: '4px 10px',
                           fontSize: 11,
                           fontWeight: 500,
-                          background: '#E5E7EB',
-                          color: '#64748B',
+                          background: '#DBEAFE',
+                          color: '#2563EB',
                           border: 'none',
                           borderRadius: 12,
                           cursor: 'pointer',
                           whiteSpace: 'nowrap',
                           transition: 'background 120ms ease'
                         }}
-                        onMouseEnter={(e) => e.currentTarget.style.background = '#D1D5DB'}
-                        onMouseLeave={(e) => e.currentTarget.style.background = '#E5E7EB'}
+                        onMouseEnter={(e) => e.currentTarget.style.background = '#BFDBFE'}
+                        onMouseLeave={(e) => e.currentTarget.style.background = '#DBEAFE'}
                       >
                         Do it
                       </button>
