@@ -177,29 +177,13 @@ export default function DashboardPage() {
           onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
           onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
         >
-            <div className="flex items-center justify-between mb-6">
-              <div>
-                <h3 className="text-xl font-semibold mb-1" style={{ color: "#0F172A" }}>
-                  Recent Responses
-                </h3>
-                <p className="text-sm" style={{ color: "#64748B" }}>
-                  Latest responses you got
-                </p>
-              </div>
-              <button
-                className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors"
-                style={{
-                  background: "#2563EB",
-                  color: "#FFFFFF"
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.background = "#1D4ED8"}
-                onMouseLeave={(e) => e.currentTarget.style.background = "#2563EB"}
-              >
-                View more
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </button>
+            <div className="mb-6">
+              <h3 className="text-xl font-semibold mb-1" style={{ color: "#0F172A" }}>
+                Recent Responses
+              </h3>
+              <p className="text-sm" style={{ color: "#64748B" }}>
+                Latest responses you got
+              </p>
             </div>
 
             {/* Responses List */}
@@ -244,8 +228,8 @@ export default function DashboardPage() {
                     style={{
                       width: "40px",
                       height: "40px",
-                      background: "#FEE2E2",
-                      color: "#DC2626",
+                      background: "#E0E7FF",
+                      color: "#2563EB",
                     }}
                   >
                     MR
@@ -267,6 +251,24 @@ export default function DashboardPage() {
                   View
                 </button>
               </div>
+            </div>
+
+            {/* View More Button */}
+            <div className="flex justify-center mt-6">
+              <button
+                className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors"
+                style={{
+                  background: "#2563EB",
+                  color: "#FFFFFF"
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.background = "#1D4ED8"}
+                onMouseLeave={(e) => e.currentTarget.style.background = "#2563EB"}
+              >
+                View more
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
             </div>
         </div>
 
