@@ -310,7 +310,7 @@ export default function ActionsPage() {
                         </span>
                       </div>
                       <button
-                        className="flex items-center gap-2 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2 whitespace-nowrap flex-shrink-0"
+                        className="flex items-center gap-2 cursor-pointer text-xs font-medium transition-colors rounded-lg px-2 py-1 whitespace-nowrap flex-shrink-0"
                         style={{
                           background: "#2563EB",
                           color: "#FFFFFF"
