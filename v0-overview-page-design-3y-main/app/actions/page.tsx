@@ -112,7 +112,7 @@ export default function ActionsPage() {
         }}
       >
         {/* Page Header */}
-        <header style={{ marginBottom: 32 }}>
+        <header style={{ marginBottom: 24 }}>
           <h1 
             style={{
               fontSize: 24,
@@ -124,6 +124,34 @@ export default function ActionsPage() {
             Actions
           </h1>
         </header>
+
+        {/* Banner Image */}
+        <div 
+          style={{ 
+            width: '100%', 
+            height: 180, 
+            borderRadius: 12, 
+            marginBottom: 24,
+            background: 'linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            overflow: 'hidden'
+          }}
+        >
+          <img 
+            src="/placeholder-banner.jpg" 
+            alt="Actions banner"
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover'
+            }}
+            onError={(e) => {
+              e.currentTarget.style.display = 'none'
+            }}
+          />
+        </div>
 
         {/* Filter Section */}
         <div style={{ 
