@@ -211,17 +211,16 @@ export default function ActionsPage() {
               {/* Top Section: Image and Urgency Badge */}
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 12 }}>
                 {/* LinkedIn Logo */}
-              <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-cmtxnnRrQfVo72cQXJm1lHAdGjFvGV.png"
-                alt="LinkedIn"
-                style={{
-                  width: 120,
-                  height: 48,
-                  borderRadius: 8,
-                  flexShrink: 0,
-                  objectFit: 'contain'
-                }}
-              />
+                <img
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-7yd2UOOPK7AFKDClB4EMzt6XQxalPO.png"
+                  alt="LinkedIn"
+                  style={{
+                    width: 48,
+                    height: 48,
+                    borderRadius: 8,
+                    flexShrink: 0
+                  }}
+                />
 
                 {/* Urgency Badge */}
                 <span
