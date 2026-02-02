@@ -29,7 +29,8 @@ export default function ActionsPage() {
       location: "Paris",
       workType: "Hybrid",
       appliedDate: "3 days ago",
-      nextTasks: ["Follow up email", "Prepare interview"]
+      nextTasks: ["Follow up email", "Prepare interview"],
+      urgency: "Very urgent"
     },
     {
       title: "Data Analyst",
@@ -37,7 +38,8 @@ export default function ActionsPage() {
       location: "London",
       workType: "Remote",
       appliedDate: "5 days ago",
-      nextTasks: ["Coding challenge", "Schedule call"]
+      nextTasks: ["Coding challenge", "Schedule call"],
+      urgency: "Urgent"
     },
     {
       title: "Business Analyst",
@@ -45,7 +47,8 @@ export default function ActionsPage() {
       location: "New York",
       workType: "On-site",
       appliedDate: "2 days ago",
-      nextTasks: ["Review requirements", "Submit portfolio"]
+      nextTasks: ["Review requirements", "Submit portfolio"],
+      urgency: "Normal"
     }
   ]
 
@@ -102,17 +105,34 @@ export default function ActionsPage() {
                 }}
               />
 
-              {/* Title */}
-              <h3
-                style={{
-                  fontSize: 16,
-                  fontWeight: 600,
-                  color: '#0F172A',
-                  marginBottom: 8
-                }}
-              >
-                {card.title}
-              </h3>
+              {/* Header with Title and Urgency */}
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 8 }}>
+                <h3
+                  style={{
+                    fontSize: 16,
+                    fontWeight: 600,
+                    color: '#0F172A',
+                    margin: 0
+                  }}
+                >
+                  {card.title}
+                </h3>
+                
+                {/* Urgency Badge */}
+                <span
+                  style={{
+                    fontSize: 11,
+                    fontWeight: 500,
+                    color: card.urgency === 'Very urgent' ? '#DC2626' : card.urgency === 'Urgent' ? '#EA580C' : '#64748B',
+                    background: card.urgency === 'Very urgent' ? '#FEE2E2' : card.urgency === 'Urgent' ? '#FEF3C7' : '#F1F5F9',
+                    padding: '4px 10px',
+                    borderRadius: 6,
+                    whiteSpace: 'nowrap'
+                  }}
+                >
+                  {card.urgency}
+                </span>
+              </div>
 
               {/* Job Info */}
               <p
