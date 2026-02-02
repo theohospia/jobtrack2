@@ -218,7 +218,8 @@ export default function ActionsPage() {
                     width: 64,
                     height: 64,
                     borderRadius: 8,
-                    flexShrink: 0
+                    flexShrink: 0,
+                    marginTop: -8
                   }}
                 />
 
