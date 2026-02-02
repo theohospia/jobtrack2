@@ -93,31 +93,20 @@ export default function ActionsPage() {
                 boxShadow: '0px 1px 3px rgba(15, 23, 42, 0.06)'
               }}
             >
-              {/* LinkedIn Logo */}
-              <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-7yd2UOOPK7AFKDClB4EMzt6XQxalPO.png"
-                alt="LinkedIn"
-                style={{
-                  width: 48,
-                  height: 48,
-                  marginBottom: 12,
-                  borderRadius: 8
-                }}
-              />
-
-              {/* Header with Title and Urgency */}
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 8 }}>
-                <h3
+              {/* Top Section: Image and Urgency Badge */}
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 12 }}>
+                {/* LinkedIn Logo */}
+                <img
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-7yd2UOOPK7AFKDClB4EMzt6XQxalPO.png"
+                  alt="LinkedIn"
                   style={{
-                    fontSize: 16,
-                    fontWeight: 600,
-                    color: '#0F172A',
-                    margin: 0
+                    width: 48,
+                    height: 48,
+                    borderRadius: 8,
+                    flexShrink: 0
                   }}
-                >
-                  {card.title}
-                </h3>
-                
+                />
+
                 {/* Urgency Badge */}
                 <span
                   style={{
@@ -133,6 +122,20 @@ export default function ActionsPage() {
                   {card.urgency}
                 </span>
               </div>
+
+              {/* Title */}
+              <h3
+                style={{
+                  fontSize: 16,
+                  fontWeight: 600,
+                  color: '#0F172A',
+                  marginBottom: 8,
+                  margin: 0,
+                  marginBottom: 8
+                }}
+              >
+                {card.title}
+              </h3>
 
               {/* Job Info */}
               <p
