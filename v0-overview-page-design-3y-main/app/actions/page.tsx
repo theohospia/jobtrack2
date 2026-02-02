@@ -196,7 +196,7 @@ export default function ActionsPage() {
         </div>
 
         {/* Job Cards Row */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 32, marginBottom: 80 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24, marginBottom: 80 }}>
           {jobCards.map((card, index) => (
             <div
               key={index}
@@ -204,7 +204,7 @@ export default function ActionsPage() {
                 background: '#FFFFFF',
                 border: '1px solid #E5E7EB',
                 borderRadius: 12,
-                padding: 32,
+                padding: 24,
                 boxShadow: '0px 1px 3px rgba(15, 23, 42, 0.06)'
               }}
             >
