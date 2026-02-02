@@ -108,7 +108,7 @@ export default function ActionsPage() {
         </header>
 
         {/* Job Cards Row */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20, marginBottom: 32 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20, marginBottom: 64 }}>
           {jobCards.map((card, index) => (
             <div
               key={index}
@@ -139,8 +139,8 @@ export default function ActionsPage() {
                   style={{
                     fontSize: 11,
                     fontWeight: 500,
-                    color: card.urgency === 'Very urgent' ? '#DC2626' : card.urgency === 'Urgent' ? '#EA580C' : '#64748B',
-                    background: card.urgency === 'Very urgent' ? '#FEE2E2' : card.urgency === 'Urgent' ? '#FEF3C7' : '#F1F5F9',
+                    color: card.urgency === 'Very urgent' ? '#FFFFFF' : card.urgency === 'Urgent' ? '#EA580C' : '#64748B',
+                    background: card.urgency === 'Very urgent' ? '#2563EB' : card.urgency === 'Urgent' ? '#FEF3C7' : '#F1F5F9',
                     padding: '4px 10px',
                     borderRadius: 6,
                     whiteSpace: 'nowrap'
