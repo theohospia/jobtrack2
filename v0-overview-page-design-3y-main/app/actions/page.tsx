@@ -212,7 +212,7 @@ export default function ActionsPage() {
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 12 }}>
                 {/* LinkedIn Logo */}
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-7yd2UOOPK7AFKDClB4EMzt6XQxalPO.png"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-xOHFwID1ygIWjR8LyBoPK8UDsHJRg5.png"
                   alt="LinkedIn"
                   style={{
                     width: 48,
