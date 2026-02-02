@@ -236,12 +236,6 @@ export default function ProfilePage() {
             >
               Profile
             </h1>
-            <p
-              className="mt-1 text-sm"
-              style={{ color: "#64748B" }}
-            >
-              How your profile affects your job search results.
-            </p>
           </div>
           <button
             className="flex cursor-pointer items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-colors opacity-90"
