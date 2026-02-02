@@ -22,6 +22,33 @@ export default function ActionsPage() {
     }
   ]
 
+  const jobCards = [
+    {
+      title: "Product Analyst Intern",
+      company: "Acme Corp",
+      location: "Paris",
+      workType: "Hybrid",
+      appliedDate: "3 days ago",
+      nextTasks: ["Follow up email", "Prepare interview"]
+    },
+    {
+      title: "Data Analyst",
+      company: "TechStart Inc",
+      location: "London",
+      workType: "Remote",
+      appliedDate: "5 days ago",
+      nextTasks: ["Coding challenge", "Schedule call"]
+    },
+    {
+      title: "Business Analyst",
+      company: "DataFlow",
+      location: "New York",
+      workType: "On-site",
+      appliedDate: "2 days ago",
+      nextTasks: ["Review requirements", "Submit portfolio"]
+    }
+  ]
+
   return (
     <div 
       className="min-h-screen min-w-[1280px]"
@@ -37,7 +64,7 @@ export default function ActionsPage() {
         }}
       >
         {/* Page Header */}
-        <header style={{ marginBottom: 24 }}>
+        <header style={{ marginBottom: 32 }}>
           <h1 
             style={{
               fontSize: 24,
@@ -49,6 +76,90 @@ export default function ActionsPage() {
             Actions
           </h1>
         </header>
+
+        {/* Job Cards Row */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20, marginBottom: 32 }}>
+          {jobCards.map((card, index) => (
+            <div
+              key={index}
+              style={{
+                background: '#FFFFFF',
+                border: '1px solid #E5E7EB',
+                borderRadius: 12,
+                padding: 20,
+                boxShadow: '0px 1px 3px rgba(15, 23, 42, 0.06)'
+              }}
+            >
+              {/* Title */}
+              <h3
+                style={{
+                  fontSize: 16,
+                  fontWeight: 600,
+                  color: '#0F172A',
+                  marginBottom: 8
+                }}
+              >
+                {card.title}
+              </h3>
+
+              {/* Job Info */}
+              <p
+                style={{
+                  fontSize: 13,
+                  color: '#64748B',
+                  marginBottom: 12
+                }}
+              >
+                {card.company} · {card.location} · {card.workType}
+              </p>
+
+              {/* When Applied */}
+              <p
+                style={{
+                  fontSize: 12,
+                  color: '#94A3B8',
+                  marginBottom: 16,
+                  paddingBottom: 16,
+                  borderBottom: '1px solid #E5E7EB'
+                }}
+              >
+                Applied {card.appliedDate}
+              </p>
+
+              {/* Next Tasks */}
+              <div>
+                <p
+                  style={{
+                    fontSize: 12,
+                    fontWeight: 500,
+                    color: '#0F172A',
+                    marginBottom: 8
+                  }}
+                >
+                  Next tasks
+                </p>
+                <ul style={{ margin: 0, padding: 0, listStyle: 'none' }}>
+                  {card.nextTasks.map((task, taskIndex) => (
+                    <li
+                      key={taskIndex}
+                      style={{
+                        fontSize: 13,
+                        color: '#64748B',
+                        marginBottom: taskIndex < card.nextTasks.length - 1 ? 6 : 0,
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: 8
+                      }}
+                    >
+                      <span style={{ color: '#2563EB' }}>·</span>
+                      {task}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
       </main>
     </div>
   )
