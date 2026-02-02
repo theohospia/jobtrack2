@@ -139,8 +139,8 @@ export default function ActionsPage() {
                   style={{
                     fontSize: 11,
                     fontWeight: 500,
-                    color: '#FFFFFF',
-                    background: '#2563EB',
+                    color: '#2563EB',
+                    background: '#DBEAFE',
                     padding: '4px 10px',
                     borderRadius: 16,
                     whiteSpace: 'nowrap'
