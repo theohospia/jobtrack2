@@ -215,10 +215,11 @@ export default function ActionsPage() {
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-cmtxnnRrQfVo72cQXJm1lHAdGjFvGV.png"
                 alt="LinkedIn"
                 style={{
-                  width: 48,
+                  width: 120,
                   height: 48,
                   borderRadius: 8,
-                  flexShrink: 0
+                  flexShrink: 0,
+                  objectFit: 'contain'
                 }}
               />
 
