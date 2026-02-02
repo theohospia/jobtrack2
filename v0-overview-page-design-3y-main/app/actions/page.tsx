@@ -157,14 +157,35 @@ export default function ActionsPage() {
                       style={{
                         fontSize: 13,
                         color: '#64748B',
-                        marginBottom: taskIndex < card.nextTasks.length - 1 ? 6 : 0,
+                        marginBottom: taskIndex < card.nextTasks.length - 1 ? 8 : 0,
                         display: 'flex',
                         alignItems: 'center',
-                        gap: 8
+                        justifyContent: 'space-between',
+                        gap: 12
                       }}
                     >
-                      <span style={{ color: '#2563EB' }}>·</span>
-                      {task}
+                      <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                        <span style={{ color: '#2563EB' }}>·</span>
+                        {task}
+                      </div>
+                      <button
+                        style={{
+                          padding: '4px 10px',
+                          fontSize: 11,
+                          fontWeight: 500,
+                          background: '#2563EB',
+                          color: '#FFFFFF',
+                          border: 'none',
+                          borderRadius: 4,
+                          cursor: 'pointer',
+                          whiteSpace: 'nowrap',
+                          transition: 'background 120ms ease'
+                        }}
+                        onMouseEnter={(e) => e.currentTarget.style.background = '#1D4ED8'}
+                        onMouseLeave={(e) => e.currentTarget.style.background = '#2563EB'}
+                      >
+                        Do it
+                      </button>
                     </li>
                   ))}
                 </ul>
