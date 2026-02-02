@@ -29,7 +29,10 @@ export default function ActionsPage() {
       location: "Paris",
       workType: "Hybrid",
       appliedDate: "3 days ago",
-      nextTasks: ["Follow up email", "Prepare interview"],
+      nextTasks: [
+        { text: "Follow up email", urgency: 3 },
+        { text: "Prepare interview", urgency: 2 }
+      ],
       urgency: "Very urgent"
     },
     {
@@ -38,7 +41,10 @@ export default function ActionsPage() {
       location: "London",
       workType: "Remote",
       appliedDate: "5 days ago",
-      nextTasks: ["Coding challenge", "Schedule call"],
+      nextTasks: [
+        { text: "Coding challenge", urgency: 2 },
+        { text: "Schedule call", urgency: 1 }
+      ],
       urgency: "Urgent"
     },
     {
@@ -47,7 +53,10 @@ export default function ActionsPage() {
       location: "New York",
       workType: "On-site",
       appliedDate: "2 days ago",
-      nextTasks: ["Review requirements", "Submit portfolio"],
+      nextTasks: [
+        { text: "Review requirements", urgency: 2 },
+        { text: "Submit portfolio", urgency: 3 }
+      ],
       urgency: "Normal"
     },
     {
@@ -56,7 +65,10 @@ export default function ActionsPage() {
       location: "Berlin",
       workType: "Remote",
       appliedDate: "1 day ago",
-      nextTasks: ["Portfolio review", "Design test"],
+      nextTasks: [
+        { text: "Portfolio review", urgency: 1 },
+        { text: "Design test", urgency: 2 }
+      ],
       urgency: "Urgent"
     },
     {
@@ -65,7 +77,10 @@ export default function ActionsPage() {
       location: "San Francisco",
       workType: "Hybrid",
       appliedDate: "4 days ago",
-      nextTasks: ["Phone screen", "Technical interview"],
+      nextTasks: [
+        { text: "Phone screen", urgency: 3 },
+        { text: "Technical interview", urgency: 2 }
+      ],
       urgency: "Very urgent"
     },
     {
@@ -74,7 +89,10 @@ export default function ActionsPage() {
       location: "Boston",
       workType: "Remote",
       appliedDate: "6 days ago",
-      nextTasks: ["Case study", "Final round"],
+      nextTasks: [
+        { text: "Case study", urgency: 1 },
+        { text: "Final round", urgency: 2 }
+      ],
       urgency: "Normal"
     }
   ]
@@ -216,7 +234,10 @@ export default function ActionsPage() {
                     >
                       <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                         <span style={{ color: '#2563EB' }}>·</span>
-                        {task}
+                        {task.text}
+                        <span style={{ color: '#EA580C', fontWeight: 600 }}>
+                          {'!'.repeat(task.urgency)}
+                        </span>
                       </div>
                       <button
                         style={{
