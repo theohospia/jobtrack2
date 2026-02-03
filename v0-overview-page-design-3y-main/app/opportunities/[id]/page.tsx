@@ -200,9 +200,7 @@ Required qualifications include strong knowledge of engine mechanics and operati
                 alignItems: "center",
                 gap: 12,
                 padding: 16,
-                background: "#F0F9FF",
                 borderRadius: 8,
-                borderLeft: "4px solid #2563EB",
               }}
             >
               <div
@@ -238,9 +236,7 @@ Required qualifications include strong knowledge of engine mechanics and operati
                 alignItems: "center",
                 gap: 12,
                 padding: 16,
-                background: "#F0F9FF",
                 borderRadius: 8,
-                borderLeft: "4px solid #2563EB",
               }}
             >
               <div
@@ -276,9 +272,7 @@ Required qualifications include strong knowledge of engine mechanics and operati
                 alignItems: "center",
                 gap: 12,
                 padding: 16,
-                background: "#F0F9FF",
                 borderRadius: 8,
-                borderLeft: "4px solid #2563EB",
               }}
             >
               <div
@@ -314,9 +308,7 @@ Required qualifications include strong knowledge of engine mechanics and operati
                 alignItems: "center",
                 gap: 12,
                 padding: 16,
-                background: "#F0F9FF",
                 borderRadius: 8,
-                borderLeft: "4px solid #2563EB",
               }}
             >
               <div
