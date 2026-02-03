@@ -383,7 +383,7 @@ export default function DashboardPage() {
                 Top matches
               </h3>
               <p className="text-sm" style={{ color: "#64748B" }}>
-                Matches with the highest rankings you got
+                Best fits for you
               </p>
             </div>
 
