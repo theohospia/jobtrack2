@@ -85,8 +85,8 @@ Required qualifications include strong knowledge of engine mechanics and operati
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 32, gap: 24 }}>
           {/* Match Circle and Percentile */}
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-            <div style={{ position: "relative", width: 130, height: 130 }}>
-              <svg width="130" height="130" viewBox="0 0 100 100" style={{ transform: "rotate(-90deg)" }}>
+            <div style={{ position: "relative", width: 100, height: 100 }}>
+              <svg width="100" height="100" viewBox="0 0 100 100" style={{ transform: "rotate(-90deg)" }}>
                 {/* Background circle */}
                 <circle
                   cx="50"
@@ -111,10 +111,10 @@ Required qualifications include strong knowledge of engine mechanics and operati
               </svg>
               {/* Center text */}
               <div style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
-                <span style={{ fontSize: 32, fontWeight: 700, color: "#2563EB" }}>
+                <span style={{ fontSize: 26, fontWeight: 700, color: "#2563EB" }}>
                   {job.fitStrength}%
                 </span>
-                <span style={{ fontSize: 13, fontWeight: 500, marginTop: 4, color: "#64748B", textAlign: "center" }}>
+                <span style={{ fontSize: 11, fontWeight: 500, marginTop: 2, color: "#64748B", textAlign: "center" }}>
                   Strong fit
                 </span>
               </div>
