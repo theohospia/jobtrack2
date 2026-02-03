@@ -1,6 +1,7 @@
 "use client"
 
 import { TopNav } from "@/components/top-nav"
+import { useRouter } from "next/navigation"
 
 type FitLevel = "strong" | "good" | "stretch"
 
@@ -104,8 +105,9 @@ function FitPill({ level }: { level: FitLevel }) {
 }
 
 function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; index: number }) {
+  const router = useRouter()
   const isAltStyle = index % 2 === 1
-  const bgColor = isAltStyle ? "#F0F7FF" : "#FFFFFF"
+  const bgColor = isAltStyle ? "#F3F9FD" : "#FAFBFC"
   
   return (
     <div
@@ -123,37 +125,8 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
     >
       {/* Main Content */}
       <div className="flex items-start justify-between gap-4">
-        {/* Left Side: Company Info, Role Title, Salary, and Fit */}
-        <div className="flex-1">
-          {/* Company Info - Top */}
-          <p
-            className="text-[13px] font-medium"
-            style={{ color: "#64748B" }}
-          >
-            {opportunity.company} · {opportunity.location} · {opportunity.workStyle} ({opportunity.metaSignals[0]})
-          </p>
-          
-          {/* Role Title */}
-          <h3
-            className="text-base font-semibold mt-1"
-            style={{ color: "#0F172A" }}
-          >
-            {opportunity.roleTitle}
-          </h3>
-
-          {/* Estimated Salary - Below Role Title */}
-          {opportunity.estimatedSalary && (
-            <p
-              className="text-sm font-medium mt-0.5"
-              style={{ color: "#64748B" }}
-            >
-              {opportunity.estimatedSalary}
-            </p>
-          )}
-        </div>
-
-        {/* Right Side: Circular Fit Strength Indicator + Arrow */}
-        <div className="flex items-center justify-center gap-6">
+        {/* Left Side: Circular Fit Strength Indicator */}
+        <div className="flex items-start justify-center flex-shrink-0">
           <div className="flex items-center justify-center">
             <svg width="85" height="85" viewBox="0 0 100 100" className="transform -rotate-90">
               {/* Background circle */}
@@ -194,15 +167,63 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
               </span>
             </div>
           </div>
-          
-          {/* Right Arrow */}
-          <span
-            className="text-3xl font-light"
-            style={{ color: "#94A3B8" }}
-          >
-            {'>'}
-          </span>
         </div>
+
+        {/* Center: Company Info, Role Title, Salary */}
+        <div className="flex-1">
+          {/* Company Info - Top */}
+          <p
+            className="text-[13px] font-medium"
+            style={{ color: "#64748B" }}
+          >
+            {opportunity.company} · {opportunity.location} · {opportunity.workStyle} ({opportunity.metaSignals[0]})
+          </p>
+          
+          {/* Role Title */}
+          <h3
+            className="text-base font-semibold mt-1"
+            style={{ color: "#0F172A" }}
+          >
+            {opportunity.roleTitle}
+          </h3>
+
+          {/* Estimated Salary - Below Role Title */}
+          {opportunity.estimatedSalary && (
+            <div className="flex items-center gap-1">
+              <p
+                className="text-sm font-medium"
+                style={{ color: "#64748B" }}
+              >
+                {opportunity.estimatedSalary}
+              </p>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10" stroke="#2563EB" strokeWidth="2.5"/>
+                <path d="M12 7V12M12 16H12.01" stroke="#2563EB" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </div>
+          )}
+        </div>
+
+        {/* Right Side: View More Button */}
+        <button
+          onClick={() => router.push(`/opportunities/${opportunity.id}`)}
+          className="flex items-center gap-2 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2 whitespace-nowrap flex-shrink-0"
+          style={{
+            background: "#2563EB",
+            color: "#FFFFFF",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.background = "#1D4ED8"
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.background = "#2563EB"
+          }}
+        >
+          Apply now
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </button>
       </div>
     </div>
   )
@@ -336,9 +357,6 @@ export default function OpportunitiesPage() {
               }}
             >
               Load more
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
             </button>
           </div>
         )}
