@@ -84,23 +84,40 @@ Required qualifications include strong knowledge of engine mechanics and operati
         {/* Top Section: Match Circle + Job Info */}
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 32, gap: 24 }}>
           {/* Match Circle and Percentile */}
-          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", minWidth: 100 }}>
-            <div
-              style={{
-                width: 100,
-                height: 100,
-                borderRadius: "50%",
-                background: "linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                marginBottom: 12,
-                boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-              }}
-            >
-              <span style={{ fontSize: 40, fontWeight: 700, color: "#FFFFFF" }}>
-                {job.fitStrength}%
-              </span>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+            <div style={{ position: "relative", width: 85, height: 85 }}>
+              <svg width="85" height="85" viewBox="0 0 100 100" style={{ transform: "rotate(-90deg)" }}>
+                {/* Background circle */}
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="45"
+                  fill="none"
+                  stroke="#E5E7EB"
+                  strokeWidth="8"
+                />
+                {/* Progress circle */}
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="45"
+                  fill="none"
+                  stroke="#2563EB"
+                  strokeWidth="8"
+                  strokeDasharray={`${(job.fitStrength / 100) * 2 * Math.PI * 45} ${2 * Math.PI * 45}`}
+                  strokeLinecap="round"
+                  style={{ transition: "stroke-dasharray 0.3s ease" }}
+                />
+              </svg>
+              {/* Center text */}
+              <div style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
+                <span style={{ fontSize: 20, fontWeight: 700, color: "#2563EB" }}>
+                  {job.fitStrength}%
+                </span>
+                <span style={{ fontSize: 11, fontWeight: 500, marginTop: 2, color: "#64748B", textAlign: "center" }}>
+                  Strong fit
+                </span>
+              </div>
             </div>
           </div>
 
@@ -142,7 +159,7 @@ Required qualifications include strong knowledge of engine mechanics and operati
             marginBottom: 32,
           }}
         >
-          <p style={{ fontSize: 24, fontWeight: 700, color: "#0F172A", margin: 0 }}>
+          <p style={{ fontSize: 14, color: "#475569", margin: 0 }}>
             {job.estimatedSalary}
           </p>
         </div>
