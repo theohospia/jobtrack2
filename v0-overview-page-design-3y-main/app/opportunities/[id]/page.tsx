@@ -141,9 +141,6 @@ Required qualifications include strong knowledge of engine mechanics and operati
                 <span style={{ fontSize: 26, fontWeight: 700, color: "#2563EB" }}>
                   {job.fitStrength}%
                 </span>
-                <span style={{ fontSize: 11, fontWeight: 500, marginTop: 2, color: "#64748B", textAlign: "center" }}>
-                  Strong fit
-                </span>
               </div>
             </div>
           </div>
