@@ -380,10 +380,10 @@ export default function DashboardPage() {
         >
             <div className="mb-6">
               <h3 className="text-xl font-semibold mb-1" style={{ color: "#0F172A" }}>
-                Recent Responses
+                Top matches
               </h3>
               <p className="text-sm" style={{ color: "#64748B" }}>
-                Latest responses you got
+                Matches with the highest rankings you got
               </p>
             </div>
 
