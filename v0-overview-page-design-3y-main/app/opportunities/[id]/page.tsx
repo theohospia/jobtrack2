@@ -82,7 +82,7 @@ Required qualifications include strong knowledge of engine mechanics and operati
 
       <main style={{ maxWidth: "900px", margin: "0 auto", padding: "24px 16px" }}>
         {/* Top Section: Match Circle + Job Info */}
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 32, gap: 24 }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 32, gap: 24 }}>
           {/* Match Circle and Percentile */}
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
             <div style={{ position: "relative", width: 130, height: 130 }}>
