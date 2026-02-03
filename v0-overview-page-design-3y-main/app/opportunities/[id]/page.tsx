@@ -225,6 +225,52 @@ Required qualifications include strong knowledge of engine mechanics and operati
           </ul>
         </div>
 
+        {/* How to Improve Section */}
+        <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 12px 0" }}>
+          HOW CAN YOU IMPROVE INTERVIEW SUCCESS:
+        </p>
+        <div
+          style={{
+            background: "#FFFFFF",
+            border: "1px solid #E5E7EB",
+            borderRadius: 12,
+            padding: 24,
+            marginBottom: 32,
+          }}
+        >
+          <ul style={{ margin: 0, padding: 0, listStyle: "none" }}>
+            {[
+              "Highlight your quantitative projects in the cover letter",
+              "Practice explaining your analytical approach in interviews",
+              "Research the company's recent product launches",
+              "Prepare examples of data-driven decisions you've made"
+            ].map((tip, index) => (
+              <li
+                key={index}
+                style={{
+                  fontSize: 14,
+                  color: "#475569",
+                  marginBottom: index < 3 ? 12 : 0,
+                  paddingLeft: 24,
+                  position: "relative",
+                }}
+              >
+                <span
+                  style={{
+                    position: "absolute",
+                    left: 0,
+                    color: "#2563EB",
+                    fontWeight: 600,
+                  }}
+                >
+                  •
+                </span>
+                {tip}
+              </li>
+            ))}
+          </ul>
+        </div>
+
         {/* Job Information Section */}
         <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 12px 0" }}>
           JOB INFORMATION:
@@ -235,7 +281,7 @@ Required qualifications include strong knowledge of engine mechanics and operati
             border: "1px solid #E5E7EB",
             borderRadius: 12,
             padding: 24,
-            marginBottom: 32,
+            marginBottom: 24,
           }}
         >
           <p
@@ -297,52 +343,6 @@ Required qualifications include strong knowledge of engine mechanics and operati
               View less
             </button>
           )}
-        </div>
-
-        {/* How to Improve Section */}
-        <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 12px 0" }}>
-          HOW CAN YOU IMPROVE INTERVIEW SUCCESS:
-        </p>
-        <div
-          style={{
-            background: "#FFFFFF",
-            border: "1px solid #E5E7EB",
-            borderRadius: 12,
-            padding: 24,
-            marginBottom: 24,
-          }}
-        >
-          <ul style={{ margin: 0, padding: 0, listStyle: "none" }}>
-            {[
-              "Highlight your quantitative projects in the cover letter",
-              "Practice explaining your analytical approach in interviews",
-              "Research the company's recent product launches",
-              "Prepare examples of data-driven decisions you've made"
-            ].map((tip, index) => (
-              <li
-                key={index}
-                style={{
-                  fontSize: 14,
-                  color: "#475569",
-                  marginBottom: index < 3 ? 12 : 0,
-                  paddingLeft: 24,
-                  position: "relative",
-                }}
-              >
-                <span
-                  style={{
-                    position: "absolute",
-                    left: 0,
-                    color: "#2563EB",
-                    fontWeight: 600,
-                  }}
-                >
-                  •
-                </span>
-                {tip}
-              </li>
-            ))}
-          </ul>
         </div>
 
         {/* Sticky Apply Now Button */}
