@@ -192,37 +192,159 @@ Required qualifications include strong knowledge of engine mechanics and operati
             marginBottom: 32,
           }}
         >
-          <ul style={{ margin: 0, padding: 0, listStyle: "none" }}>
-            {[
-              "Your profile matches 92% of job requirements",
-              "Similar candidates got interviews within 2 weeks",
-              "Your experience in analytics aligns with their team",
-              "Low competition - only 24 applicants so far"
-            ].map((reason, index) => (
-              <li
-                key={index}
+          <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+            {/* Match Score Card */}
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 12,
+                padding: 12,
+                background: "#F0F9FF",
+                borderRadius: 8,
+                borderLeft: "4px solid #2563EB",
+              }}
+            >
+              <div
                 style={{
-                  fontSize: 14,
-                  color: "#475569",
-                  marginBottom: index < 3 ? 12 : 0,
-                  paddingLeft: 24,
-                  position: "relative",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  width: 40,
+                  height: 40,
+                  background: "#2563EB",
+                  borderRadius: "50%",
+                  color: "#FFFFFF",
+                  fontSize: 18,
+                  fontWeight: 700,
                 }}
               >
-                <span
-                  style={{
-                    position: "absolute",
-                    left: 0,
-                    color: "#2563EB",
-                    fontWeight: 600,
-                  }}
-                >
-                  •
-                </span>
-                {reason}
-              </li>
-            ))}
-          </ul>
+                ✓
+              </div>
+              <div>
+                <p style={{ fontSize: 13, color: "#64748B", fontWeight: 500, margin: "0 0 4px 0" }}>
+                  PROFILE MATCH
+                </p>
+                <p style={{ fontSize: 16, color: "#0F172A", fontWeight: 700, margin: 0 }}>
+                  92% of job requirements
+                </p>
+              </div>
+            </div>
+
+            {/* Interview Timeline Card */}
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 12,
+                padding: 12,
+                background: "#FDFCE8",
+                borderRadius: 8,
+                borderLeft: "4px solid #FBBF24",
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  width: 40,
+                  height: 40,
+                  background: "#FBBF24",
+                  borderRadius: "50%",
+                  color: "#FFFFFF",
+                  fontSize: 18,
+                  fontWeight: 700,
+                }}
+              >
+                ⚡
+              </div>
+              <div>
+                <p style={{ fontSize: 13, color: "#64748B", fontWeight: 500, margin: "0 0 4px 0" }}>
+                  INTERVIEW SPEED
+                </p>
+                <p style={{ fontSize: 16, color: "#0F172A", fontWeight: 700, margin: 0 }}>
+                  Similar candidates interviewed within 2 weeks
+                </p>
+              </div>
+            </div>
+
+            {/* Experience Alignment Card */}
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 12,
+                padding: 12,
+                background: "#F0FDF4",
+                borderRadius: 8,
+                borderLeft: "4px solid #10B981",
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  width: 40,
+                  height: 40,
+                  background: "#10B981",
+                  borderRadius: "50%",
+                  color: "#FFFFFF",
+                  fontSize: 18,
+                  fontWeight: 700,
+                }}
+              >
+                ◆
+              </div>
+              <div>
+                <p style={{ fontSize: 13, color: "#64748B", fontWeight: 500, margin: "0 0 4px 0" }}>
+                  YOUR STRENGTHS
+                </p>
+                <p style={{ fontSize: 16, color: "#0F172A", fontWeight: 700, margin: 0 }}>
+                  Your analytics experience aligns perfectly with their team needs
+                </p>
+              </div>
+            </div>
+
+            {/* Competition Card */}
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 12,
+                padding: 12,
+                background: "#FCE7F3",
+                borderRadius: 8,
+                borderLeft: "4px solid #EC4899",
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  width: 40,
+                  height: 40,
+                  background: "#EC4899",
+                  borderRadius: "50%",
+                  color: "#FFFFFF",
+                  fontSize: 18,
+                  fontWeight: 700,
+                }}
+              >
+                🎯
+              </div>
+              <div>
+                <p style={{ fontSize: 13, color: "#64748B", fontWeight: 500, margin: "0 0 4px 0" }}>
+                  LOW COMPETITION
+                </p>
+                <p style={{ fontSize: 16, color: "#0F172A", fontWeight: 700, margin: 0 }}>
+                  Only 24 applicants - higher chance to stand out
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* How to Improve Section */}
@@ -238,37 +360,131 @@ Required qualifications include strong knowledge of engine mechanics and operati
             marginBottom: 32,
           }}
         >
-          <ul style={{ margin: 0, padding: 0, listStyle: "none" }}>
-            {[
-              "Highlight your quantitative projects in the cover letter",
-              "Practice explaining your analytical approach in interviews",
-              "Research the company's recent product launches",
-              "Prepare examples of data-driven decisions you've made"
-            ].map((tip, index) => (
-              <li
-                key={index}
-                style={{
-                  fontSize: 14,
-                  color: "#475569",
-                  marginBottom: index < 3 ? 12 : 0,
-                  paddingLeft: 24,
-                  position: "relative",
-                }}
-              >
-                <span
+          <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+            {/* Tip 1 - Application */}
+            <div style={{ borderBottom: "1px solid #E5E7EB", paddingBottom: 16 }}>
+              <div style={{ display: "flex", alignItems: "flex-start", gap: 12, marginBottom: 8 }}>
+                <div
                   style={{
-                    position: "absolute",
-                    left: 0,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: 32,
+                    height: 32,
+                    background: "#E0E7FF",
+                    borderRadius: "50%",
                     color: "#2563EB",
-                    fontWeight: 600,
+                    fontSize: 16,
+                    fontWeight: 700,
+                    flexShrink: 0,
                   }}
                 >
-                  •
-                </span>
-                {tip}
-              </li>
-            ))}
-          </ul>
+                  1
+                </div>
+                <div style={{ flex: 1 }}>
+                  <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 4px 0" }}>
+                    Craft a targeted cover letter
+                  </p>
+                  <p style={{ fontSize: 13, color: "#64748B", margin: 0, lineHeight: 1.5 }}>
+                    Highlight your quantitative projects and metrics you've achieved. Show them you understand their business and can deliver similar results.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Tip 2 - Interview Prep */}
+            <div style={{ borderBottom: "1px solid #E5E7EB", paddingBottom: 16 }}>
+              <div style={{ display: "flex", alignItems: "flex-start", gap: 12, marginBottom: 8 }}>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: 32,
+                    height: 32,
+                    background: "#FEF3C7",
+                    borderRadius: "50%",
+                    color: "#D97706",
+                    fontSize: 16,
+                    fontWeight: 700,
+                    flexShrink: 0,
+                  }}
+                >
+                  2
+                </div>
+                <div style={{ flex: 1 }}>
+                  <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 4px 0" }}>
+                    Master your storytelling
+                  </p>
+                  <p style={{ fontSize: 13, color: "#64748B", margin: 0, lineHeight: 1.5 }}>
+                    Practice explaining your analytical approach with real examples. Use the STAR method to describe challenges you've solved and impact you've created.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Tip 3 - Company Research */}
+            <div style={{ borderBottom: "1px solid #E5E7EB", paddingBottom: 16 }}>
+              <div style={{ display: "flex", alignItems: "flex-start", gap: 12, marginBottom: 8 }}>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: 32,
+                    height: 32,
+                    background: "#DCFCE7",
+                    borderRadius: "50%",
+                    color: "#16A34A",
+                    fontSize: 16,
+                    fontWeight: 700,
+                    flexShrink: 0,
+                  }}
+                >
+                  3
+                </div>
+                <div style={{ flex: 1 }}>
+                  <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 4px 0" }}>
+                    Deep dive on company intelligence
+                  </p>
+                  <p style={{ fontSize: 13, color: "#64748B", margin: 0, lineHeight: 1.5 }}>
+                    Research their recent product launches, funding rounds, and quarterly reports. Find 2-3 questions you can ask that show genuine interest.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Tip 4 - Examples */}
+            <div>
+              <div style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: 32,
+                    height: 32,
+                    background: "#F3E8FF",
+                    borderRadius: "50%",
+                    color: "#9333EA",
+                    fontSize: 16,
+                    fontWeight: 700,
+                    flexShrink: 0,
+                  }}
+                >
+                  4
+                </div>
+                <div style={{ flex: 1 }}>
+                  <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 4px 0" }}>
+                    Prepare data-driven examples
+                  </p>
+                  <p style={{ fontSize: 13, color: "#64748B", margin: 0, lineHeight: 1.5 }}>
+                    Have 3-5 concrete examples ready where you made data-driven decisions that resulted in measurable outcomes (increased efficiency, saved costs, etc.).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Job Information Section */}
