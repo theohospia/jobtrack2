@@ -1,6 +1,7 @@
 "use client"
 
 import { TopNav } from "@/components/top-nav"
+import { useRouter } from "next/navigation"
 
 type FitLevel = "strong" | "good" | "stretch"
 
@@ -104,6 +105,7 @@ function FitPill({ level }: { level: FitLevel }) {
 }
 
 function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; index: number }) {
+  const router = useRouter()
   const isAltStyle = index % 2 === 1
   const bgColor = isAltStyle ? "#F3F9FD" : "#FAFBFC"
   
@@ -204,6 +206,7 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
 
         {/* Right Side: View More Button */}
         <button
+          onClick={() => router.push(`/opportunities/${opportunity.id}`)}
           className="flex items-center gap-2 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2 whitespace-nowrap flex-shrink-0"
           style={{
             background: "#2563EB",
