@@ -1,7 +1,7 @@
 "use client"
 
 import { TopNav } from "@/components/top-nav"
-import { useParams } from "next/navigation"
+import { useParams, useRouter } from "next/navigation"
 import React from "react"
 
 type FitLevel = "strong" | "good" | "stretch"
@@ -51,6 +51,7 @@ const opportunities: Record<string, Opportunity> = {
 
 export default function ApplyPage() {
   const params = useParams()
+  const router = useRouter()
   const id = params.id as string
   const job = opportunities[id] || opportunities["1"]
 
@@ -81,6 +82,32 @@ Required qualifications include strong knowledge of engine mechanics and operati
       <TopNav />
 
       <main style={{ maxWidth: "900px", margin: "0 auto", padding: "24px 16px" }}>
+        {/* Back Button */}
+        <button
+          onClick={() => router.back()}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: 8,
+            marginBottom: 24,
+            padding: "8px 12px",
+            background: "transparent",
+            border: "none",
+            cursor: "pointer",
+            color: "#2563EB",
+            fontSize: 14,
+            fontWeight: 500,
+            transition: "opacity 0.2s",
+          }}
+          onMouseEnter={(e) => e.currentTarget.style.opacity = "0.7"}
+          onMouseLeave={(e) => e.currentTarget.style.opacity = "1"}
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 19L8 12L15 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+          Back
+        </button>
+
         {/* Top Section: Match Circle + Job Info */}
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 32, gap: 24 }}>
           {/* Match Circle and Percentile */}
