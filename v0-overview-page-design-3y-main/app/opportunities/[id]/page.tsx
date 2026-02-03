@@ -284,60 +284,6 @@ export default function ApplyPage() {
           </ul>
         </div>
       </main>
-
-      {/* Sticky Bottom Buttons */}
-      <div
-        style={{
-          position: "fixed",
-          bottom: 0,
-          left: 0,
-          right: 0,
-          display: "flex",
-          gap: 12,
-          padding: 16,
-          background: "#FFFFFF",
-          borderTop: "1px solid #E5E7EB",
-          maxWidth: "100%",
-          zIndex: 50,
-        }}
-      >
-        <button
-          style={{
-            flex: 1,
-            padding: "12px 24px",
-            fontSize: 14,
-            fontWeight: 500,
-            color: "#2563EB",
-            background: "#F1F5F9",
-            border: "none",
-            borderRadius: 8,
-            cursor: "pointer",
-            transition: "background-color 0.2s",
-          }}
-          onMouseEnter={(e) => e.currentTarget.style.background = "#E2E8F0"}
-          onMouseLeave={(e) => e.currentTarget.style.background = "#F1F5F9"}
-        >
-          Open job link
-        </button>
-        <button
-          style={{
-            flex: 1,
-            padding: "12px 24px",
-            fontSize: 14,
-            fontWeight: 500,
-            color: "#FFFFFF",
-            background: "#2563EB",
-            border: "none",
-            borderRadius: 8,
-            cursor: "pointer",
-            transition: "background-color 0.2s",
-          }}
-          onMouseEnter={(e) => e.currentTarget.style.background = "#1D4ED8"}
-          onMouseLeave={(e) => e.currentTarget.style.background = "#2563EB"}
-        >
-          Apply now
-        </button>
-      </div>
     </div>
   )
 }
