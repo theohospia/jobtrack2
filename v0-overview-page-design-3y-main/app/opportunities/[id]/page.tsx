@@ -2,6 +2,7 @@
 
 import { TopNav } from "@/components/top-nav"
 import { useParams } from "next/navigation"
+import React from "react"
 
 type FitLevel = "strong" | "good" | "stretch"
 
@@ -67,6 +68,14 @@ export default function ApplyPage() {
     "Prepare examples of data-driven decisions you've made",
   ]
 
+  const jobDescription = `Safran is an international high-technology group operating in the fields of aeronautics (propulsion, equipment and interiors), space, and defense. Safran Aircraft Engines designs, manufactures, and markets civil and military aircraft engines with the highest levels of performance, reliability, and environmental compliance.
+
+The Assistant Service Engineer (ASE) will provide leadership, technical direction, and support to the airframer and customers. Main responsibilities include acting as an interface with all levels of customer and company organizations, providing on-site assessments of operations, delivering comprehensive reports on engine issues, and contributing to product and service improvement by identifying operator needs and proposing corrective actions.
+
+Required qualifications include strong knowledge of engine mechanics and operation, technical expertise in engine assembly and maintenance documentation, strong oral and written communication skills, and technical English proficiency. Experience in jet engine manufacturing or aircraft manufacturing is valuable.`
+
+  const [isExpanded, setIsExpanded] = React.useState(false)
+
   return (
     <div style={{ background: "#F8FAFC", minHeight: "100vh", paddingBottom: 100 }}>
       <TopNav />
@@ -93,9 +102,6 @@ export default function ApplyPage() {
                 {job.fitStrength}%
               </span>
             </div>
-            <p style={{ fontSize: 12, color: "#64748B", textAlign: "center", fontWeight: 500 }}>
-              Match
-            </p>
           </div>
 
           {/* Job Title and Company Info */}
@@ -118,18 +124,6 @@ export default function ApplyPage() {
                 }}
               >
                 {job.workStyle}
-              </span>
-              <span
-                style={{
-                  fontSize: 13,
-                  fontWeight: 500,
-                  color: "#059669",
-                  background: "#D1FAE5",
-                  padding: "6px 12px",
-                  borderRadius: 16,
-                }}
-              >
-                Strong fit
               </span>
             </div>
           </div>
@@ -207,40 +201,61 @@ export default function ApplyPage() {
             marginBottom: 32,
           }}
         >
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
-            <div>
-              <p style={{ fontSize: 12, color: "#64748B", fontWeight: 500, margin: "0 0 8px 0" }}>
-                LOCATION
-              </p>
-              <p style={{ fontSize: 14, color: "#0F172A", fontWeight: 500, margin: 0 }}>
-                {job.location}
-              </p>
-            </div>
-            <div>
-              <p style={{ fontSize: 12, color: "#64748B", fontWeight: 500, margin: "0 0 8px 0" }}>
-                WORK STYLE
-              </p>
-              <p style={{ fontSize: 14, color: "#0F172A", fontWeight: 500, margin: 0 }}>
-                {job.workStyle}
-              </p>
-            </div>
-            <div>
-              <p style={{ fontSize: 12, color: "#64748B", fontWeight: 500, margin: "0 0 8px 0" }}>
-                COMPANY
-              </p>
-              <p style={{ fontSize: 14, color: "#0F172A", fontWeight: 500, margin: 0 }}>
-                {job.company}
-              </p>
-            </div>
-            <div>
-              <p style={{ fontSize: 12, color: "#64748B", fontWeight: 500, margin: "0 0 8px 0" }}>
-                POSTED
-              </p>
-              <p style={{ fontSize: 14, color: "#0F172A", fontWeight: 500, margin: 0 }}>
-                {job.metaSignals[0]}
-              </p>
-            </div>
-          </div>
+          <p
+            style={{
+              fontSize: 14,
+              lineHeight: 1.6,
+              color: "#475569",
+              margin: 0,
+              maxHeight: isExpanded ? "none" : 150,
+              overflow: "hidden",
+              transition: "max-height 0.3s ease-in-out",
+            }}
+          >
+            {jobDescription}
+          </p>
+          {!isExpanded && (
+            <button
+              onClick={() => setIsExpanded(true)}
+              style={{
+                marginTop: 12,
+                padding: "8px 16px",
+                fontSize: 14,
+                fontWeight: 500,
+                color: "#2563EB",
+                background: "#F1F5F9",
+                border: "none",
+                borderRadius: 8,
+                cursor: "pointer",
+                transition: "background-color 0.2s",
+              }}
+              onMouseEnter={(e) => e.currentTarget.style.background = "#E2E8F0"}
+              onMouseLeave={(e) => e.currentTarget.style.background = "#F1F5F9"}
+            >
+              View more
+            </button>
+          )}
+          {isExpanded && (
+            <button
+              onClick={() => setIsExpanded(false)}
+              style={{
+                marginTop: 12,
+                padding: "8px 16px",
+                fontSize: 14,
+                fontWeight: 500,
+                color: "#2563EB",
+                background: "#F1F5F9",
+                border: "none",
+                borderRadius: 8,
+                cursor: "pointer",
+                transition: "background-color 0.2s",
+              }}
+              onMouseEnter={(e) => e.currentTarget.style.background = "#E2E8F0"}
+              onMouseLeave={(e) => e.currentTarget.style.background = "#F1F5F9"}
+            >
+              View less
+            </button>
+          )}
         </div>
 
         {/* How to Improve Section */}
