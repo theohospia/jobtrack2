@@ -192,14 +192,14 @@ Required qualifications include strong knowledge of engine mechanics and operati
             marginBottom: 32,
           }}
         >
-          <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
             {/* Match Score Card */}
             <div
               style={{
                 display: "flex",
                 alignItems: "center",
                 gap: 12,
-                padding: 12,
+                padding: 16,
                 background: "#F0F9FF",
                 borderRadius: 8,
                 borderLeft: "4px solid #2563EB",
@@ -222,11 +222,11 @@ Required qualifications include strong knowledge of engine mechanics and operati
                 ✓
               </div>
               <div>
-                <p style={{ fontSize: 13, color: "#64748B", fontWeight: 500, margin: "0 0 4px 0" }}>
+                <p style={{ fontSize: 12, color: "#64748B", fontWeight: 500, margin: "0 0 4px 0" }}>
                   PROFILE MATCH
                 </p>
-                <p style={{ fontSize: 16, color: "#0F172A", fontWeight: 700, margin: 0 }}>
-                  92% of job requirements
+                <p style={{ fontSize: 15, color: "#0F172A", fontWeight: 700, margin: 0 }}>
+                  92% of requirements
                 </p>
               </div>
             </div>
@@ -237,10 +237,10 @@ Required qualifications include strong knowledge of engine mechanics and operati
                 display: "flex",
                 alignItems: "center",
                 gap: 12,
-                padding: 12,
-                background: "#FDFCE8",
+                padding: 16,
+                background: "#F0F9FF",
                 borderRadius: 8,
-                borderLeft: "4px solid #FBBF24",
+                borderLeft: "4px solid #2563EB",
               }}
             >
               <div
@@ -250,7 +250,7 @@ Required qualifications include strong knowledge of engine mechanics and operati
                   justifyContent: "center",
                   width: 40,
                   height: 40,
-                  background: "#FBBF24",
+                  background: "#2563EB",
                   borderRadius: "50%",
                   color: "#FFFFFF",
                   fontSize: 18,
@@ -260,11 +260,11 @@ Required qualifications include strong knowledge of engine mechanics and operati
                 ⚡
               </div>
               <div>
-                <p style={{ fontSize: 13, color: "#64748B", fontWeight: 500, margin: "0 0 4px 0" }}>
+                <p style={{ fontSize: 12, color: "#64748B", fontWeight: 500, margin: "0 0 4px 0" }}>
                   INTERVIEW SPEED
                 </p>
-                <p style={{ fontSize: 16, color: "#0F172A", fontWeight: 700, margin: 0 }}>
-                  Similar candidates interviewed within 2 weeks
+                <p style={{ fontSize: 15, color: "#0F172A", fontWeight: 700, margin: 0 }}>
+                  Interviewed in 2 weeks
                 </p>
               </div>
             </div>
@@ -275,10 +275,10 @@ Required qualifications include strong knowledge of engine mechanics and operati
                 display: "flex",
                 alignItems: "center",
                 gap: 12,
-                padding: 12,
-                background: "#F0FDF4",
+                padding: 16,
+                background: "#F0F9FF",
                 borderRadius: 8,
-                borderLeft: "4px solid #10B981",
+                borderLeft: "4px solid #2563EB",
               }}
             >
               <div
@@ -288,7 +288,7 @@ Required qualifications include strong knowledge of engine mechanics and operati
                   justifyContent: "center",
                   width: 40,
                   height: 40,
-                  background: "#10B981",
+                  background: "#2563EB",
                   borderRadius: "50%",
                   color: "#FFFFFF",
                   fontSize: 18,
@@ -298,11 +298,11 @@ Required qualifications include strong knowledge of engine mechanics and operati
                 ◆
               </div>
               <div>
-                <p style={{ fontSize: 13, color: "#64748B", fontWeight: 500, margin: "0 0 4px 0" }}>
+                <p style={{ fontSize: 12, color: "#64748B", fontWeight: 500, margin: "0 0 4px 0" }}>
                   YOUR STRENGTHS
                 </p>
-                <p style={{ fontSize: 16, color: "#0F172A", fontWeight: 700, margin: 0 }}>
-                  Your analytics experience aligns perfectly with their team needs
+                <p style={{ fontSize: 15, color: "#0F172A", fontWeight: 700, margin: 0 }}>
+                  Analytics perfectly aligned
                 </p>
               </div>
             </div>
@@ -313,10 +313,10 @@ Required qualifications include strong knowledge of engine mechanics and operati
                 display: "flex",
                 alignItems: "center",
                 gap: 12,
-                padding: 12,
-                background: "#FCE7F3",
+                padding: 16,
+                background: "#F0F9FF",
                 borderRadius: 8,
-                borderLeft: "4px solid #EC4899",
+                borderLeft: "4px solid #2563EB",
               }}
             >
               <div
@@ -326,7 +326,7 @@ Required qualifications include strong knowledge of engine mechanics and operati
                   justifyContent: "center",
                   width: 40,
                   height: 40,
-                  background: "#EC4899",
+                  background: "#2563EB",
                   borderRadius: "50%",
                   color: "#FFFFFF",
                   fontSize: 18,
@@ -336,11 +336,11 @@ Required qualifications include strong knowledge of engine mechanics and operati
                 🎯
               </div>
               <div>
-                <p style={{ fontSize: 13, color: "#64748B", fontWeight: 500, margin: "0 0 4px 0" }}>
+                <p style={{ fontSize: 12, color: "#64748B", fontWeight: 500, margin: "0 0 4px 0" }}>
                   LOW COMPETITION
                 </p>
-                <p style={{ fontSize: 16, color: "#0F172A", fontWeight: 700, margin: 0 }}>
-                  Only 24 applicants - higher chance to stand out
+                <p style={{ fontSize: 15, color: "#0F172A", fontWeight: 700, margin: 0 }}>
+                  Only 24 applicants
                 </p>
               </div>
             </div>
