@@ -159,33 +159,24 @@ Required qualifications include strong knowledge of engine mechanics and operati
               <p style={{ fontSize: 16, color: "#64748B", margin: 0, fontWeight: 500 }}>
                 {job.company} · {job.location} · {job.workStyle}
               </p>
-              <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="12" cy="12" r="10" stroke="#64748B" strokeWidth="2"/>
-                  <path d="M12 6v6l4 2" stroke="#64748B" strokeWidth="2" strokeLinecap="round"/>
-                </svg>
-                <span style={{ fontSize: 14, color: "#64748B", fontWeight: 500 }}>3 days ago</span>
+              <div style={{ display: "flex", alignItems: "center", gap: 24 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="10" stroke="#64748B" strokeWidth="2"/>
+                    <path d="M12 6v6l4 2" stroke="#64748B" strokeWidth="2" strokeLinecap="round"/>
+                  </svg>
+                  <span style={{ fontSize: 14, color: "#64748B", fontWeight: 500 }}>3 days ago</span>
+                </div>
+                <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="10" stroke="#64748B" strokeWidth="2"/>
+                    <path d="M9 12H15M12 9V15" stroke="#64748B" strokeWidth="1.5" strokeLinecap="round"/>
+                  </svg>
+                  <span style={{ fontSize: 14, color: "#64748B", fontWeight: 500 }}>$32,000 - $38,000</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Estimated Salary Section */}
-        <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 12px 0" }}>
-          ESTIMATED SALARY:
-        </p>
-        <div
-          style={{
-            background: "#FFFFFF",
-            border: "1px solid #E5E7EB",
-            borderRadius: 12,
-            padding: 20,
-            marginBottom: 32,
-          }}
-        >
-          <p style={{ fontSize: 14, color: "#475569", margin: 0 }}>
-            $32,000 - $38,000
-          </p>
         </div>
 
         {/* Why It's a Strong Match Section */}
