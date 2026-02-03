@@ -309,7 +309,7 @@ Required qualifications include strong knowledge of engine mechanics and operati
             border: "1px solid #E5E7EB",
             borderRadius: 12,
             padding: 24,
-            marginBottom: 24,
+            marginBottom: 32,
           }}
         >
           <ul style={{ margin: 0, padding: 0, listStyle: "none" }}>
