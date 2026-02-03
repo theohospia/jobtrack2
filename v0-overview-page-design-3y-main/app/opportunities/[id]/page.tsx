@@ -203,22 +203,6 @@ Required qualifications include strong knowledge of engine mechanics and operati
                 borderRadius: 8,
               }}
             >
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: 40,
-                  height: 40,
-                  background: "#2563EB",
-                  borderRadius: "50%",
-                  color: "#FFFFFF",
-                  fontSize: 18,
-                  fontWeight: 700,
-                }}
-              >
-                ✓
-              </div>
               <div>
                 <p style={{ fontSize: 12, color: "#64748B", fontWeight: 500, margin: "0 0 4px 0" }}>
                   PROFILE MATCH
@@ -239,22 +223,6 @@ Required qualifications include strong knowledge of engine mechanics and operati
                 borderRadius: 8,
               }}
             >
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: 40,
-                  height: 40,
-                  background: "#2563EB",
-                  borderRadius: "50%",
-                  color: "#FFFFFF",
-                  fontSize: 18,
-                  fontWeight: 700,
-                }}
-              >
-                ⚡
-              </div>
               <div>
                 <p style={{ fontSize: 12, color: "#64748B", fontWeight: 500, margin: "0 0 4px 0" }}>
                   INTERVIEW SPEED
@@ -275,22 +243,6 @@ Required qualifications include strong knowledge of engine mechanics and operati
                 borderRadius: 8,
               }}
             >
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: 40,
-                  height: 40,
-                  background: "#2563EB",
-                  borderRadius: "50%",
-                  color: "#FFFFFF",
-                  fontSize: 18,
-                  fontWeight: 700,
-                }}
-              >
-                ◆
-              </div>
               <div>
                 <p style={{ fontSize: 12, color: "#64748B", fontWeight: 500, margin: "0 0 4px 0" }}>
                   YOUR STRENGTHS
@@ -311,22 +263,6 @@ Required qualifications include strong knowledge of engine mechanics and operati
                 borderRadius: 8,
               }}
             >
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: 40,
-                  height: 40,
-                  background: "#2563EB",
-                  borderRadius: "50%",
-                  color: "#FFFFFF",
-                  fontSize: 18,
-                  fontWeight: 700,
-                }}
-              >
-                🎯
-              </div>
               <div>
                 <p style={{ fontSize: 12, color: "#64748B", fontWeight: 500, margin: "0 0 4px 0" }}>
                   LOW COMPETITION
