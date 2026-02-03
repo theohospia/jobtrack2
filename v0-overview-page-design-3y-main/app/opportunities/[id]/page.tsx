@@ -136,36 +136,36 @@ export default function ApplyPage() {
         </div>
 
         {/* Estimated Salary Section */}
+        <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 12px 0" }}>
+          ESTIMATED SALARY:
+        </p>
         <div
           style={{
             background: "#FFFFFF",
             border: "1px solid #E5E7EB",
             borderRadius: 12,
             padding: 20,
-            marginBottom: 24,
+            marginBottom: 32,
           }}
         >
-          <p style={{ fontSize: 12, color: "#64748B", margin: "0 0 8px 0", fontWeight: 500 }}>
-            ESTIMATED SALARY
-          </p>
           <p style={{ fontSize: 24, fontWeight: 700, color: "#0F172A", margin: 0 }}>
             {job.estimatedSalary}
           </p>
         </div>
 
         {/* Why It's a Strong Match Section */}
+        <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 12px 0" }}>
+          WHY IT'S A SUPER STRONG MATCH:
+        </p>
         <div
           style={{
             background: "#FFFFFF",
             border: "1px solid #E5E7EB",
             borderRadius: 12,
             padding: 24,
-            marginBottom: 24,
+            marginBottom: 32,
           }}
         >
-          <h2 style={{ fontSize: 18, fontWeight: 600, color: "#0F172A", marginBottom: 16, margin: 0, marginBottom: 16 }}>
-            Why it's a super strong match
-          </h2>
           <ul style={{ margin: 0, padding: 0, listStyle: "none" }}>
             {strongMatchReasons.map((reason, index) => (
               <li
@@ -195,18 +195,18 @@ export default function ApplyPage() {
         </div>
 
         {/* Job Information Section */}
+        <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 12px 0" }}>
+          JOB INFORMATION:
+        </p>
         <div
           style={{
             background: "#FFFFFF",
             border: "1px solid #E5E7EB",
             borderRadius: 12,
             padding: 24,
-            marginBottom: 24,
+            marginBottom: 32,
           }}
         >
-          <h2 style={{ fontSize: 18, fontWeight: 600, color: "#0F172A", margin: "0 0 20px 0" }}>
-            Job information
-          </h2>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
             <div>
               <p style={{ fontSize: 12, color: "#64748B", fontWeight: 500, margin: "0 0 8px 0" }}>
@@ -244,6 +244,9 @@ export default function ApplyPage() {
         </div>
 
         {/* How to Improve Section */}
+        <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 12px 0" }}>
+          HOW CAN YOU IMPROVE INTERVIEW SUCCESS:
+        </p>
         <div
           style={{
             background: "#FFFFFF",
@@ -253,9 +256,6 @@ export default function ApplyPage() {
             marginBottom: 24,
           }}
         >
-          <h2 style={{ fontSize: 18, fontWeight: 600, color: "#0F172A", marginBottom: 16, margin: "0 0 16px 0" }}>
-            How can you improve interview success
-          </h2>
           <ul style={{ margin: 0, padding: 0, listStyle: "none" }}>
             {improvementTips.map((tip, index) => (
               <li
