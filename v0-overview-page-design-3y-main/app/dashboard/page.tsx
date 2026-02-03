@@ -401,11 +401,11 @@ export default function DashboardPage() {
                       color: "#2563EB",
                     }}
                   >
-                    JD
+                    PA
                   </div>
                   <div>
-                    <p className="text-sm font-semibold" style={{ color: "#0F172A" }}>Jane Doe</p>
-                    <p className="text-xs" style={{ color: "#64748B" }}>Acme Inc.</p>
+                    <p className="text-sm font-semibold" style={{ color: "#0F172A" }}>Product Analyst Intern</p>
+                    <p className="text-xs" style={{ color: "#64748B" }}>Acme Corp</p>
                   </div>
                 </div>
                 <button
@@ -433,11 +433,11 @@ export default function DashboardPage() {
                       color: "#2563EB",
                     }}
                   >
-                    MR
+                    DA
                   </div>
                   <div>
-                    <p className="text-sm font-semibold" style={{ color: "#0F172A" }}>Mike Roberts</p>
-                    <p className="text-xs" style={{ color: "#64748B" }}>StartupXYZ</p>
+                    <p className="text-sm font-semibold" style={{ color: "#0F172A" }}>Data Analyst</p>
+                    <p className="text-xs" style={{ color: "#64748B" }}>TechStart Inc</p>
                   </div>
                 </div>
                 <button
