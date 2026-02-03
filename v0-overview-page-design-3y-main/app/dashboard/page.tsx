@@ -378,14 +378,16 @@ export default function DashboardPage() {
           onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
           onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
         >
-            <h3 className="text-xl font-semibold mb-1" style={{ color: "#0F172A" }}>
-              Recent Responses
-            </h3>
-            <p className="text-sm mb-6" style={{ color: "#64748B" }}>
-              Latest responses you got
-            </p>
+            <div className="mb-6">
+              <h3 className="text-xl font-semibold mb-1" style={{ color: "#0F172A" }}>
+                Recent Responses
+              </h3>
+              <p className="text-sm" style={{ color: "#64748B" }}>
+                Latest responses you got
+              </p>
+            </div>
 
-            {/* Sales List */}
+            {/* Responses List */}
             <div className="flex flex-col gap-4">
               {/* Response 1 */}
               <div className="flex items-center justify-between pb-4 border-b" style={{ borderColor: "#E5E7EB" }}>
@@ -420,94 +422,22 @@ export default function DashboardPage() {
               </div>
 
               {/* Response 2 */}
-              <div className="flex items-center justify-between pb-4 border-b" style={{ borderColor: "#E5E7EB" }}>
+              <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <img
-                    src="/placeholder.svg?height=40&width=40"
-                    alt="Mike Roberts"
-                    className="w-10 h-10 rounded-full object-cover"
-                  />
+                  <div
+                    className="flex items-center justify-center rounded-full flex-shrink-0 text-sm font-semibold"
+                    style={{
+                      width: "40px",
+                      height: "40px",
+                      background: "#E0E7FF",
+                      color: "#2563EB",
+                    }}
+                  >
+                    MR
+                  </div>
                   <div>
                     <p className="text-sm font-semibold" style={{ color: "#0F172A" }}>Mike Roberts</p>
                     <p className="text-xs" style={{ color: "#64748B" }}>StartupXYZ</p>
-                  </div>
-                </div>
-                <button
-                  className="px-3 py-1 rounded-lg text-xs font-medium transition-colors"
-                  style={{
-                    background: "#F1F5F9",
-                    color: "#2563EB"
-                  }}
-                  onMouseEnter={(e) => e.currentTarget.style.background = "#E2E8F0"}
-                  onMouseLeave={(e) => e.currentTarget.style.background = "#F1F5F9"}
-                >
-                  View
-                </button>
-              </div>
-
-              {/* Response 3 */}
-              <div className="flex items-center justify-between pb-4 border-b" style={{ borderColor: "#E5E7EB" }}>
-                <div className="flex items-center gap-3">
-                  <img
-                    src="/placeholder.svg?height=40&width=40"
-                    alt="Sarah Johnson"
-                    className="w-10 h-10 rounded-full object-cover"
-                  />
-                  <div>
-                    <p className="text-sm font-semibold" style={{ color: "#0F172A" }}>Sarah Johnson</p>
-                    <p className="text-xs" style={{ color: "#64748B" }}>TechCorp Inc.</p>
-                  </div>
-                </div>
-                <button
-                  className="px-3 py-1 rounded-lg text-xs font-medium transition-colors"
-                  style={{
-                    background: "#F1F5F9",
-                    color: "#2563EB"
-                  }}
-                  onMouseEnter={(e) => e.currentTarget.style.background = "#E2E8F0"}
-                  onMouseLeave={(e) => e.currentTarget.style.background = "#F1F5F9"}
-                >
-                  View
-                </button>
-              </div>
-
-              {/* Response 4 */}
-              <div className="flex items-center justify-between pb-4 border-b" style={{ borderColor: "#E5E7EB" }}>
-                <div className="flex items-center gap-3">
-                  <img
-                    src="/placeholder.svg?height=40&width=40"
-                    alt="Alex Lee"
-                    className="w-10 h-10 rounded-full object-cover"
-                  />
-                  <div>
-                    <p className="text-sm font-semibold" style={{ color: "#0F172A" }}>Alex Lee</p>
-                    <p className="text-xs" style={{ color: "#64748B" }}>Global Solutions</p>
-                  </div>
-                </div>
-                <button
-                  className="px-3 py-1 rounded-lg text-xs font-medium transition-colors"
-                  style={{
-                    background: "#F1F5F9",
-                    color: "#2563EB"
-                  }}
-                  onMouseEnter={(e) => e.currentTarget.style.background = "#E2E8F0"}
-                  onMouseLeave={(e) => e.currentTarget.style.background = "#F1F5F9"}
-                >
-                  View
-                </button>
-              </div>
-
-              {/* Response 5 */}
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <img
-                    src="/placeholder.svg?height=40&width=40"
-                    alt="Emily Martinez"
-                    className="w-10 h-10 rounded-full object-cover"
-                  />
-                  <div>
-                    <p className="text-sm font-semibold" style={{ color: "#0F172A" }}>Emily Martinez</p>
-                    <p className="text-xs" style={{ color: "#64748B" }}>Retail Chain Co.</p>
                   </div>
                 </div>
                 <button
