@@ -143,17 +143,189 @@ Required qualifications include strong knowledge of engine mechanics and operati
           </div>
         </div>
 
-        {/* Estimated Salary Section - To be filled */}
-        {/* TODO: Add estimated salary content */}
+        {/* Estimated Salary Section */}
+        <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 12px 0" }}>
+          ESTIMATED SALARY:
+        </p>
+        <div
+          style={{
+            background: "#FFFFFF",
+            border: "1px solid #E5E7EB",
+            borderRadius: 12,
+            padding: 20,
+            marginBottom: 32,
+          }}
+        >
+          <p style={{ fontSize: 14, color: "#475569", margin: 0 }}>
+            $32,000 - $38,000
+          </p>
+        </div>
 
-        {/* Why It's a Strong Match Section - To be filled */}
-        {/* TODO: Add strong match reasons */}
+        {/* Why It's a Strong Match Section */}
+        <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 12px 0" }}>
+          WHY IT'S A SUPER STRONG MATCH:
+        </p>
+        <div
+          style={{
+            background: "#FFFFFF",
+            border: "1px solid #E5E7EB",
+            borderRadius: 12,
+            padding: 24,
+            marginBottom: 32,
+          }}
+        >
+          <ul style={{ margin: 0, padding: 0, listStyle: "none" }}>
+            {[
+              "Your profile matches 92% of job requirements",
+              "Similar candidates got interviews within 2 weeks",
+              "Your experience in analytics aligns with their team",
+              "Low competition - only 24 applicants so far"
+            ].map((reason, index) => (
+              <li
+                key={index}
+                style={{
+                  fontSize: 14,
+                  color: "#475569",
+                  marginBottom: index < 3 ? 12 : 0,
+                  paddingLeft: 24,
+                  position: "relative",
+                }}
+              >
+                <span
+                  style={{
+                    position: "absolute",
+                    left: 0,
+                    color: "#2563EB",
+                    fontWeight: 600,
+                  }}
+                >
+                  •
+                </span>
+                {reason}
+              </li>
+            ))}
+          </ul>
+        </div>
 
-        {/* Job Information Section - To be filled */}
-        {/* TODO: Add job description */}
+        {/* Job Information Section */}
+        <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 12px 0" }}>
+          JOB INFORMATION:
+        </p>
+        <div
+          style={{
+            background: "#FFFFFF",
+            border: "1px solid #E5E7EB",
+            borderRadius: 12,
+            padding: 24,
+            marginBottom: 32,
+          }}
+        >
+          <p
+            style={{
+              fontSize: 14,
+              lineHeight: 1.6,
+              color: "#475569",
+              margin: 0,
+              maxHeight: isExpanded ? "none" : 150,
+              overflow: "hidden",
+              transition: "max-height 0.3s ease-in-out",
+            }}
+          >
+            Safran is an international high-technology group operating in the fields of aeronautics (propulsion, equipment and interiors), space, and defense. Safran Aircraft Engines designs, manufactures, and markets civil and military aircraft engines with the highest levels of performance, reliability, and environmental compliance.
 
-        {/* How to Improve Section - To be filled */}
-        {/* TODO: Add improvement tips */}
+The Assistant Service Engineer (ASE) will provide leadership, technical direction, and support to the airframer and customers. Main responsibilities include acting as an interface with all levels of customer and company organizations, providing on-site assessments of operations, delivering comprehensive reports on engine issues, and contributing to product and service improvement by identifying operator needs and proposing corrective actions.
+
+Required qualifications include strong knowledge of engine mechanics and operation, technical expertise in engine assembly and maintenance documentation, strong oral and written communication skills, and technical English proficiency. Experience in jet engine manufacturing or aircraft manufacturing is valuable.
+          </p>
+          {!isExpanded && (
+            <button
+              onClick={() => setIsExpanded(true)}
+              style={{
+                marginTop: 12,
+                padding: "8px 16px",
+                fontSize: 14,
+                fontWeight: 500,
+                color: "#2563EB",
+                background: "#F1F5F9",
+                border: "none",
+                borderRadius: 8,
+                cursor: "pointer",
+                transition: "background-color 0.2s",
+              }}
+              onMouseEnter={(e) => e.currentTarget.style.background = "#E2E8F0"}
+              onMouseLeave={(e) => e.currentTarget.style.background = "#F1F5F9"}
+            >
+              View more
+            </button>
+          )}
+          {isExpanded && (
+            <button
+              onClick={() => setIsExpanded(false)}
+              style={{
+                marginTop: 12,
+                padding: "8px 16px",
+                fontSize: 14,
+                fontWeight: 500,
+                color: "#2563EB",
+                background: "#F1F5F9",
+                border: "none",
+                borderRadius: 8,
+                cursor: "pointer",
+                transition: "background-color 0.2s",
+              }}
+              onMouseEnter={(e) => e.currentTarget.style.background = "#E2E8F0"}
+              onMouseLeave={(e) => e.currentTarget.style.background = "#F1F5F9"}
+            >
+              View less
+            </button>
+          )}
+        </div>
+
+        {/* How to Improve Section */}
+        <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 12px 0" }}>
+          HOW CAN YOU IMPROVE INTERVIEW SUCCESS:
+        </p>
+        <div
+          style={{
+            background: "#FFFFFF",
+            border: "1px solid #E5E7EB",
+            borderRadius: 12,
+            padding: 24,
+            marginBottom: 24,
+          }}
+        >
+          <ul style={{ margin: 0, padding: 0, listStyle: "none" }}>
+            {[
+              "Highlight your quantitative projects in the cover letter",
+              "Practice explaining your analytical approach in interviews",
+              "Research the company's recent product launches",
+              "Prepare examples of data-driven decisions you've made"
+            ].map((tip, index) => (
+              <li
+                key={index}
+                style={{
+                  fontSize: 14,
+                  color: "#475569",
+                  marginBottom: index < 3 ? 12 : 0,
+                  paddingLeft: 24,
+                  position: "relative",
+                }}
+              >
+                <span
+                  style={{
+                    position: "absolute",
+                    left: 0,
+                    color: "#2563EB",
+                    fontWeight: 600,
+                  }}
+                >
+                  •
+                </span>
+                {tip}
+              </li>
+            ))}
+          </ul>
+        </div>
       </main>
     </div>
   )
