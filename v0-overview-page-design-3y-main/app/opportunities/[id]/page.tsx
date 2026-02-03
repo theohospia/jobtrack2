@@ -356,26 +356,26 @@ Required qualifications include strong knowledge of engine mechanics and operati
 
         {/* Sticky Apply Now Button */}
         <button
+          className="flex items-center gap-2 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2 whitespace-nowrap flex-shrink-0"
           style={{
             position: "fixed",
             bottom: 24,
             right: 24,
-            padding: "12px 24px",
-            fontSize: 14,
-            fontWeight: 500,
-            color: "#FFFFFF",
             background: "#2563EB",
-            border: "none",
-            borderRadius: 8,
-            cursor: "pointer",
-            transition: "background-color 0.2s",
-            boxShadow: "0 4px 12px rgba(37, 99, 235, 0.3)",
+            color: "#FFFFFF",
             zIndex: 40,
           }}
-          onMouseEnter={(e) => e.currentTarget.style.background = "#1D4ED8"}
-          onMouseLeave={(e) => e.currentTarget.style.background = "#2563EB"}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.background = "#1D4ED8"
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.background = "#2563EB"
+          }}
         >
           Apply now
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
         </button>
       </main>
     </div>
