@@ -128,7 +128,7 @@ Required qualifications include strong knowledge of engine mechanics and operati
                 {job.roleTitle}
               </h1>
             </div>
-            <div style={{ display: "flex", alignItems: "flex-start", gap: 16 }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
               <p style={{ fontSize: 16, color: "#64748B", margin: 0, fontWeight: 500 }}>
                 {job.company} · {job.location} · {job.workStyle}
               </p>
