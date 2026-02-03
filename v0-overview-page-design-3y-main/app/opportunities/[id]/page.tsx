@@ -127,22 +127,9 @@ Required qualifications include strong knowledge of engine mechanics and operati
               <h1 style={{ fontSize: 28, fontWeight: 700, color: "#0F172A", margin: 0 }}>
                 {job.roleTitle}
               </h1>
-              <span
-                style={{
-                  fontSize: 13,
-                  fontWeight: 500,
-                  color: "#2563EB",
-                  background: "#DBEAFE",
-                  padding: "6px 12px",
-                  borderRadius: 16,
-                  whiteSpace: "nowrap",
-                }}
-              >
-                {job.workStyle}
-              </span>
             </div>
             <p style={{ fontSize: 16, color: "#64748B", margin: 0, fontWeight: 500 }}>
-              {job.company} • {job.location}
+              {job.company} · {job.location} · {job.workStyle} (3 days ago)
             </p>
           </div>
         </div>
