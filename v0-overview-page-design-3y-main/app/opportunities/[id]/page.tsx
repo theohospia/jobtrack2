@@ -85,8 +85,8 @@ Required qualifications include strong knowledge of engine mechanics and operati
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 32, gap: 24 }}>
           {/* Match Circle and Percentile */}
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-            <div style={{ position: "relative", width: 85, height: 85 }}>
-              <svg width="85" height="85" viewBox="0 0 100 100" style={{ transform: "rotate(-90deg)" }}>
+            <div style={{ position: "relative", width: 130, height: 130 }}>
+              <svg width="130" height="130" viewBox="0 0 100 100" style={{ transform: "rotate(-90deg)" }}>
                 {/* Background circle */}
                 <circle
                   cx="50"
@@ -111,10 +111,10 @@ Required qualifications include strong knowledge of engine mechanics and operati
               </svg>
               {/* Center text */}
               <div style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
-                <span style={{ fontSize: 20, fontWeight: 700, color: "#2563EB" }}>
+                <span style={{ fontSize: 32, fontWeight: 700, color: "#2563EB" }}>
                   {job.fitStrength}%
                 </span>
-                <span style={{ fontSize: 11, fontWeight: 500, marginTop: 2, color: "#64748B", textAlign: "center" }}>
+                <span style={{ fontSize: 13, fontWeight: 500, marginTop: 4, color: "#64748B", textAlign: "center" }}>
                   Strong fit
                 </span>
               </div>
@@ -123,13 +123,10 @@ Required qualifications include strong knowledge of engine mechanics and operati
 
           {/* Job Title and Company Info */}
           <div style={{ flex: 1 }}>
-            <h1 style={{ fontSize: 28, fontWeight: 700, color: "#0F172A", margin: "0 0 8px 0" }}>
-              {job.roleTitle}
-            </h1>
-            <p style={{ fontSize: 16, color: "#64748B", margin: "0 0 4px 0", fontWeight: 500 }}>
-              {job.company} • {job.location}
-            </p>
-            <div style={{ display: "flex", gap: 12, marginTop: 12 }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 8 }}>
+              <h1 style={{ fontSize: 28, fontWeight: 700, color: "#0F172A", margin: 0 }}>
+                {job.roleTitle}
+              </h1>
               <span
                 style={{
                   fontSize: 13,
@@ -138,11 +135,15 @@ Required qualifications include strong knowledge of engine mechanics and operati
                   background: "#DBEAFE",
                   padding: "6px 12px",
                   borderRadius: 16,
+                  whiteSpace: "nowrap",
                 }}
               >
                 {job.workStyle}
               </span>
             </div>
+            <p style={{ fontSize: 16, color: "#64748B", margin: 0, fontWeight: 500 }}>
+              {job.company} • {job.location}
+            </p>
           </div>
         </div>
 
