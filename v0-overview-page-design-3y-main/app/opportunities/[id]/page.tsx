@@ -353,6 +353,30 @@ Required qualifications include strong knowledge of engine mechanics and operati
             ))}
           </ul>
         </div>
+
+        {/* Sticky Apply Now Button */}
+        <button
+          style={{
+            position: "fixed",
+            bottom: 24,
+            right: 24,
+            padding: "12px 24px",
+            fontSize: 14,
+            fontWeight: 500,
+            color: "#FFFFFF",
+            background: "#2563EB",
+            border: "none",
+            borderRadius: 8,
+            cursor: "pointer",
+            transition: "background-color 0.2s",
+            boxShadow: "0 4px 12px rgba(37, 99, 235, 0.3)",
+            zIndex: 40,
+          }}
+          onMouseEnter={(e) => e.currentTarget.style.background = "#1D4ED8"}
+          onMouseLeave={(e) => e.currentTarget.style.background = "#2563EB"}
+        >
+          Apply now
+        </button>
       </main>
     </div>
   )
