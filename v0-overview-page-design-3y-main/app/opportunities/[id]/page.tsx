@@ -128,9 +128,18 @@ Required qualifications include strong knowledge of engine mechanics and operati
                 {job.roleTitle}
               </h1>
             </div>
-            <p style={{ fontSize: 16, color: "#64748B", margin: 0, fontWeight: 500 }}>
-              {job.company} · {job.location} · {job.workStyle} (3 days ago)
-            </p>
+            <div style={{ display: "flex", alignItems: "flex-start", gap: 16 }}>
+              <p style={{ fontSize: 16, color: "#64748B", margin: 0, fontWeight: 500 }}>
+                {job.company} · {job.location} · {job.workStyle}
+              </p>
+              <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="10" stroke="#64748B" strokeWidth="2"/>
+                  <path d="M12 6v6l4 2" stroke="#64748B" strokeWidth="2" strokeLinecap="round"/>
+                </svg>
+                <span style={{ fontSize: 14, color: "#64748B", fontWeight: 500 }}>3 days ago</span>
+              </div>
+            </div>
           </div>
         </div>
 
