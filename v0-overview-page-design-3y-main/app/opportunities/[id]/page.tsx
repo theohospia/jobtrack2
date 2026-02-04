@@ -394,78 +394,66 @@ Required qualifications include strong knowledge of engine mechanics and operati
           </div>
         </div>
 
-        {/* Job Context Cards Section */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 12, marginBottom: 32 }}>
-          {/* Typical Applicant Profile Card */}
+        {/* Job Context Sections */}
+        <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: 16, marginBottom: 32 }}>
+          {/* Who This Role Is Designed For */}
           <div
             style={{
               background: "#FFFFFF",
               border: "1px solid #E5E7EB",
               borderRadius: 12,
-              padding: 16,
-              display: "flex",
-              flexDirection: "column",
-              gap: 8,
+              padding: 20,
             }}
           >
-            <p style={{ fontSize: 11, color: "#64748B", fontWeight: 600, margin: "0 0 6px 0", textTransform: "uppercase" }}>
-              You're a good fit if you are:
+            <p style={{ fontSize: 12, color: "#64748B", fontWeight: 600, margin: "0 0 8px 0", textTransform: "uppercase" }}>
+              WHO THIS ROLE IS DESIGNED FOR
             </p>
-            <ul style={{ fontSize: 13, color: "#0F172A", margin: 0, paddingLeft: 20, lineHeight: 1.6 }}>
-              <li>Final-year student</li>
-              <li>Early-career (0–3 years)</li>
-              <li>Career switcher with analytical projects</li>
-            </ul>
-          </div>
-
-          {/* Contract Type Card */}
-          <div
-            style={{
-              background: "#FFFFFF",
-              border: "1px solid #E5E7EB",
-              borderRadius: 12,
-              padding: 16,
-              display: "flex",
-              flexDirection: "column",
-              gap: 8,
-            }}
-          >
-            <p style={{ fontSize: 11, color: "#64748B", fontWeight: 600, margin: "0 0 6px 0", textTransform: "uppercase" }}>
-              Contract Type
+            <p style={{ fontSize: 14, color: "#0F172A", lineHeight: 1.6, margin: 0 }}>
+              This role is well suited if you are early in your career or transitioning into an analytical role, and you already have hands-on experience through studies, projects, or previous work.
             </p>
-            <p style={{ fontSize: 15, color: "#0F172A", fontWeight: 600, margin: 0 }}>
-              Full-time, Permanent
-            </p>
-            <p style={{ fontSize: 13, color: "#64748B", margin: 0 }}>
-              Clear compensation structure
+            <p style={{ fontSize: 14, color: "#0F172A", lineHeight: 1.6, margin: "8px 0 0 0" }}>
+              What matters most here is your ability to work with data and explain your reasoning — not having a long list of past job titles.
             </p>
           </div>
 
-          {/* Company Stage Card */}
+          {/* What To Expect From The Role */}
           <div
             style={{
               background: "#FFFFFF",
               border: "1px solid #E5E7EB",
               borderRadius: 12,
-              padding: 16,
-              display: "flex",
-              flexDirection: "column",
-              gap: 8,
+              padding: 20,
             }}
           >
-            <p style={{ fontSize: 11, color: "#64748B", fontWeight: 600, margin: "0 0 6px 0", textTransform: "uppercase" }}>
-              Company Stage
+            <p style={{ fontSize: 12, color: "#64748B", fontWeight: 600, margin: "0 0 8px 0", textTransform: "uppercase" }}>
+              WHAT TO EXPECT FROM THE ROLE
             </p>
-            <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-              <div>
-                <p style={{ fontSize: 13, color: "#0F172A", fontWeight: 600, margin: "0 0 2px 0" }}>
-                  Large, stable company
-                </p>
-                <p style={{ fontSize: 12, color: "#64748B", margin: 0 }}>
-                  1,000+ employees • Structured teams, clear processes, strong brand
-                </p>
-              </div>
-            </div>
+            <p style={{ fontSize: 14, color: "#0F172A", lineHeight: 1.6, margin: 0 }}>
+              This is a full-time, permanent position with a clearly defined compensation structure and a standard interview process.
+            </p>
+            <p style={{ fontSize: 14, color: "#0F172A", lineHeight: 1.6, margin: "8px 0 0 0" }}>
+              You can expect clear expectations, structured onboarding, and a stable working environment.
+            </p>
+          </div>
+
+          {/* About The Company Environment */}
+          <div
+            style={{
+              background: "#FFFFFF",
+              border: "1px solid #E5E7EB",
+              borderRadius: 12,
+              padding: 20,
+            }}
+          >
+            <p style={{ fontSize: 12, color: "#64748B", fontWeight: 600, margin: "0 0 8px 0", textTransform: "uppercase" }}>
+              ABOUT THE COMPANY ENVIRONMENT
+            </p>
+            <p style={{ fontSize: 14, color: "#0F172A", lineHeight: 1.6, margin: 0 }}>
+              You would be joining a large, established organization with well-defined teams and processes.
+            </p>
+            <p style={{ fontSize: 14, color: "#0F172A", lineHeight: 1.6, margin: "8px 0 0 0" }}>
+              This type of environment tends to offer stability, learning opportunities, and recognizable experience that strengthens your profile over time.
+            </p>
           </div>
         </div>
 
