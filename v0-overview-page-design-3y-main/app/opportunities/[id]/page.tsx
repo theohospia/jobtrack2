@@ -232,27 +232,6 @@ Required qualifications include strong knowledge of engine mechanics and operati
           </p>
         </div>
 
-        {/* Why It's a Strong Match Section */}
-        <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 12px 0" }}>
-          WHY IT'S A SUPER STRONG MATCH:
-        </p>
-        <div
-          style={{
-            background: "#FFFFFF",
-            border: "1px solid #E5E7EB",
-            borderRadius: 12,
-            padding: 24,
-            marginBottom: 32,
-          }}
-        >
-          <p style={{ fontSize: 14, color: "#0F172A", lineHeight: 1.6, margin: 0 }}>
-            Your profile aligns well with this role, both in terms of skills and experience. The hiring process is short, competition remains limited, and the team is actively moving candidates forward.
-          </p>
-          <p style={{ fontSize: 14, color: "#0F172A", lineHeight: 1.6, margin: "12px 0 0 0" }}>
-            You are already competitive for this position, and applying now is a low-risk, high-potential step in your job search.
-          </p>
-        </div>
-
         {/* Hiring Transparency Cards Section */}
         <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 12, marginBottom: 32 }}>
           {/* Ghosting Risk Card */}
@@ -319,6 +298,27 @@ Required qualifications include strong knowledge of engine mechanics and operati
               ≈2–3 weeks
             </p>
           </div>
+        </div>
+
+        {/* Why It's a Strong Match Section */}
+        <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 12px 0" }}>
+          WHY IT'S A SUPER STRONG MATCH:
+        </p>
+        <div
+          style={{
+            background: "#FFFFFF",
+            border: "1px solid #E5E7EB",
+            borderRadius: 12,
+            padding: 24,
+            marginBottom: 32,
+          }}
+        >
+          <p style={{ fontSize: 14, color: "#0F172A", lineHeight: 1.6, margin: 0 }}>
+            Your profile aligns well with this role, both in terms of skills and experience. The hiring process is short, competition remains limited, and the team is actively moving candidates forward.
+          </p>
+          <p style={{ fontSize: 14, color: "#0F172A", lineHeight: 1.6, margin: "12px 0 0 0" }}>
+            You are already competitive for this position, and applying now is a low-risk, high-potential step in your job search.
+          </p>
         </div>
 
         {/* Job Context Cards Section */}
