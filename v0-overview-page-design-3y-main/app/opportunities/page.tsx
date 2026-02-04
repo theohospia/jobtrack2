@@ -169,53 +169,39 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
           </div>
         </div>
 
-        {/* Center: Grid Layout */}
-        <div className="flex-1 grid grid-cols-2 gap-4">
-          {/* Left Column */}
-          <div className="flex flex-col gap-2">
-            {/* Role Title - Top Left */}
-            <h3
-              className="text-base font-semibold"
-              style={{ color: "#0F172A" }}
-            >
-              {opportunity.roleTitle}
-            </h3>
-            
-            {/* Company Info - Bottom Left */}
-            <p
-              className="text-[13px] font-medium"
-              style={{ color: "#64748B" }}
-            >
-              {opportunity.company} · {opportunity.location} · {opportunity.workStyle}
-            </p>
-          </div>
+        {/* Center: Company Info, Role Title, Salary */}
+        <div className="flex-1">
+          {/* Company Info - Top */}
+          <p
+            className="text-[13px] font-medium"
+            style={{ color: "#64748B" }}
+          >
+            {opportunity.company} · {opportunity.location} · {opportunity.workStyle} ({opportunity.metaSignals[0]})
+          </p>
+          
+          {/* Role Title */}
+          <h3
+            className="text-base font-semibold mt-1"
+            style={{ color: "#0F172A" }}
+          >
+            {opportunity.roleTitle}
+          </h3>
 
-          {/* Right Column */}
-          <div className="flex flex-col gap-2 text-right">
-            {/* Posted Time - Top Right */}
-            <p
-              className="text-[13px] font-medium"
-              style={{ color: "#64748B" }}
-            >
-              {opportunity.metaSignals[0]}
-            </p>
-            
-            {/* Estimated Salary - Bottom Right */}
-            {opportunity.estimatedSalary && (
-              <div className="flex items-center justify-end gap-1">
-                <p
-                  className="text-sm font-medium"
-                  style={{ color: "#64748B" }}
-                >
-                  {opportunity.estimatedSalary}
-                </p>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="12" cy="12" r="10" stroke="#2563EB" strokeWidth="2.5"/>
-                  <path d="M12 7V12M12 16H12.01" stroke="#2563EB" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </div>
-            )}
-          </div>
+          {/* Estimated Salary - Below Role Title */}
+          {opportunity.estimatedSalary && (
+            <div className="flex items-center gap-1">
+              <p
+                className="text-sm font-medium"
+                style={{ color: "#64748B" }}
+              >
+                {opportunity.estimatedSalary}
+              </p>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10" stroke="#2563EB" strokeWidth="2.5"/>
+                <path d="M12 7V12M12 16H12.01" stroke="#2563EB" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </div>
+          )}
         </div>
 
         {/* Right Side: View More Button */}
