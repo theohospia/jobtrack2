@@ -413,6 +413,83 @@ Required qualifications include strong knowledge of engine mechanics and operati
           </div>
         </div>
 
+        {/* Job Context Cards Section */}
+        <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: 12, marginBottom: 32 }}>
+          {/* Typical Applicant Profile Card */}
+          <div
+            style={{
+              background: "#FFFFFF",
+              border: "1px solid #E5E7EB",
+              borderRadius: 12,
+              padding: 16,
+              display: "flex",
+              alignItems: "center",
+              gap: 16,
+            }}
+          >
+            <div>
+              <p style={{ fontSize: 11, color: "#64748B", fontWeight: 600, margin: "0 0 6px 0", textTransform: "uppercase" }}>
+                Typical Applicant Profile
+              </p>
+              <p style={{ fontSize: 15, color: "#0F172A", fontWeight: 600, margin: 0 }}>
+                Final-year students, Career switchers, 2-3 years experience
+              </p>
+            </div>
+          </div>
+
+          {/* Contract Type Card */}
+          <div
+            style={{
+              background: "#FFFFFF",
+              border: "1px solid #E5E7EB",
+              borderRadius: 12,
+              padding: 16,
+              display: "flex",
+              alignItems: "center",
+              gap: 16,
+            }}
+          >
+            <div>
+              <p style={{ fontSize: 11, color: "#64748B", fontWeight: 600, margin: "0 0 6px 0", textTransform: "uppercase" }}>
+                Contract Type
+              </p>
+              <p style={{ fontSize: 15, color: "#0F172A", fontWeight: 600, margin: 0 }}>
+                Full-time, Permanent • Clear compensation structure
+              </p>
+            </div>
+          </div>
+
+          {/* Company Stage Card */}
+          <div
+            style={{
+              background: "#FFFFFF",
+              border: "1px solid #E5E7EB",
+              borderRadius: 12,
+              padding: 16,
+              display: "flex",
+              alignItems: "center",
+              gap: 16,
+            }}
+          >
+            <div>
+              <p style={{ fontSize: 11, color: "#64748B", fontWeight: 600, margin: "0 0 6px 0", textTransform: "uppercase" }}>
+                Company Stage
+              </p>
+              <p style={{ fontSize: 15, color: "#0F172A", fontWeight: 600, margin: "0 0 8px 0" }}>
+                Enterprise (1,000+ employees)
+              </p>
+              <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
+                <p style={{ fontSize: 13, color: "#64748B", margin: 0 }}>
+                  Scale-up (100–1,000 employees)
+                </p>
+                <p style={{ fontSize: 13, color: "#64748B", margin: 0 }}>
+                  Startup (10–100 employees)
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Skills Gap Breakdown Section */}
         <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 12px 0" }}>
           SKILLS GAP BREAKDOWN:
