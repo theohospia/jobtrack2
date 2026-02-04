@@ -159,7 +159,7 @@ Required qualifications include strong knowledge of engine mechanics and operati
               </div>
               
               {/* Right Column */}
-              <div style={{ display: "flex", flexDirection: "column", gap: 8, textAlign: "right" }}>
+              <div style={{ display: "flex", flexDirection: "column", gap: 8, textAlign: "right", marginTop: 24 }}>
                 <div style={{ display: "flex", alignItems: "center", justifyContent: "flex-end", gap: 6 }}>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="12" cy="12" r="10" stroke="#64748B" strokeWidth="2"/>
