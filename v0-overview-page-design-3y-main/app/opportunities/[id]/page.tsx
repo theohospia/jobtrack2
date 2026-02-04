@@ -279,7 +279,7 @@ Required qualifications include strong knowledge of engine mechanics and operati
         </div>
 
         {/* Why It's a Strong Match Section */}
-        <p style={{ fontSize: 14, fontWeight: 400, color: "#0F172A", margin: "0 0 12px 0" }}>
+        <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 12px 0" }}>
           WHY IT'S A SUPER STRONG MATCH:
         </p>
         <div
@@ -300,7 +300,7 @@ Required qualifications include strong knowledge of engine mechanics and operati
         </div>
 
         {/* Skills Gap Breakdown Section */}
-        <p style={{ fontSize: 14, fontWeight: 400, color: "#0F172A", margin: "0 0 12px 0" }}>
+        <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 12px 0" }}>
           OPTIONAL SKILLS TO STRENGTHEN YOUR APPLICATION:
         </p>
         <div
@@ -373,7 +373,7 @@ Required qualifications include strong knowledge of engine mechanics and operati
         </div>
 
         {/* Who This Role Is Designed For */}
-        <p style={{ fontSize: 14, fontWeight: 400, color: "#0F172A", margin: "0 0 12px 0" }}>
+        <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 12px 0" }}>
           WHO THIS ROLE IS DESIGNED FOR:
         </p>
         <div
@@ -394,7 +394,7 @@ Required qualifications include strong knowledge of engine mechanics and operati
         </div>
 
         {/* What To Expect From The Role */}
-        <p style={{ fontSize: 14, fontWeight: 400, color: "#0F172A", margin: "0 0 12px 0" }}>
+        <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 12px 0" }}>
           WHAT TO EXPECT FROM THE ROLE:
         </p>
         <div
@@ -415,7 +415,7 @@ Required qualifications include strong knowledge of engine mechanics and operati
         </div>
 
         {/* About The Company Environment */}
-        <p style={{ fontSize: 14, fontWeight: 400, color: "#0F172A", margin: "0 0 12px 0" }}>
+        <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 12px 0" }}>
           ABOUT THE COMPANY ENVIRONMENT:
         </p>
         <div
@@ -436,7 +436,7 @@ Required qualifications include strong knowledge of engine mechanics and operati
         </div>
 
         {/* How to Improve Section - Checklist Format */}
-        <p style={{ fontSize: 14, fontWeight: 400, color: "#0F172A", margin: "0 0 12px 0" }}>
+        <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 12px 0" }}>
           PRE-INTERVIEW CHECKLIST:
         </p>
         <div
@@ -512,7 +512,7 @@ Required qualifications include strong knowledge of engine mechanics and operati
         </div>
 
         {/* Job Information Section */}
-        <p style={{ fontSize: 14, fontWeight: 400, color: "#0F172A", margin: "0 0 12px 0" }}>
+        <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 12px 0" }}>
           JOB INFORMATION:
         </p>
         <div
