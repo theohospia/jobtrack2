@@ -394,67 +394,67 @@ Required qualifications include strong knowledge of engine mechanics and operati
           </div>
         </div>
 
-        {/* Job Context Sections */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: 16, marginBottom: 32 }}>
-          {/* Who This Role Is Designed For */}
-          <div
-            style={{
-              background: "#FFFFFF",
-              border: "1px solid #E5E7EB",
-              borderRadius: 12,
-              padding: 20,
-            }}
-          >
-            <p style={{ fontSize: 12, color: "#64748B", fontWeight: 600, margin: "0 0 8px 0", textTransform: "uppercase" }}>
-              WHO THIS ROLE IS DESIGNED FOR
-            </p>
-            <p style={{ fontSize: 14, color: "#0F172A", lineHeight: 1.6, margin: 0 }}>
-              This role is well suited if you are early in your career or transitioning into an analytical role, and you already have hands-on experience through studies, projects, or previous work.
-            </p>
-            <p style={{ fontSize: 14, color: "#0F172A", lineHeight: 1.6, margin: "8px 0 0 0" }}>
-              What matters most here is your ability to work with data and explain your reasoning — not having a long list of past job titles.
-            </p>
-          </div>
+        {/* Who This Role Is Designed For */}
+        <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 12px 0" }}>
+          WHO THIS ROLE IS DESIGNED FOR:
+        </p>
+        <div
+          style={{
+            background: "#FFFFFF",
+            border: "1px solid #E5E7EB",
+            borderRadius: 12,
+            padding: 20,
+            marginBottom: 24,
+          }}
+        >
+          <p style={{ fontSize: 14, color: "#0F172A", lineHeight: 1.6, margin: 0 }}>
+            This role is well suited if you are early in your career or transitioning into an analytical role, and you already have hands-on experience through studies, projects, or previous work.
+          </p>
+          <p style={{ fontSize: 14, color: "#0F172A", lineHeight: 1.6, margin: "8px 0 0 0" }}>
+            What matters most here is your ability to work with data and explain your reasoning — not having a long list of past job titles.
+          </p>
+        </div>
 
-          {/* What To Expect From The Role */}
-          <div
-            style={{
-              background: "#FFFFFF",
-              border: "1px solid #E5E7EB",
-              borderRadius: 12,
-              padding: 20,
-            }}
-          >
-            <p style={{ fontSize: 12, color: "#64748B", fontWeight: 600, margin: "0 0 8px 0", textTransform: "uppercase" }}>
-              WHAT TO EXPECT FROM THE ROLE
-            </p>
-            <p style={{ fontSize: 14, color: "#0F172A", lineHeight: 1.6, margin: 0 }}>
-              This is a full-time, permanent position with a clearly defined compensation structure and a standard interview process.
-            </p>
-            <p style={{ fontSize: 14, color: "#0F172A", lineHeight: 1.6, margin: "8px 0 0 0" }}>
-              You can expect clear expectations, structured onboarding, and a stable working environment.
-            </p>
-          </div>
+        {/* What To Expect From The Role */}
+        <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 12px 0" }}>
+          WHAT TO EXPECT FROM THE ROLE:
+        </p>
+        <div
+          style={{
+            background: "#FFFFFF",
+            border: "1px solid #E5E7EB",
+            borderRadius: 12,
+            padding: 20,
+            marginBottom: 24,
+          }}
+        >
+          <p style={{ fontSize: 14, color: "#0F172A", lineHeight: 1.6, margin: 0 }}>
+            This is a full-time, permanent position with a clearly defined compensation structure and a standard interview process.
+          </p>
+          <p style={{ fontSize: 14, color: "#0F172A", lineHeight: 1.6, margin: "8px 0 0 0" }}>
+            You can expect clear expectations, structured onboarding, and a stable working environment.
+          </p>
+        </div>
 
-          {/* About The Company Environment */}
-          <div
-            style={{
-              background: "#FFFFFF",
-              border: "1px solid #E5E7EB",
-              borderRadius: 12,
-              padding: 20,
-            }}
-          >
-            <p style={{ fontSize: 12, color: "#64748B", fontWeight: 600, margin: "0 0 8px 0", textTransform: "uppercase" }}>
-              ABOUT THE COMPANY ENVIRONMENT
-            </p>
-            <p style={{ fontSize: 14, color: "#0F172A", lineHeight: 1.6, margin: 0 }}>
-              You would be joining a large, established organization with well-defined teams and processes.
-            </p>
-            <p style={{ fontSize: 14, color: "#0F172A", lineHeight: 1.6, margin: "8px 0 0 0" }}>
-              This type of environment tends to offer stability, learning opportunities, and recognizable experience that strengthens your profile over time.
-            </p>
-          </div>
+        {/* About The Company Environment */}
+        <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 12px 0" }}>
+          ABOUT THE COMPANY ENVIRONMENT:
+        </p>
+        <div
+          style={{
+            background: "#FFFFFF",
+            border: "1px solid #E5E7EB",
+            borderRadius: 12,
+            padding: 20,
+            marginBottom: 32,
+          }}
+        >
+          <p style={{ fontSize: 14, color: "#0F172A", lineHeight: 1.6, margin: 0 }}>
+            You would be joining a large, established organization with well-defined teams and processes.
+          </p>
+          <p style={{ fontSize: 14, color: "#0F172A", lineHeight: 1.6, margin: "8px 0 0 0" }}>
+            This type of environment tends to offer stability, learning opportunities, and recognizable experience that strengthens your profile over time.
+          </p>
         </div>
 
         {/* How to Improve Section - Checklist Format */}
