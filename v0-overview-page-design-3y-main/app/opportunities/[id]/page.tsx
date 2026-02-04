@@ -174,7 +174,7 @@ Required qualifications include strong knowledge of engine mechanics and operati
                       <circle cx="12" cy="12" r="10" stroke="#64748B" strokeWidth="2"/>
                       <path d="M9 12H15M12 9V15" stroke="#64748B" strokeWidth="1.5" strokeLinecap="round"/>
                     </svg>
-                    <span style={{ fontSize: 14, color: "#64748B", fontWeight: 500 }}>$32,000 - $38,000</span>
+                    <span style={{ fontSize: 14, color: "#64748B", fontWeight: 500 }}>$32k–$38k · paid internship</span>
                   </div>
                 </div>
                 
@@ -200,7 +200,7 @@ Required qualifications include strong knowledge of engine mechanics and operati
                     e.currentTarget.style.borderColor = "#BFDBFE";
                   }}
                 >
-                  Apply
+                  Apply with confidence
                 </button>
               </div>
             </div>
@@ -216,16 +216,21 @@ Required qualifications include strong knowledge of engine mechanics and operati
             padding: 16,
             marginBottom: 24,
             display: "flex",
-            alignItems: "center",
-            gap: 12,
+            flexDirection: "column",
+            gap: 8,
           }}
         >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="12" r="10" stroke="#2563EB" strokeWidth="2"/>
-            <path d="M10 14L12 16L16 10" stroke="#2563EB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-          <p style={{ fontSize: 14, color: "#1E40AF", fontWeight: 600, margin: 0 }}>
-            Your profile is stronger than most applicants at this stage
+          <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="10" stroke="#2563EB" strokeWidth="2"/>
+              <path d="M10 14L12 16L16 10" stroke="#2563EB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+            <p style={{ fontSize: 14, color: "#1E40AF", fontWeight: 700, margin: 0 }}>
+              You're ahead of most applicants
+            </p>
+          </div>
+          <p style={{ fontSize: 13, color: "#1E40AF", margin: "0 0 0 32px", lineHeight: 1.5 }}>
+            Based on skills match, experience level, and current competition
           </p>
         </div>
 
@@ -244,10 +249,75 @@ Required qualifications include strong knowledge of engine mechanics and operati
             }}
           >
             <p style={{ fontSize: 11, color: "#64748B", fontWeight: 600, margin: 0, textTransform: "uppercase" }}>
-              Company Responsiveness
+              Replies reliably
             </p>
             <p style={{ fontSize: 18, color: "#0F172A", fontWeight: 700, margin: 0 }}>
               Good
+            </p>
+          </div>
+
+          {/* Ghosting Risk Card */}
+          <div
+            style={{
+              background: "#FFFFFF",
+              border: "1px solid #E5E7EB",
+              borderRadius: 12,
+              padding: 16,
+              display: "flex",
+              flexDirection: "column",
+              gap: 8,
+            }}
+          >
+            <p style={{ fontSize: 11, color: "#64748B", fontWeight: 600, margin: 0, textTransform: "uppercase" }}>
+              Low chance of being ghosted
+            </p>
+            <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+              <p style={{ fontSize: 18, color: "#10B981", fontWeight: 700, margin: 0 }}>
+                Low
+              </p>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 16L5 11M10 16L15 11M10 16V5" stroke="#10B981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </div>
+          </div>
+
+          {/* Interview Stages Card */}
+          <div
+            style={{
+              background: "#FFFFFF",
+              border: "1px solid #E5E7EB",
+              borderRadius: 12,
+              padding: 16,
+              display: "flex",
+              flexDirection: "column",
+              gap: 8,
+            }}
+          >
+            <p style={{ fontSize: 11, color: "#64748B", fontWeight: 600, margin: 0, textTransform: "uppercase" }}>
+              Short process
+            </p>
+            <p style={{ fontSize: 18, color: "#0F172A", fontWeight: 700, margin: 0 }}>
+              2 interviews
+            </p>
+          </div>
+
+          {/* Time to Offer Card */}
+          <div
+            style={{
+              background: "#FFFFFF",
+              border: "1px solid #E5E7EB",
+              borderRadius: 12,
+              padding: 16,
+              display: "flex",
+              flexDirection: "column",
+              gap: 8,
+            }}
+          >
+            <p style={{ fontSize: 11, color: "#64748B", fontWeight: 600, margin: 0, textTransform: "uppercase" }}>
+              Fast decision
+            </p>
+            <p style={{ fontSize: 18, color: "#0F172A", fontWeight: 700, margin: 0 }}>
+              ≈2–3 weeks
             </p>
           </div>
 
@@ -331,6 +401,28 @@ Required qualifications include strong knowledge of engine mechanics and operati
           }}
         >
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+            {/* Competition Card - Leading */}
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 12,
+                padding: 16,
+                borderRadius: 8,
+                backgroundColor: "#F0F9FF",
+                border: "1px solid #BFDBFE",
+              }}
+            >
+              <div>
+                <p style={{ fontSize: 12, color: "#1E40AF", fontWeight: 600, margin: "0 0 4px 0" }}>
+                  LOW COMPETITION
+                </p>
+                <p style={{ fontSize: 16, color: "#1E40AF", fontWeight: 700, margin: 0 }}>
+                  Only 24 applicants so far
+                </p>
+              </div>
+            </div>
+
             {/* Match Score Card */}
             <div
               style={{
@@ -347,26 +439,6 @@ Required qualifications include strong knowledge of engine mechanics and operati
                 </p>
                 <p style={{ fontSize: 15, color: "#0F172A", fontWeight: 700, margin: 0 }}>
                   92% of requirements
-                </p>
-              </div>
-            </div>
-
-            {/* Interview Timeline Card */}
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: 12,
-                padding: 16,
-                borderRadius: 8,
-              }}
-            >
-              <div>
-                <p style={{ fontSize: 12, color: "#64748B", fontWeight: 500, margin: "0 0 4px 0" }}>
-                  INTERVIEW SPEED
-                </p>
-                <p style={{ fontSize: 15, color: "#0F172A", fontWeight: 700, margin: 0 }}>
-                  Interviewed in 2 weeks
                 </p>
               </div>
             </div>
@@ -391,7 +463,7 @@ Required qualifications include strong knowledge of engine mechanics and operati
               </div>
             </div>
 
-            {/* Competition Card */}
+            {/* Interview Timeline Card */}
             <div
               style={{
                 display: "flex",
@@ -403,10 +475,10 @@ Required qualifications include strong knowledge of engine mechanics and operati
             >
               <div>
                 <p style={{ fontSize: 12, color: "#64748B", fontWeight: 500, margin: "0 0 4px 0" }}>
-                  LOW COMPETITION
+                  INTERVIEW SPEED
                 </p>
                 <p style={{ fontSize: 15, color: "#0F172A", fontWeight: 700, margin: 0 }}>
-                  Only 24 applicants
+                  Interviewed in 2 weeks
                 </p>
               </div>
             </div>
@@ -423,18 +495,18 @@ Required qualifications include strong knowledge of engine mechanics and operati
               borderRadius: 12,
               padding: 16,
               display: "flex",
-              alignItems: "center",
-              gap: 16,
+              flexDirection: "column",
+              gap: 8,
             }}
           >
-            <div>
-              <p style={{ fontSize: 11, color: "#64748B", fontWeight: 600, margin: "0 0 6px 0", textTransform: "uppercase" }}>
-                Typical Applicant Profile
-              </p>
-              <p style={{ fontSize: 15, color: "#0F172A", fontWeight: 600, margin: 0 }}>
-                Final-year students, Career switchers, 2-3 years experience
-              </p>
-            </div>
+            <p style={{ fontSize: 11, color: "#64748B", fontWeight: 600, margin: "0 0 6px 0", textTransform: "uppercase" }}>
+              You're a good fit if you are:
+            </p>
+            <ul style={{ fontSize: 13, color: "#0F172A", margin: 0, paddingLeft: 20, lineHeight: 1.6 }}>
+              <li>Final-year student</li>
+              <li>Early-career (0–3 years)</li>
+              <li>Career switcher with analytical projects</li>
+            </ul>
           </div>
 
           {/* Contract Type Card */}
@@ -445,18 +517,19 @@ Required qualifications include strong knowledge of engine mechanics and operati
               borderRadius: 12,
               padding: 16,
               display: "flex",
-              alignItems: "center",
-              gap: 16,
+              flexDirection: "column",
+              gap: 8,
             }}
           >
-            <div>
-              <p style={{ fontSize: 11, color: "#64748B", fontWeight: 600, margin: "0 0 6px 0", textTransform: "uppercase" }}>
-                Contract Type
-              </p>
-              <p style={{ fontSize: 15, color: "#0F172A", fontWeight: 600, margin: 0 }}>
-                Full-time, Permanent • Clear compensation structure
-              </p>
-            </div>
+            <p style={{ fontSize: 11, color: "#64748B", fontWeight: 600, margin: "0 0 6px 0", textTransform: "uppercase" }}>
+              Contract Type
+            </p>
+            <p style={{ fontSize: 15, color: "#0F172A", fontWeight: 600, margin: 0 }}>
+              Full-time, Permanent
+            </p>
+            <p style={{ fontSize: 13, color: "#64748B", margin: 0 }}>
+              Clear compensation structure
+            </p>
           </div>
 
           {/* Company Stage Card */}
@@ -467,23 +540,20 @@ Required qualifications include strong knowledge of engine mechanics and operati
               borderRadius: 12,
               padding: 16,
               display: "flex",
-              alignItems: "center",
-              gap: 16,
+              flexDirection: "column",
+              gap: 8,
             }}
           >
-            <div>
-              <p style={{ fontSize: 11, color: "#64748B", fontWeight: 600, margin: "0 0 6px 0", textTransform: "uppercase" }}>
-                Company Stage
-              </p>
-              <p style={{ fontSize: 15, color: "#0F172A", fontWeight: 600, margin: "0 0 8px 0" }}>
-                Enterprise (1,000+ employees)
-              </p>
-              <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
-                <p style={{ fontSize: 13, color: "#64748B", margin: 0 }}>
-                  Scale-up (100–1,000 employees)
+            <p style={{ fontSize: 11, color: "#64748B", fontWeight: 600, margin: "0 0 6px 0", textTransform: "uppercase" }}>
+              Company Stage
+            </p>
+            <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+              <div>
+                <p style={{ fontSize: 13, color: "#0F172A", fontWeight: 600, margin: "0 0 2px 0" }}>
+                  Large, stable company
                 </p>
-                <p style={{ fontSize: 13, color: "#64748B", margin: 0 }}>
-                  Startup (10–100 employees)
+                <p style={{ fontSize: 12, color: "#64748B", margin: 0 }}>
+                  1,000+ employees • Structured teams, clear processes, strong brand
                 </p>
               </div>
             </div>
@@ -492,7 +562,7 @@ Required qualifications include strong knowledge of engine mechanics and operati
 
         {/* Skills Gap Breakdown Section */}
         <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 12px 0" }}>
-          SKILLS GAP BREAKDOWN:
+          OPTIONAL SKILLS TO STRENGTHEN YOUR APPLICATION:
         </p>
         <div
           style={{
@@ -518,12 +588,15 @@ Required qualifications include strong knowledge of engine mechanics and operati
                 </p>
               </div>
             </div>
+            <p style={{ fontSize: 12, color: "#64748B", margin: 0, fontStyle: "italic" }}>
+              You do not need these to apply. They improve interview confidence.
+            </p>
           </div>
 
           {/* Missing Skills */}
           <div>
             <p style={{ fontSize: 13, color: "#64748B", fontWeight: 600, margin: "0 0 12px 0", textTransform: "uppercase" }}>
-              MISSING 8% - Skills to Develop:
+              Skills to Develop (Optional):
             </p>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
               {/* Skill 1 */}
@@ -550,19 +623,19 @@ Required qualifications include strong knowledge of engine mechanics and operati
             {/* Development Tips */}
             <div style={{ marginTop: 16, padding: 12, background: "#F0F9FF", borderRadius: 8, border: "1px solid #BFDBFE" }}>
               <p style={{ fontSize: 12, fontWeight: 600, color: "#1E40AF", margin: "0 0 8px 0" }}>
-                💡 Quick wins to bridge the gap:
+                ⏱️ Quick wins to strengthen your application:
               </p>
               <ul style={{ fontSize: 12, color: "#1E40AF", margin: 0, paddingLeft: 20, lineHeight: 1.6 }}>
-                <li>Take a 1-week SQL optimization course on Udacity or Coursera</li>
-                <li>Build a practice dashboard with sample data to showcase in interviews</li>
+                <li>Advanced SQL course • Can be done in under 7 days</li>
+                <li>Build a practice dashboard • Show it in interviews</li>
               </ul>
             </div>
           </div>
         </div>
 
-        {/* How to Improve Section */}
+        {/* How to Improve Section - Checklist Format */}
         <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 12px 0" }}>
-          HOW CAN YOU IMPROVE INTERVIEW SUCCESS:
+          PRE-INTERVIEW CHECKLIST:
         </p>
         <div
           style={{
@@ -573,130 +646,30 @@ Required qualifications include strong knowledge of engine mechanics and operati
             marginBottom: 32,
           }}
         >
-          <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-            {/* Tip 1 - Application */}
-            <div style={{ borderBottom: "1px solid #E5E7EB", paddingBottom: 16 }}>
-              <div style={{ display: "flex", alignItems: "flex-start", gap: 12, marginBottom: 8 }}>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    width: 32,
-                    height: 32,
-                    background: "#E0E7FF",
-                    borderRadius: "50%",
-                    color: "#2563EB",
-                    fontSize: 16,
-                    fontWeight: 700,
-                    flexShrink: 0,
-                  }}
-                >
-                  1
-                </div>
-                <div style={{ flex: 1 }}>
-                  <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 4px 0" }}>
-                    Craft a targeted cover letter
-                  </p>
-                  <p style={{ fontSize: 13, color: "#64748B", margin: 0, lineHeight: 1.5 }}>
-                    Highlight your quantitative projects and metrics you've achieved. Show them you understand their business and can deliver similar results.
-                  </p>
-                </div>
-              </div>
-            </div>
+          <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+            {/* Checklist Item 1 */}
+            <label style={{ display: "flex", alignItems: "center", gap: 12, cursor: "pointer", fontSize: 14, color: "#0F172A", fontWeight: 500 }}>
+              <input type="checkbox" style={{ width: 20, height: 20, cursor: "pointer" }} />
+              <span>Tailored cover letter with metrics</span>
+            </label>
 
-            {/* Tip 2 - Interview Prep */}
-            <div style={{ borderBottom: "1px solid #E5E7EB", paddingBottom: 16 }}>
-              <div style={{ display: "flex", alignItems: "flex-start", gap: 12, marginBottom: 8 }}>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    width: 32,
-                    height: 32,
-                    background: "#FEF3C7",
-                    borderRadius: "50%",
-                    color: "#D97706",
-                    fontSize: 16,
-                    fontWeight: 700,
-                    flexShrink: 0,
-                  }}
-                >
-                  2
-                </div>
-                <div style={{ flex: 1 }}>
-                  <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 4px 0" }}>
-                    Master your storytelling
-                  </p>
-                  <p style={{ fontSize: 13, color: "#64748B", margin: 0, lineHeight: 1.5 }}>
-                    Practice explaining your analytical approach with real examples. Use the STAR method to describe challenges you've solved and impact you've created.
-                  </p>
-                </div>
-              </div>
-            </div>
+            {/* Checklist Item 2 */}
+            <label style={{ display: "flex", alignItems: "center", gap: 12, cursor: "pointer", fontSize: 14, color: "#0F172A", fontWeight: 500 }}>
+              <input type="checkbox" style={{ width: 20, height: 20, cursor: "pointer" }} />
+              <span>2–3 STAR stories prepared</span>
+            </label>
 
-            {/* Tip 3 - Company Research */}
-            <div style={{ borderBottom: "1px solid #E5E7EB", paddingBottom: 16 }}>
-              <div style={{ display: "flex", alignItems: "flex-start", gap: 12, marginBottom: 8 }}>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    width: 32,
-                    height: 32,
-                    background: "#DCFCE7",
-                    borderRadius: "50%",
-                    color: "#16A34A",
-                    fontSize: 16,
-                    fontWeight: 700,
-                    flexShrink: 0,
-                  }}
-                >
-                  3
-                </div>
-                <div style={{ flex: 1 }}>
-                  <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 4px 0" }}>
-                    Deep dive on company intelligence
-                  </p>
-                  <p style={{ fontSize: 13, color: "#64748B", margin: 0, lineHeight: 1.5 }}>
-                    Research their recent product launches, funding rounds, and quarterly reports. Find 2-3 questions you can ask that show genuine interest.
-                  </p>
-                </div>
-              </div>
-            </div>
+            {/* Checklist Item 3 */}
+            <label style={{ display: "flex", alignItems: "center", gap: 12, cursor: "pointer", fontSize: 14, color: "#0F172A", fontWeight: 500 }}>
+              <input type="checkbox" style={{ width: 20, height: 20, cursor: "pointer" }} />
+              <span>2 smart questions about the company</span>
+            </label>
 
-            {/* Tip 4 - Examples */}
-            <div>
-              <div style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    width: 32,
-                    height: 32,
-                    background: "#F3E8FF",
-                    borderRadius: "50%",
-                    color: "#9333EA",
-                    fontSize: 16,
-                    fontWeight: 700,
-                    flexShrink: 0,
-                  }}
-                >
-                  4
-                </div>
-                <div style={{ flex: 1 }}>
-                  <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 4px 0" }}>
-                    Prepare data-driven examples
-                  </p>
-                  <p style={{ fontSize: 13, color: "#64748B", margin: 0, lineHeight: 1.5 }}>
-                    Have 3-5 concrete examples ready where you made data-driven decisions that resulted in measurable outcomes (increased efficiency, saved costs, etc.).
-                  </p>
-                </div>
-              </div>
-            </div>
+            {/* Checklist Item 4 */}
+            <label style={{ display: "flex", alignItems: "center", gap: 12, cursor: "pointer", fontSize: 14, color: "#0F172A", fontWeight: 500 }}>
+              <input type="checkbox" style={{ width: 20, height: 20, cursor: "pointer" }} />
+              <span>3 data-driven examples rehearsed</span>
+            </label>
           </div>
         </div>
 
@@ -729,7 +702,7 @@ Required qualifications include strong knowledge of engine mechanics and operati
               e.currentTarget.style.boxShadow = "0 4px 12px rgba(37, 99, 235, 0.3)";
             }}
           >
-            Apply – strong match
+            Apply now — you're well positioned
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
