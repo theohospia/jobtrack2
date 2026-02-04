@@ -398,89 +398,12 @@ Required qualifications include strong knowledge of engine mechanics and operati
             marginBottom: 32,
           }}
         >
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
-            {/* Competition Card - Leading */}
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: 12,
-                padding: 16,
-                borderRadius: 8,
-                backgroundColor: "#FFFFFF",
-                border: "1px solid #E5E7EB",
-              }}
-            >
-              <div>
-                <p style={{ fontSize: 12, color: "#0F172A", fontWeight: 600, margin: "0 0 4px 0" }}>
-                  LOW COMPETITION
-                </p>
-                <p style={{ fontSize: 16, color: "#0F172A", fontWeight: 700, margin: 0 }}>
-                  Only 24 applicants so far
-                </p>
-              </div>
-            </div>
-
-            {/* Match Score Card */}
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: 12,
-                padding: 16,
-                borderRadius: 8,
-              }}
-            >
-              <div>
-                <p style={{ fontSize: 12, color: "#64748B", fontWeight: 500, margin: "0 0 4px 0" }}>
-                  PROFILE MATCH
-                </p>
-                <p style={{ fontSize: 15, color: "#0F172A", fontWeight: 700, margin: 0 }}>
-                  92% of requirements
-                </p>
-              </div>
-            </div>
-
-            {/* Experience Alignment Card */}
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: 12,
-                padding: 16,
-                borderRadius: 8,
-              }}
-            >
-              <div>
-                <p style={{ fontSize: 12, color: "#64748B", fontWeight: 500, margin: "0 0 4px 0" }}>
-                  YOUR STRENGTHS
-                </p>
-                <p style={{ fontSize: 15, color: "#0F172A", fontWeight: 700, margin: 0 }}>
-                  Analytics perfectly aligned
-                </p>
-              </div>
-            </div>
-
-            {/* Interview Timeline Card */}
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: 12,
-                padding: 16,
-                borderRadius: 8,
-              }}
-            >
-              <div>
-                <p style={{ fontSize: 12, color: "#64748B", fontWeight: 500, margin: "0 0 4px 0" }}>
-                  INTERVIEW SPEED
-                </p>
-                <p style={{ fontSize: 15, color: "#0F172A", fontWeight: 700, margin: 0 }}>
-                  Interviewed in 2 weeks
-                </p>
-              </div>
-            </div>
-          </div>
+          <p style={{ fontSize: 14, color: "#0F172A", lineHeight: 1.6, margin: 0 }}>
+            Your profile aligns well with this role, both in terms of skills and experience. The hiring process is short, competition remains limited, and the team is actively moving candidates forward.
+          </p>
+          <p style={{ fontSize: 14, color: "#0F172A", lineHeight: 1.6, margin: "12px 0 0 0" }}>
+            You are already competitive for this position, and applying now is a low-risk, high-potential step in your job search.
+          </p>
         </div>
 
         {/* Job Context Cards Section */}
