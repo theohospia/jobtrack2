@@ -174,6 +174,24 @@ Required qualifications include strong knowledge of engine mechanics and operati
                   </svg>
                   <span style={{ fontSize: 14, color: "#64748B", fontWeight: 500 }}>$32,000 - $38,000</span>
                 </div>
+                <button
+                  style={{
+                    background: "#2563EB",
+                    color: "#FFFFFF",
+                    border: "none",
+                    borderRadius: 8,
+                    padding: "10px 20px",
+                    fontSize: 14,
+                    fontWeight: 600,
+                    cursor: "pointer",
+                    marginTop: 16,
+                    transition: "background 0.2s",
+                  }}
+                  onMouseEnter={(e) => e.currentTarget.style.background = "#1D4ED8"}
+                  onMouseLeave={(e) => e.currentTarget.style.background = "#2563EB"}
+                >
+                  Apply
+                </button>
               </div>
             </div>
           </div>
@@ -665,7 +683,7 @@ Required qualifications include strong knowledge of engine mechanics and operati
             e.currentTarget.style.background = "#2563EB"
           }}
         >
-          Apply now
+          Apply – strong match
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
