@@ -147,24 +147,27 @@ Required qualifications include strong knowledge of engine mechanics and operati
 
           {/* Job Title and Company Info */}
           <div style={{ flex: 1 }}>
-            <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 8 }}>
-              <h1 style={{ fontSize: 28, fontWeight: 700, color: "#0F172A", margin: 0 }}>
-                {job.roleTitle}
-              </h1>
-            </div>
-            <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-              <p style={{ fontSize: 16, color: "#64748B", margin: 0, fontWeight: 500 }}>
-                {job.company} · {job.location} · {job.workStyle}
-              </p>
-              <div style={{ display: "flex", alignItems: "center", gap: 24 }}>
-                <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 8 }}>
+              {/* Left Column */}
+              <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                <h1 style={{ fontSize: 28, fontWeight: 700, color: "#0F172A", margin: 0 }}>
+                  {job.roleTitle}
+                </h1>
+                <p style={{ fontSize: 16, color: "#64748B", margin: 0, fontWeight: 500 }}>
+                  {job.company} · {job.location} · {job.workStyle}
+                </p>
+              </div>
+              
+              {/* Right Column */}
+              <div style={{ display: "flex", flexDirection: "column", gap: 8, textAlign: "right" }}>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "flex-end", gap: 6 }}>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="12" cy="12" r="10" stroke="#64748B" strokeWidth="2"/>
                     <path d="M12 6v6l4 2" stroke="#64748B" strokeWidth="2" strokeLinecap="round"/>
                   </svg>
                   <span style={{ fontSize: 14, color: "#64748B", fontWeight: 500 }}>3 days ago</span>
                 </div>
-                <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "flex-end", gap: 6 }}>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="12" cy="12" r="10" stroke="#64748B" strokeWidth="2"/>
                     <path d="M9 12H15M12 9V15" stroke="#64748B" strokeWidth="1.5" strokeLinecap="round"/>
