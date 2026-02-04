@@ -407,15 +407,15 @@ Required qualifications include strong knowledge of engine mechanics and operati
                 gap: 12,
                 padding: 16,
                 borderRadius: 8,
-                backgroundColor: "#1F2937",
-                border: "1px solid #374151",
+                backgroundColor: "#FFFFFF",
+                border: "1px solid #E5E7EB",
               }}
             >
               <div>
-                <p style={{ fontSize: 12, color: "#FFFFFF", fontWeight: 600, margin: "0 0 4px 0" }}>
+                <p style={{ fontSize: 12, color: "#0F172A", fontWeight: 600, margin: "0 0 4px 0" }}>
                   LOW COMPETITION
                 </p>
-                <p style={{ fontSize: 16, color: "#FFFFFF", fontWeight: 700, margin: 0 }}>
+                <p style={{ fontSize: 16, color: "#0F172A", fontWeight: 700, margin: 0 }}>
                   Only 24 applicants so far
                 </p>
               </div>
@@ -619,11 +619,11 @@ Required qualifications include strong knowledge of engine mechanics and operati
             </div>
 
             {/* Development Tips */}
-            <div style={{ marginTop: 16, padding: 12, borderRadius: 8, border: "1px solid #374151", backgroundColor: "#1F2937" }}>
-              <p style={{ fontSize: 12, fontWeight: 600, color: "#FFFFFF", margin: "0 0 8px 0" }}>
+            <div style={{ marginTop: 16, padding: 12, borderRadius: 8, border: "1px solid #E5E7EB", backgroundColor: "#FFFFFF" }}>
+              <p style={{ fontSize: 12, fontWeight: 600, color: "#0F172A", margin: "0 0 8px 0" }}>
                 ⏱️ Quick wins to strengthen your application:
               </p>
-              <ul style={{ fontSize: 12, color: "#FFFFFF", margin: 0, paddingLeft: 20, lineHeight: 1.6 }}>
+              <ul style={{ fontSize: 12, color: "#0F172A", margin: 0, paddingLeft: 20, lineHeight: 1.6 }}>
                 <li>Advanced SQL course • Can be done in under 7 days</li>
                 <li>Build a practice dashboard • Show it in interviews</li>
               </ul>
