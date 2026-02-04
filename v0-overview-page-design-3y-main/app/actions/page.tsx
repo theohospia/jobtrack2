@@ -1,8 +1,10 @@
 "use client"
 
 import { TopNav } from "@/components/top-nav"
+import { useRouter } from "next/navigation"
 
 export default function ActionsPage() {
+  const router = useRouter()
   const secondaryActions = [
     {
       title: "Follow up with TechStart Inc",
@@ -308,6 +310,7 @@ export default function ActionsPage() {
                     padding: "6px 8px",
                     border: "none"
                   }}
+                  onClick={() => router.push(`/actions/${index + 1}`)}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.background = "#1D4ED8"
                   }}
