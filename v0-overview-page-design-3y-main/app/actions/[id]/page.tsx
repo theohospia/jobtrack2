@@ -135,18 +135,8 @@ export default function ActionDetailPage() {
             marginBottom: 24,
           }}
         >
-          {/* Title */}
-          <h1 style={{ fontSize: 28, fontWeight: 700, color: "#0F172A", margin: "0 0 8px 0" }}>
-            {job.title}
-          </h1>
-          
-          {/* Company Info */}
-          <p style={{ fontSize: 14, color: "#64748B", margin: "0 0 16px 0" }}>
-            {job.company} · {job.location} · {job.workType}
-          </p>
-
-          {/* Status Row */}
-          <div style={{ display: "flex", gap: 24, alignItems: "center" }}>
+          {/* Status Row - Above Title */}
+          <div style={{ display: "flex", gap: 24, alignItems: "center", marginBottom: 16 }}>
             <div>
               <p style={{ fontSize: 12, color: "#64748B", margin: "0 0 4px 0", textTransform: "uppercase" }}>
                 Current Status
@@ -164,6 +154,16 @@ export default function ActionDetailPage() {
               </p>
             </div>
           </div>
+
+          {/* Title */}
+          <h1 style={{ fontSize: 28, fontWeight: 700, color: "#0F172A", margin: "0 0 8px 0" }}>
+            {job.title}
+          </h1>
+          
+          {/* Company Info */}
+          <p style={{ fontSize: 14, color: "#64748B", margin: 0 }}>
+            {job.company} · {job.location} · {job.workType}
+          </p>
         </div>
 
         {/* Stages Tracking Section */}
@@ -234,24 +234,24 @@ export default function ActionDetailPage() {
               </div>
             ))}
           </div>
+        </div>
 
-          {/* Progress Bar */}
-          <div style={{ marginTop: 24 }}>
-            <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 8 }}>
-              <span style={{ fontSize: 12, color: "#64748B" }}>Overall Progress</span>
-              <span style={{ fontSize: 12, color: "#0F172A" }}>{Math.round(progressPercentage)}%</span>
-            </div>
-            <div style={{ height: 8, background: "#E5E7EB", borderRadius: 4 }}>
-              <div
-                style={{
-                  width: `${progressPercentage}%`,
-                  height: "100%",
-                  background: "#2563EB",
-                  borderRadius: 4,
-                  transition: "width 0.3s ease",
-                }}
-              />
-            </div>
+        {/* Progress Bar - Between Application Progress and Tasks */}
+        <div style={{ marginBottom: 24 }}>
+          <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 8 }}>
+            <span style={{ fontSize: 12, color: "#64748B" }}>Overall Progress</span>
+            <span style={{ fontSize: 12, color: "#0F172A" }}>{Math.round(progressPercentage)}%</span>
+          </div>
+          <div style={{ height: 8, background: "#E5E7EB", borderRadius: 4 }}>
+            <div
+              style={{
+                width: `${progressPercentage}%`,
+                height: "100%",
+                background: "#2563EB",
+                borderRadius: 4,
+                transition: "width 0.3s ease",
+              }}
+            />
           </div>
         </div>
 
