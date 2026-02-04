@@ -207,6 +207,28 @@ Required qualifications include strong knowledge of engine mechanics and operati
           </div>
         </div>
 
+        {/* Emotional Reassurance Banner */}
+        <div
+          style={{
+            background: "#DBEAFE",
+            border: "1px solid #BFDBFE",
+            borderRadius: 12,
+            padding: 16,
+            marginBottom: 24,
+            display: "flex",
+            alignItems: "center",
+            gap: 12,
+          }}
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="10" stroke="#2563EB" strokeWidth="2"/>
+            <path d="M10 14L12 16L16 10" stroke="#2563EB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+          <p style={{ fontSize: 14, color: "#1E40AF", fontWeight: 600, margin: 0 }}>
+            Your profile is stronger than most applicants at this stage
+          </p>
+        </div>
+
         {/* Company Stats Cards Row */}
         <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 12, marginBottom: 32 }}>
           {/* Company Responsiveness Card */}
