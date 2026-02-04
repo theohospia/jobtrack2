@@ -129,7 +129,7 @@ Required qualifications include strong knowledge of engine mechanics and operati
                   cy="50"
                   r="45"
                   fill="none"
-                  stroke="#2563EB"
+                  stroke="#16A34A"
                   strokeWidth="8"
                   strokeDasharray={`${(job.fitStrength / 100) * 2 * Math.PI * 45} ${2 * Math.PI * 45}`}
                   strokeLinecap="round"
@@ -138,7 +138,7 @@ Required qualifications include strong knowledge of engine mechanics and operati
               </svg>
               {/* Center text */}
               <div style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
-                <span style={{ fontSize: 26, fontWeight: 700, color: "#2563EB" }}>
+                <span style={{ fontSize: 26, fontWeight: 700, color: "#16A34A" }}>
                   {job.fitStrength}%
                 </span>
               </div>
