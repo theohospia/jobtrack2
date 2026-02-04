@@ -556,67 +556,40 @@ Required qualifications include strong knowledge of engine mechanics and operati
             borderRadius: 12,
             padding: 24,
             marginBottom: 24,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            minHeight: 100,
           }}
         >
-          <p
+          <button
             style={{
+              display: "flex",
+              alignItems: "center",
+              gap: 8,
+              padding: "12px 24px",
               fontSize: 14,
-              lineHeight: 1.6,
-              color: "#475569",
-              margin: 0,
-              maxHeight: isExpanded ? "none" : 150,
-              overflow: "hidden",
-              transition: "max-height 0.3s ease-in-out",
+              fontWeight: 600,
+              color: "#2563EB",
+              background: "#FFFFFF",
+              border: "1px solid #2563EB",
+              borderRadius: 8,
+              cursor: "pointer",
+              transition: "all 0.2s",
             }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = "#F0F4F8";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = "#FFFFFF";
+            }}
+            onClick={() => window.open("https://www.safran.fr", "_blank")}
           >
-            Safran is an international high-technology group operating in the fields of aeronautics (propulsion, equipment and interiors), space, and defense. Safran Aircraft Engines designs, manufactures, and markets civil and military aircraft engines with the highest levels of performance, reliability, and environmental compliance.
-
-The Assistant Service Engineer (ASE) will provide leadership, technical direction, and support to the airframer and customers. Main responsibilities include acting as an interface with all levels of customer and company organizations, providing on-site assessments of operations, delivering comprehensive reports on engine issues, and contributing to product and service improvement by identifying operator needs and proposing corrective actions.
-
-Required qualifications include strong knowledge of engine mechanics and operation, technical expertise in engine assembly and maintenance documentation, strong oral and written communication skills, and technical English proficiency. Experience in jet engine manufacturing or aircraft manufacturing is valuable.
-          </p>
-          {!isExpanded && (
-            <button
-              onClick={() => setIsExpanded(true)}
-              style={{
-                marginTop: 12,
-                padding: "8px 16px",
-                fontSize: 14,
-                fontWeight: 500,
-                color: "#2563EB",
-                background: "#F1F5F9",
-                border: "none",
-                borderRadius: 8,
-                cursor: "pointer",
-                transition: "background-color 0.2s",
-              }}
-              onMouseEnter={(e) => e.currentTarget.style.background = "#E2E8F0"}
-              onMouseLeave={(e) => e.currentTarget.style.background = "#F1F5F9"}
-            >
-              View more
-            </button>
-          )}
-          {isExpanded && (
-            <button
-              onClick={() => setIsExpanded(false)}
-              style={{
-                marginTop: 12,
-                padding: "8px 16px",
-                fontSize: 14,
-                fontWeight: 500,
-                color: "#2563EB",
-                background: "#F1F5F9",
-                border: "none",
-                borderRadius: 8,
-                cursor: "pointer",
-                transition: "background-color 0.2s",
-              }}
-              onMouseEnter={(e) => e.currentTarget.style.background = "#E2E8F0"}
-              onMouseLeave={(e) => e.currentTarget.style.background = "#F1F5F9"}
-            >
-              View less
-            </button>
-          )}
+            Open original post
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 13H13V3H8M13 3L3 13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </button>
         </div>
       </main>
     </div>
