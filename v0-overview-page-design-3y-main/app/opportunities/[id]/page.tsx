@@ -138,7 +138,7 @@ Required qualifications include strong knowledge of engine mechanics and operati
               </svg>
               {/* Center text */}
               <div style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
-                <span style={{ fontSize: 26, fontWeight: 400, color: "#2563EB" }}>
+                <span style={{ fontSize: 26, fontWeight: 700, color: "#2563EB" }}>
                   {job.fitStrength}%
                 </span>
               </div>
@@ -150,7 +150,7 @@ Required qualifications include strong knowledge of engine mechanics and operati
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 8 }}>
               {/* Left Column - Title & Company */}
               <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-                <h1 style={{ fontSize: 28, fontWeight: 400, color: "#0F172A", margin: 0 }}>
+                <h1 style={{ fontSize: 28, fontWeight: 700, color: "#0F172A", margin: 0 }}>
                   {job.roleTitle}
                 </h1>
                 <p style={{ fontSize: 16, color: "#64748B", margin: 0, fontWeight: 400 }}>
