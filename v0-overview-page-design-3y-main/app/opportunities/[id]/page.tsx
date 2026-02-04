@@ -450,28 +450,48 @@ Required qualifications include strong knowledge of engine mechanics and operati
         >
           <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
             {/* Checklist Item 1 */}
-            <label style={{ display: "flex", alignItems: "center", gap: 12, cursor: "pointer", fontSize: 14, color: "#0F172A", fontWeight: 400 }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 12, fontSize: 14, color: "#0F172A", fontWeight: 400 }}>
               <input type="checkbox" style={{ width: 20, height: 20, cursor: "pointer" }} />
-              <span>Tailored cover letter with metrics</span>
-            </label>
+              <a 
+                href="/opportunities/prep/cover-letter" 
+                style={{ color: "#2563EB", textDecoration: "underline", cursor: "pointer" }}
+              >
+                Tailored cover letter with metrics
+              </a>
+            </div>
 
             {/* Checklist Item 2 */}
-            <label style={{ display: "flex", alignItems: "center", gap: 12, cursor: "pointer", fontSize: 14, color: "#0F172A", fontWeight: 400 }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 12, fontSize: 14, color: "#0F172A", fontWeight: 400 }}>
               <input type="checkbox" style={{ width: 20, height: 20, cursor: "pointer" }} />
-              <span>2–3 STAR stories prepared</span>
-            </label>
+              <a 
+                href="/opportunities/prep/star-stories" 
+                style={{ color: "#2563EB", textDecoration: "underline", cursor: "pointer" }}
+              >
+                2–3 STAR stories prepared
+              </a>
+            </div>
 
             {/* Checklist Item 3 */}
-            <label style={{ display: "flex", alignItems: "center", gap: 12, cursor: "pointer", fontSize: 14, color: "#0F172A", fontWeight: 400 }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 12, fontSize: 14, color: "#0F172A", fontWeight: 400 }}>
               <input type="checkbox" style={{ width: 20, height: 20, cursor: "pointer" }} />
-              <span>2 smart questions about the company</span>
-            </label>
+              <a 
+                href="/opportunities/prep/smart-questions" 
+                style={{ color: "#2563EB", textDecoration: "underline", cursor: "pointer" }}
+              >
+                2 smart questions about the company
+              </a>
+            </div>
 
             {/* Checklist Item 4 */}
-            <label style={{ display: "flex", alignItems: "center", gap: 12, cursor: "pointer", fontSize: 14, color: "#0F172A", fontWeight: 400 }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 12, fontSize: 14, color: "#0F172A", fontWeight: 400 }}>
               <input type="checkbox" style={{ width: 20, height: 20, cursor: "pointer" }} />
-              <span>3 data-driven examples rehearsed</span>
-            </label>
+              <a 
+                href="/opportunities/prep/data-examples" 
+                style={{ color: "#2563EB", textDecoration: "underline", cursor: "pointer" }}
+              >
+                3 data-driven examples rehearsed
+              </a>
+            </div>
           </div>
         </div>
 
