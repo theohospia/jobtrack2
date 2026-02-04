@@ -601,6 +601,42 @@ Required qualifications include strong knowledge of engine mechanics and operati
           </div>
         </div>
 
+        {/* Inline Sticky Apply Button */}
+        <div style={{ marginBottom: 32, display: "flex", justifyContent: "flex-end" }}>
+          <button
+            style={{
+              position: "sticky",
+              bottom: 20,
+              background: "#1D4ED8",
+              color: "#FFFFFF",
+              fontSize: 15,
+              fontWeight: 700,
+              padding: "12px 24px",
+              borderRadius: 8,
+              border: "none",
+              cursor: "pointer",
+              transition: "all 0.2s",
+              boxShadow: "0 4px 12px rgba(37, 99, 235, 0.3)",
+              display: "flex",
+              alignItems: "center",
+              gap: 8,
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = "#1E40AF";
+              e.currentTarget.style.boxShadow = "0 6px 16px rgba(37, 99, 235, 0.4)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = "#1D4ED8";
+              e.currentTarget.style.boxShadow = "0 4px 12px rgba(37, 99, 235, 0.3)";
+            }}
+          >
+            Apply – strong match
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </button>
+        </div>
+
         {/* Job Information Section */}
         <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 12px 0" }}>
           JOB INFORMATION:
@@ -674,40 +710,6 @@ Required qualifications include strong knowledge of engine mechanics and operati
             </button>
           )}
         </div>
-
-        {/* Sticky Apply Now Button */}
-        <button
-          className="flex items-center gap-2 cursor-pointer text-sm font-medium transition-colors rounded-lg px-4 py-3 whitespace-nowrap flex-shrink-0"
-          style={{
-            position: "fixed",
-            bottom: 24,
-            right: 24,
-            background: "#1D4ED8",
-            color: "#FFFFFF",
-            zIndex: 40,
-            fontSize: 15,
-            fontWeight: 700,
-            padding: "12px 24px",
-            borderRadius: 8,
-            border: "none",
-            cursor: "pointer",
-            transition: "all 0.2s",
-            boxShadow: "0 4px 12px rgba(37, 99, 235, 0.3)",
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.background = "#1E40AF";
-            e.currentTarget.style.boxShadow = "0 6px 16px rgba(37, 99, 235, 0.4)";
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.background = "#1D4ED8";
-            e.currentTarget.style.boxShadow = "0 4px 12px rgba(37, 99, 235, 0.3)";
-          }}
-        >
-          Apply – strong match
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-        </button>
       </main>
     </div>
   )
