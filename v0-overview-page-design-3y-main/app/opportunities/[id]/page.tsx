@@ -409,7 +409,6 @@ Required qualifications include strong knowledge of engine mechanics and operati
                 gap: 12,
                 padding: 16,
                 borderRadius: 8,
-                backgroundColor: "#F0F9FF",
                 border: "1px solid #BFDBFE",
               }}
             >
@@ -621,7 +620,7 @@ Required qualifications include strong knowledge of engine mechanics and operati
             </div>
 
             {/* Development Tips */}
-            <div style={{ marginTop: 16, padding: 12, background: "#F0F9FF", borderRadius: 8, border: "1px solid #BFDBFE" }}>
+            <div style={{ marginTop: 16, padding: 12, borderRadius: 8, border: "1px solid #BFDBFE" }}>
               <p style={{ fontSize: 12, fontWeight: 600, color: "#1E40AF", margin: "0 0 8px 0" }}>
                 ⏱️ Quick wins to strengthen your application:
               </p>
