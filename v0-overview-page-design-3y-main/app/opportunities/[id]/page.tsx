@@ -253,6 +253,74 @@ Required qualifications include strong knowledge of engine mechanics and operati
           </p>
         </div>
 
+        {/* Hiring Transparency Cards Section */}
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 12, marginBottom: 32 }}>
+          {/* Ghosting Risk Card */}
+          <div
+            style={{
+              background: "#FFFFFF",
+              border: "1px solid #E5E7EB",
+              borderRadius: 12,
+              padding: 16,
+              display: "flex",
+              flexDirection: "column",
+              gap: 8,
+            }}
+          >
+            <p style={{ fontSize: 11, color: "#64748B", fontWeight: 600, margin: 0, textTransform: "uppercase" }}>
+              Low chance of being ghosted
+            </p>
+            <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+              <p style={{ fontSize: 18, color: "#0F172A", fontWeight: 700, margin: 0 }}>
+                Low
+              </p>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 16L5 11M10 16L15 11M10 16V5" stroke="#0F172A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </div>
+          </div>
+
+          {/* Interview Stages Card */}
+          <div
+            style={{
+              background: "#FFFFFF",
+              border: "1px solid #E5E7EB",
+              borderRadius: 12,
+              padding: 16,
+              display: "flex",
+              flexDirection: "column",
+              gap: 8,
+            }}
+          >
+            <p style={{ fontSize: 11, color: "#64748B", fontWeight: 600, margin: 0, textTransform: "uppercase" }}>
+              Short process
+            </p>
+            <p style={{ fontSize: 18, color: "#0F172A", fontWeight: 700, margin: 0 }}>
+              2 interviews
+            </p>
+          </div>
+
+          {/* Time to Offer Card */}
+          <div
+            style={{
+              background: "#FFFFFF",
+              border: "1px solid #E5E7EB",
+              borderRadius: 12,
+              padding: 16,
+              display: "flex",
+              flexDirection: "column",
+              gap: 8,
+            }}
+          >
+            <p style={{ fontSize: 11, color: "#64748B", fontWeight: 600, margin: 0, textTransform: "uppercase" }}>
+              Fast decision
+            </p>
+            <p style={{ fontSize: 18, color: "#0F172A", fontWeight: 700, margin: 0 }}>
+              ≈2–3 weeks
+            </p>
+          </div>
+        </div>
+
         {/* Job Context Cards Section */}
         <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 12, marginBottom: 32 }}>
           {/* Typical Applicant Profile Card */}
