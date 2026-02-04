@@ -414,7 +414,7 @@ Required qualifications include strong knowledge of engine mechanics and operati
         </div>
 
         {/* Job Context Cards Section */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: 12, marginBottom: 32 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 12, marginBottom: 32 }}>
           {/* Typical Applicant Profile Card */}
           <div
             style={{
