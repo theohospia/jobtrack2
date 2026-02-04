@@ -574,7 +574,7 @@ Required qualifications include strong knowledge of engine mechanics and operati
           {/* Match Summary */}
           <div style={{ marginBottom: 24, paddingBottom: 24, borderBottom: "1px solid #E5E7EB" }}>
             <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 40, height: 40, background: "#DBEAFE", borderRadius: "50%", color: "#2563EB", fontSize: 18, fontWeight: 700 }}>
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 40, height: 40, background: "#DCFCE7", borderRadius: "50%", color: "#16A34A", fontSize: 18, fontWeight: 700 }}>
                 ✓
               </div>
               <div>
