@@ -148,7 +148,7 @@ Required qualifications include strong knowledge of engine mechanics and operati
           {/* Job Title and Company Info */}
           <div style={{ flex: 1 }}>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 8 }}>
-              {/* Left Column */}
+              {/* Left Column - Title & Company */}
               <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
                 <h1 style={{ fontSize: 28, fontWeight: 700, color: "#0F172A", margin: 0 }}>
                   {job.roleTitle}
@@ -158,37 +158,47 @@ Required qualifications include strong knowledge of engine mechanics and operati
                 </p>
               </div>
               
-              {/* Right Column */}
-              <div style={{ display: "flex", flexDirection: "column", gap: 8, textAlign: "right", marginTop: 24 }}>
-                <div style={{ display: "flex", alignItems: "center", justifyContent: "flex-end", gap: 6 }}>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="12" cy="12" r="10" stroke="#64748B" strokeWidth="2"/>
-                    <path d="M12 6v6l4 2" stroke="#64748B" strokeWidth="2" strokeLinecap="round"/>
-                  </svg>
-                  <span style={{ fontSize: 14, color: "#64748B", fontWeight: 500 }}>3 days ago</span>
+              {/* Right Column - Time, Salary, Top Apply Button */}
+              <div style={{ display: "flex", flexDirection: "column", gap: 12, textAlign: "right", marginTop: 24 }}>
+                {/* Time and Salary */}
+                <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                  <div style={{ display: "flex", alignItems: "center", justifyContent: "flex-end", gap: 6 }}>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="12" cy="12" r="10" stroke="#64748B" strokeWidth="2"/>
+                      <path d="M12 6v6l4 2" stroke="#64748B" strokeWidth="2" strokeLinecap="round"/>
+                    </svg>
+                    <span style={{ fontSize: 14, color: "#64748B", fontWeight: 500 }}>3 days ago</span>
+                  </div>
+                  <div style={{ display: "flex", alignItems: "center", justifyContent: "flex-end", gap: 6 }}>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="12" cy="12" r="10" stroke="#64748B" strokeWidth="2"/>
+                      <path d="M9 12H15M12 9V15" stroke="#64748B" strokeWidth="1.5" strokeLinecap="round"/>
+                    </svg>
+                    <span style={{ fontSize: 14, color: "#64748B", fontWeight: 500 }}>$32,000 - $38,000</span>
+                  </div>
                 </div>
-                <div style={{ display: "flex", alignItems: "center", justifyContent: "flex-end", gap: 6 }}>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="12" cy="12" r="10" stroke="#64748B" strokeWidth="2"/>
-                    <path d="M9 12H15M12 9V15" stroke="#64748B" strokeWidth="1.5" strokeLinecap="round"/>
-                  </svg>
-                  <span style={{ fontSize: 14, color: "#64748B", fontWeight: 500 }}>$32,000 - $38,000</span>
-                </div>
+                
+                {/* Top Apply Button - Secondary */}
                 <button
                   style={{
-                    background: "#2563EB",
-                    color: "#FFFFFF",
-                    border: "none",
+                    background: "#E0E7FF",
+                    color: "#2563EB",
+                    border: "1px solid #BFDBFE",
                     borderRadius: 8,
-                    padding: "10px 20px",
-                    fontSize: 14,
+                    padding: "8px 16px",
+                    fontSize: 13,
                     fontWeight: 600,
                     cursor: "pointer",
-                    marginTop: 16,
-                    transition: "background 0.2s",
+                    transition: "all 0.2s",
                   }}
-                  onMouseEnter={(e) => e.currentTarget.style.background = "#1D4ED8"}
-                  onMouseLeave={(e) => e.currentTarget.style.background = "#2563EB"}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = "#C7D2FE";
+                    e.currentTarget.style.borderColor = "#A5B4FC";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = "#E0E7FF";
+                    e.currentTarget.style.borderColor = "#BFDBFE";
+                  }}
                 >
                   Apply
                 </button>
@@ -667,20 +677,30 @@ Required qualifications include strong knowledge of engine mechanics and operati
 
         {/* Sticky Apply Now Button */}
         <button
-          className="flex items-center gap-2 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2 whitespace-nowrap flex-shrink-0"
+          className="flex items-center gap-2 cursor-pointer text-sm font-medium transition-colors rounded-lg px-4 py-3 whitespace-nowrap flex-shrink-0"
           style={{
             position: "fixed",
             bottom: 24,
             right: 24,
-            background: "#2563EB",
+            background: "#1D4ED8",
             color: "#FFFFFF",
             zIndex: 40,
+            fontSize: 15,
+            fontWeight: 700,
+            padding: "12px 24px",
+            borderRadius: 8,
+            border: "none",
+            cursor: "pointer",
+            transition: "all 0.2s",
+            boxShadow: "0 4px 12px rgba(37, 99, 235, 0.3)",
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.background = "#1D4ED8"
+            e.currentTarget.style.background = "#1E40AF";
+            e.currentTarget.style.boxShadow = "0 6px 16px rgba(37, 99, 235, 0.4)";
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.background = "#2563EB"
+            e.currentTarget.style.background = "#1D4ED8";
+            e.currentTarget.style.boxShadow = "0 4px 12px rgba(37, 99, 235, 0.3)";
           }}
         >
           Apply – strong match
