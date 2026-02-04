@@ -199,9 +199,6 @@ Required qualifications include strong knowledge of engine mechanics and operati
             <p style={{ fontSize: 18, color: "#0F172A", fontWeight: 700, margin: 0 }}>
               78%
             </p>
-            <p style={{ fontSize: 12, color: "#64748B", margin: 0 }}>
-              of applicants get responses
-            </p>
           </div>
 
           {/* Avg Response Time Card */}
@@ -221,9 +218,6 @@ Required qualifications include strong knowledge of engine mechanics and operati
             </p>
             <p style={{ fontSize: 18, color: "#0F172A", fontWeight: 700, margin: 0 }}>
               2.5 days
-            </p>
-            <p style={{ fontSize: 12, color: "#64748B", margin: 0 }}>
-              typically responds quickly
             </p>
           </div>
 
@@ -250,9 +244,6 @@ Required qualifications include strong knowledge of engine mechanics and operati
                 <path d="M10 16L5 11M10 16L15 11M10 16V5" stroke="#10B981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>
-            <p style={{ fontSize: 12, color: "#64748B", margin: 0 }}>
-              reliable company
-            </p>
           </div>
 
           {/* Interview Stages Count Card */}
@@ -273,9 +264,6 @@ Required qualifications include strong knowledge of engine mechanics and operati
             <p style={{ fontSize: 18, color: "#0F172A", fontWeight: 700, margin: 0 }}>
               3 rounds
             </p>
-            <p style={{ fontSize: 12, color: "#64748B", margin: 0 }}>
-              typical interview process
-            </p>
           </div>
 
           {/* Time-to-Offer Estimate Card */}
@@ -295,9 +283,6 @@ Required qualifications include strong knowledge of engine mechanics and operati
             </p>
             <p style={{ fontSize: 18, color: "#0F172A", fontWeight: 700, margin: 0 }}>
               3-4 weeks
-            </p>
-            <p style={{ fontSize: 12, color: "#64748B", margin: 0 }}>
-              from first interview
             </p>
           </div>
         </div>
