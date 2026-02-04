@@ -321,6 +321,79 @@ Required qualifications include strong knowledge of engine mechanics and operati
           </p>
         </div>
 
+        {/* Skills Gap Breakdown Section */}
+        <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 12px 0" }}>
+          OPTIONAL SKILLS TO STRENGTHEN YOUR APPLICATION:
+        </p>
+        <div
+          style={{
+            background: "#FFFFFF",
+            border: "1px solid #E5E7EB",
+            borderRadius: 12,
+            padding: 24,
+            marginBottom: 32,
+          }}
+        >
+          {/* Match Summary */}
+          <div style={{ marginBottom: 24, paddingBottom: 24, borderBottom: "1px solid #E5E7EB" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 40, height: 40, background: "#DBEAFE", borderRadius: "50%", color: "#2563EB", fontSize: 18, fontWeight: 700 }}>
+                ✓
+              </div>
+              <div>
+                <p style={{ fontSize: 13, color: "#64748B", fontWeight: 500, margin: "0 0 4px 0" }}>
+                  YOU MATCH
+                </p>
+                <p style={{ fontSize: 18, color: "#0F172A", fontWeight: 700, margin: 0 }}>
+                  92% of requirements
+                </p>
+              </div>
+            </div>
+            <p style={{ fontSize: 12, color: "#64748B", margin: 0, fontStyle: "italic" }}>
+              You do not need these to apply. They improve interview confidence.
+            </p>
+          </div>
+
+          {/* Missing Skills */}
+          <div>
+            <p style={{ fontSize: 13, color: "#64748B", fontWeight: 600, margin: "0 0 12px 0", textTransform: "uppercase" }}>
+              Skills to Develop (Optional):
+            </p>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+              {/* Skill 1 */}
+              <div style={{ padding: 12, background: "#F8FAFC", borderRadius: 8, border: "1px solid #E5E7EB" }}>
+                <p style={{ fontSize: 13, fontWeight: 600, color: "#0F172A", margin: "0 0 4px 0" }}>
+                  Advanced SQL
+                </p>
+                <p style={{ fontSize: 12, color: "#64748B", margin: 0, lineHeight: 1.4 }}>
+                  Experience with complex query optimization and database performance tuning
+                </p>
+              </div>
+
+              {/* Skill 2 */}
+              <div style={{ padding: 12, background: "#F8FAFC", borderRadius: 8, border: "1px solid #E5E7EB" }}>
+                <p style={{ fontSize: 13, fontWeight: 600, color: "#0F172A", margin: "0 0 4px 0" }}>
+                  Tableau/Power BI
+                </p>
+                <p style={{ fontSize: 12, color: "#64748B", margin: 0, lineHeight: 1.4 }}>
+                  Building interactive dashboards and real-time visualizations for stakeholders
+                </p>
+              </div>
+            </div>
+
+            {/* Development Tips */}
+            <div style={{ marginTop: 16, padding: 12, borderRadius: 8, border: "1px solid #E5E7EB", backgroundColor: "#FFFFFF" }}>
+              <p style={{ fontSize: 12, fontWeight: 600, color: "#0F172A", margin: "0 0 8px 0" }}>
+                ⏱️ Quick wins to strengthen your application:
+              </p>
+              <ul style={{ fontSize: 12, color: "#0F172A", margin: 0, paddingLeft: 20, lineHeight: 1.6 }}>
+                <li>Advanced SQL course • Can be done in under 7 days</li>
+                <li>Build a practice dashboard • Show it in interviews</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
         {/* Job Context Cards Section */}
         <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 12, marginBottom: 32 }}>
           {/* Typical Applicant Profile Card */}
@@ -392,79 +465,6 @@ Required qualifications include strong knowledge of engine mechanics and operati
                   1,000+ employees • Structured teams, clear processes, strong brand
                 </p>
               </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Skills Gap Breakdown Section */}
-        <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 12px 0" }}>
-          OPTIONAL SKILLS TO STRENGTHEN YOUR APPLICATION:
-        </p>
-        <div
-          style={{
-            background: "#FFFFFF",
-            border: "1px solid #E5E7EB",
-            borderRadius: 12,
-            padding: 24,
-            marginBottom: 32,
-          }}
-        >
-          {/* Match Summary */}
-          <div style={{ marginBottom: 24, paddingBottom: 24, borderBottom: "1px solid #E5E7EB" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 40, height: 40, background: "#DBEAFE", borderRadius: "50%", color: "#2563EB", fontSize: 18, fontWeight: 700 }}>
-                ✓
-              </div>
-              <div>
-                <p style={{ fontSize: 13, color: "#64748B", fontWeight: 500, margin: "0 0 4px 0" }}>
-                  YOU MATCH
-                </p>
-                <p style={{ fontSize: 18, color: "#0F172A", fontWeight: 700, margin: 0 }}>
-                  92% of requirements
-                </p>
-              </div>
-            </div>
-            <p style={{ fontSize: 12, color: "#64748B", margin: 0, fontStyle: "italic" }}>
-              You do not need these to apply. They improve interview confidence.
-            </p>
-          </div>
-
-          {/* Missing Skills */}
-          <div>
-            <p style={{ fontSize: 13, color: "#64748B", fontWeight: 600, margin: "0 0 12px 0", textTransform: "uppercase" }}>
-              Skills to Develop (Optional):
-            </p>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
-              {/* Skill 1 */}
-              <div style={{ padding: 12, background: "#F8FAFC", borderRadius: 8, border: "1px solid #E5E7EB" }}>
-                <p style={{ fontSize: 13, fontWeight: 600, color: "#0F172A", margin: "0 0 4px 0" }}>
-                  Advanced SQL
-                </p>
-                <p style={{ fontSize: 12, color: "#64748B", margin: 0, lineHeight: 1.4 }}>
-                  Experience with complex query optimization and database performance tuning
-                </p>
-              </div>
-
-              {/* Skill 2 */}
-              <div style={{ padding: 12, background: "#F8FAFC", borderRadius: 8, border: "1px solid #E5E7EB" }}>
-                <p style={{ fontSize: 13, fontWeight: 600, color: "#0F172A", margin: "0 0 4px 0" }}>
-                  Tableau/Power BI
-                </p>
-                <p style={{ fontSize: 12, color: "#64748B", margin: 0, lineHeight: 1.4 }}>
-                  Building interactive dashboards and real-time visualizations for stakeholders
-                </p>
-              </div>
-            </div>
-
-            {/* Development Tips */}
-            <div style={{ marginTop: 16, padding: 12, borderRadius: 8, border: "1px solid #E5E7EB", backgroundColor: "#FFFFFF" }}>
-              <p style={{ fontSize: 12, fontWeight: 600, color: "#0F172A", margin: "0 0 8px 0" }}>
-                ⏱️ Quick wins to strengthen your application:
-              </p>
-              <ul style={{ fontSize: 12, color: "#0F172A", margin: 0, paddingLeft: 20, lineHeight: 1.6 }}>
-                <li>Advanced SQL course • Can be done in under 7 days</li>
-                <li>Build a practice dashboard • Show it in interviews</li>
-              </ul>
             </div>
           </div>
         </div>
