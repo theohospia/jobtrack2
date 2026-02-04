@@ -180,8 +180,8 @@ Required qualifications include strong knowledge of engine mechanics and operati
         </div>
 
         {/* Company Stats Cards Row */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 12, marginBottom: 32 }}>
-          {/* Response Rate Card */}
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 12, marginBottom: 32 }}>
+          {/* Company Responsiveness Card */}
           <div
             style={{
               background: "#FFFFFF",
@@ -194,30 +194,10 @@ Required qualifications include strong knowledge of engine mechanics and operati
             }}
           >
             <p style={{ fontSize: 11, color: "#64748B", fontWeight: 600, margin: 0, textTransform: "uppercase" }}>
-              Response Rate
+              Company Responsiveness
             </p>
             <p style={{ fontSize: 18, color: "#0F172A", fontWeight: 700, margin: 0 }}>
-              78%
-            </p>
-          </div>
-
-          {/* Avg Response Time Card */}
-          <div
-            style={{
-              background: "#FFFFFF",
-              border: "1px solid #E5E7EB",
-              borderRadius: 12,
-              padding: 16,
-              display: "flex",
-              flexDirection: "column",
-              gap: 8,
-            }}
-          >
-            <p style={{ fontSize: 11, color: "#64748B", fontWeight: 600, margin: 0, textTransform: "uppercase" }}>
-              Avg Response Time
-            </p>
-            <p style={{ fontSize: 18, color: "#0F172A", fontWeight: 700, margin: 0 }}>
-              2.5 days
+              Good
             </p>
           </div>
 
@@ -246,7 +226,7 @@ Required qualifications include strong knowledge of engine mechanics and operati
             </div>
           </div>
 
-          {/* Interview Stages Count Card */}
+          {/* Interview Stages Card */}
           <div
             style={{
               background: "#FFFFFF",
@@ -262,11 +242,11 @@ Required qualifications include strong knowledge of engine mechanics and operati
               Interview Stages
             </p>
             <p style={{ fontSize: 18, color: "#0F172A", fontWeight: 700, margin: 0 }}>
-              3 rounds
+              2 steps
             </p>
           </div>
 
-          {/* Time-to-Offer Estimate Card */}
+          {/* Time to Offer Card */}
           <div
             style={{
               background: "#FFFFFF",
@@ -279,10 +259,10 @@ Required qualifications include strong knowledge of engine mechanics and operati
             }}
           >
             <p style={{ fontSize: 11, color: "#64748B", fontWeight: 600, margin: 0, textTransform: "uppercase" }}>
-              Time-to-Offer
+              Time to Offer
             </p>
             <p style={{ fontSize: 18, color: "#0F172A", fontWeight: 700, margin: 0 }}>
-              3-4 weeks
+              ~2–3 weeks
             </p>
           </div>
         </div>
