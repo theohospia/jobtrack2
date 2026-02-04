@@ -179,6 +179,129 @@ Required qualifications include strong knowledge of engine mechanics and operati
           </div>
         </div>
 
+        {/* Company Stats Cards Row */}
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 12, marginBottom: 32 }}>
+          {/* Response Rate Card */}
+          <div
+            style={{
+              background: "#FFFFFF",
+              border: "1px solid #E5E7EB",
+              borderRadius: 12,
+              padding: 16,
+              display: "flex",
+              flexDirection: "column",
+              gap: 8,
+            }}
+          >
+            <p style={{ fontSize: 11, color: "#64748B", fontWeight: 600, margin: 0, textTransform: "uppercase" }}>
+              Response Rate
+            </p>
+            <p style={{ fontSize: 18, color: "#0F172A", fontWeight: 700, margin: 0 }}>
+              78%
+            </p>
+            <p style={{ fontSize: 12, color: "#64748B", margin: 0 }}>
+              of applicants get responses
+            </p>
+          </div>
+
+          {/* Avg Response Time Card */}
+          <div
+            style={{
+              background: "#FFFFFF",
+              border: "1px solid #E5E7EB",
+              borderRadius: 12,
+              padding: 16,
+              display: "flex",
+              flexDirection: "column",
+              gap: 8,
+            }}
+          >
+            <p style={{ fontSize: 11, color: "#64748B", fontWeight: 600, margin: 0, textTransform: "uppercase" }}>
+              Avg Response Time
+            </p>
+            <p style={{ fontSize: 18, color: "#0F172A", fontWeight: 700, margin: 0 }}>
+              2.5 days
+            </p>
+            <p style={{ fontSize: 12, color: "#64748B", margin: 0 }}>
+              typically responds quickly
+            </p>
+          </div>
+
+          {/* Ghosting Risk Card */}
+          <div
+            style={{
+              background: "#FFFFFF",
+              border: "1px solid #E5E7EB",
+              borderRadius: 12,
+              padding: 16,
+              display: "flex",
+              flexDirection: "column",
+              gap: 8,
+            }}
+          >
+            <p style={{ fontSize: 11, color: "#64748B", fontWeight: 600, margin: 0, textTransform: "uppercase" }}>
+              Ghosting Risk
+            </p>
+            <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+              <p style={{ fontSize: 18, color: "#10B981", fontWeight: 700, margin: 0 }}>
+                Low
+              </p>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 16L5 11M10 16L15 11M10 16V5" stroke="#10B981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </div>
+            <p style={{ fontSize: 12, color: "#64748B", margin: 0 }}>
+              reliable company
+            </p>
+          </div>
+
+          {/* Interview Stages Count Card */}
+          <div
+            style={{
+              background: "#FFFFFF",
+              border: "1px solid #E5E7EB",
+              borderRadius: 12,
+              padding: 16,
+              display: "flex",
+              flexDirection: "column",
+              gap: 8,
+            }}
+          >
+            <p style={{ fontSize: 11, color: "#64748B", fontWeight: 600, margin: 0, textTransform: "uppercase" }}>
+              Interview Stages
+            </p>
+            <p style={{ fontSize: 18, color: "#0F172A", fontWeight: 700, margin: 0 }}>
+              3 rounds
+            </p>
+            <p style={{ fontSize: 12, color: "#64748B", margin: 0 }}>
+              typical interview process
+            </p>
+          </div>
+
+          {/* Time-to-Offer Estimate Card */}
+          <div
+            style={{
+              background: "#FFFFFF",
+              border: "1px solid #E5E7EB",
+              borderRadius: 12,
+              padding: 16,
+              display: "flex",
+              flexDirection: "column",
+              gap: 8,
+            }}
+          >
+            <p style={{ fontSize: 11, color: "#64748B", fontWeight: 600, margin: 0, textTransform: "uppercase" }}>
+              Time-to-Offer
+            </p>
+            <p style={{ fontSize: 18, color: "#0F172A", fontWeight: 700, margin: 0 }}>
+              3-4 weeks
+            </p>
+            <p style={{ fontSize: 12, color: "#64748B", margin: 0 }}>
+              from first interview
+            </p>
+          </div>
+        </div>
+
         {/* Why It's a Strong Match Section */}
         <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 12px 0" }}>
           WHY IT'S A SUPER STRONG MATCH:
