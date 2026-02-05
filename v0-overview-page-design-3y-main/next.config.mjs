@@ -6,10 +6,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  webpack: (config, { isServer }) => {
-    config.resolve.symlinks = false
-    return config
-  },
+ 
 }
 
 export default nextConfig
