@@ -150,10 +150,10 @@ export default function ActionDetailPage() {
     const stageBonus = (job.currentStage / job.totalStages) * 50
     const taskBonus = taskCompletionPercent * 0.3
     const score = stageBonus + taskBonus
-    if (score > 75) return { score: "Strong", color: "#16A34A" }
+    if (score > 75) return { score: "Strong", color: "#2563EB" }
     if (score > 50) return { score: "Good", color: "#2563EB" }
-    if (score > 25) return { score: "Fair", color: "#F59E0B" }
-    return { score: "Needs Work", color: "#EF4444" }
+    if (score > 25) return { score: "Fair", color: "#2563EB" }
+    return { score: "Needs Work", color: "#2563EB" }
   }
 
   const health = getHealthScore()
@@ -364,7 +364,7 @@ export default function ActionDetailPage() {
                     alignItems: "center",
                     justifyContent: "center",
                     flexShrink: 0,
-                    background: stage.status === "completed" ? "#16A34A" : stage.status === "current" ? "#2563EB" : "#E5E7EB",
+                    background: stage.status === "completed" ? "#2563EB" : stage.status === "current" ? "#2563EB" : "#E5E7EB",
                     color: stage.status === "upcoming" ? "#64748B" : "#FFFFFF",
                     fontSize: 12,
                     fontWeight: 500,
