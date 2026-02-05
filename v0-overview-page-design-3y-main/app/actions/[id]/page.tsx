@@ -391,99 +391,67 @@ export default function ActionDetailPage() {
             marginBottom: 24,
           }}
         >
-          {/* Shipping-tracker style timeline */}
-          {(() => {
-            // Find the index of the current stage
-            const currentIdx = job.stages.findIndex(s => s.status === "current")
-            const lastCompletedIdx = job.stages.reduce((acc, s, i) => s.status === "completed" ? i : acc, -1)
-
-            return (
-              <div>
-                {/* Horizontal tracker bar with circles */}
-                <div style={{ position: "relative", display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 24, padding: "0 4px" }}>
-                  {/* Background grey line */}
-                  <div style={{ position: "absolute", top: "50%", left: 16, right: 16, height: 3, background: "#E5E7EB", transform: "translateY(-50%)", zIndex: 0, borderRadius: 2 }} />
-                  {/* Blue progress line - extends from first circle to ~75% between last completed and current */}
-                  {lastCompletedIdx >= 0 && (
-                    <div
-                      style={{
-                        position: "absolute",
-                        top: "50%",
-                        left: 16,
-                        height: 3,
-                        background: "#2563EB",
-                        transform: "translateY(-50%)",
-                        zIndex: 1,
-                        borderRadius: 2,
-                        width: currentIdx > 0
-                          ? `calc(${((lastCompletedIdx + 0.6) / (job.stages.length - 1)) * 100}% - 32px)`
-                          : `calc(${(lastCompletedIdx / (job.stages.length - 1)) * 100}% - 0px)`,
-                        transition: "width 0.5s ease",
-                      }}
-                    />
+          {/* Stages List */}
+          <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+            {job.stages.map((stage, index) => (
+              <div key={index} style={{ display: "flex", alignItems: "flex-start", gap: 16 }}>
+                {/* Stage Indicator */}
+                <div
+                  style={{
+                    width: 24,
+                    height: 24,
+                    borderRadius: "50%",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    flexShrink: 0,
+                    background: stage.status === "completed" ? "#2563EB" : stage.status === "current" ? "#2563EB" : "#E5E7EB",
+                    color: stage.status === "upcoming" ? "#64748B" : "#FFFFFF",
+                    fontSize: 12,
+                    fontWeight: 500,
+                  }}
+                >
+                  {stage.status === "completed" ? (
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2 6L5 9L10 3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  ) : (
+                    index + 1
                   )}
-
-                  {/* Circles */}
-                  {job.stages.map((stage, index) => (
-                    <div
-                      key={index}
-                      style={{
-                        width: 32,
-                        height: 32,
-                        borderRadius: "50%",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        flexShrink: 0,
-                        zIndex: 2,
-                        background: stage.status === "completed" ? "#2563EB" : stage.status === "current" ? "#FFFFFF" : "#FFFFFF",
-                        border: stage.status === "completed" ? "2px solid #2563EB" : stage.status === "current" ? "2px solid #2563EB" : "2px solid #E5E7EB",
-                        color: stage.status === "completed" ? "#FFFFFF" : stage.status === "current" ? "#2563EB" : "#94A3B8",
-                        fontSize: 13,
-                        fontWeight: 600,
-                      }}
-                    >
-                      {index + 1}
-                    </div>
-                  ))}
                 </div>
 
-                {/* Stage labels below */}
-                <div style={{ display: "flex", justifyContent: "space-between", padding: "0 0px" }}>
-                  {job.stages.map((stage, index) => (
-                    <div key={index} style={{ textAlign: "center", flex: 1, minWidth: 0 }}>
-                      <p
-                        style={{
-                          fontSize: 13,
-                          color: stage.status === "upcoming" ? "#94A3B8" : "#0F172A",
-                          margin: 0,
-                          fontWeight: stage.status === "current" ? 600 : 400,
-                        }}
-                      >
-                        {stage.status === "completed" && "Your "}
-                        {stage.name}
-                      </p>
-                      {stage.date && (
-                        <p style={{ fontSize: 11, color: "#64748B", margin: "4px 0 0 0" }}>
-                          {stage.date}
-                        </p>
-                      )}
-                      {stage.status === "current" && (
-                        <p style={{ fontSize: 11, color: "#2563EB", margin: "4px 0 0 0", fontWeight: 500 }}>
-                          In progress
-                        </p>
-                      )}
-                      {stage.status === "upcoming" && index === job.currentStage && (
-                        <p style={{ fontSize: 11, color: "#2563EB", margin: "4px 0 0 0" }}>
-                          Est. {new Date(Date.now() + (4 + index * 3) * 24 * 60 * 60 * 1000).toLocaleDateString()}
-                        </p>
-                      )}
-                    </div>
-                  ))}
+                {/* Stage Info */}
+                <div style={{ flex: 1 }}>
+                  <p
+                    style={{
+                      fontSize: 14,
+                      color: stage.status === "upcoming" ? "#94A3B8" : "#0F172A",
+                      margin: 0,
+                      fontWeight: stage.status === "current" ? 600 : 400,
+                    }}
+                  >
+                    {stage.status === "completed" && "Your "}
+                    {stage.name}
+                    {stage.status === "current" && (
+                      <span style={{ marginLeft: 8, fontSize: 12, color: "#2563EB", fontWeight: 400 }}>
+                        (In Progress)
+                      </span>
+                    )}
+                  </p>
+                  {stage.date && (
+                    <p style={{ fontSize: 12, color: "#64748B", margin: "4px 0 0 0" }}>
+                      {stage.date}
+                    </p>
+                  )}
+                  {stage.status === "upcoming" && index === job.currentStage && (
+                    <p style={{ fontSize: 12, color: "#2563EB", margin: "4px 0 0 0" }}>
+                      Estimated: {new Date(Date.now() + (4 + index * 3) * 24 * 60 * 60 * 1000).toLocaleDateString()}
+                    </p>
+                  )}
                 </div>
               </div>
-            )
-          })()}
+            ))}
+          </div>
         </div>
 
         {/* Progress Bar */}
