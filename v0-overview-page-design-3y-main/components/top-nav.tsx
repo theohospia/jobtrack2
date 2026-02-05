@@ -1,21 +1,26 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useState, useMemo } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Search, Bell, ChevronDown, Menu, X } from "lucide-react"
 
-const tabs = [
-  { label: "Dashboard", href: "/dashboard" },
-  { label: "Opportunities", href: "/opportunities" },
-  { label: "Application", href: "/actions" },
-  { label: "Profile", href: "/profile" },
-]
-
 export function TopNav() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mounted, setMounted] = useState(false)
   const pathname = usePathname()
+
+  const tabs = useMemo(() => [
+    { label: "Dashboard", href: "/dashboard" },
+    { label: "Opportunities", href: "/opportunities" },
+    { label: "Application", href: "/actions" },
+    { label: "Profile", href: "/profile" },
+  ], [])
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -117,9 +122,8 @@ export function TopNav() {
               height: 40,
             }}
           >
-            {tabs.map((tab) => {
+            {mounted && tabs.map((tab) => {
               const isActive = pathname === tab.href || pathname.startsWith(tab.href + "/") || (pathname === "/" && tab.href === "/dashboard")
-              console.log("[v0] Tab rendering:", { tabLabel: tab.label, tabHref: tab.href, pathname, isActive })
               return (
                 <Link
                   key={tab.href}
@@ -314,9 +318,8 @@ export function TopNav() {
             zIndex: 100,
           }}
         >
-          {tabs.map((tab) => {
+          {mounted && tabs.map((tab) => {
             const isActive = pathname === tab.href || pathname.startsWith(tab.href + "/") || (pathname === "/" && tab.href === "/dashboard")
-            console.log("[v0] Mobile Tab rendering:", { tabLabel: tab.label, tabHref: tab.href, pathname, isActive })
             return (
               <Link
                 key={tab.href}
