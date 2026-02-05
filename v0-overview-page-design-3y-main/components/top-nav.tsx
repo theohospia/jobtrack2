@@ -118,7 +118,7 @@ export function TopNav() {
             }}
           >
             {tabs.map((tab) => {
-              const isActive = pathname === tab.href || (pathname === "/" && tab.href === "/dashboard")
+              const isActive = pathname === tab.href || pathname.startsWith(tab.href + "/") || (pathname === "/" && tab.href === "/dashboard")
               return (
                 <Link
                   key={tab.href}
@@ -314,7 +314,7 @@ export function TopNav() {
           }}
         >
           {tabs.map((tab) => {
-            const isActive = pathname === tab.href || (pathname === "/" && tab.href === "/dashboard")
+            const isActive = pathname === tab.href || pathname.startsWith(tab.href + "/") || (pathname === "/" && tab.href === "/dashboard")
             return (
               <Link
                 key={tab.href}
