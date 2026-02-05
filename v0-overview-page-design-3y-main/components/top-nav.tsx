@@ -8,7 +8,7 @@ import { Search, Bell, ChevronDown, Menu, X } from "lucide-react"
 const tabs = [
   { label: "Dashboard", href: "/dashboard" },
   { label: "Opportunities", href: "/opportunities" },
-  { label: "Actions", href: "/actions" },
+  { label: "Application", href: "/actions" },
   { label: "Profile", href: "/profile" },
 ]
 
