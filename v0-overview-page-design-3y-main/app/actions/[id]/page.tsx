@@ -401,28 +401,6 @@ export default function ActionDetailPage() {
           })()}
         </div>
 
-        {/* Progress Bar */}
-        <div style={{ marginBottom: 24 }}>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 8 }}>
-            <div>
-              <span style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", display: "block", marginBottom: 4 }}>Process Progress</span>
-              <span style={{ fontSize: 13, color: "#0F172A", fontWeight: 500 }}>You're past the hardest part: applying.</span>
-            </div>
-            <span style={{ fontSize: 12, color: "#0F172A" }}>{Math.round(progressPercentage)}%</span>
-          </div>
-          <div style={{ height: 8, background: "#E5E7EB", borderRadius: 4 }}>
-            <div
-              style={{
-                width: `${progressPercentage}%`,
-                height: "100%",
-                background: "#2563EB",
-                borderRadius: 4,
-                transition: "width 0.3s ease",
-              }}
-            />
-          </div>
-        </div>
-
         {/* Application Signals */}
         <div
           style={{
@@ -498,6 +476,26 @@ export default function ActionDetailPage() {
         <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 12px 0" }}>
           Tasks to Do
         </p>
+
+        {/* Progress Bar */}
+        <div style={{ marginBottom: 16 }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }}>
+            <span style={{ fontSize: 13, color: "#0F172A", fontWeight: 500 }}>You're past the hardest part: applying.</span>
+            <span style={{ fontSize: 12, color: "#0F172A" }}>{Math.round(progressPercentage)}%</span>
+          </div>
+          <div style={{ height: 8, background: "#E5E7EB", borderRadius: 4 }}>
+            <div
+              style={{
+                width: `${progressPercentage}%`,
+                height: "100%",
+                background: "#2563EB",
+                borderRadius: 4,
+                transition: "width 0.3s ease",
+              }}
+            />
+          </div>
+        </div>
+
         <div
           style={{
             background: "#FFFFFF",
