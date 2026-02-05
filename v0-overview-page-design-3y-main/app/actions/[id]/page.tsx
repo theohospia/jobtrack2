@@ -186,51 +186,57 @@ export default function ActionDetailPage() {
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M10 12L6 8L10 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
-          Back to Application
+          Back to Applications
         </button>
 
-        {/* Header Section */}
-        <div
-          style={{
-            background: "#FFFFFF",
-            border: "1px solid #E5E7EB",
-            borderRadius: 12,
-            padding: 24,
-            marginBottom: 24,
-          }}
-        >
-          {/* Status Row - Above Title */}
-          <div style={{ display: "flex", gap: 24, alignItems: "center", marginBottom: 16 }}>
-            <div>
-              <p style={{ fontSize: 12, color: "#64748B", margin: "0 0 4px 0", textTransform: "uppercase" }}>
-                Current Status
-              </p>
-              <p style={{ fontSize: 14, color: "#0F172A", margin: 0 }}>
-                {job.currentStage === 1 ? "You're early, but in a good position" : `Stage ${job.currentStage} of ${job.totalStages}`}
-              </p>
-            </div>
-            <div>
-              <p style={{ fontSize: 12, color: "#64748B", margin: "0 0 4px 0", textTransform: "uppercase" }}>
-                Applied
-              </p>
-              <p style={{ fontSize: 14, color: "#0F172A", margin: 0 }}>
-                {job.appliedDate}
-              </p>
-            </div>
-          </div>
-
-          {/* Title */}
-          <h1 style={{ fontSize: 28, fontWeight: 700, color: "#0F172A", margin: "0 0 8px 0" }}>
-            {job.title}
-          </h1>
-          
-          {/* Company Info */}
-          <p style={{ fontSize: 14, color: "#64748B", margin: 0 }}>
-            {job.company} · {job.location} · {job.workType}
+        {/* Job Summary Section */}
+        <div style={{ marginBottom: 24 }}>
+          <p style={{ fontSize: 12, color: "#64748B", margin: "0 0 8px 0", textTransform: "uppercase" }}>
+            Job Summary
           </p>
+          <div
+            style={{
+              background: "#FFFFFF",
+              border: "1px solid #E5E7EB",
+              borderRadius: 12,
+              padding: 24,
+              marginBottom: 24,
+            }}
+          >
+            {/* Status Row */}
+            <div style={{ display: "flex", gap: 24, alignItems: "flex-start", marginBottom: 16 }}>
+              <div>
+                <p style={{ fontSize: 12, color: "#64748B", margin: "0 0 4px 0", textTransform: "uppercase" }}>
+                  Current Status
+                </p>
+                <p style={{ fontSize: 14, color: "#0F172A", margin: "0 0 4px 0" }}>
+                  You're early — this is when smart candidates take the lead
+                </p>
+              </div>
+              <div>
+                <p style={{ fontSize: 12, color: "#64748B", margin: "0 0 4px 0", textTransform: "uppercase" }}>
+                  Applied
+                </p>
+                <p style={{ fontSize: 14, color: "#0F172A", margin: 0 }}>
+                  {job.appliedDate}
+                </p>
+              </div>
+            </div>
+
+            {/* Title and Company */}
+            <h1 style={{ fontSize: 28, fontWeight: 700, color: "#0F172A", margin: "0 0 8px 0" }}>
+              {job.title}
+            </h1>
+            <p style={{ fontSize: 14, color: "#64748B", margin: "0 0 12px 0" }}>
+              {job.company} · {job.location} · {job.workType}
+            </p>
+            <p style={{ fontSize: 13, color: "#475569", margin: 0 }}>
+              Most successful candidates stay active at this stage — you're right on time.
+            </p>
+          </div>
         </div>
 
-        {/* Next Best Action - CRITICAL */}
+        {/* Your Next Best Action */}
         {job.nextAction && (
           <div
             style={{
@@ -241,27 +247,64 @@ export default function ActionDetailPage() {
               marginBottom: 24,
             }}
           >
-            <p style={{ fontSize: 12, color: "#64748B", margin: "0 0 8px 0", textTransform: "uppercase" }}>
-              Your Next Best Action
-            </p>
-            <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 12 }}>
-              <span style={{ fontSize: 20 }}>{job.nextAction.icon}</span>
-              <h3 style={{ fontSize: 16, color: "#0F172A", margin: 0 }}>
-                {job.nextAction.title}
-              </h3>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 12 }}>
+              <p style={{ fontSize: 12, color: "#64748B", margin: 0, textTransform: "uppercase" }}>
+                Your Next Best Action
+              </p>
               {job.nextAction.recommendation && (
                 <span style={{ fontSize: 11, background: health.color, color: "#FFFFFF", padding: "4px 8px", borderRadius: 4, fontWeight: 600 }}>
                   RECOMMENDED
                 </span>
               )}
             </div>
-            <p style={{ fontSize: 13, color: "#475569", margin: 0 }}>
-              Doing this now significantly increases your chances. This is where unemployed job seekers often delay — don't let that be you.
+            <h3 style={{ fontSize: 16, color: "#0F172A", margin: "0 0 12px 0" }}>
+              {job.nextAction.title}
+            </h3>
+            <p style={{ fontSize: 13, color: "#475569", margin: "0 0 16px 0" }}>
+              Doing this at the right moment significantly increases your chances.
+              <br />
+              Most candidates hesitate here — taking action now helps you stand out.
             </p>
+            <div style={{ display: "flex", gap: 12 }}>
+              <button
+                style={{
+                  padding: "10px 16px",
+                  fontSize: 13,
+                  fontWeight: 500,
+                  background: "#2563EB",
+                  color: "#FFFFFF",
+                  border: "none",
+                  borderRadius: 6,
+                  cursor: "pointer",
+                  transition: "background 0.2s",
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.background = "#1D4ED8"}
+                onMouseLeave={(e) => e.currentTarget.style.background = "#2563EB"}
+              >
+                Primary action
+              </button>
+              <button
+                style={{
+                  padding: "10px 16px",
+                  fontSize: 13,
+                  fontWeight: 500,
+                  background: "#FFFFFF",
+                  color: "#2563EB",
+                  border: "1px solid #2563EB",
+                  borderRadius: 6,
+                  cursor: "pointer",
+                  transition: "background 0.2s",
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.background = "#F0F4F8"}
+                onMouseLeave={(e) => e.currentTarget.style.background = "#FFFFFF"}
+              >
+                Secondary action
+              </button>
+            </div>
           </div>
         )}
 
-        {/* Application Health Score */}
+        {/* Application Signals */}
         <div
           style={{
             background: "#FFFFFF",
@@ -278,21 +321,22 @@ export default function ActionDetailPage() {
             <p style={{ fontSize: 12, color: "#64748B", margin: "0 0 4px 0", textTransform: "uppercase" }}>
               Application Health
             </p>
-            <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-              <span style={{ fontSize: 18, fontWeight: 700, color: health.color }}>
-                {health.score}
-              </span>
-              <span style={{ fontSize: 18 }}>
-                {health.score === "Strong" ? "💪" : health.score === "Good" ? "✅" : health.score === "Fair" ? "⚠️" : "🔧"}
-              </span>
-            </div>
+            <p style={{ fontSize: 14, color: "#0F172A", margin: "0 0 4px 0" }}>
+              Good — can be stronger (+10%)
+            </p>
+            <p style={{ fontSize: 12, color: "#64748B", margin: 0 }}>
+              Two quick improvements can meaningfully increase your chances.
+            </p>
           </div>
           <div>
             <p style={{ fontSize: 12, color: "#64748B", margin: "0 0 4px 0", textTransform: "uppercase" }}>
               Competition Level
             </p>
-            <p style={{ fontSize: 14, color: "#0F172A", margin: 0 }}>
+            <p style={{ fontSize: 14, color: "#0F172A", margin: "0 0 4px 0" }}>
               Low (24 applicants)
+            </p>
+            <p style={{ fontSize: 12, color: "#64748B", margin: 0 }}>
+              You're competing in a smaller-than-average pool for this role.
             </p>
           </div>
         </div>
@@ -313,33 +357,30 @@ export default function ActionDetailPage() {
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
               <div style={{ display: "flex", gap: 12 }}>
-                <span>⏳</span>
-                <div>
-                  <p style={{ fontSize: 13, color: "#0F172A", margin: "0 0 2px 0" }}>Average Review Time</p>
-                  <p style={{ fontSize: 12, color: "#64748B", margin: 0 }}>{job.recruiterSignals.reviewTime}</p>
-                </div>
+                <span style={{ fontSize: 12, color: "#64748B", flex: "0 0 120px" }}>Average review time</span>
+                <span style={{ fontSize: 12, color: "#0F172A", fontWeight: 500 }}>{job.recruiterSignals.reviewTime}</span>
               </div>
               <div style={{ display: "flex", gap: 12 }}>
-                <span>👀</span>
-                <div>
-                  <p style={{ fontSize: 13, color: "#0F172A", margin: "0 0 2px 0" }}>Recruiter Profile View</p>
-                  <p style={{ fontSize: 12, color: "#64748B", margin: 0 }}>{job.recruiterSignals.profileView}</p>
-                </div>
+                <span style={{ fontSize: 12, color: "#64748B", flex: "0 0 120px" }}>Recruiter profile view</span>
+                <span style={{ fontSize: 12, color: "#0F172A", fontWeight: 500 }}>{job.recruiterSignals.profileView}</span>
               </div>
               <div style={{ display: "flex", gap: 12 }}>
-                <span>📊</span>
-                <div>
-                  <p style={{ fontSize: 13, color: "#0F172A", margin: "0 0 2px 0" }}>Ghosting Probability</p>
-                  <p style={{ fontSize: 12, color: "#64748B", margin: 0 }}>{job.recruiterSignals.ghostingProbability}</p>
-                </div>
+                <span style={{ fontSize: 12, color: "#64748B", flex: "0 0 120px" }}>Ghosting probability</span>
+                <span style={{ fontSize: 12, color: "#0F172A", fontWeight: 500 }}>{job.recruiterSignals.ghostingProbability}</span>
               </div>
             </div>
+            <p style={{ fontSize: 12, color: "#2563EB", margin: "16px 0 0 0", fontStyle: "italic" }}>
+              Silence at this stage is normal — it's not a negative signal.
+            </p>
           </div>
         )}
 
-        {/* APPLICATION PROGRESS - Narrative Timeline */}
-        <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 12px 0" }}>
-          APPLICATION PROGRESS:
+        {/* APPLICATION PROGRESS */}
+        <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 4px 0" }}>
+          Application Progress
+        </p>
+        <p style={{ fontSize: 12, color: "#64748B", margin: "0 0 12px 0" }}>
+          Where you are in the process
         </p>
         <div
           style={{
@@ -413,10 +454,13 @@ export default function ActionDetailPage() {
           </div>
         </div>
 
-        {/* Progress Bar - Between Application Progress and Tasks */}
+        {/* Progress Bar */}
         <div style={{ marginBottom: 24 }}>
-          <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 8 }}>
-            <span style={{ fontSize: 12, color: "#64748B" }}>Overall Progress</span>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 8 }}>
+            <div>
+              <span style={{ fontSize: 12, color: "#64748B", display: "block", marginBottom: 4 }}>Process progress</span>
+              <span style={{ fontSize: 13, color: "#0F172A", fontWeight: 500 }}>You're past the hardest part: applying.</span>
+            </div>
             <span style={{ fontSize: 12, color: "#0F172A" }}>{Math.round(progressPercentage)}%</span>
           </div>
           <div style={{ height: 8, background: "#E5E7EB", borderRadius: 4 }}>
@@ -432,9 +476,9 @@ export default function ActionDetailPage() {
           </div>
         </div>
 
-        {/* Tasks Section - Effort-based grouping */}
+        {/* Tasks Section */}
         <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 12px 0" }}>
-          TASKS TO DO:
+          Tasks to Do
         </p>
         <div
           style={{
@@ -449,6 +493,9 @@ export default function ActionDetailPage() {
           <div style={{ marginBottom: 20 }}>
             <p style={{ fontSize: 12, color: "#64748B", fontWeight: 600, margin: "0 0 12px 0", textTransform: "uppercase" }}>
               15-minute actions
+            </p>
+            <p style={{ fontSize: 12, color: "#64748B", margin: "0 0 12px 0" }}>
+              Quick wins that improve visibility and confidence
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
               {job.tasks.filter(t => t.duration === "15").map((task, index) => (
@@ -489,6 +536,9 @@ export default function ActionDetailPage() {
           <div>
             <p style={{ fontSize: 12, color: "#64748B", fontWeight: 600, margin: "0 0 12px 0", textTransform: "uppercase" }}>
               30–45 minute actions
+            </p>
+            <p style={{ fontSize: 12, color: "#64748B", margin: "0 0 12px 0" }}>
+              Higher-impact preparation
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
               {job.tasks.filter(t => t.duration === "30-45").map((task, index) => {
@@ -531,7 +581,10 @@ export default function ActionDetailPage() {
 
         {/* Interview Readiness Pack */}
         <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 12px 0" }}>
-          IF YOU GET AN INTERVIEW, BE READY:
+          When You Get an Interview
+        </p>
+        <p style={{ fontSize: 12, color: "#64748B", margin: "0 0 12px 0" }}>
+          You won't need all of this at once — prepare gradually.
         </p>
         <div
           style={{
@@ -545,29 +598,30 @@ export default function ActionDetailPage() {
           <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
             <div>
               <p style={{ fontSize: 13, color: "#0F172A", fontWeight: 600, margin: "0 0 4px 0" }}>
-                📋 Likely Interview Format
+                Likely interview format
               </p>
               <p style={{ fontSize: 12, color: "#64748B", margin: 0 }}>
-                HR screening call (20–30 min) → Behavioral interview
+                HR screening call (20–30 min)<br />
+                → Behavioral interview
               </p>
             </div>
             <div>
               <p style={{ fontSize: 13, color: "#0F172A", fontWeight: 600, margin: "0 0 4px 0" }}>
-                ❓ Common Questions for Product Analyst Roles
+                Common questions for Product Analyst roles
               </p>
               <ul style={{ fontSize: 12, color: "#64748B", margin: "0 0 0 20px", paddingLeft: 0 }}>
-                <li>Walk us through your approach to analyzing a dataset</li>
-                <li>Describe a time you influenced a decision with data</li>
-                <li>How would you measure success for [company product]?</li>
+                <li>Walk me through how you would analyze a dataset</li>
+                <li>Describe a time you influenced a decision using data</li>
+                <li>How would you measure success for one of our products?</li>
               </ul>
             </div>
             <div>
               <p style={{ fontSize: 13, color: "#0F172A", fontWeight: 600, margin: "0 0 4px 0" }}>
-                💼 2 Company-Specific Talking Points
+                Company-specific talking points
               </p>
               <ul style={{ fontSize: 12, color: "#64748B", margin: "0 0 0 20px", paddingLeft: 0 }}>
                 <li>Acme's focus on B2B analytics aligns with my interest in data-driven decision-making</li>
-                <li>Your recent expansion into Europe interests me — I'd love to help optimize that expansion with data</li>
+                <li>Your recent expansion into Europe stands out — I'd love to help optimize that growth with data</li>
               </ul>
             </div>
           </div>
@@ -599,7 +653,14 @@ export default function ActionDetailPage() {
               color: "#0F172A",
             }}
           >
-            <span>If This Application Doesn't Work Out</span>
+            <div>
+              <div style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", marginBottom: 4 }}>
+                If This Application Doesn't Work Out
+              </div>
+              <p style={{ fontSize: 12, color: "#2563EB", margin: 0, fontWeight: 400 }}>
+                You'll still be ahead — here's what to do next.
+              </p>
+            </div>
             <span style={{ fontSize: 12, color: "#64748B" }}>
               {planBOpen ? "−" : "+"}
             </span>
@@ -609,7 +670,7 @@ export default function ActionDetailPage() {
             <div style={{ marginTop: 16 }}>
               <div style={{ marginBottom: 12 }}>
                 <p style={{ fontSize: 12, color: "#64748B", margin: "0 0 8px 0", textTransform: "uppercase" }}>
-                  3 Similar Roles to Apply to Next
+                  2–3 similar roles you should apply to next
                 </p>
                 <ul style={{ fontSize: 13, color: "#0F172A", margin: 0, paddingLeft: 20 }}>
                   <li>Junior Data Analyst at DataFlow (NYC)</li>
@@ -617,24 +678,33 @@ export default function ActionDetailPage() {
                   <li>Business Intelligence Intern at InsightCorp (Paris)</li>
                 </ul>
               </div>
-              <div style={{ marginBottom: 12 }}>
+              <div>
                 <p style={{ fontSize: 12, color: "#64748B", margin: "0 0 8px 0", textTransform: "uppercase" }}>
-                  One Skill to Strengthen This Week
+                  One skill worth strengthening this week
                 </p>
                 <p style={{ fontSize: 13, color: "#0F172A", margin: 0 }}>
-                  Advanced SQL: Focus on window functions and CTEs (commonly asked in interviews)
+                  SQL fundamentals or data visualization with Tableau will increase your competitiveness.
                 </p>
               </div>
               <div>
                 <p style={{ fontSize: 12, color: "#64748B", margin: "0 0 8px 0", textTransform: "uppercase" }}>
-                  One Mistake to Avoid Next Time
+                  One common mistake to avoid next time
                 </p>
                 <p style={{ fontSize: 13, color: "#0F172A", margin: 0 }}>
                   Don't apply without tailoring your CV first. Generic applications have 70% lower response rates.
                 </p>
               </div>
+              <p style={{ fontSize: 12, color: "#64748B", margin: "12px 0 0 0", fontStyle: "italic" }}>
+                Rejection becomes iteration, not a setback.
+              </p>
             </div>
           )}
+        </div>
+
+        {/* Footer Micro-copy */}
+        <div style={{ textAlign: "center", padding: "24px 0", color: "#64748B", fontSize: 12 }}>
+          <p>You don't need to do everything today.</p>
+          <p>One small, intentional action is enough.</p>
         </div>
       </main>
     </div>
