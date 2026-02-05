@@ -265,7 +265,9 @@ export default function ActionDetailPage() {
               )}
             </div>
             <p style={{ fontSize: 13, color: "#475569", margin: "0 0 16px 0" }}>
-              Most successful candidates act at this moment — you're right on time.
+              Doing this at the right moment significantly increases your chances.
+              <br />
+              Most candidates hesitate here — taking action now helps you stand out.
             </p>
             <div style={{ display: "flex", gap: 12 }}>
               <button
@@ -283,7 +285,7 @@ export default function ActionDetailPage() {
                 onMouseEnter={(e) => e.currentTarget.style.background = "#1D4ED8"}
                 onMouseLeave={(e) => e.currentTarget.style.background = "#2563EB"}
               >
-                Schedule follow-up email
+                Primary action
               </button>
               <button
                 style={{
@@ -300,13 +302,13 @@ export default function ActionDetailPage() {
                 onMouseEnter={(e) => e.currentTarget.style.background = "#F0F4F8"}
                 onMouseLeave={(e) => e.currentTarget.style.background = "#FFFFFF"}
               >
-                Preview email
+                Secondary action
               </button>
             </div>
           </div>
         )}
 
-        {/* Application Health Score */}
+        {/* Application Signals */}
         <div
           style={{
             background: "#FFFFFF",
@@ -336,6 +338,9 @@ export default function ActionDetailPage() {
             </p>
             <p style={{ fontSize: 14, color: "#0F172A", margin: 0 }}>
               Low (24 applicants)
+            </p>
+            <p style={{ fontSize: 12, color: "#64748B", margin: "4px 0 0 0" }}>
+              You're competing in a smaller-than-average pool for this role.
             </p>
           </div>
         </div>
@@ -381,8 +386,11 @@ export default function ActionDetailPage() {
         )}
 
         {/* APPLICATION PROGRESS - Narrative Timeline */}
-        <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 12px 0" }}>
-          APPLICATION PROGRESS:
+        <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 8px 0" }}>
+          APPLICATION PROGRESS
+        </p>
+        <p style={{ fontSize: 12, color: "#64748B", margin: "0 0 16px 0" }}>
+          Where you are in the process
         </p>
         <div
           style={{
@@ -617,7 +625,7 @@ export default function ActionDetailPage() {
               </div>
             </div>
             <p style={{ fontSize: 12, color: "#2563EB", margin: "16px 0 0 0", fontStyle: "italic" }}>
-              Silence here is normal — not a negative signal.
+              Silence at this stage is normal — it's not a negative signal.
             </p>
               ))}
             </div>
@@ -767,7 +775,7 @@ export default function ActionDetailPage() {
             <div style={{ marginTop: 16 }}>
               <div style={{ marginBottom: 12 }}>
                 <p style={{ fontSize: 12, color: "#64748B", margin: "0 0 8px 0", textTransform: "uppercase" }}>
-                  3 Similar Roles to Apply to Next
+                  2–3 similar roles you should apply to next
                 </p>
                 <ul style={{ fontSize: 13, color: "#0F172A", margin: 0, paddingLeft: 20 }}>
                   <li>Junior Data Analyst at DataFlow (NYC)</li>
@@ -793,6 +801,12 @@ export default function ActionDetailPage() {
               </div>
             </div>
           )}
+        </div>
+
+        {/* Footer Micro-copy */}
+        <div style={{ textAlign: "center", padding: "24px 0", color: "#64748B", fontSize: 12 }}>
+          <p>You don't need to do everything today.</p>
+          <p>One small, intentional action is enough.</p>
         </div>
       </main>
     </div>
