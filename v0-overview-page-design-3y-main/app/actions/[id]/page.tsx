@@ -191,7 +191,7 @@ export default function ActionDetailPage() {
 
         {/* Job Summary Section */}
         <div style={{ marginBottom: 24 }}>
-          <p style={{ fontSize: 12, color: "#64748B", margin: "0 0 8px 0", textTransform: "uppercase" }}>
+          <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 8px 0" }}>
             Job Summary
           </p>
           <div
@@ -405,7 +405,7 @@ export default function ActionDetailPage() {
         <div style={{ marginBottom: 24 }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 8 }}>
             <div>
-              <span style={{ fontSize: 12, color: "#64748B", display: "block", marginBottom: 4 }}>Process progress</span>
+              <span style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", display: "block", marginBottom: 4 }}>Process Progress</span>
               <span style={{ fontSize: 13, color: "#0F172A", fontWeight: 500 }}>You're past the hardest part: applying.</span>
             </div>
             <span style={{ fontSize: 12, color: "#0F172A" }}>{Math.round(progressPercentage)}%</span>
