@@ -123,7 +123,7 @@ export default function ActionsPage() {
               color: '#0F172A'
             }}
           >
-            Actions
+            Application
           </h1>
         </header>
 
