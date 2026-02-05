@@ -2,6 +2,7 @@
 
 import { TopNav } from "@/components/top-nav"
 import { useParams, useRouter } from "next/navigation"
+import { useState } from "react"
 
 interface ActionJob {
   id: string
@@ -20,7 +21,19 @@ interface ActionJob {
   tasks: {
     text: string
     completed: boolean
+    duration: "15" | "30-45"
+    impact: string
   }[]
+  nextAction?: {
+    title: string
+    icon: string
+    recommendation: boolean
+  }
+  recruiterSignals?: {
+    reviewTime: string
+    profileView: string
+    ghostingProbability: string
+  }
 }
 
 const actionJobs: Record<string, ActionJob> = {
@@ -40,10 +53,22 @@ const actionJobs: Record<string, ActionJob> = {
       { name: "Decision", status: "upcoming" }
     ],
     tasks: [
-      { text: "Follow up email", completed: false },
-      { text: "Prepare interview questions", completed: false },
-      { text: "Research company background", completed: true }
-    ]
+      { text: "Send follow-up email", completed: false, duration: "15", impact: "Increases response rate by 25%" },
+      { text: "Prepare 2-3 interview questions", completed: false, duration: "30-45", impact: "Candidates who prepare increase success rate by ~30%" },
+      { text: "Research company background", completed: true, duration: "30-45", impact: "Shows genuine interest to recruiters" },
+      { text: "Tailor CV for this role", completed: false, duration: "30-45", impact: "+6% impact on Application Health" },
+      { text: "Prepare 'Tell me about yourself' answer", completed: false, duration: "15", impact: "First impression matters most" }
+    ],
+    nextAction: {
+      title: "Send follow-up email in 2 days",
+      icon: "✉️",
+      recommendation: true
+    },
+    recruiterSignals: {
+      reviewTime: "5–7 days average",
+      profileView: "Likely within 48 hours",
+      ghostingProbability: "Low"
+    }
   },
   "2": {
     id: "2",
@@ -61,9 +86,19 @@ const actionJobs: Record<string, ActionJob> = {
       { name: "Final Interview", status: "upcoming" }
     ],
     tasks: [
-      { text: "Complete coding challenge", completed: false },
-      { text: "Schedule technical call", completed: false }
-    ]
+      { text: "Complete coding challenge", completed: false, duration: "30-45", impact: "Critical for advancement" },
+      { text: "Schedule technical call", completed: false, duration: "15", impact: "Shows promptness and interest" }
+    ],
+    nextAction: {
+      title: "Complete coding challenge",
+      icon: "💻",
+      recommendation: true
+    },
+    recruiterSignals: {
+      reviewTime: "2–3 days for assessments",
+      profileView: "Already confirmed",
+      ghostingProbability: "Very Low"
+    }
   },
   "3": {
     id: "3",
@@ -80,9 +115,19 @@ const actionJobs: Record<string, ActionJob> = {
       { name: "Final Round", status: "upcoming" }
     ],
     tasks: [
-      { text: "Review job requirements", completed: false },
-      { text: "Submit portfolio", completed: false }
-    ]
+      { text: "Review job requirements", completed: false, duration: "15", impact: "Foundation for all prep" },
+      { text: "Submit portfolio", completed: false, duration: "30-45", impact: "Differentiates you from 80% of candidates" }
+    ],
+    nextAction: {
+      title: "Submit portfolio link",
+      icon: "📂",
+      recommendation: true
+    },
+    recruiterSignals: {
+      reviewTime: "4–5 days for screening",
+      profileView: "Likely today",
+      ghostingProbability: "Low"
+    }
   }
 }
 
@@ -91,8 +136,27 @@ export default function ActionDetailPage() {
   const router = useRouter()
   const id = params.id as string
   const job = actionJobs[id] || actionJobs["1"]
+  const [planBOpen, setPlanBOpen] = useState(false)
+  const [completedTasks, setCompletedTasks] = useState<Record<number, boolean>>(
+    job.tasks.reduce((acc, task, idx) => ({ ...acc, [idx]: task.completed }), {})
+  )
 
   const progressPercentage = (job.currentStage / job.totalStages) * 100
+  const completedTaskCount = Object.values(completedTasks).filter(Boolean).length
+  const taskCompletionPercent = (completedTaskCount / job.tasks.length) * 100
+
+  // Application Health Score logic
+  const getHealthScore = () => {
+    const stageBonus = (job.currentStage / job.totalStages) * 50
+    const taskBonus = taskCompletionPercent * 0.3
+    const score = stageBonus + taskBonus
+    if (score > 75) return { score: "Strong", color: "#16A34A" }
+    if (score > 50) return { score: "Good", color: "#2563EB" }
+    if (score > 25) return { score: "Fair", color: "#F59E0B" }
+    return { score: "Needs Work", color: "#EF4444" }
+  }
+
+  const health = getHealthScore()
 
   return (
     <div style={{ background: "#F8FAFC", minHeight: "100vh", paddingBottom: 100 }}>
@@ -122,7 +186,7 @@ export default function ActionDetailPage() {
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M10 12L6 8L10 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
-          Back to Actions
+          Back to Application
         </button>
 
         {/* Header Section */}
@@ -142,7 +206,7 @@ export default function ActionDetailPage() {
                 Current Status
               </p>
               <p style={{ fontSize: 14, color: "#0F172A", margin: 0 }}>
-                Stage {job.currentStage} of {job.totalStages}
+                {job.currentStage === 1 ? "You're early, but in a good position" : `Stage ${job.currentStage} of ${job.totalStages}`}
               </p>
             </div>
             <div>
@@ -166,7 +230,114 @@ export default function ActionDetailPage() {
           </p>
         </div>
 
-        {/* Stages Tracking Section */}
+        {/* Next Best Action - CRITICAL */}
+        {job.nextAction && (
+          <div
+            style={{
+              background: "#F0F4F8",
+              border: `2px solid ${health.color}`,
+              borderRadius: 12,
+              padding: 20,
+              marginBottom: 24,
+            }}
+          >
+            <p style={{ fontSize: 12, color: "#64748B", margin: "0 0 8px 0", textTransform: "uppercase" }}>
+              Your Next Best Action
+            </p>
+            <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 12 }}>
+              <span style={{ fontSize: 20 }}>{job.nextAction.icon}</span>
+              <h3 style={{ fontSize: 16, color: "#0F172A", margin: 0 }}>
+                {job.nextAction.title}
+              </h3>
+              {job.nextAction.recommendation && (
+                <span style={{ fontSize: 11, background: health.color, color: "#FFFFFF", padding: "4px 8px", borderRadius: 4, fontWeight: 600 }}>
+                  RECOMMENDED
+                </span>
+              )}
+            </div>
+            <p style={{ fontSize: 13, color: "#475569", margin: 0 }}>
+              Doing this now significantly increases your chances. This is where unemployed job seekers often delay — don't let that be you.
+            </p>
+          </div>
+        )}
+
+        {/* Application Health Score */}
+        <div
+          style={{
+            background: "#FFFFFF",
+            border: "1px solid #E5E7EB",
+            borderRadius: 12,
+            padding: 20,
+            marginBottom: 24,
+            display: "grid",
+            gridTemplateColumns: "repeat(2, 1fr)",
+            gap: 16,
+          }}
+        >
+          <div>
+            <p style={{ fontSize: 12, color: "#64748B", margin: "0 0 4px 0", textTransform: "uppercase" }}>
+              Application Health
+            </p>
+            <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+              <span style={{ fontSize: 18, fontWeight: 700, color: health.color }}>
+                {health.score}
+              </span>
+              <span style={{ fontSize: 18 }}>
+                {health.score === "Strong" ? "💪" : health.score === "Good" ? "✅" : health.score === "Fair" ? "⚠️" : "🔧"}
+              </span>
+            </div>
+          </div>
+          <div>
+            <p style={{ fontSize: 12, color: "#64748B", margin: "0 0 4px 0", textTransform: "uppercase" }}>
+              Competition Level
+            </p>
+            <p style={{ fontSize: 14, color: "#0F172A", margin: 0 }}>
+              Low (24 applicants)
+            </p>
+          </div>
+        </div>
+
+        {/* Recruiter Reality Signals */}
+        {job.recruiterSignals && (
+          <div
+            style={{
+              background: "#FFFFFF",
+              border: "1px solid #E5E7EB",
+              borderRadius: 12,
+              padding: 20,
+              marginBottom: 24,
+            }}
+          >
+            <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 12px 0" }}>
+              What Usually Happens at This Stage
+            </p>
+            <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+              <div style={{ display: "flex", gap: 12 }}>
+                <span>⏳</span>
+                <div>
+                  <p style={{ fontSize: 13, color: "#0F172A", margin: "0 0 2px 0" }}>Average Review Time</p>
+                  <p style={{ fontSize: 12, color: "#64748B", margin: 0 }}>{job.recruiterSignals.reviewTime}</p>
+                </div>
+              </div>
+              <div style={{ display: "flex", gap: 12 }}>
+                <span>👀</span>
+                <div>
+                  <p style={{ fontSize: 13, color: "#0F172A", margin: "0 0 2px 0" }}>Recruiter Profile View</p>
+                  <p style={{ fontSize: 12, color: "#64748B", margin: 0 }}>{job.recruiterSignals.profileView}</p>
+                </div>
+              </div>
+              <div style={{ display: "flex", gap: 12 }}>
+                <span>📊</span>
+                <div>
+                  <p style={{ fontSize: 13, color: "#0F172A", margin: "0 0 2px 0" }}>Ghosting Probability</p>
+                  <p style={{ fontSize: 12, color: "#64748B", margin: 0 }}>{job.recruiterSignals.ghostingProbability}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* APPLICATION PROGRESS - Narrative Timeline */}
         <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 12px 0" }}>
           APPLICATION PROGRESS:
         </p>
@@ -218,6 +389,7 @@ export default function ActionDetailPage() {
                       fontWeight: stage.status === "current" ? 600 : 400,
                     }}
                   >
+                    {stage.status === "completed" && "✅ You "}
                     {stage.name}
                     {stage.status === "current" && (
                       <span style={{ marginLeft: 8, fontSize: 12, color: "#2563EB", fontWeight: 400 }}>
@@ -228,6 +400,11 @@ export default function ActionDetailPage() {
                   {stage.date && (
                     <p style={{ fontSize: 12, color: "#64748B", margin: "4px 0 0 0" }}>
                       {stage.date}
+                    </p>
+                  )}
+                  {stage.status === "upcoming" && index === job.currentStage && (
+                    <p style={{ fontSize: 12, color: "#2563EB", margin: "4px 0 0 0" }}>
+                      Estimated: {new Date(Date.now() + (4 + index * 3) * 24 * 60 * 60 * 1000).toLocaleDateString()}
                     </p>
                   )}
                 </div>
@@ -255,7 +432,7 @@ export default function ActionDetailPage() {
           </div>
         </div>
 
-        {/* Tasks Section */}
+        {/* Tasks Section - Effort-based grouping */}
         <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 12px 0" }}>
           TASKS TO DO:
         </p>
@@ -268,29 +445,196 @@ export default function ActionDetailPage() {
             marginBottom: 24,
           }}
         >
-          <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-            {job.tasks.map((task, index) => (
-              <div
-                key={index}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 12,
-                  fontSize: 14,
-                  color: task.completed ? "#94A3B8" : "#0F172A",
-                }}
-              >
-                <input
-                  type="checkbox"
-                  defaultChecked={task.completed}
-                  style={{ width: 20, height: 20, cursor: "pointer" }}
-                />
-                <span style={{ textDecoration: task.completed ? "line-through" : "none" }}>
-                  {task.text}
-                </span>
-              </div>
-            ))}
+          {/* 15-minute actions */}
+          <div style={{ marginBottom: 20 }}>
+            <p style={{ fontSize: 12, color: "#64748B", fontWeight: 600, margin: "0 0 12px 0", textTransform: "uppercase" }}>
+              15-minute actions
+            </p>
+            <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+              {job.tasks.filter(t => t.duration === "15").map((task, index) => (
+                <div
+                  key={index}
+                  style={{
+                    display: "flex",
+                    alignItems: "flex-start",
+                    gap: 12,
+                    fontSize: 14,
+                    color: completedTasks[index] ? "#94A3B8" : "#0F172A",
+                    padding: "10px 12px",
+                    background: completedTasks[index] ? "#F1F5F9" : "transparent",
+                    borderRadius: 8,
+                    transition: "all 0.2s",
+                  }}
+                >
+                  <input
+                    type="checkbox"
+                    checked={completedTasks[index] || false}
+                    onChange={(e) => setCompletedTasks({ ...completedTasks, [index]: e.target.checked })}
+                    style={{ width: 20, height: 20, cursor: "pointer", marginTop: 2 }}
+                  />
+                  <div style={{ flex: 1 }}>
+                    <p style={{ margin: "0 0 4px 0", textDecoration: completedTasks[index] ? "line-through" : "none" }}>
+                      {task.text}
+                    </p>
+                    <p style={{ fontSize: 12, color: "#2563EB", margin: 0 }}>
+                      💡 {task.impact}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
+
+          {/* 30-45 minute actions */}
+          <div>
+            <p style={{ fontSize: 12, color: "#64748B", fontWeight: 600, margin: "0 0 12px 0", textTransform: "uppercase" }}>
+              30–45 minute actions
+            </p>
+            <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+              {job.tasks.filter(t => t.duration === "30-45").map((task, index) => {
+                const actualIndex = job.tasks.indexOf(task)
+                return (
+                  <div
+                    key={actualIndex}
+                    style={{
+                      display: "flex",
+                      alignItems: "flex-start",
+                      gap: 12,
+                      fontSize: 14,
+                      color: completedTasks[actualIndex] ? "#94A3B8" : "#0F172A",
+                      padding: "10px 12px",
+                      background: completedTasks[actualIndex] ? "#F1F5F9" : "transparent",
+                      borderRadius: 8,
+                      transition: "all 0.2s",
+                    }}
+                  >
+                    <input
+                      type="checkbox"
+                      checked={completedTasks[actualIndex] || false}
+                      onChange={(e) => setCompletedTasks({ ...completedTasks, [actualIndex]: e.target.checked })}
+                      style={{ width: 20, height: 20, cursor: "pointer", marginTop: 2 }}
+                    />
+                    <div style={{ flex: 1 }}>
+                      <p style={{ margin: "0 0 4px 0", textDecoration: completedTasks[actualIndex] ? "line-through" : "none" }}>
+                        {task.text}
+                      </p>
+                      <p style={{ fontSize: 12, color: "#2563EB", margin: 0 }}>
+                        💡 {task.impact}
+                      </p>
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+        </div>
+
+        {/* Interview Readiness Pack */}
+        <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 12px 0" }}>
+          IF YOU GET AN INTERVIEW, BE READY:
+        </p>
+        <div
+          style={{
+            background: "#FFFFFF",
+            border: "1px solid #E5E7EB",
+            borderRadius: 12,
+            padding: 20,
+            marginBottom: 24,
+          }}
+        >
+          <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+            <div>
+              <p style={{ fontSize: 13, color: "#0F172A", fontWeight: 600, margin: "0 0 4px 0" }}>
+                📋 Likely Interview Format
+              </p>
+              <p style={{ fontSize: 12, color: "#64748B", margin: 0 }}>
+                HR screening call (20–30 min) → Behavioral interview
+              </p>
+            </div>
+            <div>
+              <p style={{ fontSize: 13, color: "#0F172A", fontWeight: 600, margin: "0 0 4px 0" }}>
+                ❓ Common Questions for Product Analyst Roles
+              </p>
+              <ul style={{ fontSize: 12, color: "#64748B", margin: "0 0 0 20px", paddingLeft: 0 }}>
+                <li>Walk us through your approach to analyzing a dataset</li>
+                <li>Describe a time you influenced a decision with data</li>
+                <li>How would you measure success for [company product]?</li>
+              </ul>
+            </div>
+            <div>
+              <p style={{ fontSize: 13, color: "#0F172A", fontWeight: 600, margin: "0 0 4px 0" }}>
+                💼 2 Company-Specific Talking Points
+              </p>
+              <ul style={{ fontSize: 12, color: "#64748B", margin: "0 0 0 20px", paddingLeft: 0 }}>
+                <li>Acme's focus on B2B analytics aligns with my interest in data-driven decision-making</li>
+                <li>Your recent expansion into Europe interests me — I'd love to help optimize that expansion with data</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Plan B Section - Collapsible */}
+        <div
+          style={{
+            background: "#FEF3C7",
+            border: "1px solid #FCD34D",
+            borderRadius: 12,
+            padding: 20,
+            marginBottom: 24,
+          }}
+        >
+          <button
+            onClick={() => setPlanBOpen(!planBOpen)}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              width: "100%",
+              background: "transparent",
+              border: "none",
+              cursor: "pointer",
+              padding: 0,
+              fontSize: 14,
+              fontWeight: 600,
+              color: "#0F172A",
+            }}
+          >
+            <span>If This Application Doesn't Work Out</span>
+            <span style={{ fontSize: 12, color: "#64748B" }}>
+              {planBOpen ? "−" : "+"}
+            </span>
+          </button>
+
+          {planBOpen && (
+            <div style={{ marginTop: 16 }}>
+              <div style={{ marginBottom: 12 }}>
+                <p style={{ fontSize: 12, color: "#64748B", margin: "0 0 8px 0", textTransform: "uppercase" }}>
+                  3 Similar Roles to Apply to Next
+                </p>
+                <ul style={{ fontSize: 13, color: "#0F172A", margin: 0, paddingLeft: 20 }}>
+                  <li>Junior Data Analyst at DataFlow (NYC)</li>
+                  <li>Analytics Associate at TechStart (London)</li>
+                  <li>Business Intelligence Intern at InsightCorp (Paris)</li>
+                </ul>
+              </div>
+              <div style={{ marginBottom: 12 }}>
+                <p style={{ fontSize: 12, color: "#64748B", margin: "0 0 8px 0", textTransform: "uppercase" }}>
+                  One Skill to Strengthen This Week
+                </p>
+                <p style={{ fontSize: 13, color: "#0F172A", margin: 0 }}>
+                  Advanced SQL: Focus on window functions and CTEs (commonly asked in interviews)
+                </p>
+              </div>
+              <div>
+                <p style={{ fontSize: 12, color: "#64748B", margin: "0 0 8px 0", textTransform: "uppercase" }}>
+                  One Mistake to Avoid Next Time
+                </p>
+                <p style={{ fontSize: 13, color: "#0F172A", margin: 0 }}>
+                  Don't apply without tailoring your CV first. Generic applications have 70% lower response rates.
+                </p>
+              </div>
+            </div>
+          )}
         </div>
       </main>
     </div>
