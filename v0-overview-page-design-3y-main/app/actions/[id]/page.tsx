@@ -137,6 +137,12 @@ export default function ActionDetailPage() {
   const id = params.id as string
   const job = actionJobs[id] || actionJobs["1"]
   const [planBOpen, setPlanBOpen] = useState(false)
+  const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({
+    "30-45-expanded": false,
+    "interview-format": false,
+    "interview-questions": false,
+    "interview-points": false,
+  })
   const [completedTasks, setCompletedTasks] = useState<Record<number, boolean>>(
     job.tasks.reduce((acc, task, idx) => ({ ...acc, [idx]: task.completed }), {})
   )
@@ -150,10 +156,10 @@ export default function ActionDetailPage() {
     const stageBonus = (job.currentStage / job.totalStages) * 50
     const taskBonus = taskCompletionPercent * 0.3
     const score = stageBonus + taskBonus
-    if (score > 75) return { score: "Strong", color: "#2563EB" }
-    if (score > 50) return { score: "Good", color: "#2563EB" }
-    if (score > 25) return { score: "Fair", color: "#2563EB" }
-    return { score: "Needs Work", color: "#2563EB" }
+    if (score > 75) return { score: "Strong — can be excellent", improvement: "(+5%)", color: "#2563EB" }
+    if (score > 50) return { score: "Good — can be stronger", improvement: "(+10%)", color: "#2563EB" }
+    if (score > 25) return { score: "Fair — opportunity to improve", improvement: "(+15%)", color: "#2563EB" }
+    return { score: "Needs Work — quick wins available", improvement: "(+20%)", color: "#2563EB" }
   }
 
   const health = getHealthScore()
@@ -206,7 +212,10 @@ export default function ActionDetailPage() {
                 Current Status
               </p>
               <p style={{ fontSize: 14, color: "#0F172A", margin: 0 }}>
-                {job.currentStage === 1 ? "You're early, but in a good position" : `Stage ${job.currentStage} of ${job.totalStages}`}
+                {job.currentStage === 1 ? "You're early — this is when smart candidates take the lead" : `Stage ${job.currentStage} of ${job.totalStages}`}
+              </p>
+              <p style={{ fontSize: 12, color: "#64748B", margin: "4px 0 0 0" }}>
+                ⏳ Most rejections happen after this stage — staying active matters
               </p>
             </div>
             <div>
@@ -255,9 +264,45 @@ export default function ActionDetailPage() {
                 </span>
               )}
             </div>
-            <p style={{ fontSize: 13, color: "#475569", margin: 0 }}>
-              Doing this now significantly increases your chances. This is where unemployed job seekers often delay — don't let that be you.
+            <p style={{ fontSize: 13, color: "#475569", margin: "0 0 16px 0" }}>
+              Most successful candidates act at this moment — you're right on time.
             </p>
+            <div style={{ display: "flex", gap: 12 }}>
+              <button
+                style={{
+                  padding: "10px 16px",
+                  fontSize: 13,
+                  fontWeight: 500,
+                  background: "#2563EB",
+                  color: "#FFFFFF",
+                  border: "none",
+                  borderRadius: 6,
+                  cursor: "pointer",
+                  transition: "background 0.2s",
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.background = "#1D4ED8"}
+                onMouseLeave={(e) => e.currentTarget.style.background = "#2563EB"}
+              >
+                Schedule follow-up email
+              </button>
+              <button
+                style={{
+                  padding: "10px 16px",
+                  fontSize: 13,
+                  fontWeight: 500,
+                  background: "#FFFFFF",
+                  color: "#2563EB",
+                  border: "1px solid #2563EB",
+                  borderRadius: 6,
+                  cursor: "pointer",
+                  transition: "background 0.2s",
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.background = "#F0F4F8"}
+                onMouseLeave={(e) => e.currentTarget.style.background = "#FFFFFF"}
+              >
+                Preview email
+              </button>
+            </div>
           </div>
         )}
 
@@ -278,14 +323,12 @@ export default function ActionDetailPage() {
             <p style={{ fontSize: 12, color: "#64748B", margin: "0 0 4px 0", textTransform: "uppercase" }}>
               Application Health
             </p>
-            <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-              <span style={{ fontSize: 18, fontWeight: 700, color: health.color }}>
-                {health.score}
-              </span>
-              <span style={{ fontSize: 18 }}>
-                {health.score === "Strong" ? "💪" : health.score === "Good" ? "✅" : health.score === "Fair" ? "⚠️" : "🔧"}
-              </span>
-            </div>
+            <p style={{ fontSize: 14, color: "#0F172A", margin: 0 }}>
+              {health.score} {health.improvement}
+            </p>
+            <p style={{ fontSize: 12, color: "#64748B", margin: "4px 0 0 0" }}>
+              Two quick improvements available
+            </p>
           </div>
           <div>
             <p style={{ fontSize: 12, color: "#64748B", margin: "0 0 4px 0", textTransform: "uppercase" }}>
@@ -415,8 +458,11 @@ export default function ActionDetailPage() {
 
         {/* Progress Bar - Between Application Progress and Tasks */}
         <div style={{ marginBottom: 24 }}>
-          <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 8 }}>
-            <span style={{ fontSize: 12, color: "#64748B" }}>Overall Progress</span>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 8 }}>
+            <div>
+              <span style={{ fontSize: 12, color: "#64748B", display: "block", marginBottom: 4 }}>Process Progress</span>
+              <span style={{ fontSize: 13, color: "#0F172A", fontWeight: 500 }}>You're past the hardest part: applying</span>
+            </div>
             <span style={{ fontSize: 12, color: "#0F172A" }}>{Math.round(progressPercentage)}%</span>
           </div>
           <div style={{ height: 8, background: "#E5E7EB", borderRadius: 4 }}>
@@ -451,27 +497,116 @@ export default function ActionDetailPage() {
               15-minute actions
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-              {job.tasks.filter(t => t.duration === "15").map((task, index) => (
-                <div
-                  key={index}
-                  style={{
-                    display: "flex",
-                    alignItems: "flex-start",
-                    gap: 12,
-                    fontSize: 14,
-                    color: completedTasks[index] ? "#94A3B8" : "#0F172A",
-                    padding: "10px 12px",
-                    background: completedTasks[index] ? "#F1F5F9" : "transparent",
-                    borderRadius: 8,
-                    transition: "all 0.2s",
-                  }}
-                >
-                  <input
-                    type="checkbox"
-                    checked={completedTasks[index] || false}
-                    onChange={(e) => setCompletedTasks({ ...completedTasks, [index]: e.target.checked })}
-                    style={{ width: 20, height: 20, cursor: "pointer", marginTop: 2 }}
-                  />
+              {job.tasks.filter(t => t.duration === "15").map((task, taskIdx) => {
+                const actualIndex = job.tasks.indexOf(task)
+                return (
+                  <div
+                    key={actualIndex}
+                    style={{
+                      display: "flex",
+                      alignItems: "flex-start",
+                      gap: 12,
+                      fontSize: 14,
+                      color: completedTasks[actualIndex] ? "#94A3B8" : "#0F172A",
+                      padding: "10px 12px",
+                      background: completedTasks[actualIndex] ? "#F1F5F9" : "transparent",
+                      borderRadius: 8,
+                      transition: "all 0.2s",
+                    }}
+                  >
+                    <input
+                      type="checkbox"
+                      checked={completedTasks[actualIndex] || false}
+                      onChange={(e) => setCompletedTasks({ ...completedTasks, [actualIndex]: e.target.checked })}
+                      style={{ width: 20, height: 20, cursor: "pointer", marginTop: 2 }}
+                    />
+                    <div style={{ flex: 1 }}>
+                      <p style={{ margin: "0 0 4px 0", textDecoration: completedTasks[actualIndex] ? "line-through" : "none" }}>
+                        {task.text}
+                      </p>
+                      <p style={{ fontSize: 12, color: "#2563EB", margin: 0 }}>
+                        💡 {task.impact}
+                      </p>
+                      {completedTasks[actualIndex] && (
+                        <p style={{ fontSize: 12, color: "#2563EB", margin: "4px 0 0 0" }}>
+                          ✅ This improved your application quality
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+
+          {/* 30-45 minute actions - Collapse by default */}
+          <div>
+            <button
+              onClick={() => setExpandedSections({ ...expandedSections, "30-45-expanded": !expandedSections["30-45-expanded"] })}
+              style={{
+                fontSize: 12,
+                color: "#64748B",
+                fontWeight: 600,
+                margin: "0 0 12px 0",
+                textTransform: "uppercase",
+                background: "transparent",
+                border: "none",
+                cursor: "pointer",
+                padding: 0,
+                display: "flex",
+                alignItems: "center",
+                gap: 8,
+              }}
+            >
+              30–45 minute actions
+              <span style={{ transition: "transform 0.2s", display: "inline-block", transform: expandedSections["30-45-expanded"] ? "rotate(0deg)" : "rotate(-90deg)" }}>
+                ▼
+              </span>
+            </button>
+            {expandedSections["30-45-expanded"] && (
+              <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+                {job.tasks.filter(t => t.duration === "30-45").map((task) => {
+                  const actualIndex = job.tasks.indexOf(task)
+                  return (
+                    <div
+                      key={actualIndex}
+                      style={{
+                        display: "flex",
+                        alignItems: "flex-start",
+                        gap: 12,
+                        fontSize: 14,
+                        color: completedTasks[actualIndex] ? "#94A3B8" : "#0F172A",
+                        padding: "10px 12px",
+                        background: completedTasks[actualIndex] ? "#F1F5F9" : "transparent",
+                        borderRadius: 8,
+                        transition: "all 0.2s",
+                      }}
+                    >
+                      <input
+                        type="checkbox"
+                        checked={completedTasks[actualIndex] || false}
+                        onChange={(e) => setCompletedTasks({ ...completedTasks, [actualIndex]: e.target.checked })}
+                        style={{ width: 20, height: 20, cursor: "pointer", marginTop: 2 }}
+                      />
+                      <div style={{ flex: 1 }}>
+                        <p style={{ margin: "0 0 4px 0", textDecoration: completedTasks[actualIndex] ? "line-through" : "none" }}>
+                          {task.text}
+                        </p>
+                        <p style={{ fontSize: 12, color: "#2563EB", margin: 0 }}>
+                          💡 {task.impact}
+                        </p>
+                        {completedTasks[actualIndex] && (
+                          <p style={{ fontSize: 12, color: "#2563EB", margin: "4px 0 0 0" }}>
+                            ✅ This improved your application quality
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                  )
+                })}
+              </div>
+            )}
+          </div>
                   <div style={{ flex: 1 }}>
                     <p style={{ margin: "0 0 4px 0", textDecoration: completedTasks[index] ? "line-through" : "none" }}>
                       {task.text}
@@ -479,8 +614,11 @@ export default function ActionDetailPage() {
                     <p style={{ fontSize: 12, color: "#2563EB", margin: 0 }}>
                       💡 {task.impact}
                     </p>
-                  </div>
-                </div>
+              </div>
+            </div>
+            <p style={{ fontSize: 12, color: "#2563EB", margin: "16px 0 0 0", fontStyle: "italic" }}>
+              Silence here is normal — not a negative signal.
+            </p>
               ))}
             </div>
           </div>
@@ -531,7 +669,7 @@ export default function ActionDetailPage() {
 
         {/* Interview Readiness Pack */}
         <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 12px 0" }}>
-          IF YOU GET AN INTERVIEW, BE READY:
+          WHEN YOU GET AN INTERVIEW:
         </p>
         <div
           style={{
@@ -543,32 +681,47 @@ export default function ActionDetailPage() {
           }}
         >
           <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-            <div>
-              <p style={{ fontSize: 13, color: "#0F172A", fontWeight: 600, margin: "0 0 4px 0" }}>
+            <div style={{ cursor: "pointer", padding: "8px 0" }} onClick={() => setExpandedSections({ ...expandedSections, "interview-format": !expandedSections["interview-format"] })}>
+              <p style={{ fontSize: 13, color: "#0F172A", fontWeight: 600, margin: 0, display: "flex", alignItems: "center", gap: 8 }}>
                 📋 Likely Interview Format
+                <span style={{ transition: "transform 0.2s", display: "inline-block", transform: expandedSections["interview-format"] ? "rotate(0deg)" : "rotate(-90deg)", fontSize: 12 }}>
+                  ▼
+                </span>
               </p>
-              <p style={{ fontSize: 12, color: "#64748B", margin: 0 }}>
-                HR screening call (20–30 min) → Behavioral interview
-              </p>
+              {expandedSections["interview-format"] && (
+                <p style={{ fontSize: 12, color: "#64748B", margin: "8px 0 0 0" }}>
+                  HR screening call (20–30 min) → Behavioral interview
+                </p>
+              )}
             </div>
-            <div>
-              <p style={{ fontSize: 13, color: "#0F172A", fontWeight: 600, margin: "0 0 4px 0" }}>
+            <div style={{ cursor: "pointer", padding: "8px 0" }} onClick={() => setExpandedSections({ ...expandedSections, "interview-questions": !expandedSections["interview-questions"] })}>
+              <p style={{ fontSize: 13, color: "#0F172A", fontWeight: 600, margin: 0, display: "flex", alignItems: "center", gap: 8 }}>
                 ❓ Common Questions for Product Analyst Roles
+                <span style={{ transition: "transform 0.2s", display: "inline-block", transform: expandedSections["interview-questions"] ? "rotate(0deg)" : "rotate(-90deg)", fontSize: 12 }}>
+                  ▼
+                </span>
               </p>
-              <ul style={{ fontSize: 12, color: "#64748B", margin: "0 0 0 20px", paddingLeft: 0 }}>
-                <li>Walk us through your approach to analyzing a dataset</li>
-                <li>Describe a time you influenced a decision with data</li>
-                <li>How would you measure success for [company product]?</li>
-              </ul>
+              {expandedSections["interview-questions"] && (
+                <ul style={{ fontSize: 12, color: "#64748B", margin: "8px 0 0 20px", paddingLeft: 0 }}>
+                  <li>Walk us through your approach to analyzing a dataset</li>
+                  <li>Describe a time you influenced a decision with data</li>
+                  <li>How would you measure success for [company product]?</li>
+                </ul>
+              )}
             </div>
-            <div>
-              <p style={{ fontSize: 13, color: "#0F172A", fontWeight: 600, margin: "0 0 4px 0" }}>
+            <div style={{ cursor: "pointer", padding: "8px 0" }} onClick={() => setExpandedSections({ ...expandedSections, "interview-points": !expandedSections["interview-points"] })}>
+              <p style={{ fontSize: 13, color: "#0F172A", fontWeight: 600, margin: 0, display: "flex", alignItems: "center", gap: 8 }}>
                 💼 2 Company-Specific Talking Points
+                <span style={{ transition: "transform 0.2s", display: "inline-block", transform: expandedSections["interview-points"] ? "rotate(0deg)" : "rotate(-90deg)", fontSize: 12 }}>
+                  ▼
+                </span>
               </p>
-              <ul style={{ fontSize: 12, color: "#64748B", margin: "0 0 0 20px", paddingLeft: 0 }}>
-                <li>Acme's focus on B2B analytics aligns with my interest in data-driven decision-making</li>
-                <li>Your recent expansion into Europe interests me — I'd love to help optimize that expansion with data</li>
-              </ul>
+              {expandedSections["interview-points"] && (
+                <ul style={{ fontSize: 12, color: "#64748B", margin: "8px 0 0 20px", paddingLeft: 0 }}>
+                  <li>Acme's focus on B2B analytics aligns with my interest in data-driven decision-making</li>
+                  <li>Your recent expansion into Europe interests me — I'd love to help optimize that expansion with data</li>
+                </ul>
+              )}
             </div>
           </div>
         </div>
@@ -599,7 +752,12 @@ export default function ActionDetailPage() {
               color: "#0F172A",
             }}
           >
-            <span>If This Application Doesn't Work Out</span>
+            <div>
+              <div>If This Application Doesn't Work Out</div>
+              <p style={{ fontSize: 12, color: "#2563EB", margin: "4px 0 0 0", fontWeight: 400 }}>
+                You'll still be ahead — here's what to do next.
+              </p>
+            </div>
             <span style={{ fontSize: 12, color: "#64748B" }}>
               {planBOpen ? "−" : "+"}
             </span>
