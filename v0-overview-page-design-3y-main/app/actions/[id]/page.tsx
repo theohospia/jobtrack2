@@ -430,7 +430,7 @@ export default function ActionDetailPage() {
                       fontWeight: stage.status === "current" ? 600 : 400,
                     }}
                   >
-                    {stage.status === "completed" && "✅ You "}
+                    {stage.status === "completed" && "Your "}
                     {stage.name}
                     {stage.status === "current" && (
                       <span style={{ marginLeft: 8, fontSize: 12, color: "#2563EB", fontWeight: 400 }}>
