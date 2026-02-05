@@ -119,6 +119,7 @@ export function TopNav() {
           >
             {tabs.map((tab) => {
               const isActive = pathname === tab.href || pathname.startsWith(tab.href + "/") || (pathname === "/" && tab.href === "/dashboard")
+              console.log("[v0] Tab rendering:", { tabLabel: tab.label, tabHref: tab.href, pathname, isActive })
               return (
                 <Link
                   key={tab.href}
@@ -315,6 +316,7 @@ export function TopNav() {
         >
           {tabs.map((tab) => {
             const isActive = pathname === tab.href || pathname.startsWith(tab.href + "/") || (pathname === "/" && tab.href === "/dashboard")
+            console.log("[v0] Mobile Tab rendering:", { tabLabel: tab.label, tabHref: tab.href, pathname, isActive })
             return (
               <Link
                 key={tab.href}
