@@ -155,7 +155,6 @@ export default function ActionDetailPage() {
   const router = useRouter()
   const id = params.id as string
   const job = actionJobs[id] || actionJobs["1"]
-  const [planBOpen, setPlanBOpen] = useState(false)
   const [completedTasks, setCompletedTasks] = useState<Record<number, boolean>>(
     job.tasks.reduce((acc, _, i) => ({ ...acc, [i]: false }), {})
   )
@@ -671,47 +670,26 @@ export default function ActionDetailPage() {
             marginBottom: 24,
           }}
         >
-          <button
-            onClick={() => setPlanBOpen(!planBOpen)}
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              width: "100%",
-              background: "transparent",
-              border: "none",
-              cursor: "pointer",
-              padding: 0,
-              fontSize: 14,
-              fontWeight: 600,
-              color: "#0F172A",
-            }}
-          >
-            <div>
-              <div style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", marginBottom: 4 }}>
-                If This Application Doesn't Work Out
-              </div>
-              <p style={{ fontSize: 12, color: "#2563EB", margin: 0, fontWeight: 400 }}>
-                You'll still be ahead — here's what to do next.
-              </p>
+          <div style={{ marginBottom: 16 }}>
+            <div style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", marginBottom: 4 }}>
+              If This Application Doesn't Work Out
             </div>
-            <span style={{ fontSize: 12, color: "#64748B" }}>
-              {planBOpen ? "−" : "+"}
-            </span>
-          </button>
+            <p style={{ fontSize: 12, color: "#2563EB", margin: 0, fontWeight: 400 }}>
+              You'll still be ahead — here's what to do next.
+            </p>
+          </div>
 
-          {planBOpen && (
-            <div style={{ marginTop: 16 }}>
-              {/* Job Cards Grid */}
-              <div
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "repeat(3, 1fr)",
-                  gap: 16,
-                  marginBottom: 24,
-                }}
-              >
-                {alternativeJobs.map((job, index) => (
+          <div style={{ marginTop: 16 }}>
+            {/* Job Cards Grid */}
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(3, 1fr)",
+                gap: 16,
+                marginBottom: 24,
+              }}
+            >
+              {alternativeJobs.map((job, index) => (
                   <div
                     key={index}
                     style={{
@@ -755,7 +733,6 @@ export default function ActionDetailPage() {
                 ))}
               </div>
             </div>
-          )}
         </div>
       </main>
     </div>
