@@ -24,15 +24,22 @@ export default function DashboardPage() {
             Dashboard
           </h1>
           <button 
-            className="flex items-center gap-2 px-4 py-2 rounded-lg cursor-pointer transition-colors"
-            style={{ background: "#F1F5F9", color: "#64748B" }}
+            className="flex items-center gap-2 px-4 py-2 rounded-lg cursor-pointer transition-all"
+            style={{ 
+              background: "#F1F5F9", 
+              color: "#64748B",
+              border: "1px solid #E5E7EB",
+              boxShadow: "0 2px 4px rgba(0, 0, 0, 0.04)",
+            }}
             onMouseEnter={(e) => {
               e.currentTarget.style.background = "#E2E8F0";
               e.currentTarget.style.color = "#475569";
+              e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08)";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.background = "#F1F5F9";
               e.currentTarget.style.color = "#64748B";
+              e.currentTarget.style.boxShadow = "0 2px 4px rgba(0, 0, 0, 0.04)";
             }}
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -52,18 +59,21 @@ export default function DashboardPage() {
         <div className="mb-12 grid grid-cols-4 gap-4">
           {/* Matches Found */}
           <div
-            className="rounded-2xl p-6 transition-colors"
+            className="rounded-2xl p-6 transition-all duration-300"
             style={{
               background: "#FFFFFF",
               border: "1px solid #E5E7EB",
+              boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)",
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.borderColor = "#CBD5E1";
-              e.currentTarget.style.boxShadow = "0px 8px 24px rgba(15, 23, 42, 0.06)";
+              e.currentTarget.style.boxShadow = "0 12px 32px rgba(0, 0, 0, 0.15), 0 4px 12px rgba(0, 0, 0, 0.08)";
+              e.currentTarget.style.transform = "translateY(-4px)";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.borderColor = "#E5E7EB";
-              e.currentTarget.style.boxShadow = "none";
+              e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)";
+              e.currentTarget.style.transform = "translateY(0)";
             }}
           >
             <div className="flex items-center justify-between mb-4">
@@ -81,18 +91,21 @@ export default function DashboardPage() {
 
           {/* Outreach Sent */}
           <div
-            className="rounded-2xl p-6 transition-colors"
+            className="rounded-2xl p-6 transition-all duration-300"
             style={{
               background: "#FFFFFF",
               border: "1px solid #E5E7EB",
+              boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)",
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.borderColor = "#CBD5E1";
-              e.currentTarget.style.boxShadow = "0px 8px 24px rgba(15, 23, 42, 0.06)";
+              e.currentTarget.style.boxShadow = "0 12px 32px rgba(0, 0, 0, 0.15), 0 4px 12px rgba(0, 0, 0, 0.08)";
+              e.currentTarget.style.transform = "translateY(-4px)";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.borderColor = "#E5E7EB";
-              e.currentTarget.style.boxShadow = "none";
+              e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)";
+              e.currentTarget.style.transform = "translateY(0)";
             }}
           >
             <div className="flex items-center justify-between mb-4">
@@ -110,18 +123,21 @@ export default function DashboardPage() {
 
           {/* Responses Received */}
           <div
-            className="rounded-2xl p-6 transition-colors"
+            className="rounded-2xl p-6 transition-all duration-300"
             style={{
               background: "#FFFFFF",
               border: "1px solid #E5E7EB",
+              boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)",
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.borderColor = "#CBD5E1";
-              e.currentTarget.style.boxShadow = "0px 8px 24px rgba(15, 23, 42, 0.06)";
+              e.currentTarget.style.boxShadow = "0 12px 32px rgba(0, 0, 0, 0.15), 0 4px 12px rgba(0, 0, 0, 0.08)";
+              e.currentTarget.style.transform = "translateY(-4px)";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.borderColor = "#E5E7EB";
-              e.currentTarget.style.boxShadow = "none";
+              e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)";
+              e.currentTarget.style.transform = "translateY(0)";
             }}
           >
             <div className="flex items-center justify-between mb-4">
@@ -139,18 +155,21 @@ export default function DashboardPage() {
 
           {/* Interview Rate */}
           <div
-            className="rounded-2xl p-6 transition-colors"
+            className="rounded-2xl p-6 transition-all duration-300"
             style={{
               background: "#FFFFFF",
               border: "1px solid #E5E7EB",
+              boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)",
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.borderColor = "#CBD5E1";
-              e.currentTarget.style.boxShadow = "0px 8px 24px rgba(15, 23, 42, 0.06)";
+              e.currentTarget.style.boxShadow = "0 12px 32px rgba(0, 0, 0, 0.15), 0 4px 12px rgba(0, 0, 0, 0.08)";
+              e.currentTarget.style.transform = "translateY(-4px)";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.borderColor = "#E5E7EB";
-              e.currentTarget.style.boxShadow = "none";
+              e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)";
+              e.currentTarget.style.transform = "translateY(0)";
             }}
           >
             <div className="flex items-center justify-between mb-4">
@@ -169,13 +188,20 @@ export default function DashboardPage() {
 
         {/* Recent Responses Section - Above Tutorials */}
         <div 
-          className="mb-12 rounded-2xl p-8 transition-colors"
+          className="mb-12 rounded-2xl p-8 transition-all duration-300"
           style={{
             background: "#FFFFFF",
             border: "1px solid #E5E7EB",
+            boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)",
           }}
-          onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
-          onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.borderColor = "#CBD5E1";
+            e.currentTarget.style.boxShadow = "0 8px 24px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.06)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.borderColor = "#E5E7EB";
+            e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)";
+          }}
         >
             <div className="mb-6">
               <h3 className="text-xl font-semibold mb-1" style={{ color: "#0F172A" }}>
@@ -208,13 +234,20 @@ export default function DashboardPage() {
                   </div>
                 </div>
                 <button
-                  className="px-3 py-1 rounded-lg text-xs font-medium transition-colors"
+                  className="px-3 py-1 rounded-lg text-xs font-medium transition-all"
                   style={{
                     background: "#F1F5F9",
-                    color: "#2563EB"
+                    color: "#2563EB",
+                    boxShadow: "0 2px 4px rgba(0, 0, 0, 0.04)",
                   }}
-                  onMouseEnter={(e) => e.currentTarget.style.background = "#E2E8F0"}
-                  onMouseLeave={(e) => e.currentTarget.style.background = "#F1F5F9"}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = "#E2E8F0";
+                    e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = "#F1F5F9";
+                    e.currentTarget.style.boxShadow = "0 2px 4px rgba(0, 0, 0, 0.04)";
+                  }}
                 >
                   View
                 </button>
@@ -240,13 +273,20 @@ export default function DashboardPage() {
                   </div>
                 </div>
                 <button
-                  className="px-3 py-1 rounded-lg text-xs font-medium transition-colors"
+                  className="px-3 py-1 rounded-lg text-xs font-medium transition-all"
                   style={{
                     background: "#F1F5F9",
-                    color: "#2563EB"
+                    color: "#2563EB",
+                    boxShadow: "0 2px 4px rgba(0, 0, 0, 0.04)",
                   }}
-                  onMouseEnter={(e) => e.currentTarget.style.background = "#E2E8F0"}
-                  onMouseLeave={(e) => e.currentTarget.style.background = "#F1F5F9"}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = "#E2E8F0";
+                    e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = "#F1F5F9";
+                    e.currentTarget.style.boxShadow = "0 2px 4px rgba(0, 0, 0, 0.04)";
+                  }}
                 >
                   View
                 </button>
@@ -258,13 +298,22 @@ export default function DashboardPage() {
         <div className="flex flex-col gap-6">
           {/* Tutorial 1 - Image Left, Content Right */}
           <div
-            className="flex gap-6 overflow-hidden rounded-2xl transition-colors"
+            className="flex gap-6 overflow-hidden rounded-2xl transition-all duration-300"
             style={{
               background: "#FFFFFF",
               border: "1px solid #E5E7EB",
+              boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)",
             }}
-            onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
-            onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.borderColor = "#CBD5E1";
+              e.currentTarget.style.boxShadow = "0 12px 32px rgba(0, 0, 0, 0.15), 0 4px 12px rgba(0, 0, 0, 0.08)";
+              e.currentTarget.style.transform = "translateY(-4px)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.borderColor = "#E5E7EB";
+              e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)";
+              e.currentTarget.style.transform = "translateY(0)";
+            }}
           >
             {/* Image */}
             <div 
@@ -295,13 +344,22 @@ export default function DashboardPage() {
                 3 min · Beginner
               </p>
               <button
-                className="mt-4 flex items-center gap-1 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2"
+                className="mt-4 flex items-center gap-1 cursor-pointer text-sm font-medium transition-all rounded-lg px-3 py-2"
                 style={{ 
                   background: "#EC9F55",
-                  color: "#FFFFFF" 
+                  color: "#FFFFFF",
+                  boxShadow: "0 4px 12px rgba(236, 159, 85, 0.2)",
                 }}
-                onMouseEnter={(e) => e.currentTarget.style.background = "#D88A3D"}
-                onMouseLeave={(e) => e.currentTarget.style.background = "#EC9F55"}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = "#D88A3D";
+                  e.currentTarget.style.boxShadow = "0 8px 20px rgba(236, 159, 85, 0.3)";
+                  e.currentTarget.style.transform = "translateY(-2px)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = "#EC9F55";
+                  e.currentTarget.style.boxShadow = "0 4px 12px rgba(236, 159, 85, 0.2)";
+                  e.currentTarget.style.transform = "translateY(0)";
+                }}
               >
                 Watch
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -313,13 +371,22 @@ export default function DashboardPage() {
 
           {/* Tutorial 2 - Content Left, Image Right */}
           <div
-            className="flex gap-6 overflow-hidden rounded-2xl transition-colors"
+            className="flex gap-6 overflow-hidden rounded-2xl transition-all duration-300"
             style={{
               background: "#FFFFFF",
               border: "1px solid #E5E7EB",
+              boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)",
             }}
-            onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
-            onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.borderColor = "#CBD5E1";
+              e.currentTarget.style.boxShadow = "0 12px 32px rgba(0, 0, 0, 0.15), 0 4px 12px rgba(0, 0, 0, 0.08)";
+              e.currentTarget.style.transform = "translateY(-4px)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.borderColor = "#E5E7EB";
+              e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)";
+              e.currentTarget.style.transform = "translateY(0)";
+            }}
           >
             {/* Content */}
             <div className="flex w-3/5 flex-col items-start justify-center pl-6">
@@ -336,13 +403,22 @@ export default function DashboardPage() {
                 5 min · Quick win
               </p>
               <button
-                className="mt-4 flex items-center gap-1 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2"
+                className="mt-4 flex items-center gap-1 cursor-pointer text-sm font-medium transition-all rounded-lg px-3 py-2"
                 style={{ 
                   background: "#EC9F55",
-                  color: "#FFFFFF" 
+                  color: "#FFFFFF",
+                  boxShadow: "0 4px 12px rgba(236, 159, 85, 0.2)",
                 }}
-                onMouseEnter={(e) => e.currentTarget.style.background = "#D88A3D"}
-                onMouseLeave={(e) => e.currentTarget.style.background = "#EC9F55"}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = "#D88A3D";
+                  e.currentTarget.style.boxShadow = "0 8px 20px rgba(236, 159, 85, 0.3)";
+                  e.currentTarget.style.transform = "translateY(-2px)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = "#EC9F55";
+                  e.currentTarget.style.boxShadow = "0 4px 12px rgba(236, 159, 85, 0.2)";
+                  e.currentTarget.style.transform = "translateY(0)";
+                }}
               >
                 Watch
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -370,13 +446,20 @@ export default function DashboardPage() {
 
         {/* Recent Responses Section */}
         <div 
-          className="mt-12 rounded-2xl p-8 transition-colors"
+          className="mt-12 rounded-2xl p-8 transition-all duration-300"
           style={{
             background: "#FFFFFF",
             border: "1px solid #E5E7EB",
+            boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)",
           }}
-          onMouseEnter={(e) => e.currentTarget.style.borderColor = "#CBD5E1"}
-          onMouseLeave={(e) => e.currentTarget.style.borderColor = "#E5E7EB"}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.borderColor = "#CBD5E1";
+            e.currentTarget.style.boxShadow = "0 8px 24px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.06)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.borderColor = "#E5E7EB";
+            e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)";
+          }}
         >
             <div className="mb-6">
               <h3 className="text-xl font-semibold mb-1" style={{ color: "#0F172A" }}>

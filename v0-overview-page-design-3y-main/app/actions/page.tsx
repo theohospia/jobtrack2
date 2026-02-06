@@ -1,8 +1,10 @@
 "use client"
 
 import { TopNav } from "@/components/top-nav"
+import { useRouter } from "next/navigation"
 
 export default function ActionsPage() {
+  const router = useRouter()
   const secondaryActions = [
     {
       title: "Follow up with TechStart Inc",
@@ -121,7 +123,7 @@ export default function ActionsPage() {
               color: '#0F172A'
             }}
           >
-            Actions
+            Application
           </h1>
         </header>
 
@@ -132,7 +134,16 @@ export default function ActionsPage() {
             height: 100, 
             borderRadius: 12, 
             marginBottom: 24,
-            overflow: 'hidden'
+            overflow: 'hidden',
+            boxShadow: '0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)',
+            transition: 'box-shadow 0.3s ease',
+            cursor: 'pointer'
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.boxShadow = '0 8px 24px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.06)'
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)'
           }}
         >
           <img 
@@ -166,10 +177,17 @@ export default function ActionsPage() {
               background: '#FFFFFF',
               color: '#0F172A',
               minWidth: 200,
-              transition: 'border-color 120ms ease'
+              transition: 'all 0.3s ease',
+              boxShadow: '0 2px 4px rgba(0, 0, 0, 0.04)'
             }}
-            onFocus={(e) => e.target.style.borderColor = '#2563EB'}
-            onBlur={(e) => e.target.style.borderColor = '#E5E7EB'}
+            onFocus={(e) => {
+              e.target.style.borderColor = '#2563EB'
+              e.target.style.boxShadow = '0 4px 12px rgba(37, 99, 235, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06)'
+            }}
+            onBlur={(e) => {
+              e.target.style.borderColor = '#E5E7EB'
+              e.target.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.04)'
+            }}
           />
 
           {/* Filter by Urgency */}
@@ -182,10 +200,17 @@ export default function ActionsPage() {
               background: '#FFFFFF',
               color: '#0F172A',
               cursor: 'pointer',
-              transition: 'border-color 120ms ease'
+              transition: 'all 0.3s ease',
+              boxShadow: '0 2px 4px rgba(0, 0, 0, 0.04)'
             }}
-            onFocus={(e) => e.target.style.borderColor = '#2563EB'}
-            onBlur={(e) => e.target.style.borderColor = '#E5E7EB'}
+            onFocus={(e) => {
+              e.target.style.borderColor = '#2563EB'
+              e.target.style.boxShadow = '0 4px 12px rgba(37, 99, 235, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06)'
+            }}
+            onBlur={(e) => {
+              e.target.style.borderColor = '#E5E7EB'
+              e.target.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.04)'
+            }}
           >
             <option value="">Filter by urgency</option>
             <option value="very-urgent">Very urgent</option>
@@ -203,10 +228,17 @@ export default function ActionsPage() {
               background: '#FFFFFF',
               color: '#0F172A',
               cursor: 'pointer',
-              transition: 'border-color 120ms ease'
+              transition: 'all 0.3s ease',
+              boxShadow: '0 2px 4px rgba(0, 0, 0, 0.04)'
             }}
-            onFocus={(e) => e.target.style.borderColor = '#2563EB'}
-            onBlur={(e) => e.target.style.borderColor = '#E5E7EB'}
+            onFocus={(e) => {
+              e.target.style.borderColor = '#2563EB'
+              e.target.style.boxShadow = '0 4px 12px rgba(37, 99, 235, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06)'
+            }}
+            onBlur={(e) => {
+              e.target.style.borderColor = '#E5E7EB'
+              e.target.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.04)'
+            }}
           >
             <option value="">Filter by date</option>
             <option value="1-day">Last 1 day</option>
@@ -218,15 +250,29 @@ export default function ActionsPage() {
 
         {/* Job Cards Row */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24, marginBottom: 80 }}>
-          {jobCards.map((card, index) => (
+          {jobCards.map((card, index) => {
+            const isAltStyle = index % 2 === 1
+            const bgColor = isAltStyle ? "#EFF6FF" : "#FFFFFF"
+
+            return (
             <div
               key={index}
               style={{
-                background: '#FFFFFF',
+                background: bgColor,
                 border: '1px solid #E5E7EB',
                 borderRadius: 12,
                 padding: 24,
-                boxShadow: '0px 1px 3px rgba(15, 23, 42, 0.06)'
+                boxShadow: '0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)',
+                transition: 'all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                cursor: 'pointer'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow = '0 12px 32px rgba(0, 0, 0, 0.15), 0 4px 12px rgba(0, 0, 0, 0.08)'
+                e.currentTarget.style.transform = 'translateY(-6px)'
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)'
+                e.currentTarget.style.transform = 'translateY(0)'
               }}
             >
               {/* Top Section: Title and Urgency Badge */}
@@ -288,31 +334,39 @@ export default function ActionsPage() {
                 <span style={{ fontSize: 14, fontWeight: 600, color: '#0F172A', flexShrink: 0 }}>Tasks:</span>
                 
                 {/* Progress Bar */}
-                <div style={{ flex: 1, height: 6, background: '#E5E7EB', borderRadius: 3 }}>
+                <div style={{ flex: 1, height: 6, background: '#E5E7EB', borderRadius: 3, overflow: 'hidden', boxShadow: 'inset 0 1px 3px rgba(0, 0, 0, 0.1)' }}>
                   <div 
                     style={{ 
                       width: card.urgency === 'Very urgent' ? '75%' : card.urgency === 'Urgent' ? '50%' : '25%',
                       height: '100%', 
-                      background: '#2563EB', 
-                      borderRadius: 3 
+                      background: 'linear-gradient(90deg, #2563EB 0%, #1D4ED8 100%)',
+                      borderRadius: 3,
+                      transition: 'width 0.5s ease'
                     }} 
                   />
                 </div>
                 
                 {/* Arrow Icon Button */}
                 <button
-                  className="flex items-center justify-center cursor-pointer transition-colors rounded-lg flex-shrink-0"
+                  className="flex items-center justify-center cursor-pointer transition-all rounded-lg flex-shrink-0"
                   style={{
                     background: "#2563EB",
                     color: "#FFFFFF",
                     padding: "6px 8px",
-                    border: "none"
+                    border: "none",
+                    boxShadow: '0 2px 8px rgba(37, 99, 235, 0.2)',
+                    transition: 'all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)'
                   }}
+                  onClick={() => router.push(`/actions/${index + 1}`)}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.background = "#1D4ED8"
+                    e.currentTarget.style.boxShadow = '0 6px 16px rgba(37, 99, 235, 0.3)'
+                    e.currentTarget.style.transform = 'translateY(-2px)'
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.background = "#2563EB"
+                    e.currentTarget.style.boxShadow = '0 2px 8px rgba(37, 99, 235, 0.2)'
+                    e.currentTarget.style.transform = 'translateY(0)'
                   }}
                 >
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -321,22 +375,29 @@ export default function ActionsPage() {
                 </button>
               </div>
             </div>
-          ))}
+            )
+          })}
         </div>
 
         {/* Load More Button */}
         <div className="flex justify-center">
           <button
-            className="flex items-center gap-1 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2"
+            className="flex items-center gap-1 cursor-pointer text-sm font-medium transition-all rounded-lg px-4 py-2"
             style={{
               background: "#2563EB",
               color: "#FFFFFF",
+              boxShadow: '0 4px 12px rgba(37, 99, 235, 0.2)',
+              transition: 'all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)'
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.background = "#1D4ED8"
+              e.currentTarget.style.boxShadow = '0 8px 24px rgba(37, 99, 235, 0.3)'
+              e.currentTarget.style.transform = 'translateY(-3px)'
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.background = "#2563EB"
+              e.currentTarget.style.boxShadow = '0 4px 12px rgba(37, 99, 235, 0.2)'
+              e.currentTarget.style.transform = 'translateY(0)'
             }}
           >
             Load more
