@@ -600,6 +600,36 @@ export default function ActionDetailPage() {
                             Next best move
                           </span>
                         )}
+                        {task.text.includes("interview questions") && (
+                          <button
+                            onClick={() => console.log("Tips clicked for:", task.text)}
+                            style={{
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                              width: 24,
+                              height: 24,
+                              borderRadius: "50%",
+                              background: "transparent",
+                              border: "1px solid #2563EB",
+                              cursor: "pointer",
+                              padding: 0,
+                              color: "#2563EB",
+                              fontSize: 14,
+                              transition: "all 0.2s",
+                              flexShrink: 0,
+                            }}
+                            onMouseEnter={(e) => {
+                              e.currentTarget.style.background = "#EFF6FF"
+                            }}
+                            onMouseLeave={(e) => {
+                              e.currentTarget.style.background = "transparent"
+                            }}
+                            title="Tips for interview questions"
+                          >
+                            💡
+                          </button>
+                        )}
                       </div>
                       <p style={{ fontSize: 12, color: "#2563EB", margin: 0 }}>
                         {task.impact}
@@ -608,54 +638,6 @@ export default function ActionDetailPage() {
                   </div>
                 )
               })}
-            </div>
-          </div>
-        </div>
-
-        {/* Interview Readiness Pack */}
-        <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 12px 0" }}>
-          When You Get an Interview
-        </p>
-        <p style={{ fontSize: 12, color: "#64748B", margin: "0 0 12px 0" }}>
-          You won't need all of this at once — prepare gradually.
-        </p>
-        <div
-          style={{
-            background: "#FFFFFF",
-            border: "1px solid #E5E7EB",
-            borderRadius: 12,
-            padding: 20,
-            marginBottom: 24,
-          }}
-        >
-          <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-            <div>
-              <p style={{ fontSize: 13, color: "#0F172A", fontWeight: 600, margin: "0 0 4px 0" }}>
-                Likely interview format
-              </p>
-              <p style={{ fontSize: 12, color: "#64748B", margin: 0 }}>
-                HR screening call (20–30 min)<br />
-                → Behavioral interview
-              </p>
-            </div>
-            <div>
-              <p style={{ fontSize: 13, color: "#0F172A", fontWeight: 600, margin: "0 0 4px 0" }}>
-                Common questions for Product Analyst roles
-              </p>
-              <ul style={{ fontSize: 12, color: "#64748B", margin: "0 0 0 20px", paddingLeft: 0 }}>
-                <li>Walk me through how you would analyze a dataset</li>
-                <li>Describe a time you influenced a decision using data</li>
-                <li>How would you measure success for one of our products?</li>
-              </ul>
-            </div>
-            <div>
-              <p style={{ fontSize: 13, color: "#0F172A", fontWeight: 600, margin: "0 0 4px 0" }}>
-                Company-specific talking points
-              </p>
-              <ul style={{ fontSize: 12, color: "#64748B", margin: "0 0 0 20px", paddingLeft: 0 }}>
-                <li>Acme's focus on B2B analytics aligns with my interest in data-driven decision-making</li>
-                <li>Your recent expansion into Europe stands out — I'd love to help optimize that growth with data</li>
-              </ul>
             </div>
           </div>
         </div>
