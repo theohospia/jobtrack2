@@ -212,13 +212,22 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
         {/* Right Side: View More Button */}
         <button
           onClick={() => router.push(`/opportunities/${opportunity.id}`)}
-          className="flex items-center gap-2 cursor-pointer text-sm font-medium rounded-lg px-3 py-2 whitespace-nowrap flex-shrink-0"
           style={{
             background: "#2563EB",
             color: "#FFFFFF",
             boxShadow: "0 2px 8px rgba(37, 99, 235, 0.2)",
             transition: "all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)",
             border: "none",
+            display: "flex",
+            alignItems: "center",
+            gap: "8px",
+            cursor: "pointer",
+            fontSize: "14px",
+            fontWeight: "500",
+            borderRadius: "8px",
+            padding: "8px 12px",
+            whiteSpace: "nowrap",
+            flexShrink: 0,
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.background = "#1D4ED8"

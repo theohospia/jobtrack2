@@ -139,7 +139,6 @@ Required qualifications include strong knowledge of engine mechanics and operati
                   strokeWidth="8"
                   strokeDasharray={`${(job.fitStrength / 100) * 2 * Math.PI * 45} ${2 * Math.PI * 45}`}
                   strokeLinecap="round"
-                  style={{ transition: "stroke-dasharray 0.3s ease" }}
                 />
               </svg>
               {/* Center text */}
