@@ -97,10 +97,16 @@ Required qualifications include strong knowledge of engine mechanics and operati
             color: "#2563EB",
             fontSize: 14,
             fontWeight: 400,
-            transition: "opacity 0.2s",
+            transition: "all 0.3s ease",
           }}
-          onMouseEnter={(e) => e.currentTarget.style.opacity = "0.7"}
-          onMouseLeave={(e) => e.currentTarget.style.opacity = "1"}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.opacity = "0.7"
+            e.currentTarget.style.transform = "translateX(-4px)"
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.opacity = "1"
+            e.currentTarget.style.transform = "translateX(0)"
+          }}
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M15 19L8 12L15 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -194,6 +200,14 @@ Required qualifications include strong knowledge of engine mechanics and operati
             display: "flex",
             flexDirection: "column",
             gap: 8,
+            boxShadow: "0 4px 12px rgba(37, 99, 235, 0.15), 0 1px 3px rgba(37, 99, 235, 0.08)",
+            transition: "box-shadow 0.3s ease",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.boxShadow = "0 8px 24px rgba(37, 99, 235, 0.2), 0 2px 6px rgba(37, 99, 235, 0.1)"
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.boxShadow = "0 4px 12px rgba(37, 99, 235, 0.15), 0 1px 3px rgba(37, 99, 235, 0.08)"
           }}
         >
           <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
@@ -222,6 +236,16 @@ Required qualifications include strong knowledge of engine mechanics and operati
               display: "flex",
               flexDirection: "column",
               gap: 8,
+              boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)",
+              transition: "all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.boxShadow = "0 12px 32px rgba(0, 0, 0, 0.15), 0 4px 12px rgba(0, 0, 0, 0.08)"
+              e.currentTarget.style.transform = "translateY(-4px)"
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)"
+              e.currentTarget.style.transform = "translateY(0)"
             }}
           >
             <p style={{ fontSize: 11, color: "#64748B", fontWeight: 400, margin: 0, textTransform: "uppercase" }}>
@@ -247,6 +271,16 @@ Required qualifications include strong knowledge of engine mechanics and operati
               display: "flex",
               flexDirection: "column",
               gap: 8,
+              boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)",
+              transition: "all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.boxShadow = "0 12px 32px rgba(0, 0, 0, 0.15), 0 4px 12px rgba(0, 0, 0, 0.08)"
+              e.currentTarget.style.transform = "translateY(-4px)"
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)"
+              e.currentTarget.style.transform = "translateY(0)"
             }}
           >
             <p style={{ fontSize: 11, color: "#64748B", fontWeight: 400, margin: 0, textTransform: "uppercase" }}>
@@ -267,6 +301,16 @@ Required qualifications include strong knowledge of engine mechanics and operati
               display: "flex",
               flexDirection: "column",
               gap: 8,
+              boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)",
+              transition: "all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.boxShadow = "0 12px 32px rgba(0, 0, 0, 0.15), 0 4px 12px rgba(0, 0, 0, 0.08)"
+              e.currentTarget.style.transform = "translateY(-4px)"
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)"
+              e.currentTarget.style.transform = "translateY(0)"
             }}
           >
             <p style={{ fontSize: 11, color: "#64748B", fontWeight: 400, margin: 0, textTransform: "uppercase" }}>
@@ -289,6 +333,14 @@ Required qualifications include strong knowledge of engine mechanics and operati
             borderRadius: 12,
             padding: 24,
             marginBottom: 32,
+            boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)",
+            transition: "box-shadow 0.3s ease",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.boxShadow = "0 8px 24px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.06)"
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)"
           }}
         >
           <p style={{ fontSize: 14, color: "#0F172A", lineHeight: 1.6, margin: 0 }}>
@@ -308,16 +360,25 @@ Required qualifications include strong knowledge of engine mechanics and operati
             background: "#FFFFFF",
             border: "1px solid #E5E7EB",
             borderRadius: 12,
-            padding: 24,
+            padding: 20,
             marginBottom: 32,
+            boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)",
+            transition: "box-shadow 0.3s ease",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.boxShadow = "0 8px 24px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.06)"
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)"
           }}
         >
-          {/* Match Summary */}
-          <div style={{ marginBottom: 24, paddingBottom: 24, borderBottom: "1px solid #E5E7EB" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 40, height: 40, background: "#DBEAFE", borderRadius: "50%", color: "#2563EB", fontSize: 18, fontWeight: 400 }}>
-                ✓
-              </div>
+          <p style={{ fontSize: 14, color: "#0F172A", lineHeight: 1.6, margin: 0 }}>
+            You would be joining a large, established organization with well-defined teams and processes.
+          </p>
+          <p style={{ fontSize: 14, color: "#0F172A", lineHeight: 1.6, margin: "8px 0 0 0" }}>
+            This type of environment tends to offer stability, learning opportunities, and recognizable experience that strengthens your profile over time.
+          </p>
+        </div>
               <div>
                 <p style={{ fontSize: 13, color: "#64748B", fontWeight: 400, margin: "0 0 4px 0" }}>
                   YOU MATCH
@@ -339,7 +400,16 @@ Required qualifications include strong knowledge of engine mechanics and operati
             </p>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
               {/* Skill 1 */}
-              <div style={{ padding: 12, background: "#F8FAFC", borderRadius: 8, border: "1px solid #E5E7EB" }}>
+              <div style={{ padding: 12, background: "#F8FAFC", borderRadius: 8, border: "1px solid #E5E7EB", boxShadow: "0 2px 4px rgba(0, 0, 0, 0.04)", transition: "all 0.3s ease" }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08)"
+                  e.currentTarget.style.transform = "translateY(-2px)"
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = "0 2px 4px rgba(0, 0, 0, 0.04)"
+                  e.currentTarget.style.transform = "translateY(0)"
+                }}
+              >
                 <p style={{ fontSize: 13, fontWeight: 400, color: "#0F172A", margin: "0 0 4px 0" }}>
                   Advanced SQL
                 </p>
@@ -349,7 +419,16 @@ Required qualifications include strong knowledge of engine mechanics and operati
               </div>
 
               {/* Skill 2 */}
-              <div style={{ padding: 12, background: "#F8FAFC", borderRadius: 8, border: "1px solid #E5E7EB" }}>
+              <div style={{ padding: 12, background: "#F8FAFC", borderRadius: 8, border: "1px solid #E5E7EB", boxShadow: "0 2px 4px rgba(0, 0, 0, 0.04)", transition: "all 0.3s ease" }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08)"
+                  e.currentTarget.style.transform = "translateY(-2px)"
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = "0 2px 4px rgba(0, 0, 0, 0.04)"
+                  e.currentTarget.style.transform = "translateY(0)"
+                }}
+              >
                 <p style={{ fontSize: 13, fontWeight: 400, color: "#0F172A", margin: "0 0 4px 0" }}>
                   Tableau/Power BI
                 </p>
@@ -360,7 +439,14 @@ Required qualifications include strong knowledge of engine mechanics and operati
             </div>
 
             {/* Development Tips */}
-            <div style={{ marginTop: 16, padding: 12, borderRadius: 8, border: "1px solid #E5E7EB", backgroundColor: "#FFFFFF" }}>
+            <div style={{ marginTop: 16, padding: 12, borderRadius: 8, border: "1px solid #E5E7EB", backgroundColor: "#FFFFFF", boxShadow: "0 2px 4px rgba(0, 0, 0, 0.04)", transition: "all 0.3s ease" }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08)"
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow = "0 2px 4px rgba(0, 0, 0, 0.04)"
+              }}
+            >
               <p style={{ fontSize: 12, fontWeight: 400, color: "#0F172A", margin: "0 0 8px 0" }}>
                 ⏱️ Quick wins to strengthen your application:
               </p>
@@ -383,6 +469,14 @@ Required qualifications include strong knowledge of engine mechanics and operati
             borderRadius: 12,
             padding: 20,
             marginBottom: 24,
+            boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)",
+            transition: "box-shadow 0.3s ease",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.boxShadow = "0 8px 24px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.06)"
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)"
           }}
         >
           <p style={{ fontSize: 14, color: "#0F172A", lineHeight: 1.6, margin: 0 }}>
@@ -404,6 +498,14 @@ Required qualifications include strong knowledge of engine mechanics and operati
             borderRadius: 12,
             padding: 20,
             marginBottom: 24,
+            boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)",
+            transition: "box-shadow 0.3s ease",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.boxShadow = "0 8px 24px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.06)"
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)"
           }}
         >
           <p style={{ fontSize: 14, color: "#0F172A", lineHeight: 1.6, margin: 0 }}>
@@ -423,8 +525,16 @@ Required qualifications include strong knowledge of engine mechanics and operati
             background: "#FFFFFF",
             border: "1px solid #E5E7EB",
             borderRadius: 12,
-            padding: 20,
+            padding: 24,
             marginBottom: 32,
+            boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)",
+            transition: "box-shadow 0.3s ease",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.boxShadow = "0 8px 24px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.06)"
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)"
           }}
         >
           <p style={{ fontSize: 14, color: "#0F172A", lineHeight: 1.6, margin: 0 }}>
@@ -446,11 +556,26 @@ Required qualifications include strong knowledge of engine mechanics and operati
             borderRadius: 12,
             padding: 24,
             marginBottom: 32,
+            boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)",
+            transition: "box-shadow 0.3s ease",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.boxShadow = "0 8px 24px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.06)"
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)"
           }}
         >
           <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
             {/* Checklist Item 1 */}
-            <div style={{ display: "flex", alignItems: "center", gap: 12, fontSize: 14, color: "#0F172A", fontWeight: 400 }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 12, fontSize: 14, color: "#0F172A", fontWeight: 400, transition: "all 0.3s ease", padding: "8px 12px", borderRadius: 6 }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = "#F1F5F9"
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = "transparent"
+              }}
+            >
               <input type="checkbox" style={{ width: 20, height: 20, cursor: "pointer" }} />
               <a 
                 href="/opportunities/prep/cover-letter" 
@@ -461,7 +586,14 @@ Required qualifications include strong knowledge of engine mechanics and operati
             </div>
 
             {/* Checklist Item 2 */}
-            <div style={{ display: "flex", alignItems: "center", gap: 12, fontSize: 14, color: "#0F172A", fontWeight: 400 }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 12, fontSize: 14, color: "#0F172A", fontWeight: 400, transition: "all 0.3s ease", padding: "8px 12px", borderRadius: 6 }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = "#F1F5F9"
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = "transparent"
+              }}
+            >
               <input type="checkbox" style={{ width: 20, height: 20, cursor: "pointer" }} />
               <a 
                 href="/opportunities/prep/star-stories" 
@@ -472,7 +604,14 @@ Required qualifications include strong knowledge of engine mechanics and operati
             </div>
 
             {/* Checklist Item 3 */}
-            <div style={{ display: "flex", alignItems: "center", gap: 12, fontSize: 14, color: "#0F172A", fontWeight: 400 }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 12, fontSize: 14, color: "#0F172A", fontWeight: 400, transition: "all 0.3s ease", padding: "8px 12px", borderRadius: 6 }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = "#F1F5F9"
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = "transparent"
+              }}
+            >
               <input type="checkbox" style={{ width: 20, height: 20, cursor: "pointer" }} />
               <a 
                 href="/opportunities/prep/smart-questions" 
@@ -483,7 +622,14 @@ Required qualifications include strong knowledge of engine mechanics and operati
             </div>
 
             {/* Checklist Item 4 */}
-            <div style={{ display: "flex", alignItems: "center", gap: 12, fontSize: 14, color: "#0F172A", fontWeight: 400 }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 12, fontSize: 14, color: "#0F172A", fontWeight: 400, transition: "all 0.3s ease", padding: "8px 12px", borderRadius: 6 }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = "#F1F5F9"
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = "transparent"
+              }}
+            >
               <input type="checkbox" style={{ width: 20, height: 20, cursor: "pointer" }} />
               <a 
                 href="/opportunities/prep/data-examples" 
