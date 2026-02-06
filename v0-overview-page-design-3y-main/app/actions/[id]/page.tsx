@@ -767,13 +767,13 @@ export default function ActionDetailPage() {
             background: "#EFF6FF",
             border: "1px solid #2563EB",
             borderRadius: 12,
-            padding: 20,
+            padding: 24,
             marginBottom: 24,
             boxShadow: "0 4px 12px rgba(37, 99, 235, 0.15), 0 1px 3px rgba(37, 99, 235, 0.08)",
             transition: "box-shadow 0.3s ease",
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.boxShadow = "0 8px 24px rgba(37, 99, 235, 0.2), 0 2px 6px rgba(37, 99, 235, 0.1)"
+            e.currentTarget.style.boxShadow = "0 8px 24px rgba(37, 99, 235, 0.2), 0 2px 6px rgba(37, 99, 235, 0.12)"
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.boxShadow = "0 4px 12px rgba(37, 99, 235, 0.15), 0 1px 3px rgba(37, 99, 235, 0.08)"
