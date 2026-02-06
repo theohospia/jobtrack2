@@ -118,26 +118,7 @@ Required qualifications include strong knowledge of engine mechanics and operati
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 32, gap: 24 }}>
           {/* Match Circle and Percentile */}
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-            <div 
-              style={{ 
-                position: "relative", 
-                width: 100, 
-                height: 100,
-                background: "#FFFFFF",
-                borderRadius: "50%",
-                boxShadow: "0 4px 12px rgba(37, 99, 235, 0.12), 0 2px 4px rgba(37, 99, 235, 0.08)",
-                border: "1px solid #E5E7EB",
-                transition: "all 0.3s ease",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.boxShadow = "0 8px 20px rgba(37, 99, 235, 0.18), 0 4px 8px rgba(37, 99, 235, 0.12)"
-                e.currentTarget.style.transform = "scale(1.05)"
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.boxShadow = "0 4px 12px rgba(37, 99, 235, 0.12), 0 2px 4px rgba(37, 99, 235, 0.08)"
-                e.currentTarget.style.transform = "scale(1)"
-              }}
-            >
+            <div style={{ position: "relative", width: 100, height: 100 }}>
               <svg width="100" height="100" viewBox="0 0 100 100" style={{ transform: "rotate(-90deg)" }}>
                 {/* Background circle */}
                 <circle
@@ -158,7 +139,7 @@ Required qualifications include strong knowledge of engine mechanics and operati
                   strokeWidth="8"
                   strokeDasharray={`${(job.fitStrength / 100) * 2 * Math.PI * 45} ${2 * Math.PI * 45}`}
                   strokeLinecap="round"
-                  style={{ transition: "stroke-dasharray 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)" }}
+                  style={{ transition: "stroke-dasharray 0.3s ease" }}
                 />
               </svg>
               {/* Center text */}

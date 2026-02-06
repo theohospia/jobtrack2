@@ -132,26 +132,7 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
       <div className="flex items-start justify-between gap-4">
         {/* Left Side: Circular Fit Strength Indicator */}
         <div className="flex items-start justify-center flex-shrink-0">
-          <div 
-            className="flex items-center justify-center"
-            style={{
-              background: "#FFFFFF",
-              borderRadius: "50%",
-              width: 100,
-              height: 100,
-              boxShadow: "0 4px 12px rgba(37, 99, 235, 0.12), 0 2px 4px rgba(37, 99, 235, 0.08)",
-              border: "1px solid #E5E7EB",
-              transition: "all 0.3s ease",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.boxShadow = "0 8px 20px rgba(37, 99, 235, 0.18), 0 4px 8px rgba(37, 99, 235, 0.12)"
-              e.currentTarget.style.transform = "scale(1.05)"
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.boxShadow = "0 4px 12px rgba(37, 99, 235, 0.12), 0 2px 4px rgba(37, 99, 235, 0.08)"
-              e.currentTarget.style.transform = "scale(1)"
-            }}
-          >
+          <div className="flex items-center justify-center">
             <svg width="85" height="85" viewBox="0 0 100 100" className="transform -rotate-90">
               {/* Background circle */}
               <circle
@@ -172,7 +153,7 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
                 strokeWidth="8"
                 strokeDasharray={`${(opportunity.fitStrength / 100) * 2 * Math.PI * 45} ${2 * Math.PI * 45}`}
                 strokeLinecap="round"
-                style={{ transition: "stroke-dasharray 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)" }}
+                style={{ transition: "stroke-dasharray 0.3s ease" }}
               />
             </svg>
             {/* Center text */}
