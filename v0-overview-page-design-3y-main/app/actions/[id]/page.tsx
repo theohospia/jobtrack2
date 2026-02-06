@@ -826,39 +826,33 @@ export default function ActionDetailPage() {
                       e.currentTarget.style.transform = "translateY(0)"
                     }}
                   >
-                    {/* Arrow Button */}
-                    <button
+                    {/* Arrow Icon */}
+                    <div
                       style={{
                         position: "absolute",
-                        bottom: 12,
-                        right: 12,
-                        width: 32,
-                        height: 32,
-                        borderRadius: 6,
-                        background: "#F1F5F9",
-                        border: "1px solid #E5E7EB",
+                        bottom: 16,
+                        right: 16,
                         cursor: "pointer",
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
-                        color: "#DC2626",
-                        fontSize: 16,
+                        color: "#2563EB",
+                        fontSize: 28,
                         fontWeight: 600,
-                        transition: "all 0.2s ease",
+                        transition: "all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)",
+                        transform: "translateX(0)",
                       }}
                       onMouseEnter={(e) => {
-                        e.currentTarget.style.background = "#FEE2E2";
-                        e.currentTarget.style.color = "#991B1B";
-                        e.currentTarget.style.boxShadow = "0 2px 8px rgba(220, 38, 38, 0.12)";
+                        e.currentTarget.style.color = "#1D4ED8";
+                        e.currentTarget.style.transform = "translateX(4px)";
                       }}
                       onMouseLeave={(e) => {
-                        e.currentTarget.style.background = "#F1F5F9";
-                        e.currentTarget.style.color = "#DC2626";
-                        e.currentTarget.style.boxShadow = "none";
+                        e.currentTarget.style.color = "#2563EB";
+                        e.currentTarget.style.transform = "translateX(0)";
                       }}
                     >
                       →
-                    </button>
+                    </div>
 
                     <p style={{ fontSize: 15, fontWeight: 700, color: "#0F172A", margin: "0 0 8px 0" }}>
                       {job.title}
