@@ -711,8 +711,8 @@ export default function ActionDetailPage() {
               <div
                 style={{
                   display: "grid",
-                  gridTemplateColumns: "repeat(3, 1fr)",
-                  gap: 16,
+                  gridTemplateColumns: "1fr",
+                  gap: 12,
                   marginBottom: 24,
                 }}
               >
@@ -721,7 +721,7 @@ export default function ActionDetailPage() {
                     key={index}
                     onClick={() => setFlippedCards({ ...flippedCards, [index]: !flippedCards[index] })}
                     style={{
-                      height: 200,
+                      height: 120,
                       cursor: "pointer",
                       perspective: "1000px",
                     }}
@@ -731,7 +731,7 @@ export default function ActionDetailPage() {
                         position: "relative",
                         width: "100%",
                         height: "100%",
-                        transition: "transform 0.6s",
+                        transition: "transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55)",
                         transformStyle: "preserve-3d",
                         transform: flippedCards[index] ? "rotateY(180deg)" : "rotateY(0deg)",
                       }}
@@ -746,12 +746,13 @@ export default function ActionDetailPage() {
                           display: "flex",
                           alignItems: "center",
                           justifyContent: "center",
-                          background: "#2563EB",
-                          border: "2px solid #1D4ED8",
-                          borderRadius: 12,
-                          fontSize: 60,
+                          background: "linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%)",
+                          border: "1px solid #1D4ED8",
+                          borderRadius: 8,
+                          fontSize: 48,
                           fontWeight: 700,
                           color: "#FFFFFF",
+                          boxShadow: "0 4px 12px rgba(37, 99, 235, 0.15)",
                         }}
                       >
                         ?
@@ -765,26 +766,32 @@ export default function ActionDetailPage() {
                           height: "100%",
                           backfaceVisibility: "hidden",
                           display: "flex",
-                          flexDirection: "column",
                           alignItems: "center",
-                          justifyContent: "center",
+                          justifyContent: "space-between",
                           background: "#FFFFFF",
-                          border: "2px solid #2563EB",
-                          borderRadius: 12,
-                          padding: 16,
-                          textAlign: "center",
+                          border: "1px solid #E5E7EB",
+                          borderRadius: 8,
+                          padding: "20px 24px",
                           transform: "rotateY(180deg)",
+                          boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08)",
                         }}
                       >
-                        <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 8px 0" }}>
-                          {job.title}
-                        </p>
-                        <p style={{ fontSize: 13, color: "#64748B", margin: "0 0 12px 0" }}>
-                          {job.company}
-                        </p>
-                        <p style={{ fontSize: 14, fontWeight: 600, color: "#2563EB", margin: 0 }}>
-                          {job.salary}
-                        </p>
+                        <div style={{ textAlign: "left", flex: 1 }}>
+                          <p style={{ fontSize: 15, fontWeight: 600, color: "#0F172A", margin: "0 0 4px 0" }}>
+                            {job.title}
+                          </p>
+                          <p style={{ fontSize: 13, color: "#64748B", margin: 0 }}>
+                            {job.company}
+                          </p>
+                        </div>
+                        <div style={{ textAlign: "right" }}>
+                          <p style={{ fontSize: 14, fontWeight: 700, color: "#2563EB", margin: 0 }}>
+                            {job.salary}
+                          </p>
+                          <p style={{ fontSize: 11, color: "#94A3B8", margin: "4px 0 0 0" }}>
+                            per year
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
