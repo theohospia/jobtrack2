@@ -825,7 +825,6 @@ export default function ActionDetailPage() {
                       boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)",
                       transition: "all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)",
                       cursor: "pointer",
-                      position: "relative",
                     }}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.boxShadow = "0 12px 32px rgba(0, 0, 0, 0.15), 0 4px 12px rgba(0, 0, 0, 0.08)"
@@ -836,40 +835,6 @@ export default function ActionDetailPage() {
                       e.currentTarget.style.transform = "translateY(0)"
                     }}
                   >
-                    {/* Arrow Button */}
-                    <button
-                      style={{
-                        position: "absolute",
-                        top: 12,
-                        right: 12,
-                        width: 32,
-                        height: 32,
-                        borderRadius: 6,
-                        background: "#F1F5F9",
-                        border: "1px solid #E5E7EB",
-                        cursor: "pointer",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        color: "#64748B",
-                        fontSize: 16,
-                        fontWeight: 600,
-                        transition: "all 0.2s ease",
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.background = "#E2E8F0";
-                        e.currentTarget.style.color = "#475569";
-                        e.currentTarget.style.boxShadow = "0 2px 8px rgba(0, 0, 0, 0.08)";
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.background = "#F1F5F9";
-                        e.currentTarget.style.color = "#64748B";
-                        e.currentTarget.style.boxShadow = "none";
-                      }}
-                    >
-                      →
-                    </button>
-
                     <p style={{ fontSize: 15, fontWeight: 700, color: "#0F172A", margin: "0 0 8px 0" }}>
                       {job.title}
                     </p>
