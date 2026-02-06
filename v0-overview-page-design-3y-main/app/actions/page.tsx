@@ -251,7 +251,7 @@ export default function ActionsPage() {
         {/* Job Cards Row */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24, marginBottom: 80 }}>
           {jobCards.map((card, index) => {
-            const isAltStyle = index % 2 === 0
+            const isAltStyle = index % 2 === 1
             const bgColor = isAltStyle ? "#F3F9FD" : "#FFFFFF"
 
             return (
