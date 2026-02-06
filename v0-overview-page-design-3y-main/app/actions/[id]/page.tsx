@@ -159,11 +159,6 @@ export default function ActionDetailPage() {
   const [completedTasks, setCompletedTasks] = useState<Record<number, boolean>>(
     job.tasks.reduce((acc, _, i) => ({ ...acc, [i]: false }), {})
   )
-  const [flippedCards, setFlippedCards] = useState<Record<number, boolean>>({
-    0: false,
-    1: false,
-    2: false,
-  })
 
   const progressPercentage = (job.currentStage / job.totalStages) * 100
   const completedTaskCount = Object.values(completedTasks).filter(Boolean).length
@@ -707,7 +702,7 @@ export default function ActionDetailPage() {
 
           {planBOpen && (
             <div style={{ marginTop: 16 }}>
-              {/* Flippable Cards Grid */}
+              {/* Job Cards Grid */}
               <div
                 style={{
                   display: "grid",
@@ -719,87 +714,42 @@ export default function ActionDetailPage() {
                 {alternativeJobs.map((job, index) => (
                   <div
                     key={index}
-                    onClick={() => setFlippedCards({ ...flippedCards, [index]: !flippedCards[index] })}
                     style={{
                       height: 180,
-                      cursor: "pointer",
-                      perspective: "1000px",
+                      background: "#FFFFFF",
+                      border: "1px solid #E5E7EB",
+                      borderRadius: 12,
+                      padding: "24px 20px",
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      textAlign: "center",
+                      boxShadow: "0 8px 24px rgba(0, 0, 0, 0.1)",
+                      transition: "all 0.3s ease",
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.boxShadow = "0 12px 32px rgba(0, 0, 0, 0.15)"
+                      e.currentTarget.style.transform = "translateY(-4px)"
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.boxShadow = "0 8px 24px rgba(0, 0, 0, 0.1)"
+                      e.currentTarget.style.transform = "translateY(0)"
                     }}
                   >
-                    <div
-                      style={{
-                        position: "relative",
-                        width: "100%",
-                        height: "100%",
-                        transition: "transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55)",
-                        transformStyle: "preserve-3d",
-                        transform: flippedCards[index] ? "rotateY(180deg)" : "rotateY(0deg)",
-                      }}
-                    >
-                      {/* Front - Question Mark */}
-                      <div
-                        style={{
-                          position: "absolute",
-                          width: "100%",
-                          height: "100%",
-                          backfaceVisibility: "hidden",
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          background: "linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%)",
-                          border: "1px solid rgba(29, 78, 216, 0.3)",
-                          borderRadius: 12,
-                          fontSize: 56,
-                          fontWeight: 700,
-                          color: "#FFFFFF",
-                          boxShadow: "0 8px 24px rgba(37, 99, 235, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1)",
-                          transition: "all 0.3s ease",
-                        }}
-                        onMouseEnter={(e) => {
-                          e.currentTarget.style.boxShadow = "0 12px 32px rgba(37, 99, 235, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1)"
-                        }}
-                        onMouseLeave={(e) => {
-                          e.currentTarget.style.boxShadow = "0 8px 24px rgba(37, 99, 235, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1)"
-                        }}
-                      >
-                        ?
-                      </div>
-
-                      {/* Back - Job Details */}
-                      <div
-                        style={{
-                          position: "absolute",
-                          width: "100%",
-                          height: "100%",
-                          backfaceVisibility: "hidden",
-                          display: "flex",
-                          flexDirection: "column",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          background: "#FFFFFF",
-                          border: "1px solid #E5E7EB",
-                          borderRadius: 12,
-                          padding: "24px 20px",
-                          textAlign: "center",
-                          transform: "rotateY(180deg)",
-                          boxShadow: "0 8px 24px rgba(0, 0, 0, 0.1)",
-                        }}
-                      >
-                        <p style={{ fontSize: 15, fontWeight: 700, color: "#0F172A", margin: "0 0 8px 0" }}>
-                          {job.title}
-                        </p>
-                        <p style={{ fontSize: 13, color: "#64748B", margin: "0 0 16px 0" }}>
-                          {job.company}
-                        </p>
-                        <div style={{ borderTop: "1px solid #E5E7EB", paddingTop: 12, width: "100%" }}>
-                          <p style={{ fontSize: 16, fontWeight: 700, color: "#2563EB", margin: 0 }}>
-                            {job.salary}
-                          </p>
-                          <p style={{ fontSize: 11, color: "#94A3B8", margin: "4px 0 0 0" }}>
-                            per year
-                          </p>
-                        </div>
-                      </div>
+                    <p style={{ fontSize: 15, fontWeight: 700, color: "#0F172A", margin: "0 0 8px 0" }}>
+                      {job.title}
+                    </p>
+                    <p style={{ fontSize: 13, color: "#64748B", margin: "0 0 16px 0" }}>
+                      {job.company}
+                    </p>
+                    <div style={{ borderTop: "1px solid #E5E7EB", paddingTop: 12, width: "100%" }}>
+                      <p style={{ fontSize: 16, fontWeight: 700, color: "#2563EB", margin: 0 }}>
+                        {job.salary}
+                      </p>
+                      <p style={{ fontSize: 11, color: "#94A3B8", margin: "4px 0 0 0" }}>
+                        per year
+                      </p>
                     </div>
                   </div>
                 ))}
