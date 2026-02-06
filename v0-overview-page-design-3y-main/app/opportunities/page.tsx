@@ -273,12 +273,19 @@ function EmptyState() {
         Based on your profile and recent activity, applying right now would likely have low returns.
       </p>
       <button
-        className="h-9 w-fit cursor-pointer rounded-[10px] px-4 text-[13px] font-semibold transition-all duration-200"
         style={{
+          height: "36px",
+          width: "fit-content",
+          cursor: "pointer",
+          borderRadius: "10px",
+          padding: "0 16px",
+          fontSize: "13px",
+          fontWeight: "600",
           background: "#F1F5F9",
           color: "#0F172A",
           border: "1px solid #CBD5E1",
           boxShadow: "0 2px 4px rgba(0, 0, 0, 0.04)",
+          transition: "all 0.2s ease",
         }}
         onMouseEnter={(e) => {
           e.currentTarget.style.background = "#E0E8F2"
