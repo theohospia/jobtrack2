@@ -757,12 +757,6 @@ export default function ActionDetailPage() {
             </div>
           )}
         </div>
-
-        {/* Footer Micro-copy */}
-        <div style={{ textAlign: "center", padding: "24px 0", color: "#64748B", fontSize: 12 }}>
-          <p>You don't need to do everything today.</p>
-          <p>One small, intentional action is enough.</p>
-        </div>
       </main>
     </div>
   )
