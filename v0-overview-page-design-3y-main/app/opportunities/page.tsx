@@ -106,29 +106,25 @@ function FitPill({ level }: { level: FitLevel }) {
 
 function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; index: number }) {
   const router = useRouter()
-  const isAltStyle = index % 2 === 0
-  const bgColor = "#FFFFFF"
-  const borderColor = isAltStyle ? "#2563EB" : "#E5E7EB"
-  const shadowColor = isAltStyle ? "rgba(37, 99, 235, 0.15), 0 1px 3px rgba(37, 99, 235, 0.08)" : "rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)"
-  const shadowColorHover = isAltStyle ? "rgba(37, 99, 235, 0.2), 0 4px 12px rgba(37, 99, 235, 0.12)" : "rgba(0, 0, 0, 0.15), 0 4px 12px rgba(0, 0, 0, 0.08)"
-  const borderColorHover = isAltStyle ? "#1D4ED8" : "#CBD5E1"
+  const isAltStyle = index % 2 === 1
+  const bgColor = isAltStyle ? "#F3F9FD" : "#FAFBFC"
   
   return (
     <div
       className="flex w-full cursor-pointer flex-col gap-3 rounded-2xl p-5 transition-all duration-300"
       style={{
         background: bgColor,
-        border: `1px solid ${borderColor}`,
-        boxShadow: `0 4px 12px ${shadowColor}`,
+        border: "1px solid #E5E7EB",
+        boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)",
       }}
       onMouseEnter={(e) => {
-        e.currentTarget.style.borderColor = borderColorHover
-        e.currentTarget.style.boxShadow = `0 12px 32px ${shadowColorHover}`
+        e.currentTarget.style.borderColor = "#CBD5E1"
+        e.currentTarget.style.boxShadow = "0 12px 32px rgba(0, 0, 0, 0.15), 0 4px 12px rgba(0, 0, 0, 0.08)"
         e.currentTarget.style.transform = "translateY(-6px)"
       }}
       onMouseLeave={(e) => {
-        e.currentTarget.style.borderColor = borderColor
-        e.currentTarget.style.boxShadow = `0 4px 12px ${shadowColor}`
+        e.currentTarget.style.borderColor = "#E5E7EB"
+        e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)"
         e.currentTarget.style.transform = "translateY(0)"
       }}
     >
