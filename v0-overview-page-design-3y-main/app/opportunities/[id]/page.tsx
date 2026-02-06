@@ -568,7 +568,8 @@ Required qualifications include strong knowledge of engine mechanics and operati
         >
           <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
             {/* Checklist Item 1 */}
-            <div style={{ display: "flex", alignItems: "center", gap: 12, fontSize: 14, color: "#0F172A", fontWeight: 400, transition: "all 0.3s ease", padding: "8px 12px", borderRadius: 6 }}
+            <div 
+              style={{ display: "flex", alignItems: "center", gap: 12, fontSize: 14, color: "#0F172A", fontWeight: 400, transition: "all 0.3s ease", padding: "8px 12px", borderRadius: 6 }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.background = "#F1F5F9"
               }}
@@ -586,7 +587,8 @@ Required qualifications include strong knowledge of engine mechanics and operati
             </div>
 
             {/* Checklist Item 2 */}
-            <div style={{ display: "flex", alignItems: "center", gap: 12, fontSize: 14, color: "#0F172A", fontWeight: 400, transition: "all 0.3s ease", padding: "8px 12px", borderRadius: 6 }}
+            <div 
+              style={{ display: "flex", alignItems: "center", gap: 12, fontSize: 14, color: "#0F172A", fontWeight: 400, transition: "all 0.3s ease", padding: "8px 12px", borderRadius: 6 }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.background = "#F1F5F9"
               }}
@@ -604,7 +606,8 @@ Required qualifications include strong knowledge of engine mechanics and operati
             </div>
 
             {/* Checklist Item 3 */}
-            <div style={{ display: "flex", alignItems: "center", gap: 12, fontSize: 14, color: "#0F172A", fontWeight: 400, transition: "all 0.3s ease", padding: "8px 12px", borderRadius: 6 }}
+            <div 
+              style={{ display: "flex", alignItems: "center", gap: 12, fontSize: 14, color: "#0F172A", fontWeight: 400, transition: "all 0.3s ease", padding: "8px 12px", borderRadius: 6 }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.background = "#F1F5F9"
               }}
@@ -622,7 +625,8 @@ Required qualifications include strong knowledge of engine mechanics and operati
             </div>
 
             {/* Checklist Item 4 */}
-            <div style={{ display: "flex", alignItems: "center", gap: 12, fontSize: 14, color: "#0F172A", fontWeight: 400, transition: "all 0.3s ease", padding: "8px 12px", borderRadius: 6 }}
+            <div 
+              style={{ display: "flex", alignItems: "center", gap: 12, fontSize: 14, color: "#0F172A", fontWeight: 400, transition: "all 0.3s ease", padding: "8px 12px", borderRadius: 6 }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.background = "#F1F5F9"
               }}
