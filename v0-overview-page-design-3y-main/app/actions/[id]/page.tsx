@@ -711,8 +711,8 @@ export default function ActionDetailPage() {
               <div
                 style={{
                   display: "grid",
-                  gridTemplateColumns: "1fr",
-                  gap: 12,
+                  gridTemplateColumns: "repeat(3, 1fr)",
+                  gap: 16,
                   marginBottom: 24,
                 }}
               >
@@ -721,7 +721,7 @@ export default function ActionDetailPage() {
                     key={index}
                     onClick={() => setFlippedCards({ ...flippedCards, [index]: !flippedCards[index] })}
                     style={{
-                      height: 120,
+                      height: 180,
                       cursor: "pointer",
                       perspective: "1000px",
                     }}
@@ -747,12 +747,19 @@ export default function ActionDetailPage() {
                           alignItems: "center",
                           justifyContent: "center",
                           background: "linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%)",
-                          border: "1px solid #1D4ED8",
-                          borderRadius: 8,
-                          fontSize: 48,
+                          border: "1px solid rgba(29, 78, 216, 0.3)",
+                          borderRadius: 12,
+                          fontSize: 56,
                           fontWeight: 700,
                           color: "#FFFFFF",
-                          boxShadow: "0 4px 12px rgba(37, 99, 235, 0.15)",
+                          boxShadow: "0 8px 24px rgba(37, 99, 235, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1)",
+                          transition: "all 0.3s ease",
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.boxShadow = "0 12px 32px rgba(37, 99, 235, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1)"
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.boxShadow = "0 8px 24px rgba(37, 99, 235, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1)"
                         }}
                       >
                         ?
@@ -766,26 +773,26 @@ export default function ActionDetailPage() {
                           height: "100%",
                           backfaceVisibility: "hidden",
                           display: "flex",
+                          flexDirection: "column",
                           alignItems: "center",
-                          justifyContent: "space-between",
+                          justifyContent: "center",
                           background: "#FFFFFF",
                           border: "1px solid #E5E7EB",
-                          borderRadius: 8,
-                          padding: "20px 24px",
+                          borderRadius: 12,
+                          padding: "24px 20px",
+                          textAlign: "center",
                           transform: "rotateY(180deg)",
-                          boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08)",
+                          boxShadow: "0 8px 24px rgba(0, 0, 0, 0.1)",
                         }}
                       >
-                        <div style={{ textAlign: "left", flex: 1 }}>
-                          <p style={{ fontSize: 15, fontWeight: 600, color: "#0F172A", margin: "0 0 4px 0" }}>
-                            {job.title}
-                          </p>
-                          <p style={{ fontSize: 13, color: "#64748B", margin: 0 }}>
-                            {job.company}
-                          </p>
-                        </div>
-                        <div style={{ textAlign: "right" }}>
-                          <p style={{ fontSize: 14, fontWeight: 700, color: "#2563EB", margin: 0 }}>
+                        <p style={{ fontSize: 15, fontWeight: 700, color: "#0F172A", margin: "0 0 8px 0" }}>
+                          {job.title}
+                        </p>
+                        <p style={{ fontSize: 13, color: "#64748B", margin: "0 0 16px 0" }}>
+                          {job.company}
+                        </p>
+                        <div style={{ borderTop: "1px solid #E5E7EB", paddingTop: 12, width: "100%" }}>
+                          <p style={{ fontSize: 16, fontWeight: 700, color: "#2563EB", margin: 0 }}>
                             {job.salary}
                           </p>
                           <p style={{ fontSize: 11, color: "#94A3B8", margin: "4px 0 0 0" }}>
