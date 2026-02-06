@@ -451,17 +451,6 @@ export default function ActionDetailPage() {
         >
           <div>
             <p style={{ fontSize: 12, color: "#64748B", margin: "0 0 4px 0", textTransform: "uppercase" }}>
-              Application Health
-            </p>
-            <p style={{ fontSize: 14, color: "#0F172A", margin: "0 0 4px 0" }}>
-              Good — can be stronger (+10%)
-            </p>
-            <p style={{ fontSize: 12, color: "#64748B", margin: 0 }}>
-              Two quick improvements can meaningfully increase your chances.
-            </p>
-          </div>
-          <div>
-            <p style={{ fontSize: 12, color: "#64748B", margin: "0 0 4px 0", textTransform: "uppercase" }}>
               Competition Level
             </p>
             <p style={{ fontSize: 14, color: "#0F172A", margin: "0 0 4px 0" }}>
@@ -469,6 +458,17 @@ export default function ActionDetailPage() {
             </p>
             <p style={{ fontSize: 12, color: "#64748B", margin: 0 }}>
               You're competing in a smaller-than-average pool for this role.
+            </p>
+          </div>
+          <div>
+            <p style={{ fontSize: 12, color: "#64748B", margin: "0 0 4px 0", textTransform: "uppercase" }}>
+              Estimated Salary
+            </p>
+            <p style={{ fontSize: 14, color: "#0F172A", margin: "0 0 4px 0" }}>
+              {job.salary}
+            </p>
+            <p style={{ fontSize: 12, color: "#64748B", margin: 0 }}>
+              per year
             </p>
           </div>
         </div>
