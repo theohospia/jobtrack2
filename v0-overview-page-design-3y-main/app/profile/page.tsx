@@ -104,10 +104,19 @@ function BlockerCard({ blocker }: { blocker: Blocker }) {
   
   return (
     <div
-      className="flex items-center justify-between rounded-xl p-4"
+      className="flex items-center justify-between rounded-xl p-4 transition-all duration-300"
       style={{
         background: "#FFFFFF",
         border: "1px solid #E5E7EB",
+        boxShadow: "0 2px 4px rgba(0, 0, 0, 0.04)",
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.boxShadow = "0 8px 20px rgba(0, 0, 0, 0.1)"
+        e.currentTarget.style.borderColor = "#CBD5E1"
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.boxShadow = "0 2px 4px rgba(0, 0, 0, 0.04)"
+        e.currentTarget.style.borderColor = "#E5E7EB"
       }}
     >
       <div className="flex-1">
@@ -142,10 +151,17 @@ function BlockerCard({ blocker }: { blocker: Blocker }) {
 function StrengthCard({ strength }: { strength: Strength }) {
   return (
     <div
-      className="rounded-[14px] p-4"
+      className="rounded-[14px] p-4 transition-all duration-300"
       style={{
         background: "#FFFFFF",
         border: "1px solid #BBF7D0",
+        boxShadow: "0 2px 4px rgba(6, 95, 70, 0.06)",
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.boxShadow = "0 8px 20px rgba(6, 95, 70, 0.12)"
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.boxShadow = "0 2px 4px rgba(6, 95, 70, 0.06)"
       }}
     >
       <h4
@@ -186,10 +202,17 @@ function AlignmentPill({ alignment }: { alignment: "well" | "partial" | "poor" }
 function EmptyState() {
   return (
     <div
-      className="rounded-2xl p-8 text-center"
+      className="rounded-2xl p-8 text-center transition-all duration-300"
       style={{
         background: "#FFFFFF",
         border: "1px solid #E5E7EB",
+        boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)",
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.boxShadow = "0 8px 24px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.06)"
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)"
       }}
     >
       <h3
@@ -205,10 +228,21 @@ function EmptyState() {
         We need a bit more information to personalize your opportunities and actions.
       </p>
       <button
-        className="mt-6 h-11 cursor-pointer rounded-[10px] px-5 text-sm font-medium transition-colors"
+        className="mt-6 h-11 cursor-pointer rounded-[10px] px-5 text-sm font-medium transition-all"
         style={{
           background: "#1A73E8",
           color: "#FFFFFF",
+          boxShadow: "0 2px 8px rgba(26, 115, 232, 0.2)",
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.background = "#1557B0"
+          e.currentTarget.style.boxShadow = "0 6px 16px rgba(26, 115, 232, 0.3)"
+          e.currentTarget.style.transform = "translateY(-2px)"
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.background = "#1A73E8"
+          e.currentTarget.style.boxShadow = "0 2px 8px rgba(26, 115, 232, 0.2)"
+          e.currentTarget.style.transform = "translateY(0)"
         }}
       >
         Set up my profile
@@ -238,10 +272,22 @@ export default function ProfilePage() {
             </h1>
           </div>
           <button
-            className="flex cursor-pointer items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-colors opacity-90"
-            style={{ color: "#FFFFFF", background: "#1D4ED8" }}
-            onMouseEnter={(e) => e.currentTarget.style.background = "#1E40AF"}
-            onMouseLeave={(e) => e.currentTarget.style.background = "#1D4ED8"}
+            className="flex cursor-pointer items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all"
+            style={{ 
+              color: "#FFFFFF", 
+              background: "#1D4ED8",
+              boxShadow: "0 2px 8px rgba(29, 78, 216, 0.2)",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = "#1E40AF"
+              e.currentTarget.style.boxShadow = "0 6px 16px rgba(29, 78, 216, 0.3)"
+              e.currentTarget.style.transform = "translateY(-2px)"
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = "#1D4ED8"
+              e.currentTarget.style.boxShadow = "0 2px 8px rgba(29, 78, 216, 0.2)"
+              e.currentTarget.style.transform = "translateY(0)"
+            }}
           >
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M11.333 2.00004C11.5081 1.82494 11.7169 1.68605 11.9473 1.59129C12.1777 1.49653 12.4251 1.44775 12.675 1.44775C12.9249 1.44775 13.1723 1.49653 13.4027 1.59129C13.6331 1.68605 13.8419 1.82494 14.017 2.00004C14.1921 2.17513 14.331 2.38394 14.4257 2.61436C14.5205 2.84478 14.5693 3.09219 14.5693 3.34204C14.5693 3.59188 14.5205 3.83929 14.4257 4.06971C14.331 4.30013 14.1921 4.50894 14.017 4.68404L5.00001 13.701L1.33334 14.6667L2.29901 11.0007L11.333 2.00004Z" stroke="#FFFFFF" strokeWidth="1.33" strokeLinecap="round" strokeLinejoin="round"/>
@@ -263,10 +309,19 @@ export default function ProfilePage() {
                 Diploma
               </h2>
               <div
-                className="rounded-2xl p-5"
+                className="rounded-2xl p-5 transition-all duration-300"
                 style={{
                   background: "#FFFFFF",
                   border: "1px solid #E5E7EB",
+                  boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = "0 8px 24px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.06)"
+                  e.currentTarget.style.borderColor = "#CBD5E1"
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)"
+                  e.currentTarget.style.borderColor = "#E5E7EB"
                 }}
               >
                 <p className="text-sm" style={{ color: "#0F172A" }}>
@@ -287,10 +342,19 @@ export default function ProfilePage() {
                 Experience
               </h2>
               <div
-                className="rounded-2xl p-5"
+                className="rounded-2xl p-5 transition-all duration-300"
                 style={{
                   background: "#FFFFFF",
                   border: "1px solid #E5E7EB",
+                  boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = "0 8px 24px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.06)"
+                  e.currentTarget.style.borderColor = "#CBD5E1"
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)"
+                  e.currentTarget.style.borderColor = "#E5E7EB"
                 }}
               >
                 <p className="text-sm" style={{ color: "#0F172A" }}>
@@ -311,10 +375,19 @@ export default function ProfilePage() {
                 Dream jobs
               </h2>
               <div
-                className="rounded-2xl p-4"
+                className="rounded-2xl p-4 transition-all duration-300"
                 style={{
                   background: "#FFFFFF",
                   border: "1px solid #E5E7EB",
+                  boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = "0 8px 24px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.06)"
+                  e.currentTarget.style.borderColor = "#CBD5E1"
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)"
+                  e.currentTarget.style.borderColor = "#E5E7EB"
                 }}
               >
                 <div className="flex flex-col gap-3">
@@ -360,10 +433,19 @@ export default function ProfilePage() {
                 Career preferences
               </h2>
               <div
-                className="rounded-2xl p-5"
+                className="rounded-2xl p-5 transition-all duration-300"
                 style={{
                   background: "#FFFFFF",
                   border: "1px solid #E5E7EB",
+                  boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = "0 8px 24px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.06)"
+                  e.currentTarget.style.borderColor = "#CBD5E1"
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)"
+                  e.currentTarget.style.borderColor = "#E5E7EB"
                 }}
               >
                 <div className="grid grid-cols-2 gap-x-8 gap-y-4">
