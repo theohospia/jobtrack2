@@ -213,13 +213,7 @@ export default function ActionDetailPage() {
           Back to Applications
         </button>
 
-        {/* APPLICATION PROGRESS */}
-        <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 4px 0" }}>
-          Application Progress
-        </p>
-        <p style={{ fontSize: 12, color: "#64748B", margin: "0 0 12px 0" }}>
-          Where you are in the process
-        </p>
+        {/* APPLICATION PROGRESS + JOB SUMMARY */}
         <div
           style={{
             background: "#FFFFFF",
