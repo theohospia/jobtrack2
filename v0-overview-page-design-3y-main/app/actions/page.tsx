@@ -252,31 +252,26 @@ export default function ActionsPage() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24, marginBottom: 80 }}>
           {jobCards.map((card, index) => {
             const isAltStyle = index % 2 === 0
-            const borderColor = isAltStyle ? "#2563EB" : "#E5E7EB"
-            const shadowColor = isAltStyle ? "rgba(37, 99, 235, 0.15), 0 1px 3px rgba(37, 99, 235, 0.08)" : "rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)"
-            const shadowColorHover = isAltStyle ? "rgba(37, 99, 235, 0.2), 0 4px 12px rgba(37, 99, 235, 0.12)" : "rgba(0, 0, 0, 0.15), 0 4px 12px rgba(0, 0, 0, 0.08)"
-            const borderColorHover = isAltStyle ? "#1D4ED8" : "#CBD5E1"
+            const bgColor = isAltStyle ? "#F3F9FD" : "#FFFFFF"
 
             return (
             <div
               key={index}
               style={{
-                background: '#FFFFFF',
-                border: `1px solid ${borderColor}`,
+                background: bgColor,
+                border: '1px solid #E5E7EB',
                 borderRadius: 12,
                 padding: 24,
-                boxShadow: `0 4px 12px ${shadowColor}`,
+                boxShadow: '0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)',
                 transition: 'all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)',
                 cursor: 'pointer'
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.boxShadow = `0 12px 32px ${shadowColorHover}`
-                e.currentTarget.style.borderColor = borderColorHover
+                e.currentTarget.style.boxShadow = '0 12px 32px rgba(0, 0, 0, 0.15), 0 4px 12px rgba(0, 0, 0, 0.08)'
                 e.currentTarget.style.transform = 'translateY(-6px)'
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.boxShadow = `0 4px 12px ${shadowColor}`
-                e.currentTarget.style.borderColor = borderColor
+                e.currentTarget.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)'
                 e.currentTarget.style.transform = 'translateY(0)'
               }}
             >
