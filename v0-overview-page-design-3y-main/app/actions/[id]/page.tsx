@@ -495,43 +495,101 @@ export default function ActionDetailPage() {
 
         {/* Recruiter Reality Signals */}
         {job.recruiterSignals && (
-          <div
-            style={{
-              background: "#FFFFFF",
-              border: "1px solid #E5E7EB",
-              borderRadius: 12,
-              padding: 20,
-              marginBottom: 24,
-              boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)",
-              transition: "box-shadow 0.3s ease",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.boxShadow = "0 8px 24px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.06)"
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)"
-            }}
-          >
+          <div>
             <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 12px 0" }}>
               What Usually Happens at This Stage
             </p>
-            <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-              <div style={{ display: "flex", gap: 12 }}>
-                <span style={{ fontSize: 12, color: "#64748B", flex: "0 0 120px" }}>Average review time</span>
-                <span style={{ fontSize: 12, color: "#0F172A", fontWeight: 500 }}>{job.recruiterSignals.reviewTime}</span>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 12, marginBottom: 24 }}>
+              {/* Average Review Time Card */}
+              <div
+                style={{
+                  background: "#FFFFFF",
+                  border: "1px solid #E5E7EB",
+                  borderRadius: 12,
+                  padding: 16,
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 8,
+                  boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)",
+                  transition: "all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = "0 12px 32px rgba(0, 0, 0, 0.15), 0 4px 12px rgba(0, 0, 0, 0.08)"
+                  e.currentTarget.style.transform = "translateY(-4px)"
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)"
+                  e.currentTarget.style.transform = "translateY(0)"
+                }}
+              >
+                <p style={{ fontSize: 12, color: "#64748B", margin: 0, textTransform: "uppercase", fontWeight: 600 }}>
+                  Average Review Time
+                </p>
+                <p style={{ fontSize: 20, color: "#0F172A", margin: 0, fontWeight: 700 }}>
+                  {job.recruiterSignals.reviewTime}
+                </p>
               </div>
-              <div style={{ display: "flex", gap: 12 }}>
-                <span style={{ fontSize: 12, color: "#64748B", flex: "0 0 120px" }}>Recruiter profile view</span>
-                <span style={{ fontSize: 12, color: "#0F172A", fontWeight: 500 }}>{job.recruiterSignals.profileView}</span>
+
+              {/* Recruiter Profile View Card */}
+              <div
+                style={{
+                  background: "#FFFFFF",
+                  border: "1px solid #E5E7EB",
+                  borderRadius: 12,
+                  padding: 16,
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 8,
+                  boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)",
+                  transition: "all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = "0 12px 32px rgba(0, 0, 0, 0.15), 0 4px 12px rgba(0, 0, 0, 0.08)"
+                  e.currentTarget.style.transform = "translateY(-4px)"
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)"
+                  e.currentTarget.style.transform = "translateY(0)"
+                }}
+              >
+                <p style={{ fontSize: 12, color: "#64748B", margin: 0, textTransform: "uppercase", fontWeight: 600 }}>
+                  Recruiter Profile View
+                </p>
+                <p style={{ fontSize: 20, color: "#0F172A", margin: 0, fontWeight: 700 }}>
+                  {job.recruiterSignals.profileView}
+                </p>
               </div>
-              <div style={{ display: "flex", gap: 12 }}>
-                <span style={{ fontSize: 12, color: "#64748B", flex: "0 0 120px" }}>Ghosting probability</span>
-                <span style={{ fontSize: 12, color: "#0F172A", fontWeight: 500 }}>{job.recruiterSignals.ghostingProbability}</span>
+
+              {/* Ghosting Probability Card */}
+              <div
+                style={{
+                  background: "#FFFFFF",
+                  border: "1px solid #E5E7EB",
+                  borderRadius: 12,
+                  padding: 16,
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 8,
+                  boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)",
+                  transition: "all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = "0 12px 32px rgba(0, 0, 0, 0.15), 0 4px 12px rgba(0, 0, 0, 0.08)"
+                  e.currentTarget.style.transform = "translateY(-4px)"
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)"
+                  e.currentTarget.style.transform = "translateY(0)"
+                }}
+              >
+                <p style={{ fontSize: 12, color: "#64748B", margin: 0, textTransform: "uppercase", fontWeight: 600 }}>
+                  Ghosting Probability
+                </p>
+                <p style={{ fontSize: 20, color: "#0F172A", margin: 0, fontWeight: 700 }}>
+                  {job.recruiterSignals.ghostingProbability}
+                </p>
               </div>
             </div>
-            <p style={{ fontSize: 12, color: "#2563EB", margin: "16px 0 0 0", fontStyle: "italic" }}>
-              Silence at this stage is normal — it's not a negative signal.
-            </p>
           </div>
         )}
 
