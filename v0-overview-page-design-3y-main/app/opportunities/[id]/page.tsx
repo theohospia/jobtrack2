@@ -400,7 +400,8 @@ Required qualifications include strong knowledge of engine mechanics and operati
             </p>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
               {/* Skill 1 */}
-              <div style={{ padding: 12, background: "#F8FAFC", borderRadius: 8, border: "1px solid #E5E7EB", boxShadow: "0 2px 4px rgba(0, 0, 0, 0.04)", transition: "all 0.3s ease" }}
+              <div 
+                style={{ padding: 12, background: "#F8FAFC", borderRadius: 8, border: "1px solid #E5E7EB", boxShadow: "0 2px 4px rgba(0, 0, 0, 0.04)", transition: "all 0.3s ease" }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08)"
                   e.currentTarget.style.transform = "translateY(-2px)"
@@ -419,7 +420,8 @@ Required qualifications include strong knowledge of engine mechanics and operati
               </div>
 
               {/* Skill 2 */}
-              <div style={{ padding: 12, background: "#F8FAFC", borderRadius: 8, border: "1px solid #E5E7EB", boxShadow: "0 2px 4px rgba(0, 0, 0, 0.04)", transition: "all 0.3s ease" }}
+              <div 
+                style={{ padding: 12, background: "#F8FAFC", borderRadius: 8, border: "1px solid #E5E7EB", boxShadow: "0 2px 4px rgba(0, 0, 0, 0.04)", transition: "all 0.3s ease" }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08)"
                   e.currentTarget.style.transform = "translateY(-2px)"
@@ -439,7 +441,8 @@ Required qualifications include strong knowledge of engine mechanics and operati
             </div>
 
             {/* Development Tips */}
-            <div style={{ marginTop: 16, padding: 12, borderRadius: 8, border: "1px solid #E5E7EB", backgroundColor: "#FFFFFF", boxShadow: "0 2px 4px rgba(0, 0, 0, 0.04)", transition: "all 0.3s ease" }}
+            <div 
+              style={{ marginTop: 16, padding: 12, borderRadius: 8, border: "1px solid #E5E7EB", backgroundColor: "#FFFFFF", boxShadow: "0 2px 4px rgba(0, 0, 0, 0.04)", transition: "all 0.3s ease" }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08)"
               }}
