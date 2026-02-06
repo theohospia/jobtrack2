@@ -468,7 +468,7 @@ export default function ActionDetailPage() {
               {job.salary}
             </p>
             <p style={{ fontSize: 12, color: "#64748B", margin: 0 }}>
-              24 applicants
+              $75,000 per year
             </p>
           </div>
         </div>
@@ -614,6 +614,19 @@ export default function ActionDetailPage() {
             e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)"
           }}
         >
+          {/* Application Health */}
+          <div style={{ marginBottom: 20, paddingBottom: 20, borderBottom: "1px solid #E5E7EB" }}>
+            <p style={{ fontSize: 12, color: "#64748B", fontWeight: 600, margin: "0 0 12px 0", textTransform: "uppercase" }}>
+              Application Health
+            </p>
+            <p style={{ fontSize: 12, color: "#64748B", margin: "0 0 12px 0" }}>
+              Good — can be stronger (+10%)
+            </p>
+            <p style={{ fontSize: 12, color: "#64748B", margin: 0 }}>
+              Two quick improvements can meaningfully increase your chances.
+            </p>
+          </div>
+
           {/* 15-minute actions */}
           <div style={{ marginBottom: 20 }}>
             <p style={{ fontSize: 12, color: "#64748B", fontWeight: 600, margin: "0 0 12px 0", textTransform: "uppercase" }}>
