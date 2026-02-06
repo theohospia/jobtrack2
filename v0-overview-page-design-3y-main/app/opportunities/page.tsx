@@ -111,16 +111,21 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
   
   return (
     <div
-      className="flex w-full cursor-pointer flex-col gap-3 rounded-2xl p-5 transition-colors duration-150"
+      className="flex w-full cursor-pointer flex-col gap-3 rounded-2xl p-5 transition-all duration-300"
       style={{
         background: bgColor,
         border: "1px solid #E5E7EB",
+        boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)",
       }}
       onMouseEnter={(e) => {
         e.currentTarget.style.borderColor = "#CBD5E1"
+        e.currentTarget.style.boxShadow = "0 12px 32px rgba(0, 0, 0, 0.15), 0 4px 12px rgba(0, 0, 0, 0.08)"
+        e.currentTarget.style.transform = "translateY(-6px)"
       }}
       onMouseLeave={(e) => {
         e.currentTarget.style.borderColor = "#E5E7EB"
+        e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)"
+        e.currentTarget.style.transform = "translateY(0)"
       }}
     >
       {/* Main Content */}
@@ -207,16 +212,23 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
         {/* Right Side: View More Button */}
         <button
           onClick={() => router.push(`/opportunities/${opportunity.id}`)}
-          className="flex items-center gap-2 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2 whitespace-nowrap flex-shrink-0"
+          className="flex items-center gap-2 cursor-pointer text-sm font-medium rounded-lg px-3 py-2 whitespace-nowrap flex-shrink-0"
           style={{
             background: "#2563EB",
             color: "#FFFFFF",
+            boxShadow: "0 2px 8px rgba(37, 99, 235, 0.2)",
+            transition: "all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)",
+            border: "none",
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.background = "#1D4ED8"
+            e.currentTarget.style.boxShadow = "0 6px 16px rgba(37, 99, 235, 0.3)"
+            e.currentTarget.style.transform = "translateY(-2px)"
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.background = "#2563EB"
+            e.currentTarget.style.boxShadow = "0 2px 8px rgba(37, 99, 235, 0.2)"
+            e.currentTarget.style.transform = "translateY(0)"
           }}
         >
           Apply now
@@ -236,6 +248,7 @@ function EmptyState() {
       style={{
         background: "#FFFFFF",
         border: "1px solid #E5E7EB",
+        boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)",
       }}
     >
       <h3
@@ -251,11 +264,20 @@ function EmptyState() {
         Based on your profile and recent activity, applying right now would likely have low returns.
       </p>
       <button
-        className="h-9 w-fit cursor-pointer rounded-[10px] px-4 text-[13px] font-semibold transition-colors duration-150"
+        className="h-9 w-fit cursor-pointer rounded-[10px] px-4 text-[13px] font-semibold transition-all duration-200"
         style={{
           background: "#F1F5F9",
           color: "#0F172A",
           border: "1px solid #CBD5E1",
+          boxShadow: "0 2px 4px rgba(0, 0, 0, 0.04)",
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.background = "#E0E8F2"
+          e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08)"
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.background = "#F1F5F9"
+          e.currentTarget.style.boxShadow = "0 2px 4px rgba(0, 0, 0, 0.04)"
         }}
       >
         Improve my chances
@@ -289,10 +311,19 @@ export default function OpportunitiesPage() {
         <div className="mb-8 flex gap-4">
           {/* Search Bar */}
           <div
-            className="flex-1 flex items-center gap-3 rounded-lg px-5 py-3.5"
+            className="flex-1 flex items-center gap-3 rounded-lg px-5 py-3.5 transition-all duration-200"
             style={{
               background: "#FFFFFF",
               border: "1px solid #E5E7EB",
+              boxShadow: "0 2px 4px rgba(0, 0, 0, 0.04)",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.boxShadow = "0 4px 12px rgba(37, 99, 235, 0.1)"
+              e.currentTarget.style.borderColor = "#CBD5E1"
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.boxShadow = "0 2px 4px rgba(0, 0, 0, 0.04)"
+              e.currentTarget.style.borderColor = "#E5E7EB"
             }}
           >
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -309,17 +340,22 @@ export default function OpportunitiesPage() {
 
           {/* Filter Button */}
           <button
-            className="flex items-center gap-2 rounded-lg px-6 py-3.5 transition-colors"
+            className="flex items-center gap-2 rounded-lg px-6 py-3.5 transition-all duration-200"
             style={{
               background: "#FFFFFF",
               border: "1px solid #E5E7EB",
               color: "#64748B",
+              boxShadow: "0 2px 4px rgba(0, 0, 0, 0.04)",
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.background = "#F1F5F9";
+              e.currentTarget.style.background = "#F1F5F9"
+              e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08)"
+              e.currentTarget.style.borderColor = "#CBD5E1"
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.background = "#FFFFFF";
+              e.currentTarget.style.background = "#FFFFFF"
+              e.currentTarget.style.boxShadow = "0 2px 4px rgba(0, 0, 0, 0.04)"
+              e.currentTarget.style.borderColor = "#E5E7EB"
             }}
           >
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -344,16 +380,21 @@ export default function OpportunitiesPage() {
         {!showEmpty && (
           <div className="flex justify-center">
             <button
-              className="flex items-center gap-1 cursor-pointer text-sm font-medium transition-colors rounded-lg px-3 py-2"
+              className="flex items-center gap-1 cursor-pointer text-sm font-medium rounded-lg px-3 py-2 transition-all duration-200"
               style={{
                 background: "#2563EB",
                 color: "#FFFFFF",
+                boxShadow: "0 4px 12px rgba(37, 99, 235, 0.2)",
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.background = "#1D4ED8"
+                e.currentTarget.style.boxShadow = "0 8px 24px rgba(37, 99, 235, 0.3)"
+                e.currentTarget.style.transform = "translateY(-3px)"
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.background = "#2563EB"
+                e.currentTarget.style.boxShadow = "0 4px 12px rgba(37, 99, 235, 0.2)"
+                e.currentTarget.style.transform = "translateY(0)"
               }}
             >
               Load more
