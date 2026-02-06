@@ -379,7 +379,8 @@ export default function ActionDetailPage() {
                   style={{
                     display: "flex",
                     justifyContent: "space-between",
-                    marginTop: 12,
+                    marginTop: 20,
+                    paddingTop: 12,
                   }}
                 >
                   {job.stages.map(
@@ -389,8 +390,8 @@ export default function ActionDetailPage() {
                         style={{
                           textAlign: "center",
                           flex: 1,
-                          minWidth: 0,
-                          padding: "0 2px",
+                          minWidth: 60,
+                          padding: "0 8px",
                         }}
                       >
                         <p
