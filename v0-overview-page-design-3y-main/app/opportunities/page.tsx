@@ -212,22 +212,13 @@ function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; ind
         {/* Right Side: View More Button */}
         <button
           onClick={() => router.push(`/opportunities/${opportunity.id}`)}
+          className="flex items-center gap-2 cursor-pointer text-sm font-medium rounded-lg px-3 py-2 whitespace-nowrap flex-shrink-0"
           style={{
             background: "#2563EB",
             color: "#FFFFFF",
             boxShadow: "0 2px 8px rgba(37, 99, 235, 0.2)",
             transition: "all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)",
             border: "none",
-            display: "flex",
-            alignItems: "center",
-            gap: "8px",
-            cursor: "pointer",
-            fontSize: "14px",
-            fontWeight: "500",
-            borderRadius: "8px",
-            padding: "8px 12px",
-            whiteSpace: "nowrap",
-            flexShrink: 0,
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.background = "#1D4ED8"
@@ -273,19 +264,12 @@ function EmptyState() {
         Based on your profile and recent activity, applying right now would likely have low returns.
       </p>
       <button
+        className="h-9 w-fit cursor-pointer rounded-[10px] px-4 text-[13px] font-semibold transition-all duration-200"
         style={{
-          height: "36px",
-          width: "fit-content",
-          cursor: "pointer",
-          borderRadius: "10px",
-          padding: "0 16px",
-          fontSize: "13px",
-          fontWeight: "600",
           background: "#F1F5F9",
           color: "#0F172A",
           border: "1px solid #CBD5E1",
           boxShadow: "0 2px 4px rgba(0, 0, 0, 0.04)",
-          transition: "all 0.2s ease",
         }}
         onMouseEnter={(e) => {
           e.currentTarget.style.background = "#E0E8F2"
