@@ -106,7 +106,7 @@ function FitPill({ level }: { level: FitLevel }) {
 
 function OpportunityCard({ opportunity, index }: { opportunity: Opportunity; index: number }) {
   const router = useRouter()
-  const isAltStyle = index % 2 === 1
+  const isAltStyle = index % 2 === 0
   const bgColor = isAltStyle ? "#DBEAFE" : "#FAFBFC"
   const borderColor = isAltStyle ? "#2563EB" : "#E5E7EB"
   const shadowColor = isAltStyle ? "rgba(37, 99, 235, 0.15), 0 1px 3px rgba(37, 99, 235, 0.08)" : "rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)"
