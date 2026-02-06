@@ -525,7 +525,7 @@ export default function ActionDetailPage() {
                 <p style={{ fontSize: 12, color: "#64748B", margin: 0, textTransform: "uppercase", fontWeight: 600 }}>
                   Average Review Time
                 </p>
-                <p style={{ fontSize: 20, color: "#0F172A", margin: 0, fontWeight: 700 }}>
+                <p style={{ fontSize: 14, color: "#0F172A", margin: 0 }}>
                   {job.recruiterSignals.reviewTime}
                 </p>
               </div>
@@ -555,7 +555,7 @@ export default function ActionDetailPage() {
                 <p style={{ fontSize: 12, color: "#64748B", margin: 0, textTransform: "uppercase", fontWeight: 600 }}>
                   Recruiter Profile View
                 </p>
-                <p style={{ fontSize: 20, color: "#0F172A", margin: 0, fontWeight: 700 }}>
+                <p style={{ fontSize: 14, color: "#0F172A", margin: 0 }}>
                   {job.recruiterSignals.profileView}
                 </p>
               </div>
@@ -585,7 +585,7 @@ export default function ActionDetailPage() {
                 <p style={{ fontSize: 12, color: "#64748B", margin: 0, textTransform: "uppercase", fontWeight: 600 }}>
                   Ghosting Probability
                 </p>
-                <p style={{ fontSize: 20, color: "#0F172A", margin: 0, fontWeight: 700 }}>
+                <p style={{ fontSize: 14, color: "#0F172A", margin: 0 }}>
                   {job.recruiterSignals.ghostingProbability}
                 </p>
               </div>
