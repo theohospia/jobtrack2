@@ -213,7 +213,56 @@ export default function ActionDetailPage() {
           Back to Applications
         </button>
 
-        {/* APPLICATION PROGRESS + JOB SUMMARY */}
+        {/* Job Summary Section */}
+        <div style={{ marginBottom: 24 }}>
+          <div
+            style={{
+              background: "#FFFFFF",
+              border: "1px solid #E5E7EB",
+              borderRadius: 12,
+              padding: 24,
+              boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)",
+              transition: "box-shadow 0.3s ease",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.boxShadow = "0 8px 24px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.06)"
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)"
+            }}
+          >
+            {/* Title */}
+            <h1 style={{ fontSize: 28, fontWeight: 700, color: "#0F172A", margin: "0 0 8px 0" }}>
+              {job.title}
+            </h1>
+
+            {/* Company info + Applied on same row */}
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 16 }}>
+              <p style={{ fontSize: 14, color: "#64748B", margin: 0 }}>
+                {job.company} · {job.location} · {job.workType}
+              </p>
+              <p style={{ fontSize: 13, color: "#64748B", margin: 0 }}>
+                Applied {job.appliedDate}
+              </p>
+            </div>
+
+            {/* Status messages - both in black */}
+            <p style={{ fontSize: 14, color: "#0F172A", margin: "0 0 4px 0" }}>
+              You're early — this is when smart candidates take the lead
+            </p>
+            <p style={{ fontSize: 14, color: "#0F172A", margin: 0 }}>
+              Most successful candidates stay active at this stage — you're right on time.
+            </p>
+          </div>
+        </div>
+
+        {/* APPLICATION PROGRESS */}
+        <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 4px 0" }}>
+          Application Progress
+        </p>
+        <p style={{ fontSize: 12, color: "#64748B", margin: "0 0 12px 0" }}>
+          Where you are in the process
+        </p>
         <div
           style={{
             background: "#FFFFFF",
@@ -387,49 +436,6 @@ export default function ActionDetailPage() {
               </div>
             )
           })()}
-        </div>
-
-        {/* Job Summary Section */}
-        <div style={{ marginBottom: 24 }}>
-          <div
-            style={{
-              background: "#FFFFFF",
-              border: "1px solid #E5E7EB",
-              borderRadius: 12,
-              padding: 24,
-              boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)",
-              transition: "box-shadow 0.3s ease",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.boxShadow = "0 8px 24px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.06)"
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)"
-            }}
-          >
-            {/* Title */}
-            <h1 style={{ fontSize: 28, fontWeight: 700, color: "#0F172A", margin: "0 0 8px 0" }}>
-              {job.title}
-            </h1>
-
-            {/* Company info + Applied on same row */}
-            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 16 }}>
-              <p style={{ fontSize: 14, color: "#64748B", margin: 0 }}>
-                {job.company} · {job.location} · {job.workType}
-              </p>
-              <p style={{ fontSize: 13, color: "#64748B", margin: 0 }}>
-                Applied {job.appliedDate}
-              </p>
-            </div>
-
-            {/* Status messages - both in black */}
-            <p style={{ fontSize: 14, color: "#0F172A", margin: "0 0 4px 0" }}>
-              You're early — this is when smart candidates take the lead
-            </p>
-            <p style={{ fontSize: 14, color: "#0F172A", margin: 0 }}>
-              Most successful candidates stay active at this stage — you're right on time.
-            </p>
-          </div>
         </div>
 
         {/* Application Signals */}
