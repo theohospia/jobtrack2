@@ -196,10 +196,16 @@ export default function ActionDetailPage() {
             color: "#2563EB",
             fontSize: 14,
             fontWeight: 400,
-            transition: "opacity 0.2s",
+            transition: "all 0.3s ease",
           }}
-          onMouseEnter={(e) => e.currentTarget.style.opacity = "0.7"}
-          onMouseLeave={(e) => e.currentTarget.style.opacity = "1"}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.opacity = "0.7"
+            e.currentTarget.style.transform = "translateX(-4px)"
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.opacity = "1"
+            e.currentTarget.style.transform = "translateX(0)"
+          }}
         >
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M10 12L6 8L10 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -207,17 +213,32 @@ export default function ActionDetailPage() {
           Back to Applications
         </button>
 
+        {/* Blue Banner */}
+        <div
+          style={{
+            background: "#2563EB",
+            height: 16,
+            borderRadius: "4px 4px 0 0",
+            marginBottom: 0,
+          }}
+        />
+
         {/* Job Summary Section */}
         <div style={{ marginBottom: 24 }}>
-          <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 8px 0" }}>
-            Job Summary
-          </p>
           <div
             style={{
               background: "#FFFFFF",
               border: "1px solid #E5E7EB",
-              borderRadius: 12,
+              borderRadius: "0 0 12px 12px",
               padding: 24,
+              boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)",
+              transition: "box-shadow 0.3s ease",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.boxShadow = "0 8px 24px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.06)"
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)"
             }}
           >
             {/* Title */}
@@ -259,6 +280,14 @@ export default function ActionDetailPage() {
             borderRadius: 12,
             padding: 24,
             marginBottom: 24,
+            boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)",
+            transition: "box-shadow 0.3s ease",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.boxShadow = "0 8px 24px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.06)"
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)"
           }}
         >
           {/* Delivery-tracker style timeline */}
@@ -430,6 +459,14 @@ export default function ActionDetailPage() {
             display: "grid",
             gridTemplateColumns: "repeat(2, 1fr)",
             gap: 16,
+            boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)",
+            transition: "box-shadow 0.3s ease",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.boxShadow = "0 8px 24px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.06)"
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)"
           }}
         >
           <div>
@@ -465,6 +502,14 @@ export default function ActionDetailPage() {
               borderRadius: 12,
               padding: 20,
               marginBottom: 24,
+              boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)",
+              transition: "box-shadow 0.3s ease",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.boxShadow = "0 8px 24px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.06)"
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)"
             }}
           >
             <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 12px 0" }}>
@@ -521,6 +566,14 @@ export default function ActionDetailPage() {
             borderRadius: 12,
             padding: 24,
             marginBottom: 24,
+            boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)",
+            transition: "box-shadow 0.3s ease",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.boxShadow = "0 8px 24px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.06)"
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)"
           }}
         >
           {/* 15-minute actions */}
@@ -668,6 +721,14 @@ export default function ActionDetailPage() {
             borderRadius: 12,
             padding: 20,
             marginBottom: 24,
+            boxShadow: "0 4px 12px rgba(37, 99, 235, 0.15), 0 1px 3px rgba(37, 99, 235, 0.08)",
+            transition: "box-shadow 0.3s ease",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.boxShadow = "0 8px 24px rgba(37, 99, 235, 0.2), 0 2px 6px rgba(37, 99, 235, 0.1)"
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.boxShadow = "0 4px 12px rgba(37, 99, 235, 0.15), 0 1px 3px rgba(37, 99, 235, 0.08)"
           }}
         >
           <div style={{ marginBottom: 16 }}>
@@ -703,15 +764,16 @@ export default function ActionDetailPage() {
                       justifyContent: "center",
                       alignItems: "center",
                       textAlign: "center",
-                      boxShadow: "0 8px 24px rgba(0, 0, 0, 0.1)",
-                      transition: "all 0.3s ease",
+                      boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)",
+                      transition: "all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)",
+                      cursor: "pointer",
                     }}
                     onMouseEnter={(e) => {
-                      e.currentTarget.style.boxShadow = "0 12px 32px rgba(0, 0, 0, 0.15)"
-                      e.currentTarget.style.transform = "translateY(-4px)"
+                      e.currentTarget.style.boxShadow = "0 12px 32px rgba(0, 0, 0, 0.15), 0 4px 12px rgba(0, 0, 0, 0.08)"
+                      e.currentTarget.style.transform = "translateY(-6px)"
                     }}
                     onMouseLeave={(e) => {
-                      e.currentTarget.style.boxShadow = "0 8px 24px rgba(0, 0, 0, 0.1)"
+                      e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)"
                       e.currentTarget.style.transform = "translateY(0)"
                     }}
                   >
