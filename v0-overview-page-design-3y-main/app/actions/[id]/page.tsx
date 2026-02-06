@@ -131,6 +131,25 @@ const actionJobs: Record<string, ActionJob> = {
   }
 }
 
+// Alternative jobs for the Plan B cards
+const alternativeJobs = [
+  {
+    title: "Junior Data Analyst",
+    company: "DataFlow",
+    salary: "$65-75k",
+  },
+  {
+    title: "Analytics Associate",
+    company: "TechStart",
+    salary: "$70-80k",
+  },
+  {
+    title: "Business Intelligence Intern",
+    company: "InsightCorp",
+    salary: "$55-65k",
+  },
+]
+
 export default function ActionDetailPage() {
   const params = useParams()
   const router = useRouter()
@@ -138,8 +157,13 @@ export default function ActionDetailPage() {
   const job = actionJobs[id] || actionJobs["1"]
   const [planBOpen, setPlanBOpen] = useState(false)
   const [completedTasks, setCompletedTasks] = useState<Record<number, boolean>>(
-    job.tasks.reduce((acc, task, idx) => ({ ...acc, [idx]: task.completed }), {})
+    job.tasks.reduce((acc, _, i) => ({ ...acc, [i]: false }), {})
   )
+  const [flippedCards, setFlippedCards] = useState<Record<number, boolean>>({
+    0: false,
+    1: false,
+    2: false,
+  })
 
   const progressPercentage = (job.currentStage / job.totalStages) * 100
   const completedTaskCount = Object.values(completedTasks).filter(Boolean).length
@@ -683,35 +707,89 @@ export default function ActionDetailPage() {
 
           {planBOpen && (
             <div style={{ marginTop: 16 }}>
-              <div style={{ marginBottom: 12 }}>
-                <p style={{ fontSize: 12, color: "#64748B", margin: "0 0 8px 0", textTransform: "uppercase" }}>
-                  2–3 similar roles you should apply to next
-                </p>
-                <ul style={{ fontSize: 13, color: "#0F172A", margin: 0, paddingLeft: 20 }}>
-                  <li>Junior Data Analyst at DataFlow (NYC)</li>
-                  <li>Analytics Associate at TechStart (London)</li>
-                  <li>Business Intelligence Intern at InsightCorp (Paris)</li>
-                </ul>
+              {/* Flippable Cards Grid */}
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(3, 1fr)",
+                  gap: 16,
+                  marginBottom: 24,
+                }}
+              >
+                {alternativeJobs.map((job, index) => (
+                  <div
+                    key={index}
+                    onClick={() => setFlippedCards({ ...flippedCards, [index]: !flippedCards[index] })}
+                    style={{
+                      height: 200,
+                      cursor: "pointer",
+                      perspective: "1000px",
+                    }}
+                  >
+                    <div
+                      style={{
+                        position: "relative",
+                        width: "100%",
+                        height: "100%",
+                        transition: "transform 0.6s",
+                        transformStyle: "preserve-3d",
+                        transform: flippedCards[index] ? "rotateY(180deg)" : "rotateY(0deg)",
+                      }}
+                    >
+                      {/* Front - Question Mark */}
+                      <div
+                        style={{
+                          position: "absolute",
+                          width: "100%",
+                          height: "100%",
+                          backfaceVisibility: "hidden",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          background: "#2563EB",
+                          border: "2px solid #1D4ED8",
+                          borderRadius: 12,
+                          fontSize: 60,
+                          fontWeight: 700,
+                          color: "#FFFFFF",
+                        }}
+                      >
+                        ?
+                      </div>
+
+                      {/* Back - Job Details */}
+                      <div
+                        style={{
+                          position: "absolute",
+                          width: "100%",
+                          height: "100%",
+                          backfaceVisibility: "hidden",
+                          display: "flex",
+                          flexDirection: "column",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          background: "#FFFFFF",
+                          border: "2px solid #2563EB",
+                          borderRadius: 12,
+                          padding: 16,
+                          textAlign: "center",
+                          transform: "rotateY(180deg)",
+                        }}
+                      >
+                        <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 8px 0" }}>
+                          {job.title}
+                        </p>
+                        <p style={{ fontSize: 13, color: "#64748B", margin: "0 0 12px 0" }}>
+                          {job.company}
+                        </p>
+                        <p style={{ fontSize: 14, fontWeight: 600, color: "#2563EB", margin: 0 }}>
+                          {job.salary}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
-              <div>
-                <p style={{ fontSize: 12, color: "#64748B", margin: "0 0 8px 0", textTransform: "uppercase" }}>
-                  One skill worth strengthening this week
-                </p>
-                <p style={{ fontSize: 13, color: "#0F172A", margin: 0 }}>
-                  SQL fundamentals or data visualization with Tableau will increase your competitiveness.
-                </p>
-              </div>
-              <div>
-                <p style={{ fontSize: 12, color: "#64748B", margin: "0 0 8px 0", textTransform: "uppercase" }}>
-                  One common mistake to avoid next time
-                </p>
-                <p style={{ fontSize: 13, color: "#0F172A", margin: 0 }}>
-                  Don't apply without tailoring your CV first. Generic applications have 70% lower response rates.
-                </p>
-              </div>
-              <p style={{ fontSize: 12, color: "#64748B", margin: "12px 0 0 0", fontStyle: "italic" }}>
-                Rejection becomes iteration, not a setback.
-              </p>
             </div>
           )}
         </div>
