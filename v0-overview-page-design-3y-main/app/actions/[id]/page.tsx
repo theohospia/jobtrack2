@@ -213,23 +213,13 @@ export default function ActionDetailPage() {
           Back to Applications
         </button>
 
-        {/* Blue Banner */}
-        <div
-          style={{
-            background: "#2563EB",
-            height: 16,
-            borderRadius: "4px 4px 0 0",
-            marginBottom: 0,
-          }}
-        />
-
         {/* Job Summary Section */}
         <div style={{ marginBottom: 24 }}>
           <div
             style={{
               background: "#FFFFFF",
               border: "1px solid #E5E7EB",
-              borderRadius: "0 0 12px 12px",
+              borderRadius: 12,
               padding: 24,
               boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)",
               transition: "box-shadow 0.3s ease",
