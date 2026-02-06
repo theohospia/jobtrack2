@@ -193,7 +193,7 @@ export default function ActionDetailPage() {
         <div
           style={{
             background: "#2563EB",
-            height: 8,
+            height: 16,
             borderRadius: "4px 4px 0 0",
             marginBottom: 0,
           }}
@@ -201,9 +201,6 @@ export default function ActionDetailPage() {
 
         {/* Job Summary Section */}
         <div style={{ marginBottom: 24 }}>
-          <p style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", margin: "0 0 8px 0" }}>
-            Job Summary
-          </p>
           <div
             style={{
               background: "#FFFFFF",
@@ -487,24 +484,6 @@ export default function ActionDetailPage() {
           Tasks to Do
         </p>
 
-        {/* Progress Bar */}
-        <div style={{ marginBottom: 20 }}>
-          <div style={{ display: "flex", justifyContent: "flex-end", alignItems: "center", marginBottom: 12 }}>
-            <span style={{ fontSize: 14, fontWeight: 600, color: "#0F172A" }}>{Math.round(progressPercentage)}%</span>
-          </div>
-          <div style={{ height: 12, background: "#E5E7EB", borderRadius: 6 }}>
-            <div
-              style={{
-                width: `${progressPercentage}%`,
-                height: "100%",
-                background: "#2563EB",
-                borderRadius: 6,
-                transition: "width 0.3s ease",
-              }}
-            />
-          </div>
-        </div>
-
         <div
           style={{
             background: "#FFFFFF",
@@ -514,6 +493,24 @@ export default function ActionDetailPage() {
             marginBottom: 24,
           }}
         >
+          {/* Progress Bar Inside Container */}
+          <div style={{ marginBottom: 24 }}>
+            <div style={{ display: "flex", justifyContent: "flex-end", alignItems: "center", marginBottom: 12 }}>
+              <span style={{ fontSize: 14, fontWeight: 600, color: "#0F172A" }}>{Math.round(progressPercentage)}%</span>
+            </div>
+            <div style={{ height: 12, background: "#E5E7EB", borderRadius: 6 }}>
+              <div
+                style={{
+                  width: `${progressPercentage}%`,
+                  height: "100%",
+                  background: "#2563EB",
+                  borderRadius: 6,
+                  transition: "width 0.3s ease",
+                }}
+              />
+            </div>
+          </div>
+
           {/* 15-minute actions */}
           <div style={{ marginBottom: 20 }}>
             <p style={{ fontSize: 12, color: "#64748B", fontWeight: 600, margin: "0 0 12px 0", textTransform: "uppercase" }}>
