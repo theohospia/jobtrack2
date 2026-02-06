@@ -830,7 +830,7 @@ export default function ActionDetailPage() {
                     <button
                       style={{
                         position: "absolute",
-                        top: 12,
+                        bottom: 12,
                         right: 12,
                         width: 32,
                         height: 32,
@@ -841,19 +841,19 @@ export default function ActionDetailPage() {
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
-                        color: "#64748B",
+                        color: "#DC2626",
                         fontSize: 16,
                         fontWeight: 600,
                         transition: "all 0.2s ease",
                       }}
                       onMouseEnter={(e) => {
-                        e.currentTarget.style.background = "#E2E8F0";
-                        e.currentTarget.style.color = "#475569";
-                        e.currentTarget.style.boxShadow = "0 2px 8px rgba(0, 0, 0, 0.08)";
+                        e.currentTarget.style.background = "#FEE2E2";
+                        e.currentTarget.style.color = "#991B1B";
+                        e.currentTarget.style.boxShadow = "0 2px 8px rgba(220, 38, 38, 0.12)";
                       }}
                       onMouseLeave={(e) => {
                         e.currentTarget.style.background = "#F1F5F9";
-                        e.currentTarget.style.color = "#64748B";
+                        e.currentTarget.style.color = "#DC2626";
                         e.currentTarget.style.boxShadow = "none";
                       }}
                     >
