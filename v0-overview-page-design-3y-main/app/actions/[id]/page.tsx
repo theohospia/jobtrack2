@@ -762,6 +762,10 @@ export default function ActionDetailPage() {
         </div>
 
         {/* Plan B Section - Collapsible */}
+        {(() => {
+          const [isExpanded, setIsExpanded] = React.useState(false)
+          
+          return (
         <div
           style={{
             background: "#EFF6FF",
@@ -779,15 +783,43 @@ export default function ActionDetailPage() {
             e.currentTarget.style.boxShadow = "0 4px 12px rgba(37, 99, 235, 0.15), 0 1px 3px rgba(37, 99, 235, 0.08)"
           }}
         >
-          <div style={{ marginBottom: 16 }}>
-            <div style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", marginBottom: 4 }}>
-              If This Application Doesn't Work Out
+          <div style={{ marginBottom: 16, display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
+            <div>
+              <div style={{ fontSize: 14, fontWeight: 600, color: "#0F172A", marginBottom: 4 }}>
+                If This Application Doesn't Work Out
+              </div>
+              <p style={{ fontSize: 12, color: "#2563EB", margin: 0, fontWeight: 400 }}>
+                You'll still be ahead — here's what to do next.
+              </p>
             </div>
-            <p style={{ fontSize: 12, color: "#2563EB", margin: 0, fontWeight: 400 }}>
-              You'll still be ahead — here's what to do next.
-            </p>
+            <button
+              onClick={() => setIsExpanded(!isExpanded)}
+              style={{
+                background: "transparent",
+                border: "none",
+                fontSize: 20,
+                color: "#2563EB",
+                cursor: "pointer",
+                padding: 0,
+                width: 32,
+                height: 32,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                transition: "all 0.2s ease",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.color = "#1D4ED8"
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.color = "#2563EB"
+              }}
+            >
+              {isExpanded ? "−" : "+"}
+            </button>
           </div>
 
+          {isExpanded && (
           <div style={{ marginTop: 16 }}>
             {/* Job Cards Grid */}
             <div
@@ -872,7 +904,10 @@ export default function ActionDetailPage() {
                 ))}
               </div>
             </div>
+          )}
         </div>
+          )
+        })()
       </main>
     </div>
   )
