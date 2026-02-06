@@ -295,143 +295,133 @@ export default function ActionDetailPage() {
 
             return (
               <div>
-                {/* Circles + connecting lines */}
-                <div
-                  style={{
-                    position: "relative",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "space-around",
-                    padding: "0 0",
-                  }}
-                >
-                  {/* Grey baseline between first and last circle centres */}
+                {/* Timeline Container */}
+                <div style={{ position: "relative", width: "100%" }}>
+                  {/* Connecting line background */}
                   <div
                     style={{
                       position: "absolute",
-                      top: "50%",
-                      left: 24,
-                      right: 24,
+                      top: 16,
+                      left: 0,
+                      right: 0,
                       height: 3,
                       background: "#E5E7EB",
-                      transform: "translateY(-50%)",
                       borderRadius: 2,
+                      zIndex: 0,
                     }}
                   />
-                  {/* Blue progress overlay */}
+                  {/* Blue progress line */}
                   {lastCompletedIdx >= 0 && (
                     <div
                       style={{
                         position: "absolute",
-                        top: "50%",
-                        left: 24,
+                        top: 16,
+                        left: 0,
                         height: 3,
                         background: "#2563EB",
-                        transform: "translateY(-50%)",
                         borderRadius: 2,
                         zIndex: 1,
-                        width: `calc(${Math.min(bluePct, 100)}% - 48px)`,
+                        width: `${((lastCompletedIdx + 0.7) / (job.stages.length - 1)) * 100}%`,
                         transition: "width 0.5s ease",
                       }}
                     />
                   )}
 
-                  {/* Numbered circles */}
-                  {job.stages.map(
-                    (stage: { status: string; name: string; date?: string }, index: number) => (
-                      <div
-                        key={index}
-                        style={{
-                          width: 32,
-                          height: 32,
-                          borderRadius: "50%",
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          flexShrink: 0,
-                          zIndex: 2,
-                          background:
-                            stage.status === "completed" ? "#2563EB" : "#FFFFFF",
-                          border:
-                            stage.status === "completed"
-                              ? "2px solid #2563EB"
-                              : stage.status === "current"
-                                ? "2px solid #2563EB"
-                                : "2px solid #E5E7EB",
-                          color:
-                            stage.status === "completed"
-                              ? "#FFFFFF"
-                              : stage.status === "current"
-                                ? "#2563EB"
-                                : "#94A3B8",
-                          fontSize: 13,
-                          fontWeight: 600,
-                        }}
-                      >
-                        {index + 1}
-                      </div>
-                    )
-                  )}
-                </div>
-
-                {/* Labels below circles */}
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-around",
-                    marginTop: 24,
-                  }}
-                >
-                  {job.stages.map(
-                    (stage: { status: string; name: string; date?: string }, index: number) => (
-                      <div
-                        key={index}
-                        style={{
-                          textAlign: "center",
-                          flex: 0,
-                          width: 80,
-                          padding: "0",
-                        }}
-                      >
-                        <p
+                  {/* Stages Grid */}
+                  <div
+                    style={{
+                      display: "grid",
+                      gridTemplateColumns: `repeat(${job.stages.length}, 1fr)`,
+                      gap: 0,
+                      position: "relative",
+                      zIndex: 2,
+                    }}
+                  >
+                    {job.stages.map(
+                      (stage: { status: string; name: string; date?: string }, index: number) => (
+                        <div
+                          key={index}
                           style={{
-                            fontSize: 12,
-                            color:
-                              stage.status === "upcoming" ? "#94A3B8" : "#0F172A",
-                            margin: 0,
-                            fontWeight: stage.status === "current" ? 600 : 400,
-                            lineHeight: 1.3,
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
+                            gap: 12,
                           }}
                         >
-                          {stage.status === "completed" ? "Your " : ""}
-                          {stage.name}
-                        </p>
-                        {stage.date && (
-                          <p
+                          {/* Circle */}
+                          <div
                             style={{
-                              fontSize: 11,
-                              color: "#64748B",
-                              margin: "4px 0 0 0",
+                              width: 32,
+                              height: 32,
+                              borderRadius: "50%",
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                              flexShrink: 0,
+                              background:
+                                stage.status === "completed" ? "#2563EB" : "#FFFFFF",
+                              border:
+                                stage.status === "completed"
+                                  ? "2px solid #2563EB"
+                                  : stage.status === "current"
+                                    ? "2px solid #2563EB"
+                                    : "2px solid #E5E7EB",
+                              color:
+                                stage.status === "completed"
+                                  ? "#FFFFFF"
+                                  : stage.status === "current"
+                                    ? "#2563EB"
+                                    : "#94A3B8",
+                              fontSize: 13,
+                              fontWeight: 600,
                             }}
                           >
-                            {stage.date}
-                          </p>
-                        )}
-                        {stage.status === "current" && (
-                          <p
-                            style={{
-                              fontSize: 11,
-                              color: "#2563EB",
-                              margin: "4px 0 0 0",
-                              fontWeight: 500,
-                            }}
-                          >
-                            In progress
-                          </p>
-                        )}
-                      </div>
-                    )
-                  )}
+                            {index + 1}
+                          </div>
+
+                          {/* Label */}
+                          <div style={{ textAlign: "center" }}>
+                            <p
+                              style={{
+                                fontSize: 12,
+                                color:
+                                  stage.status === "upcoming" ? "#94A3B8" : "#0F172A",
+                                margin: 0,
+                                fontWeight: stage.status === "current" ? 600 : 400,
+                                lineHeight: 1.4,
+                              }}
+                            >
+                              {stage.status === "completed" ? "Your " : ""}
+                              {stage.name}
+                            </p>
+                            {stage.date && (
+                              <p
+                                style={{
+                                  fontSize: 11,
+                                  color: "#64748B",
+                                  margin: "4px 0 0 0",
+                                }}
+                              >
+                                {stage.date}
+                              </p>
+                            )}
+                            {stage.status === "current" && (
+                              <p
+                                style={{
+                                  fontSize: 11,
+                                  color: "#2563EB",
+                                  margin: "4px 0 0 0",
+                                  fontWeight: 500,
+                                }}
+                              >
+                                In progress
+                              </p>
+                            )}
+                          </div>
+                        </div>
+                      )
+                    )}
+                  </div>
                 </div>
               </div>
             )
