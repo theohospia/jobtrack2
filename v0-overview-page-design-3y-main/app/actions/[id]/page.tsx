@@ -764,7 +764,7 @@ export default function ActionDetailPage() {
         {/* Plan B Section - Collapsible */}
         <div
           style={{
-            background: "#DBEAFE",
+            background: "#EFF6FF",
             border: "1px solid #2563EB",
             borderRadius: 12,
             padding: 20,
