@@ -301,8 +301,8 @@ export default function ActionDetailPage() {
                     position: "relative",
                     display: "flex",
                     alignItems: "center",
-                    justifyContent: "space-between",
-                    padding: "0 8px",
+                    justifyContent: "space-around",
+                    padding: "0 0",
                   }}
                 >
                   {/* Grey baseline between first and last circle centres */}
@@ -378,9 +378,8 @@ export default function ActionDetailPage() {
                 <div
                   style={{
                     display: "flex",
-                    justifyContent: "space-between",
-                    marginTop: 20,
-                    paddingTop: 12,
+                    justifyContent: "space-around",
+                    marginTop: 24,
                   }}
                 >
                   {job.stages.map(
@@ -389,9 +388,9 @@ export default function ActionDetailPage() {
                         key={index}
                         style={{
                           textAlign: "center",
-                          flex: 1,
-                          minWidth: 60,
-                          padding: "0 8px",
+                          flex: 0,
+                          width: 80,
+                          padding: "0",
                         }}
                       >
                         <p
