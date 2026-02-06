@@ -468,7 +468,7 @@ export default function ActionDetailPage() {
               {job.salary}
             </p>
             <p style={{ fontSize: 12, color: "#64748B", margin: 0 }}>
-              per year
+              24 applicants
             </p>
           </div>
         </div>
