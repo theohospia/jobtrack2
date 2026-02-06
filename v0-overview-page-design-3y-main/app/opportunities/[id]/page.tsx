@@ -597,7 +597,7 @@ Required qualifications include strong knowledge of engine mechanics and operati
             style={{
               position: "sticky",
               bottom: 20,
-              background: "#1D4ED8",
+              background: "#2563EB",
               color: "#FFFFFF",
               fontSize: 15,
               fontWeight: 400,
@@ -616,7 +616,7 @@ Required qualifications include strong knowledge of engine mechanics and operati
               e.currentTarget.style.boxShadow = "0 6px 16px rgba(37, 99, 235, 0.4)";
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.background = "#1D4ED8";
+              e.currentTarget.style.background = "#2563EB";
               e.currentTarget.style.boxShadow = "0 4px 12px rgba(37, 99, 235, 0.3)";
             }}
           >
